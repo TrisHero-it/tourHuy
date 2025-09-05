@@ -6,6 +6,30 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
+    <script>
+        (function(w, i, g) {
+            w[g] = w[g] || [];
+            if (typeof w[g].push == 'function') w[g].push(i)
+        })
+        (window, 'GTM-T9HMGMGP', 'google_tags_first_party');
+    </script>
+    <script>
+        (function(w, d, s, l) {
+            w[l] = w[l] || [];
+            (function() {
+                w[l].push(arguments);
+            })('set', 'developer_id.dYzg1YT', true);
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s);
+            j.async = true;
+            j.src = 'metrics/index.html';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer');
+    </script>
     <meta charset="UTF-8" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="pingback" href="xmlrpc.html" />
@@ -19,12 +43,71 @@
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
-    <title>@yield('title', 'Trang chủ - Du lịch Thế Sinh')</title>
+    <title>Trang chủ - Du lịch Thế Sinh</title>
     <style>
         .flying-press-lazy-bg {
             background-image: none !important;
         }
     </style>
+    <link rel='preload' href='wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-600x168.jpg' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-600x168.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-1024x287.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-300x84.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam.jpg 2048w'
+        imagesizes='(max-width: 600px) 100vw, 600px' />
+    <link rel='preload' href='wp-content/uploads/2506_z6700105915602_3e6ed79a3a6850cae5c1c8e59c430b44-600x450.jpg'
+        as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_z6700044442471_69c455edfeb0029df19c9eb1799027c5.jpg' as='image'
+        imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_z5519721449695_e7f485daa65015a4f21ba2fce813d603.jpg' as='image'
+        imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2505_anh-1.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2505_anh-dep-cat.webp' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2507_2nn-600x450.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_b2-600x450.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_sapa-5-1-600x450.png' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_cho-bac-ha-600x450.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_ho-chieu.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2507_song-nho-que-600x450.jpg' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_ban-cat-cat-600x450.webp' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2504_680ef0fa21c95-600x450.webp' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2504_680ef0fcb150b-600x450.webp' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2504_680ef0fdf14e0-600x450.webp' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2507_3nn-600x450.jpg' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2507_3nn-600x450.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn-1024x768.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn-300x225.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn-768x576.jpg 768w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn.jpg 1200w'
+        imagesizes='(max-width: 600px) 100vw, 600px' />
+    <link rel='preload' href='wp-content/uploads/2506_tm2.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2506_cp3.jpg' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2504_680ef0f4c00b2-600x450.webp' as='image' imagesrcset=''
+        imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2505_ninh-binh-1-600x400.jpg' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-300x200.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1.jpg 1024w'
+        imagesizes='(max-width: 600px) 100vw, 600px' />
+    <link rel='preload' href='wp-content/uploads/2505_banner-tay-bac-600x284.jpg' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-600x284.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-1024x485.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-300x142.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac.jpg 1600w'
+        imagesizes='(max-width: 600px) 100vw, 600px' />
+    <link rel='preload' href='wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-600x301.jpg'
+        as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-600x301.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-300x150.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674.jpg 800w'
+        imagesizes='(max-width: 600px) 100vw, 600px' />
+    <link rel='preload' href='wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png 512w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png 300w'
+        imagesizes='(max-width: 512px) 100vw, 512px' />
+    <link rel='preload' href='wp-content/uploads/2505_dmca-badge-1.png' as='image' imagesrcset='' imagesizes='' />
+    <link rel='preload' href='wp-content/uploads/2505_hotline-dat-tour.png' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour.png 688w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-600x206.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-300x103.png 300w'
+        imagesizes='(max-width: 688px) 100vw, 688px' />
+    <link rel='preload' href='wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-600x89.webp' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-600x89.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-1024x152.webp 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-300x44.webp 300w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao.webp 1039w'
+        imagesizes='(max-width: 600px) 100vw, 600px' />
+    <link rel='preload' href='wp-content/uploads/2504_680ef0ff90d85-1024x576.webp' as='image'
+        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-1024x576.webp 1024w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-600x338.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-300x169.webp 300w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85.webp 1280w'
+        imagesizes='(max-width: 1020px) 100vw, 1020px' />
+
     <meta name="description" content="Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt Nam!" />
     <meta name="robots" content="nofollow, noindex" />
     <meta property="og:locale" content="vi_VN" />
@@ -51,6 +134,107 @@
     <meta name="twitter:data1" content="The Sinh Tourist" />
     <meta name="twitter:label2" content="Thời gian để đọc" />
     <meta name="twitter:data2" content="3 phút" />
+    <script type="application/ld+json"
+        class="rank-math-schema">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "Organization",
+                "@id": "https://dulichthesinh.vn/#organization",
+                "name": "Du l\u1ecbch Th\u1ebf Sinh",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://dulichthesinh.vn/#logo",
+                    "url": "https://dulichthesinh.vn/wp-content/uploads/2504_cropped-2504_dulichthesinh-favicon.png",
+                    "contentUrl": "https://dulichthesinh.vn/wp-content/uploads/2504_cropped-2504_dulichthesinh-favicon.png",
+                    "caption": "Du l\u1ecbch Th\u1ebf Sinh",
+                    "inLanguage": "vi",
+                    "width": "512",
+                    "height": "512"
+                }
+            }, {
+                "@type": "WebSite",
+                "@id": "https://dulichthesinh.vn/#website",
+                "url": "https://dulichthesinh.vn",
+                "name": "Du l\u1ecbch Th\u1ebf Sinh",
+                "alternateName": "Sinh Cafe Tour",
+                "publisher": {
+                    "@id": "https://dulichthesinh.vn/#organization"
+                },
+                "inLanguage": "vi",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://dulichthesinh.vn/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }, {
+                "@type": "ImageObject",
+                "@id": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp",
+                "url": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp",
+                "width": "875",
+                "height": "632",
+                "inLanguage": "vi"
+            }, {
+                "@type": "WebPage",
+                "@id": "https://dulichthesinh.vn/#webpage",
+                "url": "https://dulichthesinh.vn/",
+                "name": "Trang ch\u1ee7 - Du l\u1ecbch Th\u1ebf Sinh",
+                "datePublished": "2024-12-11T17:42:51+07:00",
+                "dateModified": "2025-06-02T11:18:36+07:00",
+                "about": {
+                    "@id": "https://dulichthesinh.vn/#organization"
+                },
+                "isPartOf": {
+                    "@id": "https://dulichthesinh.vn/#website"
+                },
+                "primaryImageOfPage": {
+                    "@id": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp"
+                },
+                "inLanguage": "vi"
+            }, {
+                "@type": "Person",
+                "@id": "https://dulichthesinh.vn/#author",
+                "name": "The Sinh Tourist",
+                "image": {
+                    "@type": "ImageObject",
+                    "@id": "https://secure.gravatar.com/avatar/b1d9d828b3e218d7a57e9abcfee1797974f6a199bb85d7eae8c4949de5cae892?s=96&amp;d=mm&amp;r=g",
+                    "url": "https://secure.gravatar.com/avatar/b1d9d828b3e218d7a57e9abcfee1797974f6a199bb85d7eae8c4949de5cae892?s=96&amp;d=mm&amp;r=g",
+                    "caption": "The Sinh Tourist",
+                    "inLanguage": "vi"
+                },
+                "sameAs": ["https://dulichthesinh.vn"],
+                "worksFor": {
+                    "@id": "https://dulichthesinh.vn/#organization"
+                }
+            }, {
+                "@type": "Article",
+                "headline": "Trang ch\u1ee7 - Du l\u1ecbch Th\u1ebf Sinh",
+                "datePublished": "2024-12-11T17:42:51+07:00",
+                "dateModified": "2025-06-02T11:18:36+07:00",
+                "author": {
+                    "@id": "https://dulichthesinh.vn/#author",
+                    "name": "The Sinh Tourist"
+                },
+                "publisher": {
+                    "@id": "https://dulichthesinh.vn/#organization"
+                },
+                "description": "\u0110\u01a1n v\u1ecb t\u1ed5 ch\u1ee9c tour du l\u1ecbch mi\u1ec1n B\u1eafc h\u00e0ng \u0111\u1ea7u Vi\u1ec7t Nam!",
+                "name": "Trang ch\u1ee7 - Du l\u1ecbch Th\u1ebf Sinh",
+                "@id": "https://dulichthesinh.vn/#richSnippet",
+                "isPartOf": {
+                    "@id": "https://dulichthesinh.vn/#webpage"
+                },
+                "image": {
+                    "@id": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp"
+                },
+                "inLanguage": "vi",
+                "mainEntityOfPage": {
+                    "@id": "https://dulichthesinh.vn/#webpage"
+                }
+            }]
+        }
+    </script>
+    <!-- /Plugin SEO WordPress Rank Math -->
 
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
@@ -65,6 +249,33 @@
     <link rel='stylesheet' id='flatsome-main-css'
         href='https://dulichthesinh.vn/wp-content/cache/flying-press/4264b2a55c6d.flatsome.css' type='text/css'
         media='all' />
+    <style id='flatsome-main-inline-css' type='text/css'>
+        @font-face {
+            font-display: swap;
+            font-family: "fl-icons";
+
+            src: url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.19.15);
+            src:
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.19.15) format("embedded-opentype"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.19.15) format("woff2"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.19.15) format("truetype"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.19.15) format("woff"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.19.15#fl-icons) format("svg");
+        }
+    </style>
+    <link rel='stylesheet' id='flatsome-shop-css'
+        href='https://dulichthesinh.vn/wp-content/cache/flying-press/1cb9f4eac993.flatsome-shop.css' type='text/css'
+        media='all' />
+    <script type="text/javascript" src="https://dulichthesinh.vn/wp-includes/js/jquery/jquery.min.js?ver=826eb77e86b0"
+        id="jquery-core-js" defer></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=ef56117d1bb5"
+        id="jquery-blockui-js" data-wp-strategy="defer" defer></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=691a1e43450e"
+        id="js-cookie-js" data-wp-strategy="defer" defer></script>
+    <link rel="https://api.w.org/" href="https://dulichthesinh.vn/wp-json/" />
+    <link rel="alternate" title="JSON" type="application/json" href="https://dulichthesinh.vn/wp-json/wp/v2/pages/52" />
     <meta name="theme-color" content="#1365ac" />
 
     <!-- Google Tag Manager -->
@@ -382,6 +593,8 @@
     <a class="skip-link screen-reader-text" href="#main">Bỏ qua nội dung</a>
 
     <div id="wrapper">
+
+
         <header id="header" class="header has-sticky sticky-shrink">
             <div class="header-wrapper">
                 <div id="top-bar" class="header-top nav-dark flex-has-center">
@@ -431,14 +644,22 @@
                 </div>
                 <div id="masthead" class="header-main ">
                     <div class="header-inner flex-row container logo-left medium-logo-left" role="navigation">
+
                         <!-- Logo -->
                         <div id="logo" class="flex-col logo">
 
                             <!-- Header logo -->
-                            <a href="/" title="Du lịch Thế Sinh" rel="home">
+                            <a href="https://dulichthesinh.vn/" title="Du lịch Thế Sinh" rel="home">
                                 <img width="800" height="533"
-                                    src="{{ asset('storage/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png') }}"
-                                    class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy" /></a>
+                                    src="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png"
+                                    class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
+                                    fetchpriority="low"
+                                    srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png 800w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-600x400.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-300x200.png 300w"
+                                    sizes="auto" /><img width="800" height="533"
+                                    src="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png"
+                                    class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low"
+                                    srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png 800w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-600x400.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-300x200.png 300w"
+                                    sizes="auto" /></a>
                         </div>
 
                         <!-- Mobile Left Elements -->
@@ -448,43 +669,42 @@
                         </div>
 
                         <!-- Left Elements -->
-                        <div class="flex-col hide-for-medium flex-left flex-grow">
+                        <div class="flex-col hide-for-medium flex-left
+            flex-grow">
                             <ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-spacing-medium">
                             </ul>
                         </div>
+
                         <!-- Right Elements -->
                         <div class="flex-col hide-for-medium flex-right">
                             <ul class="header-nav header-nav-main nav nav-right  nav-size-medium nav-spacing-medium">
                                 @foreach ($categoriesNav as $category)
+                                @if ($category->categoryChild->isEmpty())
+                                <li id="menu-item-1494"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1494 menu-item-design-default">
+                                    <a href="/{{ $category->slug }}" class="nav-top-link">{{ $category->name }}</a>
+                                </li>
+                                @else
                                 <li id="menu-item-1497"
                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1497 menu-item-design-default has-dropdown">
-                                    <a href="https://dulichthesinh.vn/ninh-binh/" class="nav-top-link"
-                                        aria-expanded="false" aria-haspopup="menu">{{ $category->name }}
-                                        @if ($category->categoryChild->isEmpty())
-                                        @else
-                                        <i
-                                            class="icon-angle-down"></i>
-                                        @endif
-                                    </a>
+                                    <a href="/{{ $category->slug }}" class="nav-top-link"
+                                        aria-expanded="false" aria-haspopup="menu">{{ $category->name }}<i
+                                            class="icon-angle-down"></i></a>
                                     <ul class="sub-menu nav-dropdown nav-dropdown-default">
+                                        @foreach ($category->categoryChild as $categoryChild)
                                         <li id="menu-item-1826"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1826">
-                                            <a href="https://dulichthesinh.vn/ninh-binh/ninh-binh-1-ngay/">Ninh Bình 1
-                                                Ngày</a>
+                                            <a href="/{{ $category->slug }}/{{ $categoryChild->slug }}">{{ $categoryChild->name }}</a>
                                         </li>
-                                        <li id="menu-item-1827"
-                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1827">
-                                            <a href="https://dulichthesinh.vn/ninh-binh/ninh-binh-2-ngay/">Ninh Bình 2
-                                                Ngày</a>
-                                        </li>
-                                        <li id="menu-item-1828"
-                                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1828">
-                                            <a href="https://dulichthesinh.vn/ninh-binh/ninh-binh-lien-tuyen/">Ninh Bình
-                                                Liên Tuyến</a>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
+                                @endif
                                 @endforeach
+                                <li class="header-divider"></li>
+                                <li class="html custom html_nav_position_text">
+                                    <div class="gtranslate_wrapper" id="gt-wrapper-12967469"></div>
+                                </li>
                             </ul>
                         </div>
 
@@ -502,19 +722,15 @@
                                     <div id="search-lightbox" class="mfp-hide dark text-center">
                                         <div class="searchform-wrapper ux-search-box relative is-large">
                                             <form role="search" method="get" class="searchform"
-                                                action="https://dulichthesinh.vn/">
+                                                action="/">
                                                 <div class="flex-row relative">
                                                     <div class="flex-col search-form-categories">
                                                         <select class="search_categories resize-select mb-0"
                                                             name="product_cat">
                                                             <option value="" selected='selected'>Tất cả</option>
-                                                            <option value="chua-phan-loai">Chưa phân loại</option>
-                                                            <option value="dong-tay-bac">Đông Tây Bắc</option>
-                                                            <option value="ha-giang">Hà Giang</option>
-                                                            <option value="ha-long">Hạ Long</option>
-                                                            <option value="lien-tuyen">Liên Tuyến</option>
-                                                            <option value="ninh-binh">Ninh Bình</option>
-                                                            <option value="sa-pa">Sa Pa</option>
+                                                            @foreach ($categoriesNav as $category)
+                                                            <option value="{{ $category->slug }}">{{ $category->name }}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="flex-col flex-grow">
@@ -561,9 +777,8 @@
 
 
         <main id="main" class="">
+
             @yield('content')
-
-
 
         </main>
 
@@ -572,8 +787,6 @@
 
             <section class="section hide-for-small" id="section_456667461">
                 <div class="section-bg fill">
-
-
 
                 </div>
 
@@ -590,29 +803,22 @@
 
 
 
-                                <h3><span style="font-size: 80%;"><strong>CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DỊCH VỤ
-                                            DU LỊCH SINH CAFE</strong></span></h3>
+                                <h3><span style="font-size: 80%;"><strong>{{ $address->name }}</strong></span></h3>
                                 <p><span style="font-size: 90%;"><strong><i class="far fa-building"></i> Trụ sở
-                                            chính</strong>: <a
-                                            href="https://www.google.com/maps/place/The+Sinh+Tourist/@21.0338691,105.8473622,15z/data=!4m5!3m4!1s0x0:0xce4d71ea0684154c!8m2!3d21.0338691!4d105.8473622">Số
-                                            22 Bát Đàn, Phường Hàng Bồ, Quận Hoàn Kiếm, Hà Nội.</a></span><br /><span
+                                            chính</strong>: <a>{{ $address->address }}.</a></span><br /><span
                                         style="font-size: 90%;"><strong><i class="fas fa-phone-alt"></i> Điện
-                                            thoại</strong>: <a href="tel:02485885333">0248 5885 333</a><br /><i
-                                            class="fas fa-mobile-alt"></i> <strong>Hotline</strong>: <a
-                                            href="tel:0849048888">084.904.8888</a></span><br /><span
+                                            thoại</strong>: <a href="tel:{{ $address->phone }}">{{ $address->phone }}</a><br />
+                                    </span><span
                                         style="font-size: 90%;"><strong><i class="fas fa-globe"></i> Website</strong>:
                                         <a
-                                            href="https://dulichthesinh.vn/">https://dulichthesinh.vn</a></span><br /><span
+                                            href="https://sinhtravel.com.vn/">https://sinhtravel.com.vn</a></span><br /><span
                                         style="font-size: 90%;"><strong><i class="far fa-envelope"></i> Email</strong>:
-                                        <a
-                                            href="https://dulichthesinh.vn/cdn-cgi/l/email-protection#f3879b96809a9d9b879c86819a80879b929d9c9ac2cacac0b3949e929a9fdd909c9e"><span
-                                                class="__cf_email__"
-                                                data-cfemail="4034282533292e28342f353229333428212e2f297179797300272d21292c6e232f2d">[email&#160;protected]</span></a></span>
+                                        <a><span>{{ $address->email }}</span></a></span>
                                 </p>
                                 <h3><span style="font-size: 65%"><strong>GIẤY PHÉP ĐĂNG KÝ CHỨNG NHẬN KINH
                                             DOANH</strong></span></h3>
                                 <p><span style="font-size: 90%"><strong>Số đăng ký/MST</strong>:
-                                        0110815527<br /></span><span style="font-size: 12.96px">Cấp bởi Sở Kế Hoạch
+                                        0111171674<br /></span><span style="font-size: 12.96px">Cấp bởi Sở Kế Hoạch
                                         &amp; Đầu Tư Thành Phố Hà Nội</span></p>
 
 
@@ -653,13 +859,8 @@
 
                             </div>
                         </div>
-
-
-
                         <div id="col-1742795861" class="col medium-2 small-6 large-2">
                             <div class="col-inner">
-
-
 
                                 <h3><span style="font-size: 65%"><strong>CHỨNG NHẬN</strong></span></h3>
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_277771718">
@@ -699,14 +900,8 @@
 
                             </div>
                         </div>
-
-
-
                         <div id="col-1191868968" class="col medium-3 small-6 large-3">
                             <div class="col-inner">
-
-
-
                                 <h3><span style="font-size: 65%;"><strong>HOTLINE ĐẶT TOUR</strong></span></h3>
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1083541475">
                                     <div class="img-inner dark">
@@ -725,32 +920,16 @@
                                     </style>
                                 </div>
 
-
-
                             </div>
                         </div>
-
-
-
                         <div id="col-1805330945" class="col small-6 large-12">
                             <div class="col-inner">
-
-
-
-                                <p><span style="font-size: 90%"><em>Copyright © 2024 <strong>DU LỊCH THẾ SINH
-                                                CAFE</strong>. Ghi rõ nguồn "<strong>dulichthesinh.vn</strong>" khi sử
+                                <p><span style="font-size: 90%"><em>Copyright © 2024 <strong>DU LỊCH VÀ DỊCH VỤ THẾ SINH CAFE TOURIST</strong>. Ghi rõ nguồn "<strong>sinhtravel.com.vn</strong>" khi sử
                                             dụng thông tin từ website này.</em></span></p>
-
                             </div>
                         </div>
-
-
-
                     </div>
-
                 </div>
-
-
                 <style>
                     #section_456667461 {
                         padding-top: 30px;
@@ -760,21 +939,11 @@
                 </style>
             </section>
 
-
             <section class="section show-for-small" id="section_954813435">
                 <div class="section-bg fill">
-
-
-
                 </div>
-
-
-
                 <div class="section-content relative">
-
-
                     <div class="row row-collapse" id="row-241224082">
-
 
                         <div id="col-697381432" class="col small-12 large-12">
                             <div class="col-inner">
@@ -835,8 +1004,6 @@
 
                         <div id="col-1684812485" class="col medium-5 small-12 large-5">
                             <div class="col-inner">
-
-
 
                                 <h3><span style="font-size: 100%;"><strong>CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DỊCH VỤ
                                             DU LỊCH SINH CAFE</strong></span></h3>
@@ -1049,12 +1216,7 @@
                             }
                         </style>
                     </div>
-
-
-
                 </div>
-
-
                 <style>
                     #section_954813435 {
                         padding-top: 0px;
@@ -1070,7 +1232,6 @@
                     }
                 </style>
             </section>
-
             <div class="absolute-footer dark medium-text-center small-text-center">
                 <div class="container clearfix">
 
@@ -1136,11 +1297,7 @@
     </div>
 
     <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
-
-
         <div class="sidebar-menu no-scrollbar ">
-
-
             <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
                 <li class="header-search-form search-form html relative has-icon">
                     <div class="header-search-form-wrapper">
@@ -1366,13 +1523,878 @@
             <span class="btn-title">Zalo</span>
         </a>
         <a href="https://m.me/100057498496081" class="btn btn-messenger">
-            <img src="{{ asset('uploads/2505_messenger-2025.svg') }}" alt="Messenger"
+            <img src="https://dulichthesinh.vn/wp-content/uploads/2505_messenger-2025.svg" alt="Messenger"
                 class="btn-icon" width="1000" height="999" loading="lazy" fetchpriority="low">
             <span class="btn-title">Messenger</span>
         </a>
     </div>
 
+    <script type='text/javascript' defer
+        src="data:text/javascript,%28function%20%28%29%20%7B%0A%09%09%09var%20c%20%3D%20document.body.className%3B%0A%09%09%09c%20%3D%20c.replace%28%2Fwoocommerce-no-js%2F%2C%20%27woocommerce-js%27%29%3B%0A%09%09%09document.body.className%20%3D%20c%3B%0A%09%09%7D%29%28%29%3B"></script>
+    <link rel='stylesheet' id='wc-blocks-style-css'
+        href='https://dulichthesinh.vn/wp-content/cache/flying-press/3c68ad9b345b.wc-blocks.css' type='text/css'
+        media='all' />
+    <style id='wp-block-paragraph-inline-css' type='text/css'>
+        .is-small-text {
+            font-size: .875em
+        }
 
+        .is-regular-text {
+            font-size: 1em
+        }
+
+        .is-large-text {
+            font-size: 2.25em
+        }
+
+        .is-larger-text {
+            font-size: 3em
+        }
+
+        .has-drop-cap:not(:focus):first-letter {
+            float: left;
+            font-size: 8.4em;
+            font-style: normal;
+            font-weight: 100;
+            line-height: .68;
+            margin: .05em .1em 0 0;
+            text-transform: uppercase
+        }
+
+        body.rtl .has-drop-cap:not(:focus):first-letter {
+            float: none;
+            margin-left: .1em
+        }
+
+        p.has-drop-cap.has-background {
+            overflow: hidden
+        }
+
+        :root :where(p.has-background) {
+            padding: 1.25em 2.375em
+        }
+
+        :where(p.has-text-color:not(.has-link-color)) a {
+            color: inherit
+        }
+
+        p.has-text-align-left[style*="writing-mode:vertical-lr"],
+        p.has-text-align-right[style*="writing-mode:vertical-rl"] {
+            rotate: 180deg
+        }
+    </style>
+    <style id='wp-block-heading-inline-css' type='text/css'>
+        h1.has-background,
+        h2.has-background,
+        h3.has-background,
+        h4.has-background,
+        h5.has-background,
+        h6.has-background {
+            padding: 1.25em 2.375em
+        }
+
+        h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),
+        h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),
+        h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),
+        h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),
+        h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),
+        h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),
+        h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),
+        h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),
+        h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),
+        h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),
+        h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),
+        h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]) {
+            rotate: 180deg
+        }
+    </style>
+    <style id='wp-block-table-inline-css' type='text/css'>
+        .wp-block-table {
+            overflow-x: auto
+        }
+
+        .wp-block-table table {
+            border-collapse: collapse;
+            width: 100%
+        }
+
+        .wp-block-table thead {
+            border-bottom: 3px solid
+        }
+
+        .wp-block-table tfoot {
+            border-top: 3px solid
+        }
+
+        .wp-block-table td,
+        .wp-block-table th {
+            border: 1px solid;
+            padding: .5em
+        }
+
+        .wp-block-table .has-fixed-layout {
+            table-layout: fixed;
+            width: 100%
+        }
+
+        .wp-block-table .has-fixed-layout td,
+        .wp-block-table .has-fixed-layout th {
+            word-break: break-word
+        }
+
+        .wp-block-table.aligncenter,
+        .wp-block-table.alignleft,
+        .wp-block-table.alignright {
+            display: table;
+            width: auto
+        }
+
+        .wp-block-table.aligncenter td,
+        .wp-block-table.aligncenter th,
+        .wp-block-table.alignleft td,
+        .wp-block-table.alignleft th,
+        .wp-block-table.alignright td,
+        .wp-block-table.alignright th {
+            word-break: break-word
+        }
+
+        .wp-block-table .has-subtle-light-gray-background-color {
+            background-color: #f3f4f5
+        }
+
+        .wp-block-table .has-subtle-pale-green-background-color {
+            background-color: #e9fbe5
+        }
+
+        .wp-block-table .has-subtle-pale-blue-background-color {
+            background-color: #e7f5fe
+        }
+
+        .wp-block-table .has-subtle-pale-pink-background-color {
+            background-color: #fcf0ef
+        }
+
+        .wp-block-table.is-style-stripes {
+            background-color: initial;
+            border-bottom: 1px solid #f0f0f0;
+            border-collapse: inherit;
+            border-spacing: 0
+        }
+
+        .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+            background-color: #f0f0f0
+        }
+
+        .wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd) {
+            background-color: #f3f4f5
+        }
+
+        .wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd) {
+            background-color: #e9fbe5
+        }
+
+        .wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd) {
+            background-color: #e7f5fe
+        }
+
+        .wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd) {
+            background-color: #fcf0ef
+        }
+
+        .wp-block-table.is-style-stripes td,
+        .wp-block-table.is-style-stripes th {
+            border-color: #0000
+        }
+
+        .wp-block-table .has-border-color td,
+        .wp-block-table .has-border-color th,
+        .wp-block-table .has-border-color tr,
+        .wp-block-table .has-border-color>* {
+            border-color: inherit
+        }
+
+        .wp-block-table table[style*=border-top-color] tr:first-child,
+        .wp-block-table table[style*=border-top-color] tr:first-child td,
+        .wp-block-table table[style*=border-top-color] tr:first-child th,
+        .wp-block-table table[style*=border-top-color]>*,
+        .wp-block-table table[style*=border-top-color]>* td,
+        .wp-block-table table[style*=border-top-color]>* th {
+            border-top-color: inherit
+        }
+
+        .wp-block-table table[style*=border-top-color] tr:not(:first-child) {
+            border-top-color: initial
+        }
+
+        .wp-block-table table[style*=border-right-color] td:last-child,
+        .wp-block-table table[style*=border-right-color] th,
+        .wp-block-table table[style*=border-right-color] tr,
+        .wp-block-table table[style*=border-right-color]>* {
+            border-right-color: inherit
+        }
+
+        .wp-block-table table[style*=border-bottom-color] tr:last-child,
+        .wp-block-table table[style*=border-bottom-color] tr:last-child td,
+        .wp-block-table table[style*=border-bottom-color] tr:last-child th,
+        .wp-block-table table[style*=border-bottom-color]>*,
+        .wp-block-table table[style*=border-bottom-color]>* td,
+        .wp-block-table table[style*=border-bottom-color]>* th {
+            border-bottom-color: inherit
+        }
+
+        .wp-block-table table[style*=border-bottom-color] tr:not(:last-child) {
+            border-bottom-color: initial
+        }
+
+        .wp-block-table table[style*=border-left-color] td:first-child,
+        .wp-block-table table[style*=border-left-color] th,
+        .wp-block-table table[style*=border-left-color] tr,
+        .wp-block-table table[style*=border-left-color]>* {
+            border-left-color: inherit
+        }
+
+        .wp-block-table table[style*=border-style] td,
+        .wp-block-table table[style*=border-style] th,
+        .wp-block-table table[style*=border-style] tr,
+        .wp-block-table table[style*=border-style]>* {
+            border-style: inherit
+        }
+
+        .wp-block-table table[style*=border-width] td,
+        .wp-block-table table[style*=border-width] th,
+        .wp-block-table table[style*=border-width] tr,
+        .wp-block-table table[style*=border-width]>* {
+            border-style: inherit;
+            border-width: inherit
+        }
+    </style>
+    <style id='global-styles-inline-css' type='text/css'>
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--color--primary: #0f4c9d;
+            --wp--preset--color--secondary: #4ab4e4;
+            --wp--preset--color--success: #7a9c59;
+            --wp--preset--color--alert: #ff5b00;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(body) {
+            margin: 0;
+        }
+
+        .wp-site-blocks>.alignleft {
+            float: left;
+            margin-right: 2em;
+        }
+
+        .wp-site-blocks>.alignright {
+            float: right;
+            margin-left: 2em;
+        }
+
+        .wp-site-blocks>.aligncenter {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        body {
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+        }
+
+        a:where(:not(.wp-element-button)) {
+            text-decoration: none;
+        }
+
+        :root :where(.wp-element-button, .wp-block-button__link) {
+            background-color: #32373c;
+            border-width: 0;
+            color: #fff;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding: calc(0.667em + 2px) calc(1.333em + 2px);
+            text-decoration: none;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-primary-color {
+            color: var(--wp--preset--color--primary) !important;
+        }
+
+        .has-secondary-color {
+            color: var(--wp--preset--color--secondary) !important;
+        }
+
+        .has-success-color {
+            color: var(--wp--preset--color--success) !important;
+        }
+
+        .has-alert-color {
+            color: var(--wp--preset--color--alert) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-primary-background-color {
+            background-color: var(--wp--preset--color--primary) !important;
+        }
+
+        .has-secondary-background-color {
+            background-color: var(--wp--preset--color--secondary) !important;
+        }
+
+        .has-success-background-color {
+            background-color: var(--wp--preset--color--success) !important;
+        }
+
+        .has-alert-background-color {
+            background-color: var(--wp--preset--color--alert) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-primary-border-color {
+            border-color: var(--wp--preset--color--primary) !important;
+        }
+
+        .has-secondary-border-color {
+            border-color: var(--wp--preset--color--secondary) !important;
+        }
+
+        .has-success-border-color {
+            border-color: var(--wp--preset--color--success) !important;
+        }
+
+        .has-alert-border-color {
+            border-color: var(--wp--preset--color--alert) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+    <script type="text/javascript" id="woocommerce-js-extra" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20woocommerce_params%20%3D%20%7B%22ajax_url%22%3A%22%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22wc_ajax_url%22%3A%22%5C%2F%3Fwc-ajax%3D%25%25endpoint%25%25%22%2C%22i18n_password_show%22%3A%22Hi%5Cu1ec3n%20th%5Cu1ecb%20m%5Cu1eadt%20kh%5Cu1ea9u%22%2C%22i18n_password_hide%22%3A%22%5Cu1ea8n%20m%5Cu1eadt%20kh%5Cu1ea9u%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=69718a71ff04"
+        id="woocommerce-js" data-wp-strategy="defer" defer></script>
+    <script type="text/javascript" src="https://dulichthesinh.vn/wp-includes/js/hoverIntent.min.js?ver=8c0498e2f1f7"
+        id="hoverIntent-js" defer></script>
+    <script type="text/javascript" id="flatsome-js-js-extra" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20flatsomeVars%20%3D%20%7B%22theme%22%3A%7B%22version%22%3A%223.19.15%22%7D%2C%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22rtl%22%3A%22%22%2C%22sticky_height%22%3A%2270%22%2C%22stickyHeaderHeight%22%3A%220%22%2C%22scrollPaddingTop%22%3A%220%22%2C%22assets_url%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-content%5C%2Fthemes%5C%2Fflatsome%5C%2Fassets%5C%2F%22%2C%22lightbox%22%3A%7B%22close_markup%22%3A%22%3Cbutton%20title%3D%5C%22%25title%25%5C%22%20type%3D%5C%22button%5C%22%20class%3D%5C%22mfp-close%5C%22%3E%3Csvg%20xmlns%3D%5C%22http%3A%5C%2F%5C%2Fwww.w3.org%5C%2F2000%5C%2Fsvg%5C%22%20width%3D%5C%2228%5C%22%20height%3D%5C%2228%5C%22%20viewBox%3D%5C%220%200%2024%2024%5C%22%20fill%3D%5C%22none%5C%22%20stroke%3D%5C%22currentColor%5C%22%20stroke-width%3D%5C%222%5C%22%20stroke-linecap%3D%5C%22round%5C%22%20stroke-linejoin%3D%5C%22round%5C%22%20class%3D%5C%22feather%20feather-x%5C%22%3E%3Cline%20x1%3D%5C%2218%5C%22%20y1%3D%5C%226%5C%22%20x2%3D%5C%226%5C%22%20y2%3D%5C%2218%5C%22%3E%3C%5C%2Fline%3E%3Cline%20x1%3D%5C%226%5C%22%20y1%3D%5C%226%5C%22%20x2%3D%5C%2218%5C%22%20y2%3D%5C%2218%5C%22%3E%3C%5C%2Fline%3E%3C%5C%2Fsvg%3E%3C%5C%2Fbutton%3E%22%2C%22close_btn_inside%22%3Afalse%7D%2C%22user%22%3A%7B%22can_edit_pages%22%3Afalse%7D%2C%22i18n%22%3A%7B%22mainMenu%22%3A%22Menu%20ch%5Cu00ednh%22%2C%22toggleButton%22%3A%22Chuy%5Cu1ec3n%20%5Cu0111%5Cu1ed5i%22%7D%2C%22options%22%3A%7B%22cookie_notice_version%22%3A%221%22%2C%22swatches_layout%22%3Afalse%2C%22swatches_disable_deselect%22%3Afalse%2C%22swatches_box_select_event%22%3Afalse%2C%22swatches_box_behavior_selected%22%3Afalse%2C%22swatches_box_update_urls%22%3A%221%22%2C%22swatches_box_reset%22%3Afalse%2C%22swatches_box_reset_limited%22%3Afalse%2C%22swatches_box_reset_extent%22%3Afalse%2C%22swatches_box_reset_time%22%3A300%2C%22search_result_latency%22%3A%220%22%7D%2C%22is_mini_cart_reveal%22%3A%221%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/themes/flatsome/assets/js/flatsome.js?ver=ed03f8cb80df"
+        id="flatsome-js-js" defer></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=3a8f98a00b53"
+        id="flatsome-theme-woocommerce-js-js" defer></script>
+    <script type="text/javascript" id="gt_widget_script_12967469-js-before" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2712967469%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-12967469%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script src="https://dulichthesinh.vn/wp-content/plugins/gtranslate/js/fn.js?ver=9c5a190da378" data-no-optimize="1"
+        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="dulichthesinh.vn" data-gt-widget-id="12967469"
+        defer></script>
+    <script type="text/javascript" id="gt_widget_script_38227772-js-before" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2738227772%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-38227772%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script src="https://dulichthesinh.vn/wp-content/plugins/gtranslate/js/fn.js?ver=9c5a190da378" data-no-optimize="1"
+        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="dulichthesinh.vn" data-gt-widget-id="38227772"
+        defer></script>
+
+    <script>
+        ! function(e) {
+            "function" == typeof define && define.amd ? define(e) : e()
+        }(function() {
+            ! function() {
+                var e, t = !1,
+                    n = !1,
+                    r = Array.from(document.querySelectorAll("script[data-loading-method][data-src]")),
+                    o = r.filter(function(e) {
+                        return "idle" === e.dataset.loadingMethod
+                    }),
+                    a = r.filter(function(e) {
+                        return "user-interaction" === e.dataset.loadingMethod
+                    }),
+                    i = document.querySelectorAll("link[data-href]");
+                if (r.length || i.length) {
+                    var c = ["readystatechange", "DOMContentLoaded", "load"],
+                        u = {
+                            readystatechange: [],
+                            DOMContentLoaded: [],
+                            load: []
+                        },
+                        l = !1,
+                        d = EventTarget.prototype.addEventListener;
+                    EventTarget.prototype.addEventListener = function(e, t, n) {
+                        if (!l || !c.includes(e)) return d.call(this, e, t, n);
+                        u[e].push({
+                            target: this,
+                            listener: t,
+                            options: n
+                        })
+                    };
+                    var s = [{
+                            event: "click",
+                            target: document
+                        }, {
+                            event: "mousemove",
+                            target: document
+                        }, {
+                            event: "keydown",
+                            target: document
+                        }, {
+                            event: "touchstart",
+                            target: document
+                        }, {
+                            event: "touchmove",
+                            target: document
+                        }, {
+                            event: "scroll",
+                            target: window
+                        }],
+                        f = function(e) {
+                            s.forEach(function(t) {
+                                return t.target.addEventListener(t.event, e, {
+                                    passive: !0
+                                })
+                            })
+                        },
+                        v = function(e) {
+                            s.forEach(function(t) {
+                                return t.target.removeEventListener(t.event, e)
+                            })
+                        };
+                    window.requestIdleCallback = window.requestIdleCallback || function(e) {
+                        return setTimeout(function() {
+                            var t = Date.now();
+                            e({
+                                didTimeout: !1,
+                                timeRemaining: function() {
+                                    return Math.max(0, 50 - (Date.now() - t))
+                                }
+                            })
+                        }, 1)
+                    };
+                    var g = [],
+                        h = function(e) {
+                            return g.push(e)
+                        };
+                    document.addEventListener("click", h, {
+                        passive: !0
+                    }), o.length && window.requestIdleCallback(function() {
+                        return m(o)
+                    }), a.length && (f(y), e = setTimeout(y, 5e3)), f(function e() {
+                        i.forEach(function(e) {
+                            e.href = e.getAttribute("data-href"), e.removeAttribute("data-href")
+                        }), v(e)
+                    })
+                }
+
+                function m(e) {
+                    e.forEach(function(e) {
+                            var t = e.getAttribute("data-src");
+                            if (!t.includes("data:")) {
+                                var n = document.createElement("link");
+                                n.rel = "preload", n.as = "script", n.href = t, document.head.appendChild(n)
+                            }
+                        }),
+                        function r(o) {
+                            if (o > e.length - 1) n || (window.jQuery && t && window.jQuery.holdReady(!1), c.forEach(function(e) {
+                                u[e].forEach(function(t) {
+                                    var n = t.target,
+                                        r = t.listener;
+                                    try {
+                                        var o = new Event(e, {
+                                            bubbles: !0,
+                                            cancelable: !0
+                                        });
+                                        r.call(n, o)
+                                    } catch (t) {
+                                        console.error("Error executing " + e + " listener:", t)
+                                    }
+                                }), u[e].length = 0
+                            }), document.removeEventListener("click", h), g.forEach(function(e) {
+                                var t;
+                                return null == (t = e.target) ? void 0 : t.dispatchEvent(new MouseEvent("click", {
+                                    bubbles: !0,
+                                    cancelable: !0,
+                                    clientX: e.clientX,
+                                    clientY: e.clientY
+                                }))
+                            }), g.length = 0, n = !0);
+                            else {
+                                var a = e[o].getAttribute("data-src");
+                                window.jQuery && "function" == typeof window.jQuery.holdReady && !t && (window.jQuery.holdReady(!0), t = !0), window.requestIdleCallback(function() {
+                                    var e = document.createElement("script");
+                                    l = !0;
+                                    var t = setTimeout(function() {
+                                        l && (l = !1, r(o + 1))
+                                    }, 1500);
+                                    e.onload = function() {
+                                        clearTimeout(t), l = !1, r(o + 1)
+                                    }, e.onerror = function() {
+                                        clearTimeout(t), l = !1, r(o + 1)
+                                    }, e.src = a, document.head.appendChild(e)
+                                })
+                            }
+                        }(0)
+                }
+
+                function y() {
+                    e && clearTimeout(e), v(y), m(a)
+                }
+            }(), [{
+                selector: "video[data-lazy-src],iframe[data-lazy-src]",
+                callback: function(e) {
+                    return function(t) {
+                        if (t.isIntersecting) {
+                            var n = t.target.getAttribute("data-lazy-src");
+                            t.target.setAttribute("src", n), e.unobserve(t.target)
+                        }
+                    }
+                }
+            }, {
+                selector: ".flying-press-lazy-bg",
+                callback: function(e) {
+                    return function(t) {
+                        t.isIntersecting && (t.target.classList.remove("flying-press-lazy-bg"), e.unobserve(t.target))
+                    }
+                }
+            }, {
+                selector: '[style*="content-visibility"]',
+                callback: function(e) {
+                    return function(t) {
+                        t.isIntersecting && (t.target.style.removeProperty("content-visibility"), t.target.style.removeProperty("contain-intrinsic-size"), e.unobserve(t.target))
+                    }
+                }
+            }].forEach(function(e) {
+                var t = e.selector,
+                    n = e.callback,
+                    r = new IntersectionObserver(function(e) {
+                        e.forEach(n(r))
+                    }, {
+                        rootMargin: "300px"
+                    });
+                document.querySelectorAll(t).forEach(function(e) {
+                    return r.observe(e)
+                })
+            })
+        });
+    </script>
 </body>
 
 <!-- Mirrored from dulichthesinh.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 14:45:02 GMT -->
