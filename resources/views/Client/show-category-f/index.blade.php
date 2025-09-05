@@ -84,57 +84,6 @@
 	<meta name="twitter:image" content="https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp" />
 	<meta name="twitter:label1" content="Sản phẩm" />
 	<meta name="twitter:data1" content="11" />
-	<script type="application/ld+json" class="rank-math-schema">
-		{
-			"@context": "https://schema.org",
-			"@graph": [{
-				"@type": "Organization",
-				"@id": "https://dulichthesinh.vn/#organization",
-				"name": "Du l\u1ecbch Th\u1ebf Sinh"
-			}, {
-				"@type": "WebSite",
-				"@id": "https://dulichthesinh.vn/#website",
-				"url": "https://dulichthesinh.vn",
-				"name": "Du l\u1ecbch Th\u1ebf Sinh",
-				"alternateName": "Sinh Cafe Tour",
-				"publisher": {
-					"@id": "https://dulichthesinh.vn/#organization"
-				},
-				"inLanguage": "vi"
-			}, {
-				"@type": "BreadcrumbList",
-				"@id": "https://dulichthesinh.vn/ha-giang/#breadcrumb",
-				"itemListElement": [{
-					"@type": "ListItem",
-					"position": "1",
-					"item": {
-						"@id": "https://dulichthesinh.vn",
-						"name": "The Sinh Tourist"
-					}
-				}, {
-					"@type": "ListItem",
-					"position": "2",
-					"item": {
-						"@id": "https://dulichthesinh.vn/ha-giang/",
-						"name": "H\u00e0 Giang"
-					}
-				}]
-			}, {
-				"@type": "CollectionPage",
-				"@id": "https://dulichthesinh.vn/ha-giang/#webpage",
-				"url": "https://dulichthesinh.vn/ha-giang/",
-				"name": "H\u00e0 Giang - Du l\u1ecbch Th\u1ebf Sinh",
-				"isPartOf": {
-					"@id": "https://dulichthesinh.vn/#website"
-				},
-				"inLanguage": "vi",
-				"breadcrumb": {
-					"@id": "https://dulichthesinh.vn/ha-giang/#breadcrumb"
-				}
-			}]
-		}
-	</script>
-	<!-- /Plugin SEO WordPress Rank Math -->
 
 	<link rel='stylesheet' id='asenha-turnstile-main-css' href='https://dulichthesinh.vn/wp-content/cache/flying-press/8963422aaa25.turnstile.css' type='text/css' media='all' />
 	<style id='woocommerce-inline-inline-css' type='text/css'>

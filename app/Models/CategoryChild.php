@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryChild extends Model
 {
     use HasFactory;
+
+    protected $table = 'category_childs';
+    
 }
