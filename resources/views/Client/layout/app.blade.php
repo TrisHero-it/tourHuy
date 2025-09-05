@@ -1216,12 +1216,7 @@
                             }
                         </style>
                     </div>
-
-
-
                 </div>
-
-
                 <style>
                     #section_954813435 {
                         padding-top: 0px;
@@ -1237,7 +1232,6 @@
                     }
                 </style>
             </section>
-
             <div class="absolute-footer dark medium-text-center small-text-center">
                 <div class="container clearfix">
 
@@ -1303,11 +1297,7 @@
     </div>
 
     <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
-
-
         <div class="sidebar-menu no-scrollbar ">
-
-
             <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
                 <li class="header-search-form search-form html relative has-icon">
                     <div class="header-search-form-wrapper">
