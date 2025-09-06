@@ -43,7 +43,7 @@
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
-    <title>Trang chủ - Du lịch Thế Sinh</title>
+    <title>@yield('title', 'Trang chủ - Du lịch Thế Sinh')</title>
     <style>
         .flying-press-lazy-bg {
             background-image: none !important;

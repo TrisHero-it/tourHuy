@@ -23,20 +23,20 @@
 		@foreach ($categoriesBanner as $category)
 		<div class="product-category col">
 			<div class="col-inner">
-				<a aria-label="Truy cập danh mục sản phẩm Ninh Bình"
-					href="/ninh-binh/">
+				<a aria-label="{{ $category->name }}"
+					href="/{{ $category->slug }}">
 					<div class="box box-category has-hover box-normal ">
 						<div class="box-image">
 							<div class="image-cover" style="padding-top:100%;">
 								<img decoding="async"
 									src="{{ asset($category->image) }}"
-									alt="Ninh Bình" width="300" height="300" loading="lazy" />
+									alt="" width="300" height="300" loading="lazy" />
 							</div>
 						</div>
 						<div class="box-text text-center">
 							<div class="box-text-inner">
 								<h5 class="uppercase header-title">
-									Ninh Bình </h5>
+									{{ $category->name }} </h5>
 								<p class="is-xsmall uppercase count ">
 									{{ $category->countTour }} Sản phẩm
 								</p>
@@ -805,8 +805,6 @@
 										<p class="from_the_blog_excerpt ">
 											Trải nghiệm vùng Tây Bắc hùng vĩ, nên thơ với kinh nghiệm du
 											lịch Sapa tự túc cùng MoMo,[...đọc tiếp] </p>
-
-
 
 									</div>
 								</div>
