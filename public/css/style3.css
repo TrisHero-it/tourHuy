@@ -1,0 +1,152 @@
+.contact {
+    width: 29.1%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact img {
+    width: 24px;
+    height: 24px;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    word-break: break-word;
+}
+
+.center-trader {
+    width: 83%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.infor {
+    width: 49%;
+    position: relative;
+}
+
+.info {
+    width: 100%;
+    height: auto;
+}
+
+.check-trader {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 100px;
+    padding: 0px 24px;
+}
+
+.infor:not(:first-child) {
+    margin-left: 24px;
+}
+.check-trader p {
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.icon-edit {
+    position: absolute;
+    top: 10px;
+    right: 12px
+}
+
+#submit1,
+#submit2,
+#submit3 {
+    display: none;
+}
+
+@media screen and (max-width:1382px) {
+    .contact {
+        width: 38.1%;
+    }
+
+    .center-trader {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .contact {
+        width: 40%;
+    }
+
+    .center-trader>div {
+        flex-wrap: wrap;
+    }
+
+    .infor {
+        width: 100%;
+    }
+
+    .infor:not(:first-child) {
+        margin-top: 28px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .contact {
+        width: 38%;
+    }
+}
+
+@media screen and (max-width:936px) {
+    .contact {
+        width: 41%;
+    }
+}
+
+@media screen and (max-width:863px) {
+    .contact {
+        width: 43%;
+    }
+}
+
+@media screen and (max-width:828px) {
+    .contact {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:790px) {
+    .contact {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width:752px) {
+    .contact {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width:724px) {
+    .contact {
+        width: 51%;
+    }
+}
+
+@media screen and (max-width:718px) {
+    .contact {
+        width: 71%;
+    }
+}
+
+
+@media screen and (max-width:503px) {
+    .contact {
+        width: 97%;
+    }
+}
