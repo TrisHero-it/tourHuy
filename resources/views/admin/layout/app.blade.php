@@ -71,7 +71,7 @@
                 </a>
                 <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
             </div>
-            <div class="navbar-content scroll-div   " id="layout-sidenav">
+            <div class="navbar-content scroll-div" id="layout-sidenav">
 
                 <ul class="nav pcoded-inner-navbar sidenav-inner">
                     <li class="nav-item pcoded-menu-caption">
@@ -83,7 +83,7 @@
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Đơn hàng</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="/admin-reports" class="">Danh sách
+                            <li class=""><a href="/admin/orders" class="">Danh sách
                                     <span class="pcoded-badge label label-danger">0</span>
                                 </a></li>
                         </ul>
@@ -94,9 +94,8 @@
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
                                     class="feather icon-box"></i></span><span class="pcoded-mtext">Danh mục</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Danh mục con</a></li>
-                            <li class=""><a href="" class="">Thêm danh mục</a></li>
+                            <li class=""><a href="/admin/categories" class="">Danh sách</a></li>
+                            <li class=""><a href="/admin/categories/create" class="">Thêm danh mục</a></li>
                         </ul>
                     </li>
 
@@ -105,9 +104,9 @@
                                     class="feather icon-layers"></i></span><span class="pcoded-mtext">Thông tin
                                 website</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Banner</a></li>
-                            <li class=""><a href="" class="">Logo</a></li>
-                            <li class=""><a href="" class="">Địa chỉ footer</a></li>
+                            <li class=""><a href="/admin/banners" class="">Banner</a></li>
+                            <li class=""><a href="/admin/logos" class="">Logo</a></li>
+                            <li class=""><a href="/admin/footers" class="">Địa chỉ footer</a></li>
                         </ul>
                     </li>
 
@@ -115,8 +114,8 @@
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
                                     class="feather icon-layers"></i></span><span class="pcoded-mtext">Tour</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Thêm tour</a></li>
+                            <li class=""><a href="/admin/tours" class="">Danh sách</a></li>
+                            <li class=""><a href="/admin/tours/create" class="">Thêm tour</a></li>
                         </ul>
                     </li>
 
@@ -124,7 +123,7 @@
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
                                     class="feather icon-layers"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
+                            <li class=""><a href="/admin/blogs" class="">Danh sách</a></li>
                             <li class=""><a href="" class="">Thêm blog</a></li>
                         </ul>
                     </li>

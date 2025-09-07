@@ -24,6 +24,10 @@ class Tour extends Model
         'category_child_id'
     ];
 
+    protected $casts = [
+        'image' => 'array',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id', 'id');
