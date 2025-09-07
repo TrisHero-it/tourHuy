@@ -16,33 +16,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home page
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/test', function () {   
-    return view('client.layout.app');
-});
-
-Route::get('/test-category', function () {
-    $categories = \App\Models\Category::with('categoryChild')->get();
-    $result = [];
-    
-    foreach ($categories as $category) {
-        $result[] = [
-            'name' => $category->name,
-            'slug' => $category->slug,
-            'children_count' => $category->categoryChild->count(),
-            'children' => $category->categoryChild->pluck('name', 'slug')->toArray()
-        ];
-    }
-    
-    return response()->json($result);
-});
-
-// Category routes
+// Categories
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-Route::get('/{categorySlug}/{categoryChildSlug}', [CategoryController::class, 'toursByCategoryChild'])->name('tours.category-child');
 Route::get('/{slug}', [CategoryController::class, 'show'])->name('category.show');
-Route::get('/{categorySlug}/{childSlug}', [CategoryController::class, 'showChild'])->name('category.child.show');
 
-// Tour routes
-Route::get('/{categorySlug}/{tourSlug}/detail', [TourController::class, 'show'])->name('tour.detail');
+// Tours and Category Children
+Route::get('/{categorySlug}/{slug}', function($categorySlug, $slug) {
+    // Check if slug is a tour slug
+    $tour = \App\Models\Tour::where('slug', $slug)->first();
+    
+    if ($tour) {
+        // Show tour detail
+        return app(TourController::class)->show($categorySlug, $slug);
+    } else {
+        // Show tours by category child
+        return app(CategoryController::class)->toursByCategoryChild($categorySlug, $slug);
+    }
+})->name('tour.or.category-child');

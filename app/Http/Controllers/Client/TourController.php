@@ -16,7 +16,7 @@ class TourController extends Controller
     {
         // Tìm category cha theo slug
         $category = Category::where('slug', $categorySlug)
-            ->where('status', 'active')
+            // ->where('status', 'active')
             ->first();
             
         if (!$category) {
