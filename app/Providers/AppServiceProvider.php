@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $address = Account::first();
         View::share('address', $address);
-        
+
         // Share categories for navigation
         try {
             $categoriesNav = Category::with('categoryChild')->get();
