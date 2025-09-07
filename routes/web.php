@@ -24,15 +24,9 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('categorie
 Route::get('/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
 // Tours and Category Children
-Route::get('/{categorySlug}/{slug}', function($categorySlug, $slug) {
-    // Check if slug is a tour slug
-    $tour = \App\Models\Tour::where('slug', $slug)->first();
-    
-    if ($tour) {
-        // Show tour detail
-        return app(TourController::class)->show($categorySlug, $slug);
-    } else {
-        // Show tours by category child
-        return app(CategoryController::class)->toursByCategoryChild($categorySlug, $slug);
-    }
-})->name('tour.or.category-child');
+Route::get('/{categorySlug}/{slug}', [CategoryController::class, 'toursByCategoryChild'])
+    ->name('category.child.show');
+
+// Tour detail with category child
+Route::get('/{categorySlug}/{categoryChildSlug}/{tourSlug}', [TourController::class, 'showWithCategoryChild'])
+    ->name('tour.detail');

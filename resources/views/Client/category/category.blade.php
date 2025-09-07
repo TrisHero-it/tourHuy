@@ -42,7 +42,7 @@
                     @foreach($categoryChildren as $child)
                         <div class="product-category col product {{ $loop->first ? 'first' : '' }}">
                             <div class="col-inner">
-                                <a aria-label="Truy cập danh mục sản phẩm {{ $child->name }}" href="{{ route('tour.or.category-child', [$category->slug, $child->slug]) }}">
+                                <a aria-label="Truy cập danh mục sản phẩm {{ $child->name }}" href="{{ route('category.child.show', [$category->slug, $child->slug]) }}">
                                     <div class="box box-normal">
                                         <div class="box-image">
                                             @if($child->image)

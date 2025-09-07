@@ -694,7 +694,7 @@
                                         @foreach ($category->categoryChild as $categoryChild)
                                         <li id="menu-item-1826"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1826">
-                                            <a href="{{ route('tour.or.category-child', [$category->slug, $categoryChild->slug]) }}">{{ $categoryChild->name }}</a>
+                                            <a href="{{ route('category.child.show', [$category->slug, $categoryChild->slug]) }}">{{ $categoryChild->name }}</a>
                                         </li>
                                         @endforeach
                                     </ul>

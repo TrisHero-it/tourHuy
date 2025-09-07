@@ -37,7 +37,7 @@
                                 <div class="product-small box">
                                     <div class="box-image">
                                         <div class="image-none">
-                                            <a href="{{ route('tour.or.category-child', [$category->slug, $tour->slug]) }}" aria-label="{{ $tour->name }}">
+                                            <a href="{{ route('tour.detail', [$category->slug, $categoryChild->slug, $tour->slug]) }}" aria-label="{{ $tour->name }}">
                                                 @if($tour->image)
                                                     <img width="600" height="450" src="{{ asset('storage/' . $tour->image) }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $tour->name }}" decoding="async" fetchpriority="high" loading="eager" />
                                                 @else
@@ -56,7 +56,7 @@
                                     <div class="box-text box-text-products">
                                         <div class="title-wrapper">
                                             <p class="name product-title woocommerce-loop-product__title">
-                                                <a href="{{ route('tour.or.category-child', [$category->slug, $tour->slug]) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a>
+                                                <a href="{{ route('tour.detail', [$category->slug, $categoryChild->slug, $tour->slug]) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a>
                                             </p>
                                         </div>
                                         <div class="price-wrapper">
