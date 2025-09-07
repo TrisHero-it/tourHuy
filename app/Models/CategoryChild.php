@@ -12,4 +12,8 @@ class CategoryChild extends Model
     public $timestamps = false;
     protected $table = 'category_childs';
     
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 }

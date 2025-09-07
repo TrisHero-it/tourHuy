@@ -74,4 +74,35 @@ class CategoryController extends Controller
 
         return view('client.category.index', compact('categories'));
     }
+
+    /**
+     * Display tours by category child slug
+     */
+    public function toursByCategoryChild($categorySlug, $categoryChildSlug)
+    {
+        // Tìm category cha theo slug
+        $category = Category::where('slug', $categorySlug)
+            ->first();
+            
+        if (!$category) {
+            abort(404, 'Category not found');
+        }
+
+        // Tìm category child theo slug và thuộc category cha này
+        $categoryChild = $category->categoryChild()
+            ->where('slug', $categoryChildSlug)
+            // ->where('status', 'active')
+            ->first();
+            
+        if (!$categoryChild) {
+            abort(404, 'Category child not found');
+        }
+
+        // Lấy các tour thuộc category child này
+        $tours = Tour::where('category_child_id', $categoryChild->id)
+            ->where('status', 'active')
+            ->paginate(12);
+
+        return view('client.listTour.listTour', compact('category', 'categoryChild', 'tours'));
+    }
 }
