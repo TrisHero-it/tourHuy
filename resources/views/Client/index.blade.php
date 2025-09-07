@@ -155,7 +155,7 @@
 							<div class="product-small box ">
 								<div class="box-image">
 									<div class="image-none">
-										<a href="/{{ $category->slug }}/{{ $tour->slug }}"
+										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
 											<img decoding="async" width="600" height="450"
 												src="{{ $tour->image }}"
@@ -176,7 +176,7 @@
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
 										<p class="name product-title woocommerce-loop-product__title"><a
-												href="/{{ $category->slug }}/{{ $tour->slug }}"
+												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">
@@ -270,7 +270,7 @@
 							<div class="product-small box ">
 								<div class="box-image">
 									<div class="image-none">
-										<a href="/{{ $category->slug }}/{{ $tour->slug }}"
+										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="NINH BÌNH - SAPA FANXIPAN - HÀ GIANG - 5 NGÀY 5 ĐÊM.">
 											<img decoding="async" width="600" height="450"
 												src="https://dulichthesinh.vn/wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg"
@@ -291,7 +291,7 @@
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
 										<p class="name product-title woocommerce-loop-product__title"><a
-												href="/{{ $category->slug }}/{{ $tour->slug }}"
+												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}.</a></p>
 									</div>
 									<div class="price-wrapper">
@@ -391,7 +391,7 @@
 							<div class="product-small box ">
 								<div class="box-image">
 									<div class="image-none">
-										<a href="/{{ $category->slug }}/{{ $tour->slug }}"
+										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
 											<img decoding="async" width="600" height="450"
 												src="https://dulichthesinh.vn/wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg"
@@ -412,7 +412,7 @@
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
 										<p class="name product-title woocommerce-loop-product__title"><a
-												href="/{{ $category->slug }}/{{ $tour->slug }}"
+												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">
@@ -512,7 +512,7 @@
 							<div class="product-small box ">
 								<div class="box-image">
 									<div class="image-none">
-										<a href="/{{ $category->slug }}/{{ $tour->slug }}"
+										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
 											<img decoding="async" width="600" height="450"
 												src="https://dulichthesinh.vn/wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg"
@@ -533,7 +533,7 @@
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
 										<p class="name product-title woocommerce-loop-product__title"><a
-												href="/{{ $category->slug }}/{{ $tour->slug }}"
+												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">
@@ -633,7 +633,7 @@
 							<div class="product-small box ">
 								<div class="box-image">
 									<div class="image-none">
-										<a href="/{{ $category->slug }}/{{ $tour->slug }}"
+										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
 											<img decoding="async" width="600" height="450"
 												src="https://dulichthesinh.vn/wp-content/uploads/2505_anh-dep-cat.webp"
@@ -654,7 +654,7 @@
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
 										<p class="name product-title woocommerce-loop-product__title"><a
-												href="/{{ $category->slug }}/{{ $tour->slug }}"
+												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">

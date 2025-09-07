@@ -28,7 +28,7 @@
                                                 <a href="{{ route('category.show', $category->slug) }}">{{ $category->name }}</a>
                                                 @if($tour->categoryChild)
                                                     <span class="separator"> / </span>
-                                                    <a href="{{ route('tour.or.category-child', [$category->slug, $tour->categoryChild->slug]) }}">{{ $tour->categoryChild->name }}</a>
+                                                    <a href="{{ route('category.child.show', [$category->slug, $tour->categoryChild->slug]) }}">{{ $tour->categoryChild->name }}</a>
                                                 @endif
                                                 <span class="separator"> / </span>
                                                 <span class="last">{{ $tour->name }}</span>

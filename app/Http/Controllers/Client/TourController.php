@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class TourController extends Controller
 {
     /**
-     * Display tour detail
+     * Display tour detail with category child
      */
-    public function show($categorySlug, $tourSlug)
+    public function showWithCategoryChild($categorySlug, $categoryChildSlug, $tourSlug)
     {
         // Tìm category cha theo slug
         $category = Category::where('slug', $categorySlug)
@@ -23,9 +23,19 @@ class TourController extends Controller
             abort(404, 'Category not found');
         }
 
-        // Tìm tour theo slug và thuộc category này
+        // Tìm category child theo slug và thuộc category cha này
+        $categoryChild = $category->categoryChild()
+            ->where('slug', $categoryChildSlug)
+            // ->where('status', 'active')
+            ->first();
+            
+        if (!$categoryChild) {
+            abort(404, 'Category child not found');
+        }
+
+        // Tìm tour theo slug và thuộc category child này
         $tour = Tour::where('slug', $tourSlug)
-            ->where('category_id', $category->id)
+            ->where('category_child_id', $categoryChild->id)
             ->where('status', 'active')
             ->with(['category', 'categoryChild'])
             ->first();
@@ -34,6 +44,6 @@ class TourController extends Controller
             abort(404, 'Tour not found');
         }
 
-        return view('client.tour.detail', compact('category', 'tour'));
+        return view('client.tour.detail', compact('category', 'categoryChild', 'tour'));
     }
 }
