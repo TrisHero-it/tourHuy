@@ -15,12 +15,13 @@
                             <thead>
                                 <tr>
                                     <th>Tên danh mục</th>
-                                    <th>Ảnh</th>
+                                    <th>Thumbnail</th>
+                                    <th>Banner</th>
                                     <th>Slug</th>
                                     <th>Mô Tả</th>
-                                    <th>Nav</th>
-                                    <th>Featured</th>
-                                    <th>Banner</th>
+                                    <th>is_nav</th>
+                                    <th>is_featured</th>
+                                    <th>is_banner</th>
                                     <th>Chức năng</th>
                                 </tr>
                             </thead>
@@ -29,6 +30,8 @@
                                     <tr>
                                         <td>{{ $category->name }}</td>
                                         <td><img src="{{ asset($category->image) }}" alt=""
+                                                style="width: 100px; height: 100px;"></td>
+                                        <td><img src="{{ asset($category->banner) }}" alt=""
                                                 style="width: 100px; height: 100px;"></td>
                                         <td>{{ $category->slug }}</td>
                                         <td>{{ $category->description }}</td>
@@ -80,8 +83,8 @@
         function changeStatus(id, status_id) {
             let flag = 'duyệt';
             let success = `
-                                                                                           <span class="badge rounded-pill text-bg-success" style="display: flex;align-items: center;width: max-content;">Duyệt</span>
-                                                                                           `
+                                                                                                                           <span class="badge rounded-pill text-bg-success" style="display: flex;align-items: center;width: max-content;">Duyệt</span>
+                                                                                                                           `
             let notification = document.getElementById('notification')
             if (status_id == 2) {
                 flag = 'huỷ'
@@ -99,17 +102,17 @@
                         console.log(data)
                         let html = '';
                         html += `<div class="toast toast-3 mb-2 fade show" id="toast${id}" role="alert" aria-live="assertive" aria-atomic="true">
-                                                                                            <div class="toast-header">
-                                                                                                <img src="{{'images/design/favicon_io/favicon.ico'}}" alt="" class="img-fluid m-r-5" style="width:20px;">
-                                                                                                <strong class="me-auto">CheckSca</strong>
-                                                                                                <small class="text-muted">1 Giây</small>
-                                                                                                <button type="button" class="m-l-5 mb-1 mt-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
-                                                                                                </button>
-                                                                                            </div>
-                                                                                            <div class="toast-body">
-                                                                                                Trạng thái cập nhập thành công !!
-                                                                                            </div>
-                                                                                        </div>`
+                                                                                                                            <div class="toast-header">
+                                                                                                                                <img src="{{'images/design/favicon_io/favicon.ico'}}" alt="" class="img-fluid m-r-5" style="width:20px;">
+                                                                                                                                <strong class="me-auto">CheckSca</strong>
+                                                                                                                                <small class="text-muted">1 Giây</small>
+                                                                                                                                <button type="button" class="m-l-5 mb-1 mt-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
+                                                                                                                                </button>
+                                                                                                                            </div>
+                                                                                                                            <div class="toast-body">
+                                                                                                                                Trạng thái cập nhập thành công !!
+                                                                                                                            </div>
+                                                                                                                        </div>`
                         $('#notification').append(html)
                         reload()
                         setTimeout(() => {

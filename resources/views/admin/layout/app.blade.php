@@ -73,24 +73,19 @@
             </div>
             <div class="navbar-content scroll-div   " id="layout-sidenav">
 
-
-
                 <ul class="nav pcoded-inner-navbar sidenav-inner">
                     <li class="nav-item pcoded-menu-caption">
-                        <label>Navigation</label>
+                        <label>Quản lí</label>
                     </li>
 
                     <li data-username="dashboard default ecommerce sales Helpdesk ticket CRM analytics project"
                         class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Bài viết tố
-                                cáo</span></a>
+                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Đơn hàng</span></a>
                         <ul class="pcoded-submenu">
                             <li class=""><a href="/admin-reports" class="">Danh sách
                                     <span class="pcoded-badge label label-danger">0</span>
                                 </a></li>
-                            <li class=""><a href="" class="">Yêu cầu gỡ bài viết</a></li>
-                            <li class=""><a href="/admin-reports/create" class="">Thêm bài viết</a></li>
                         </ul>
                     </li>
 
@@ -100,66 +95,37 @@
                                     class="feather icon-box"></i></span><span class="pcoded-mtext">Danh mục</span></a>
                         <ul class="pcoded-submenu">
                             <li class=""><a href="" class="">Danh sách</a></li>
+                            <li class=""><a href="" class="">Danh mục con</a></li>
                             <li class=""><a href="" class="">Thêm danh mục</a></li>
                         </ul>
                     </li>
 
                     <li data-username="widget statistic data chart" class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Quảng
-                                cáo</span></a>
+                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Thông tin
+                                website</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
+                            <li class=""><a href="" class="">Banner</a></li>
+                            <li class=""><a href="" class="">Logo</a></li>
+                            <li class=""><a href="" class="">Địa chỉ footer</a></li>
                         </ul>
                     </li>
 
                     <li data-username="widget statistic data chart" class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Tài
-                                khoản</span></a>
+                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Tour</span></a>
                         <ul class="pcoded-submenu">
                             <li class=""><a href="" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Thêm admin</a></li>
-                        </ul>
-                    </li>
-
-                    <li data-username="basic components button alert badges breadcrumb pagination progress tooltip popovers carousel cards collapse tabs pills modal spinner grid system toasts typography extra shadows embeds"
-                        class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-box"></i></span><span class="pcoded-mtext">Tin tức</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Thêm tin tức</a></li>
-                            <li class=""><a href="" class="">Thêm tin tức v.2</a></li>
+                            <li class=""><a href="" class="">Thêm tour</a></li>
                         </ul>
                     </li>
 
                     <li data-username="widget statistic data chart" class="nav-item pcoded-hasmenu">
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Hợp
-                                đồng</span></a>
+                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
                             <li class=""><a href="" class="">Danh sách</a></li>
-                        </ul>
-                    </li>
-
-                    <li data-username="widget statistic data chart" class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Người trung
-                                gian</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Thêm người trung gian</a></li>
-                        </ul>
-                    </li>
-
-                    <li data-username="widget statistic data chart" class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link"><span class="pcoded-micon"><i
-                                    class="feather icon-layers"></i></span><span class="pcoded-mtext">Cộng
-                                đồng</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Thêm cộng đồng</a></li>
+                            <li class=""><a href="" class="">Thêm blog</a></li>
                         </ul>
                     </li>
                 </ul>

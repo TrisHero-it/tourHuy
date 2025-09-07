@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,7 @@ Route::get('/', [HomeController::class, 'login']);
 
 Route::apiResources([
     'categories' => CategoryController::class,
+    'orders' => OrderController::class,
 ]);
 
 // });
