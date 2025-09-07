@@ -734,6 +734,7 @@
 
 
 				<div class="row large-columns-3 medium-columns-1 small-columns-1">
+					@foreach ($blog as $blogs)
 					<div class="col post-item">
 						<div class="col-inner">
 							<div class="box box-default box-text-bottom box-blog-post has-hover">
@@ -758,98 +759,28 @@
 										<p class="cat-label  is-xxsmall op-7 uppercase">
 											Blog du lịch </p>
 										<h5 class="post-title is-large ">
-											<a href="https://dulichthesinh.vn/6-dia-diem-du-lich-tam-linh-o-ninh-binh-giup-ban-tim-kiem-su-binh-an/"
-												class="plain">6 địa điểm du lịch tâm linh ở Ninh Bình giúp
-												bạn tìm kiếm sự bình an</a>
+											<a href="{{ route('blog.show', $blogs->slug) }}"
+												class="plain"> {{ $blogs->title }}</a>
 										</h5>
 										<div class="is-divider"></div>
 										<p class="from_the_blog_excerpt ">
-											Được mệnh danh là vùng đất Cố Đô, không bất ngờ khi Ninh Bình là
-											một trong những nơi[...đọc tiếp] </p>
-
-
-
+											{{ $blogs->content }} </p>
+										<style>
+											.from_the_blog_excerpt {
+												display: -webkit-box;
+												-webkit-line-clamp: 2;
+												-webkit-box-orient: vertical;
+												overflow: hidden;
+												text-overflow: ellipsis;
+												word-break: break-word;
+											}
+										</style>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col post-item">
-						<div class="col-inner">
-							<div class="box box-default box-text-bottom box-blog-post has-hover">
-								<div class="box-image">
-									<div class="image-cover" style="padding-top:56.25%;">
-										<a href="https://dulichthesinh.vn/tron-bo-kinh-nghiem-du-lich-sapa-tu-tuc/"
-											class="plain"
-											aria-label="Trọn bộ kinh nghiệm du lịch Sapa tự túc">
-											<img decoding="async" width="600" height="284"
-												src="https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-600x284.jpg"
-												class="attachment-medium size-medium wp-post-image" alt=""
-												srcset="https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-600x284.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-1024x485.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-300x142.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac.jpg 1600w"
-												sizes="(max-width: 600px) 100vw, 600px" loading="eager"
-												fetchpriority="high" /> </a>
-									</div>
-								</div>
-								<div class="box-text text-left"
-									style="background-color:rgb(245, 245, 245);padding:10px 10px 10px 10px;">
-									<div class="box-text-inner blog-post-inner">
-
-
-										<p class="cat-label  is-xxsmall op-7 uppercase">
-											Blog du lịch </p>
-										<h5 class="post-title is-large ">
-											<a href="https://dulichthesinh.vn/tron-bo-kinh-nghiem-du-lich-sapa-tu-tuc/"
-												class="plain">Trọn bộ kinh nghiệm du lịch Sapa tự túc</a>
-										</h5>
-										<div class="is-divider"></div>
-										<p class="from_the_blog_excerpt ">
-											Trải nghiệm vùng Tây Bắc hùng vĩ, nên thơ với kinh nghiệm du
-											lịch Sapa tự túc cùng MoMo,[...đọc tiếp] </p>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col post-item">
-						<div class="col-inner">
-							<div class="box box-default box-text-bottom box-blog-post has-hover">
-								<div class="box-image">
-									<div class="image-cover" style="padding-top:56.25%;">
-										<a href="https://dulichthesinh.vn/12-mon-ngon-ha-giang-lam-say-long-du-khach/"
-											class="plain"
-											aria-label="12 món ngon Hà Giang làm say lòng du khách">
-											<img decoding="async" width="600" height="301"
-												src="https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-600x301.jpg"
-												class="attachment-medium size-medium wp-post-image" alt=""
-												srcset="https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-600x301.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-300x150.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674.jpg 800w"
-												sizes="(max-width: 600px) 100vw, 600px" loading="eager"
-												fetchpriority="high" /> </a>
-									</div>
-								</div>
-								<div class="box-text text-left"
-									style="background-color:rgb(245, 245, 245);padding:10px 10px 10px 10px;">
-									<div class="box-text-inner blog-post-inner">
-
-
-										<p class="cat-label  is-xxsmall op-7 uppercase">
-											Blog du lịch </p>
-										<h5 class="post-title is-large ">
-											<a href="https://dulichthesinh.vn/12-mon-ngon-ha-giang-lam-say-long-du-khach/"
-												class="plain">12 món ngon Hà Giang làm say lòng du khách</a>
-										</h5>
-										<div class="is-divider"></div>
-										<p class="from_the_blog_excerpt ">
-											Cùng khám phá bức tranh ẩm thực phố núi phong phú cùng những món
-											ngon Hà Giang nhất định[...đọc tiếp] </p>
-
-
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					@endforeach
 				</div>
 
 
