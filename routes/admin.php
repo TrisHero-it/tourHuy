@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CategoryChildController;
 use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\LogoController;
@@ -21,14 +22,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'login']);
+Route::get('/categories', [CategoryController::class, 'index'])->name('admin.categories.index');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('admin.categories.create');
+Route::post('/categories', [CategoryController::class, 'store'])->name('admin.categories.store');
+Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('admin.categories.edit');
+Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('admin.categories.update');
+Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('admin.categories.destroy');
 
-// Route::middleware('check.login.admin')->group(function () {
-
-Route::get('/categories', [CategoryController::class, 'index']);
-Route::get('/categories/create', [CategoryController::class, 'create']);
-Route::get('/categories/{id}/edit', [CategoryController::class, 'edit']);
-Route::get('/categories/{id}/delete', [CategoryController::class, 'delete']);
+// Category Children routes
+Route::get('/category-children', [CategoryChildController::class, 'index'])->name('admin.category-children.index');
+Route::get('/category-children/create', [CategoryChildController::class, 'create'])->name('admin.category-children.create');
+Route::post('/category-children', [CategoryChildController::class, 'store'])->name('admin.category-children.store');
+Route::get('/category-children/{id}/edit', [CategoryChildController::class, 'edit'])->name('admin.category-children.edit');
+Route::put('/category-children/{id}', [CategoryChildController::class, 'update'])->name('admin.category-children.update');
+Route::delete('/category-children/{id}', [CategoryChildController::class, 'destroy'])->name('admin.category-children.destroy');
 
 Route::get('/orders', [OrderController::class, 'index']);
 
