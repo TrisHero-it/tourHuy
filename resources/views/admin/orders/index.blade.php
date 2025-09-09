@@ -8,10 +8,18 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5>Danh sách bài orders</h5>
-                <form action="/admin/orders" class="d-flex align-items-center gap-2" style="height: 10px;" method="get">
-                    <input type="text" value="{{ request()->search ?? '' }}" name="search" placeholder="Tìm kiếm theo số điện thoại" class="form-control">
-                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-                </form>
+                <div class="d-flex align-items-center gap-2">
+                    <form action="/admin/orders" class="d-flex align-items-center gap-2" style="height: 10px;" method="get">
+                        <input type="text" value="{{ request()->search ?? '' }}" name="search" placeholder="Tìm kiếm theo số điện thoại" class="form-control">
+                        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                    </form>
+
+                    <select name="status" id="" onchange="window.location.href = '/admin/orders?status=' + this.value" class="form-control" style="width: 200px;">
+                        <option value="">Tất cả</option>
+                        <option value="Đã liên hệ">Đã liên hệ</option>
+                        <option value="Chưa liên hệ">Chưa liên hệ</option>
+                    </select>
+                </div>
             </div>
             <div class="card-body">
                 <div class="dt-responsive table-responsive">
@@ -35,9 +43,19 @@
                                 <td>{{ $order->price_now }}</td>
                                 <td>{{ $order->status }}</td>
                                 <td>
-                                    <button class="btn btn-success">
-                                        Duyệt
-                                    </button>
+                                    @if ($order->status == 'Chưa liên hệ')
+                                    <a href="/admin/orders/{{ $order->id }}?status=Đã liên hệ" class="btn btn-primary">
+                                        Đã liên hệ
+                                    </a>
+                                    @elseif ($order->status == 'Đã liên hệ')
+                                    <a href="/admin/orders/{{ $order->id }}?status=Thành công" class="btn btn-success">
+                                        Thành công
+                                    </a>
+                                    <a href="/admin/orders/{{ $order->id }}?status=Thất bại" class="btn btn-danger">
+                                        Thất bại
+                                    </a>
+                                    @endif
+
                                 </td>
                             </tr>
                             @endforeach

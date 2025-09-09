@@ -28,6 +28,7 @@ Route::post('/categories', [CategoryController::class, 'store'])->name('admin.ca
 Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('admin.categories.edit');
 Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('admin.categories.update');
 Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('admin.categories.destroy');
+Route::get('/orders/{id}', [OrderController::class, 'updateStatus'])->name('admin.orders.update-status');
 
 // Category Children routes
 Route::get('/category-children', [CategoryChildController::class, 'index'])->name('admin.category-children.index');
