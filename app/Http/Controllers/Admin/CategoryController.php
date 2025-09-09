@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\CategoryChild;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -30,7 +31,7 @@ class CategoryController extends Controller
         ]);
 
         $data = $request->all();
-        
+
         // Xử lý upload ảnh thumbnail
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -69,7 +70,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::findOrFail($id);
-        
+
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -78,14 +79,14 @@ class CategoryController extends Controller
         ]);
 
         $data = $request->all();
-        
+
         // Xử lý upload ảnh thumbnail mới
         if ($request->hasFile('image')) {
             // Xóa ảnh cũ nếu có
             if ($category->image && file_exists(public_path($category->image))) {
                 unlink(public_path($category->image));
             }
-            
+
             $image = $request->file('image');
             $imageName = time() . '_thumb.' . $image->getClientOriginalExtension();
             $image->move(public_path('images/categories'), $imageName);
@@ -101,7 +102,7 @@ class CategoryController extends Controller
             if ($category->banner && file_exists(public_path($category->banner))) {
                 unlink(public_path($category->banner));
             }
-            
+
             $banner = $request->file('banner');
             $bannerName = time() . '_banner.' . $banner->getClientOriginalExtension();
             $banner->move(public_path('images/categories'), $bannerName);
@@ -127,19 +128,25 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::findOrFail($id);
-        
+
         // Xóa ảnh thumbnail nếu có
         if ($category->image && file_exists(public_path($category->image))) {
             unlink(public_path($category->image));
         }
-        
+
         // Xóa ảnh banner nếu có
         if ($category->banner && file_exists(public_path($category->banner))) {
             unlink(public_path($category->banner));
         }
-        
+
         $category->delete();
 
         return redirect()->route('admin.categories.index')->with('success', 'Danh mục đã được xóa thành công');
+    }
+
+    public function categoryChildsByCategory($id)
+    {
+        $categoryChilds = CategoryChild::where('category_id', $id)->get();
+        return response()->json($categoryChilds);
     }
 }
