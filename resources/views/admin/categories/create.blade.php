@@ -38,6 +38,12 @@
                 @error('description')
                 <div style="color:red">{{$message}}</div>
                 @enderror
+
+                <label for="">Meta</label> <br>
+                <textarea class="form-control" name="meta" id="metaEditor" rows="4" placeholder="Nhập nội dung meta..."></textarea>
+                @error('meta')
+                <div style="color:red">{{$message}}</div>
+                @enderror
                 <div class="form-check form-switch mt-3">
                     <input type="hidden" name="is_nav" value="0">
                     <input class="form-check-input" type="checkbox" role="switch" id="is_nav" name="is_nav" value="1">
@@ -100,6 +106,17 @@
 <script>
     ClassicEditor
         .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
+            }
+        })
+        .then(editor => {})
+        .catch(error => {
+            console.error(error);
+        });
+
+    ClassicEditor
+        .create(document.querySelector('#metaEditor'), {
             ckfinder: {
                 uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
             }
