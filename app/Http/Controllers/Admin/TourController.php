@@ -69,7 +69,6 @@ class TourController extends Controller
             'category_child_id' => 'nullable|exists:category_childs,id',
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,webp,jpg,gif|max:5120',
-            'duration' => 'nullable|string',
         ]);
 
         $data = $validated;
