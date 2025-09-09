@@ -26,11 +26,11 @@
                         <tbody>
                             @foreach ($blogs as $blog)
                             <tr>
-                                <td>{{ $blog->title }}</td>
+                                <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $blog->title }}</td>
                                 <td><img src="{{ asset($blog->image) }}" alt="" style="width: auto; height: 200px;"></td>
-                                <td>{{ $blog->meta }}</td>
+                                <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $blog->meta }}</td>
                                 <td>{{ $blog->key_words }}</td>
-                                <td>{{ $blog->slug }}</td>
+                                <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $blog->slug }}</td>
                                 <td>
                                     <form onsubmit="return confirm('Bạn có chắc chắn muốn xóa bài này không?')" action="/admin/blogs/{{ $blog->id }}" method="POST">
                                         @csrf

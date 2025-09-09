@@ -12,7 +12,7 @@
             <h5>Thêm danh mục</h5>
         </div>
         <div class="card-body">
-            <form action="/admin/categories" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.categories.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label for="">Tên danh mục</label> <br>
 
@@ -32,20 +32,17 @@
                 <div style="color:red">{{$message}}</div>
                 @enderror
                 <label for="" class="mt-3">is_nav</label> <br>
-                <input type="hidden" name="is_nav" value="0">
-                <input class="form-control" type="checkbox" name="is_nav" value="1">
+                <input class="form-control" type="checkbox" name="is_nav">
                 @error('is_nav')
                 <div style="color:red">{{$message}}</div>
                 @enderror
                 <label for="">is_featured</label> <br>
-                <input type="hidden" name="is_featured" value="0">
-                <input class="form-control" type="checkbox" name="is_featured" value="1">
+                <input class="form-control" type="checkbox" name="is_featured">
                 @error('is_featured')
                 <div style="color:red">{{$message}}</div>
                 @enderror
                 <label for="">is_banner</label> <br>
-                <input type="hidden" name="is_banner" value="0">
-                <input class="form-control" type="checkbox" name="is_banner" value="1">
+                <input class="form-control" type="checkbox" name="is_banner">
                 @error('is_banner')
                 <div style="color:red">{{$message}}</div>
                 @enderror

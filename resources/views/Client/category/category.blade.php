@@ -4,7 +4,7 @@
 
 @section('content')
 @if($category->image)
-    <img class="product-category-banner" src="{{ asset('storage/' . $category->image) }}" alt"" width="1024" height="356" loading="lazy" fetchpriority="low">
+    <img class="product-category-banner" src="{{ asset($category->image) }}" alt="{{ $category->name }}" width="1024" height="356" loading="lazy" fetchpriority="low">
 @else
     <img class="product-category-banner" src="https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh.webp" alt="Tour du lịch {{ $category->name }}" width="1024" height="356" loading="lazy" fetchpriority="low">
 @endif
@@ -46,7 +46,7 @@
                                     <div class="box box-normal">
                                         <div class="box-image">
                                             @if($child->image)
-                                                <img src="{{ asset('storage/' . $child->image) }}" alt="{{ $child->name }}" width="600" height="450" loading="lazy" fetchpriority="low"/>
+                                                <img src="{{ asset($child->image) }}" alt="{{ $child->name }}" width="600" height="450" loading="lazy" fetchpriority="low"/>
                                             @else
                                                 <img src="https://dulichthesinh.vn/wp-content/uploads/2504_680ef0e76d6a5-600x450.webp" alt="{{ $child->name }}" width="600" height="450" loading="lazy" fetchpriority="low"/>
                                             @endif

@@ -7,14 +7,16 @@
 
 	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_566051371">
 		<div class="img-inner dark">
-			<img width="600" height="168"
-				src="{{ asset('storage/uploads/2505_banner-du-lich-mien-bac-viet-nam-600x168.jpg') }}"
-				class="attachment-medium size-medium" />
+			<img width="1250" height="350"
+				src="{{asset($banners->image)}}"
+				alt="Banner du lịch" />
 		</div>
 
 		<style>
-			#image_566051371 {
+			#image_566051371 img {
 				width: 100%;
+				height: 350px;
+				object-fit: cover;
 			}
 		</style>
 	</div>
@@ -36,7 +38,8 @@
 						<div class="box-text text-center">
 							<div class="box-text-inner">
 								<h5 class="uppercase header-title">
-									{{ $category->name }} </h5>
+									{{ $category->name }}
+								</h5>
 								<p class="is-xsmall uppercase count ">
 									{{ $category->countTour }} Sản phẩm
 								</p>
@@ -112,8 +115,6 @@
 		<div id="col-1078270613" class="col trang-chu-san-pham-column small-12 large-12">
 			<div class="col-inner text-left" style="background-color:rgb(229, 246, 255);">
 
-
-
 				<div id="text-3984494503" class="text category-header">
 
 
@@ -155,13 +156,13 @@
 							<div class="product-small box ">
 								<div class="box-image">
 									<div class="image-none">
-										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
+										<a href="{{ $tour->categoryChild ? route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) : route('category.child.show', [$category->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
-											<img decoding="async" width="600" height="450"
-												src="{{ $tour->image }}"
-												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-												alt="{{ $tour->name }}"
-												loading="eager" fetchpriority="high" /> </a>
+											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+											@if($firstImage)
+											<img src="{{ asset($firstImage) }}" alt="" style="width: 100px; height: 100px;">
+											@endif
+										</a>
 									</div>
 									<div class="image-tools is-small top right show-on-hover">
 									</div>
@@ -176,7 +177,7 @@
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
 										<p class="name product-title woocommerce-loop-product__title"><a
-												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
+												href="{{ $tour->categoryChild ? route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) : route('category.child.show', [$category->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">
@@ -764,7 +765,8 @@
 										</h5>
 										<div class="is-divider"></div>
 										<p class="from_the_blog_excerpt ">
-											{{ $blogs->content }} </p>
+											{{ $blogs->content }}
+										</p>
 										<style>
 											.from_the_blog_excerpt {
 												display: -webkit-box;

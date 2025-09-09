@@ -125,7 +125,7 @@
                                     class="feather icon-layers"></i></span><span class="pcoded-mtext">Blog</span></a>
                         <ul class="pcoded-submenu">
                             <li class=""><a href="/admin/blogs" class="">Danh sách</a></li>
-                            <li class=""><a href="" class="">Thêm blog</a></li>
+                            <li class=""><a href="/admin/blogs/create" class="">Thêm blog</a></li>
                         </ul>
                     </li>
                 </ul>
