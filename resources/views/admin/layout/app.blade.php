@@ -84,7 +84,7 @@
                                     class="feather icon-home"></i></span><span class="pcoded-mtext">Đơn hàng</span></a>
                         <ul class="pcoded-submenu">
                             <li class=""><a href="/admin/orders" class="">Danh sách
-                                    <span class="pcoded-badge label label-danger">0</span>
+                                    <span class="pcoded-badge label label-danger">{{ $countOrder }}</span>
                                 </a></li>
                         </ul>
                     </li>
@@ -96,7 +96,8 @@
                         <ul class="pcoded-submenu">
                             <li class=""><a href="/admin/categories" class="">Danh sách</a></li>
                             <li class=""><a href="/admin/categories/create" class="">Thêm danh mục</a></li>
-                            <li class=""><a href="/admin/category-childs/create" class="">Thêm danh mục con</a></li>
+                            <li class=""><a href="/admin/category-children" class="">Danh sách danh mục con</a></li>
+                            <li class=""><a href="/admin/category-children/create" class="">Thêm danh mục con</a></li>
                         </ul>
                     </li>
 

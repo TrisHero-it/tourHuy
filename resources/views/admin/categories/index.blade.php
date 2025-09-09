@@ -6,8 +6,9 @@
     <!-- Zero config table start -->
     <div class="col-sm-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
                 <h5>Danh sách danh mục</h5>
+                <a href="{{ route('admin.categories.create') }}" class="btn btn-primary ">Thêm danh mục</a>
             </div>
             <div class="card-body">
                 <div class="dt-responsive table-responsive">

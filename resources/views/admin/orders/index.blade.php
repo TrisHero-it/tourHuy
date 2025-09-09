@@ -16,8 +16,10 @@
 
                     <select name="status" id="" onchange="window.location.href = '/admin/orders?status=' + this.value" class="form-control" style="width: 200px;">
                         <option value="">Tất cả</option>
-                        <option value="Đã liên hệ">Đã liên hệ</option>
-                        <option value="Chưa liên hệ">Chưa liên hệ</option>
+                        <option {{ request()->status == 'Đã liên hệ' ? 'selected' : '' }} value="Đã liên hệ">Đã liên hệ</option>
+                        <option {{ request()->status == 'Chưa liên hệ' ? 'selected' : '' }} value="Chưa liên hệ">Chưa liên hệ</option>
+                        <option {{ request()->status == 'Thành công' ? 'selected' : '' }} value="Thành công">Thành công</option>
+                        <option {{ request()->status == 'Thất bại' ? 'selected' : '' }} value="Thất bại">Thất bại</option>
                     </select>
                 </div>
             </div>
@@ -40,7 +42,7 @@
                                 <td>{{ $order->name }}</td>
                                 <td>{{ $order->phone }}</td>
                                 <td>{{ $order->tour->name }}</td>
-                                <td>{{ $order->price_now }}</td>
+                                <td>{{ number_format($order->price_now, 0, ',', '.') }} VNĐ</td>
                                 <td>{{ $order->status }}</td>
                                 <td>
                                     @if ($order->status == 'Chưa liên hệ')
