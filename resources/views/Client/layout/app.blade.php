@@ -16,7 +16,7 @@
     <script>
         (function(w, d, s, l) {
             w[l] = w[l] || [];
-            (function() {
+            (function() {   
                 w[l].push(arguments);
             })('set', 'developer_id.dYzg1YT', true);
             w[l].push({
@@ -42,6 +42,7 @@
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
     <title>@yield('title', 'Trang chủ - Du lịch Thế Sinh')</title>
     <style>

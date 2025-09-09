@@ -125,25 +125,32 @@
 
                                     <div class="dlts-gallery-wrapper gallery">
                                         <div class="dlts-gallery-main">
-                                            <a href="{{ $tour->image ? asset($tour->image) : 'https://dulichthesinh.vn/wp-content/uploads/2506_anh-1.jpg' }}" class="baguetteBox-trigger">
-                                                <img src="{{ $tour->image ? asset($tour->image) : 'https://dulichthesinh.vn/wp-content/uploads/2506_anh-1.jpg' }}" alt="{{ $tour->name }}" width="974" height="779" loading="lazy" fetchpriority="low">
-                                            </a>
+                                            @php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+                                            @if($firstImage)
+                                                <a href="{{ asset($firstImage) }}" class="baguetteBox-trigger">
+                                                    <img src="{{ asset($firstImage) }}" alt="{{ $tour->name }}" width="974" height="779" loading="lazy" fetchpriority="low">
+                                                </a>
+                                            @endif
                                         </div>
                                         <div class="dlts-gallery-sub">
-                                            <a href="https://dulichthesinh.vn/wp-content/uploads/2506_nb4-1024x576.jpeg" class="baguetteBox-trigger">
-                                                <img src="https://dulichthesinh.vn/wp-content/uploads/2506_nb4-1024x576.jpeg" alt="Sub Image 1" width="1024" height="576" loading="lazy" fetchpriority="low">
-                                            </a>
-                                            <a href="https://dulichthesinh.vn/wp-content/uploads/2506_n3.jpg" class="baguetteBox-trigger">
-                                                <img src="https://dulichthesinh.vn/wp-content/uploads/2506_n3.jpg" alt="Sub Image 2" width="720" height="453" loading="lazy" fetchpriority="low">
-                                            </a>
+                                            @if(is_array($tour->image) && count($tour->image) > 1)
+                                                @for($i = 1; $i < min(3, count($tour->image)); $i++)
+                                                    <a href="{{ asset($tour->image[$i]) }}" class="baguetteBox-trigger">
+                                                        <img src="{{ asset($tour->image[$i]) }}" alt="Sub Image {{ $i }}" width="1024" height="576" loading="lazy" fetchpriority="low">
+                                                    </a>
+                                                @endfor
+                                            @endif
                                         </div>
                                         <div class="dlts-gallery-readmore" onclick="document.querySelector('.dlts-gallery-wrapper a.baguetteBox-trigger').click()">Xem thêm hình</div>
                                     </div>
 
                                     <!-- Hidden gallery for preload -->
                                     <div class="gallery" style="display:none">
-                                        <a href="https://dulichthesinh.vn/wp-content/uploads/2504_680ef10220506.webp" class="baguetteBox-trigger"></a>
-                                        <a href="https://dulichthesinh.vn/wp-content/uploads/2504_680ef1061cf4b.webp" class="baguetteBox-trigger"></a>
+                                        @if(is_array($tour->image) && count($tour->image) > 3)
+                                            @for($i = 3; $i < count($tour->image); $i++)
+                                                <a href="{{ asset($tour->image[$i]) }}" class="baguetteBox-trigger"></a>
+                                            @endfor
+                                        @endif
                                     </div>
 
                                 </div>
@@ -171,79 +178,7 @@
                                             <p style="text-align: center"><span style="font-size: 110%;color: #ff6600"><strong>DU LỊCH THE SINH TOURIST 22 BÁT ĐÀN – HOÀN KIẾM – HÀ NỘI</strong></span></p>
                                         @endif
                                         
-                                        {{-- <!-- Tour Highlights -->
-                                        <p style="text-align: center"><span style="color: #ff6600"><strong>CHUYẾN ĐI SẼ GIÚP BẠN KHÁM PHÁ CÁC ĐIỂM ĐẸP SAU</strong></span></p>
-                                        
-                                        <!-- Highlights Grid -->
-                                        <div class="row" id="row-526454788">
-                                            <div id="col-480945136" class="col medium-6 small-12 large-6">
-                                                <div class="col-inner">
-                                                    <div class="box has-hover has-hover box-text-bottom">
-                                                        <div class="box-image">
-                                                            <div class="image-cover" style="padding-top:75%;">
-                                                                <img decoding="async" width="870" height="489" src="https://dulichthesinh.vn/wp-content/uploads/2506_nb2.webp" class="attachment- size-" alt="" srcset="https://dulichthesinh.vn/wp-content/uploads/2506_nb2.webp 870w, https://dulichthesinh.vn/wp-content/uploads/2506_nb2-600x337.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2506_nb2-300x169.webp 300w" sizes="(max-width: 870px) 100vw, 870px" loading="eager" fetchpriority="high"/>
-                                                            </div>
-                                                        </div>
-                                                        <div class="box-text text-center">
-                                                            <div class="box-text-inner">
-                                                                <p style="text-align: center"><span style="color: #ff6600">CỐ ĐÔ HOA LƯ</span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div id="col-1159978302" class="col medium-6 small-12 large-6">
-                                                <div class="col-inner">
-                                                    <div class="box has-hover has-hover box-text-bottom">
-                                                        <div class="box-image">
-                                                            <div class="image-cover" style="padding-top:75%;">
-                                                                <img decoding="async" width="800" height="500" src="https://dulichthesinh.vn/wp-content/uploads/2506_nb6.jpg" class="attachment- size-" alt="" srcset="https://dulichthesinh.vn/wp-content/uploads/2506_nb6.jpg 800w, https://dulichthesinh.vn/wp-content/uploads/2506_nb6-600x375.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2506_nb6-300x188.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" loading="eager" fetchpriority="high"/>
-                                                            </div>
-                                                        </div>
-                                                        <div class="box-text text-center">
-                                                            <div class="box-text-inner">
-                                                                <p style="text-align: center"><span style="color: #ff6600">ĐỀN THỜ VUA ĐINH – VUA LÊ</span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> --}}
-                                        
-                                        <!-- Tour Details -->
-                                        {{-- @if($tour->duration || $tour->schedule)
-                                            <p><span style="font-size: 110%;color: #000080"><em>Dưới đây là chương trình <strong>{{ $tour->name }}</strong>, một hành trình kinh điển và phù hợp cho du khách lần đầu đến với {{ $category->name }}. Tour kết hợp hài hòa giữa <strong>giá trị văn hóa – lịch sử</strong> và <strong>vẻ đẹp thiên nhiên non nước hữu tình</strong>, lý tưởng cho <strong>du khách mọi lứa tuổi</strong>.</em></span></p>
-                                            
-                                            @if($tour->duration)
-                                                <p style="text-align: center"><span style="font-size: 110%;color: #ff6600"><strong>⏱ Thời gian: {{ $tour->duration }}</strong></span></p>
-                                            @endif
-                                            
-                                            @if($tour->schedule)
-                                                <p><span style="font-size: 110%;color: #000080"><strong>✅ LỊCH TRÌNH CHI TIẾT:</strong></span></p>
-                                                <p><span style="font-size: 110%;color: #000080">{{ $tour->schedule }}</span></p>
-                                            @endif
-                                        @endif --}}
-                                        
-                                        <!-- Price Information -->
-                                        {{-- <p><span style="font-size: 110%;color: #ff6600"><strong>🎁 GIÁ TOUR BAO GỒM:</strong></span></p>
-                                        <ul>
-                                            <li><span style="font-size: 110%;color: #000080">Xe du lịch đời mới điều hòa đưa đón theo chương trình</span></li>
-                                            <li><span style="font-size: 110%;color: #000080">Vé tham quan các điểm du lịch</span></li>
-                                            <li><span style="font-size: 110%;color: #000080">Ăn trưa buffet tại nhà hàng</span></li>
-                                            <li><span style="font-size: 110%;color: #000080">Hướng dẫn viên chuyên nghiệp</span></li>
-                                            <li><span style="font-size: 110%;color: #000080">Nước uống, bảo hiểm du lịch</span></li>
-                                        </ul>
-                                        
-                                        <!-- Booking Information -->
-                                        <div class="text custom-huong-dan-dat-tour">
-                                            <p><strong style="color: #000080;">✅ </strong><span style="color: #ff6600;"><strong>PHƯƠNG THỨC ĐĂNG KÝ ĐẶT TOUR</strong></span></p>
-                                            <div>
-                                                <p><span style="color: #000080;"><strong>1.Khách hàng ở Hà Nội</strong> :Công ty sẽ có nhân viên trực tiếp đến tận nơi tư vấn đưa lịch trình chi tiết và làm thủ tục đăng ký , giao vé trực tiếp cho Qúy khách.</span></p>
-                                                <p><span style="color: #000080;"><strong>2. Khách hàng đến trực tiếp công ty</strong> : Địa chỉ văn phòng tại: 22 Bát Đàn – Hoàn Kiếm – Hà Nội . Tư vấn lịch trình chi tiết & thanh toán trực tiếp (tiền mặt/chuyển khoản) . Nhận vé xác nhận & lịch trình chính thức.</span></p>
-                                                <p><span style="color: #000080;"><strong>3.Khách hàng ở xa</strong> : (không ở Hà Nội hoặc không thể đến trực tiếp văn phòng) : Công ty sẽ hỗ trợ tư vấn Miễn phí và đặt vé Online , Có vé xác nhận điện tử – VÉ XÁC NHẬN CÓ DẤU ĐỎ CỦA CÔNG TY – đảm bảo đầy đủ cho Qúy khách hàng.Trước ngày khởi hành Nhân viên của công ty sẽ liên hệ nhắc lịch khách đi tour lần nữa.</span></p>
-                                            </div>
-                                        </div> --}}
+                                
                                     </div>
                                 </div>
                             </div>
@@ -264,11 +199,32 @@
                                             <div style="color: #666; font-size: 14px; margin-top: 5px;">/khách</div>
                                         </div>
                                         
-                                        <!-- Booking Actions -->
+                                        <!-- Booking Form -->
                                         <div class="product-actions" style="margin-bottom: 25px;">
-                                            <a href="tel:{{ $account->phone ?? '0849048888' }}" class="button" style="background: linear-gradient(135deg, #ff6600, #ff8533); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: block; text-align: center; font-weight: bold; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);">
-                                                <i class="fas fa-phone" style="margin-right: 8px;"></i> Đặt tour ngay
-                                            </a>
+                                            <form id="bookingForm" style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0;">
+                                                <div style="margin-bottom: 15px;">
+                                                    <label for="customer_name" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Họ và tên *</label>
+                                                    <input type="text" id="customer_name" name="name" required 
+                                                           style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;"
+                                                           placeholder="Nhập họ và tên của bạn">
+                                                </div>
+                                                <div style="margin-bottom: 20px;">
+                                                    <label for="customer_phone" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Số điện thoại *</label>
+                                                    <input type="tel" id="customer_phone" name="phone" required 
+                                                           style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;"
+                                                           placeholder="Nhập số điện thoại của bạn">
+                                                </div>
+                                                <input type="hidden" name="tour_id" value="{{ $tour->id }}">
+                                                <button type="submit" style="background: linear-gradient(135deg, #ff6600, #ff8533); color: white; padding: 15px 30px; border: none; border-radius: 8px; width: 100%; font-weight: bold; font-size: 16px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);">
+                                                    <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Đặt tour ngay
+                                                </button>
+                                            </form>
+                                            
+                                            <!-- Success Message -->
+                                            <div id="successMessage" style="display: none; background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center; font-weight: bold;">
+                                                <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+                                                <span id="successText"></span>
+                                            </div>
                                         </div>
                                         
                                         <!-- Tour Info -->
@@ -350,14 +306,14 @@
                                         </div>
                                         
                                         <!-- Special Offers -->
-                                        <div class="special-offers" style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #ff6600, #ff8533); color: white; border-radius: 8px; text-align: center;">
+                                        {{-- <div class="special-offers" style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #ff6600, #ff8533); color: white; border-radius: 8px; text-align: center;">
                                             <div style="font-weight: bold; margin-bottom: 8px;">🎁 Ưu đãi đặc biệt</div>
                                             <div style="font-size: 14px; line-height: 1.4;">
                                                 • Nhóm từ 5 người: giảm 50.000đ/người<br>
                                                 • Đặt sớm >7 ngày: giảm thêm 50.000đ/người<br>
                                                 • Khách cũ: giảm 3-5% giá tour
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -369,4 +325,177 @@
         </div>
     </div>
 </main>
+
+<!-- Success Popup Modal -->
+<div id="successModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 12px; padding: 30px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <!-- Close button -->
+        <button onclick="closeSuccessModal()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; color: #999; cursor: pointer; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">&times;</button>
+        
+        <!-- Success icon -->
+        <div style="width: 60px; height: 60px; background: #28a745; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-check" style="color: white; font-size: 24px;"></i>
+        </div>
+        
+        <!-- Title -->
+        <h3 style="color: #333; margin-bottom: 15px; font-size: 20px; font-weight: bold;">Đặt tour thành công!</h3>
+        
+        <!-- Message -->
+        <p style="color: #666; margin-bottom: 20px; font-size: 14px; line-height: 1.4;">Cảm ơn bạn! Chúng tôi sẽ liên hệ với bạn sớm nhất.</p>
+        
+        <!-- Close button -->
+        <button onclick="closeSuccessModal()" style="background: #ff6600; color: white; border: none; padding: 10px 25px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; width: 100%;">
+            Đóng
+        </button>
+    </div>
+</div>
+
+<!-- Error Popup Modal -->
+<div id="errorModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 12px; padding: 30px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <!-- Close button -->
+        <button onclick="closeErrorModal()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; color: #999; cursor: pointer; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">&times;</button>
+        
+        <!-- Error icon -->
+        <div style="width: 60px; height: 60px; background: #dc3545; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-exclamation-triangle" style="color: white; font-size: 24px;"></i>
+        </div>
+        
+        <!-- Title -->
+        <h3 style="color: #333; margin-bottom: 15px; font-size: 20px; font-weight: bold;">Có lỗi xảy ra!</h3>
+        
+        <!-- Error message -->
+        <div style="background: #f8d7da; padding: 12px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #dc3545;">
+            <p style="margin: 0; color: #721c24; font-size: 14px; line-height: 1.4;" id="errorMessage">Vui lòng kiểm tra lại thông tin</p>
+        </div>
+        
+        <!-- Error details -->
+        <div id="errorDetails" style="display: none; background: #fff3cd; padding: 10px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
+            <p style="margin: 0; color: #856404; font-size: 12px; font-weight: bold;">Chi tiết lỗi:</p>
+            <p style="margin: 5px 0 0 0; color: #856404; font-size: 12px; font-family: monospace;" id="errorDetailsText"></p>
+        </div>
+        
+        <!-- Close button -->
+        <button onclick="closeErrorModal()" style="background: #dc3545; color: white; border: none; padding: 10px 25px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; width: 100%;">
+            Đóng
+        </button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const bookingForm = document.getElementById('bookingForm');
+    const successMessage = document.getElementById('successMessage');
+    const successText = document.getElementById('successText');
+    
+    bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(bookingForm);
+        const submitButton = bookingForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        
+        // Show loading state
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i> Đang xử lý...';
+        submitButton.disabled = true;
+        
+        fetch('{{ route("tour.booking") }}', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                // Show success popup modal
+                showSuccessModal(data.message);
+                bookingForm.reset();
+            } else {
+                // Show error popup modal with details
+                const errorDetails = data.errors ? JSON.stringify(data.errors, null, 2) : data.error;
+                showErrorModal(data.message || 'Có lỗi xảy ra. Vui lòng thử lại.', errorDetails);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showErrorModal('Có lỗi xảy ra. Vui lòng kiểm tra kết nối và thử lại.', error.message);
+        })
+        .finally(() => {
+            // Reset button state
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+        });
+    });
+});
+
+// Function to show success modal
+function showSuccessModal(message, orderId) {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to close success modal
+function closeSuccessModal() {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Function to show error modal
+function showErrorModal(message, details = null) {
+    const modal = document.getElementById('errorModal');
+    const errorMessage = document.getElementById('errorMessage');
+    const errorDetails = document.getElementById('errorDetails');
+    const errorDetailsText = document.getElementById('errorDetailsText');
+    
+    errorMessage.textContent = message;
+    
+    // Show detailed error if available
+    if (details) {
+        errorDetailsText.textContent = details;
+        errorDetails.style.display = 'block';
+    } else {
+        errorDetails.style.display = 'none';
+    }
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to close error modal
+function closeErrorModal() {
+    const modal = document.getElementById('errorModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modals when clicking outside
+document.getElementById('successModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeSuccessModal();
+    }
+});
+
+document.getElementById('errorModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeErrorModal();
+    }
+});
+
+// Close modals with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeSuccessModal();
+        closeErrorModal();
+    }
+});
+</script>
 @endsection

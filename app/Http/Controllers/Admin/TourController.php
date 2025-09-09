@@ -30,7 +30,7 @@ class TourController extends Controller
             'category_id' => 'required|exists:categories,id',
             'category_child_id' => 'nullable|exists:category_childs,id',
             'images' => 'required|array|size:3',
-            'images.*' => 'required|image|mimes:jpeg,png,webp,jpg,gif|max:5120',
+            'images.*' => 'required|image|mimes:jpeg,png,webp,jpg,gif',
         ]);
 
         $data = $validated;
