@@ -39,20 +39,28 @@ Route::get('/tours/{id}/delete', [TourController::class, 'delete']);
 
 Route::get('/banners', [BannerController::class, 'index']);
 Route::get('/banners/create', [BannerController::class, 'create']);
+Route::post('/banners', [BannerController::class, 'store']);
+Route::put('/banners/{id}', [BannerController::class, 'update']);
+Route::delete('/banners/{id}', [BannerController::class, 'delete']);
 
 Route::get('/logos', [LogoController::class, 'index']);
 Route::get('/logos/create', [LogoController::class, 'create']);
-Route::get('/logos/{id}/edit', [LogoController::class, 'edit']);
-Route::get('/logos/{id}/delete', [LogoController::class, 'delete']);
+Route::post('/logos', [LogoController::class, 'store']);
+Route::put('/logos/{id}', [LogoController::class, 'update']);
+Route::delete('/logos/{id}', [LogoController::class, 'delete']);
 
 Route::get('/footers', [FooterController::class, 'index']);
 Route::get('/footers/create', [FooterController::class, 'create']);
-Route::get('/footers/{id}/edit', [FooterController::class, 'edit']);
-Route::get('/footers/{id}/delete', [FooterController::class, 'delete']);
+Route::post('/footers', [FooterController::class, 'store']);
+Route::put('/footers/{id}', [FooterController::class, 'update']);
+Route::delete('/footers/{id}', [FooterController::class, 'destroy']);
 
 Route::get('/blogs', [BlogController::class, 'index']);
 Route::get('/blogs/create', [BlogController::class, 'create']);
+Route::post('/blogs', [BlogController::class, 'store']);
 Route::get('/blogs/{id}/edit', [BlogController::class, 'edit']);
-Route::get('/blogs/{id}/delete', [BlogController::class, 'delete']);
+Route::delete('/blogs/{id}', [BlogController::class, 'destroy']);
 
 // });
+
+Route::post('/upload-image', [BlogController::class, 'uploadImage'])->name('upload-image');
