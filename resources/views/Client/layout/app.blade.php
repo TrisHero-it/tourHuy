@@ -43,7 +43,7 @@
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
-    <title>Trang chủ - Du lịch Thế Sinh</title>
+    <title>@yield('title', 'Trang chủ - Du lịch Thế Sinh')</title>
     <style>
         .flying-press-lazy-bg {
             background-image: none !important;
@@ -694,7 +694,7 @@
                                         @foreach ($category->categoryChild as $categoryChild)
                                         <li id="menu-item-1826"
                                             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1826">
-                                            <a href="/{{ $category->slug }}/{{ $categoryChild->slug }}">{{ $categoryChild->name }}</a>
+                                            <a href="{{ route('category.child.show', [$category->slug, $categoryChild->slug]) }}">{{ $categoryChild->name }}</a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -783,14 +783,10 @@
         </main>
 
         <footer id="footer" class="footer-wrapper">
-
-
             <section class="section hide-for-small" id="section_456667461">
                 <div class="section-bg fill">
 
                 </div>
-
-
 
                 <div class="section-content relative">
 

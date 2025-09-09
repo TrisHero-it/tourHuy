@@ -9,9 +9,12 @@ class Category extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
         'description',
+        'banner',
         'image',
         'slug',
         'is_nav',

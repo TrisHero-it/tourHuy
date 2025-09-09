@@ -1,0 +1,12 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon" clip-path="url(#clip0_2328_9154)">
+<path id="Rectangle 71" d="M8.00033 13.3333H4.00033C3.26395 13.3333 2.66699 12.7363 2.66699 11.9999V11.9999C2.66699 10.5272 3.8609 9.33325 5.33366 9.33325H10.667C11.0003 9.33327 11.667 9.33327 12.3337 9.99995" stroke="#009571" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse id="Ellipse 59" cx="8" cy="4.66663" rx="2" ry="2" stroke="#009571"/>
+<path id="Vector 5" d="M14 11.3334L11.3333 14L10 12.6667" stroke="#009571" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_2328_9154">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
