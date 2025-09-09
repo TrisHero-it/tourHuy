@@ -650,17 +650,27 @@
                         <div id="logo" class="flex-col logo">
 
                             <!-- Header logo -->
-                            <a href="https://dulichthesinh.vn/" title="Du lịch Thế Sinh" rel="home">
-                                <img width="800" height="533"
-                                    src="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png"
-                                    class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
-                                    fetchpriority="low"
-                                    srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png 800w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-600x400.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-300x200.png 300w"
-                                    sizes="auto" /><img width="800" height="533"
-                                    src="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png"
-                                    class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low"
-                                    srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan.png 800w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-600x400.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-viet-nam-ve-dep-bat-tan-300x200.png 300w"
-                                    sizes="auto" /></a>
+                            <a href="{{ url('/') }}" title="Du lịch Thế Sinh" rel="home">
+                                @if(isset($logo) && $logo)
+                                    <img width="800" height="533"
+                                        src="{{ asset($logo->image) }}"
+                                        class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
+                                        fetchpriority="low" 
+                                        onerror="this.src='{{ asset('images/logo.png') }}'; console.log('Logo failed to load: {{ $logo->image }}');" />
+                                    <img width="800" height="533"
+                                        src="{{ asset($logo->image) }}"
+                                        class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low" 
+                                        onerror="this.src='{{ asset('images/logo.png') }}';" />
+                                @else
+                                    <img width="800" height="533"
+                                        src="{{ asset('images/logo.png') }}"
+                                        class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
+                                        fetchpriority="low" />
+                                    <img width="800" height="533"
+                                        src="{{ asset('images/logo.png') }}"
+                                        class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low" />
+                                @endif
+                            </a>
                         </div>
 
                         <!-- Mobile Left Elements -->

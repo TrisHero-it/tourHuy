@@ -59,7 +59,7 @@ Route::get('/logos', [LogoController::class, 'index']);
 Route::get('/logos/create', [LogoController::class, 'create']);
 Route::post('/logos', [LogoController::class, 'store']);
 Route::put('/logos/{id}', [LogoController::class, 'update']);
-Route::delete('/logos/{id}', [LogoController::class, 'delete']);
+Route::delete('/logos/{id}', [LogoController::class, 'destroy']);
 
 Route::get('/footers', [FooterController::class, 'index']);
 Route::get('/footers/create', [FooterController::class, 'create']);

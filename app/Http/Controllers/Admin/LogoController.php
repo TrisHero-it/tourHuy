@@ -45,4 +45,17 @@ class LogoController extends Controller
         $logo->save();
         return redirect()->back()->with('success', 'Logo cập nhập thành công');
     }
+
+    public function destroy($id)
+    {
+        $logo = Logo::find($id);
+        
+        // Delete the image file from storage
+        if ($logo && file_exists(public_path($logo->image))) {
+            unlink(public_path($logo->image));
+        }
+        
+        $logo->delete();
+        return redirect()->back()->with('success', 'Logo đã được xóa thành công');
+    }
 }

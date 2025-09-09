@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Account;
 use App\Models\Category;
+use App\Models\Logo;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -32,6 +33,15 @@ class AppServiceProvider extends ServiceProvider
         } catch (\Exception $e) {
             // Fallback if table doesn't exist or has issues
             View::share('categoriesNav', collect());
+        }
+
+        // Share active logo globally
+        try {
+            $logo = Logo::where('status', 'active')->first();
+            View::share('logo', $logo);
+        } catch (\Exception $e) {
+            // Fallback if table doesn't exist or has issues
+            View::share('logo', null);
         }
     }
 }

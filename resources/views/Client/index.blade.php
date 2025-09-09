@@ -134,7 +134,7 @@
 				<div id="text-3075179566" class="text">
 
 
-					<p>{{ $category->description }}</p>
+					<p>{!! $category-> meta !!}</p>
 
 					<style>
 						#text-3075179566 {
