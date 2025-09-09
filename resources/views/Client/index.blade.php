@@ -740,11 +740,11 @@
 							<div class="box box-default box-text-bottom box-blog-post has-hover">
 								<div class="box-image">
 									<div class="image-cover" style="padding-top:56.25%;">
-										<a href="https://dulichthesinh.vn/6-dia-diem-du-lich-tam-linh-o-ninh-binh-giup-ban-tim-kiem-su-binh-an/"
+										<a href="{{ route('blog.show', $blogs->slug) }}"
 											class="plain"
 											aria-label="6 địa điểm du lịch tâm linh ở Ninh Bình giúp bạn tìm kiếm sự bình an">
 											<img decoding="async" width="600" height="400"
-												src="https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg"
+												src="{{ $blogs->image ? asset($blogs->image) : 'https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg' }}"
 												class="attachment-medium size-medium wp-post-image" alt=""
 												srcset="https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-300x200.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1.jpg 1024w"
 												sizes="(max-width: 600px) 100vw, 600px" loading="eager"
