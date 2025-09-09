@@ -64,9 +64,12 @@
                                 </td>
 
                                 <td>
-                                    <a href="/categories/{{$category->id}}/edit" class="btn btn-outline-warning">Sửa</a>
-                                    <a href="/categories/{{$category->id}}/delete"
-                                        class="btn btn-outline-danger">Xóa</a>
+                                    <a href="{{ route('admin.categories.edit', $category->id) }}" class="btn btn-outline-warning btn-sm">Sửa</a>
+                                    <form action="{{ route('admin.categories.destroy', $category->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

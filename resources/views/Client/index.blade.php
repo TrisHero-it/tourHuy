@@ -7,14 +7,16 @@
 
 	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_566051371">
 		<div class="img-inner dark">
-			<img width="600" height="168"
-				src="{{ asset('storage/uploads/2505_banner-du-lich-mien-bac-viet-nam-600x168.jpg') }}"
-				class="attachment-medium size-medium" />
+			<img width="1250" height="350"
+				src="{{asset($banners->image)}}"
+				alt="Banner du lịch" />
 		</div>
 
 		<style>
-			#image_566051371 {
+			#image_566051371 img {
 				width: 100%;
+				height: 350px;
+				object-fit: cover;
 			}
 		</style>
 	</div>
@@ -111,8 +113,6 @@
 		@if ($loop->index == 0)
 		<div id="col-1078270613" class="col trang-chu-san-pham-column small-12 large-12">
 			<div class="col-inner text-left" style="background-color:rgb(229, 246, 255);">
-
-
 
 				<div id="text-3984494503" class="text category-header">
 

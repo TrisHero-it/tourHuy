@@ -94,9 +94,10 @@
                         <a href="#!" class="nav-link"><span class="pcoded-micon"><i
                                     class="feather icon-box"></i></span><span class="pcoded-mtext">Danh mục</span></a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="/admin/categories" class="">Danh sách</a></li>
+                            <li class=""><a href="/admin/categories" class="">Danh sách danh mục</a></li>
                             <li class=""><a href="/admin/categories/create" class="">Thêm danh mục</a></li>
-                            <li class=""><a href="/admin/category-childs/create" class="">Thêm danh mục con</a></li>
+                            <li class=""><a href="/admin/category-children" class="">Danh sách danh mục con</a></li>
+                            <li class=""><a href="/admin/category-children/create" class="">Thêm danh mục con</a></li>
                         </ul>
                     </li>
 
