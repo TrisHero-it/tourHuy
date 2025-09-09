@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Models\Account;
 use App\Models\Category;
-use App\Models\Logo;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,8 +22,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        $countOrder = Order::where('status', 'Chưa liên hệ')->count();
         $address = Account::first();
         View::share('address', $address);
+        View::share('countOrder', $countOrder);
 
         // Share categories for navigation
         try {

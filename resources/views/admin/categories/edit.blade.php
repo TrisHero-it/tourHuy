@@ -1,6 +1,7 @@
 @extends('admin.layout.app')
 @section('link')
 <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-timepicker.min.css')}}">
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 @endsection
 @section('content')
 <div style="position: fixed; right: 23px; top: 30px; z-index: 1102;" id="notification">
@@ -23,50 +24,65 @@
 
                 <label for="">Thumbnail hiện tại</label> <br>
                 @if($category->image)
-                    <img src="{{ asset($category->image) }}" alt="{{ $category->name }}" style="max-width: 200px; max-height: 150px; margin-bottom: 10px;">
+                <img src="{{ asset($category->image) }}" alt="{{ $category->name }}" style="max-width: 200px; max-height: 150px; margin-bottom: 10px;">
                 @else
-                    <p>Chưa có ảnh thumbnail</p>
+                <p>Chưa có ảnh thumbnail</p>
                 @endif
                 <br>
-                <label for="">Thay đổi thumbnail</label> <br>
-                <input class="form-control" type="file" name="image">
+                <label for="image">Thay đổi thumbnail</label> <br>
+                <input class="form-control" type="file" name="image" id="image" onchange="previewImage(this, 'imagePreview', 'previewImg')">
                 @error('image')
                 <div style="color:red">{{$message}}</div>
                 @enderror
+                <div id="imagePreview" class="mt-2" style="display: none;">
+                    <img id="previewImg" src="" alt="Preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
+                </div>
 
                 <label for="">Banner hiện tại</label> <br>
                 @if($category->banner)
-                    <img src="{{ asset($category->banner) }}" alt="{{ $category->name }} banner" style="max-width: 200px; max-height: 150px; margin-bottom: 10px;">
+                <img src="{{ asset($category->banner) }}" alt="{{ $category->name }} banner" style="max-width: 200px; max-height: 150px; margin-bottom: 10px;">
                 @else
-                    <p>Chưa có ảnh banner</p>
+                <p>Chưa có ảnh banner</p>
                 @endif
                 <br>
-                <label for="">Thay đổi banner</label> <br>
-                <input class="form-control" type="file" name="banner">
+                <label for="banner">Thay đổi banner</label> <br>
+                <input class="form-control" type="file" name="banner" id="banner" onchange="previewImage(this, 'bannerPreview', 'previewBannerImg')">
                 @error('banner')
                 <div style="color:red">{{$message}}</div>
                 @enderror
+                <div id="bannerPreview" class="mt-2" style="display: none;">
+                    <img id="previewBannerImg" src="" alt="Preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
+                </div>
 
                 <label for="">Description</label> <br>
-                <textarea class="form-control" name="description" id="description">{{ old('description', $category->description) }}</textarea>
+                <textarea class="form-control" name="description" id="editor">{{ old('description', $category->description) }}</textarea>
                 @error('description')
                 <div style="color:red">{{$message}}</div>
                 @enderror
 
-                <label for="" class="mt-3">is_nav</label> <br>
-                <input class="form-control" type="checkbox" name="is_nav" {{ old('is_nav', $category->is_nav) ? 'checked' : '' }}>
+                <div class="form-check form-switch mt-3">
+                    <input type="hidden" name="is_nav" value="0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="is_nav" name="is_nav" value="1" {{ old('is_nav', $category->is_nav) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="is_nav">Hiển thị trên navigation (is_nav)</label>
+                </div>
                 @error('is_nav')
                 <div style="color:red">{{$message}}</div>
                 @enderror
 
-                <label for="">is_featured</label> <br>
-                <input class="form-control" type="checkbox" name="is_featured" {{ old('is_featured', $category->is_featured) ? 'checked' : '' }}>
+                <div class="form-check form-switch mt-2">
+                    <input type="hidden" name="is_featured" value="0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="is_featured" name="is_featured" value="1" {{ old('is_featured', $category->is_featured) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="is_featured">Nổi bật (is_featured)</label>
+                </div>
                 @error('is_featured')
                 <div style="color:red">{{$message}}</div>
                 @enderror
 
-                <label for="">is_banner</label> <br>
-                <input class="form-control" type="checkbox" name="is_banner" {{ old('is_banner', $category->is_banner) ? 'checked' : '' }}>
+                <div class="form-check form-switch mt-2">
+                    <input type="hidden" name="is_banner" value="0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="is_banner" name="is_banner" value="1" {{ old('is_banner', $category->is_banner) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="is_banner">Hiển thị banner (is_banner)</label>
+                </div>
                 @error('is_banner')
                 <div style="color:red">{{$message}}</div>
                 @enderror
@@ -104,4 +120,27 @@
     }, 2000)
 </script>
 @endif
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
+            }
+        })
+        .then(editor => {})
+        .catch(error => {
+            console.error(error);
+        });
+
+    function previewImage(input, containerId, imgId) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById(imgId).src = e.target.result;
+                document.getElementById(containerId).style.display = 'block';
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 @endsection
