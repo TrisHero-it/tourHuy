@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\Account;
 use App\Models\Category;
+use App\Models\Logo;
+use App\Models\Order;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
