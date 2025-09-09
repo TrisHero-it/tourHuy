@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Account;
 use App\Models\Category;
 use App\Models\Tour;
 use Illuminate\Http\Request;
@@ -44,6 +45,9 @@ class TourController extends Controller
             abort(404, 'Tour not found');
         }
 
-        return view('client.tour.detail', compact('category', 'categoryChild', 'tour'));
+        // Lấy thông tin liên hệ từ bảng account
+        $account = Account::first();
+
+        return view('client.tour.detail', compact('category', 'categoryChild', 'tour', 'account'));
     }
 }
