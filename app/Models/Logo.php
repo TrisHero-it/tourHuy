@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Logo extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'image',
+        'status'
+    ];
 }

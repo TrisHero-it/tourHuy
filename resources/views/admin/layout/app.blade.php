@@ -96,6 +96,7 @@
                         <ul class="pcoded-submenu">
                             <li class=""><a href="/admin/categories" class="">Danh sách</a></li>
                             <li class=""><a href="/admin/categories/create" class="">Thêm danh mục</a></li>
+                            <li class=""><a href="/admin/category-childs/create" class="">Thêm danh mục con</a></li>
                         </ul>
                     </li>
 
