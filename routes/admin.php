@@ -27,14 +27,20 @@ Route::get('/', [HomeController::class, 'login']);
 
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/categories/create', [CategoryController::class, 'create']);
+Route::post('/categories', [CategoryController::class, 'store']);
 Route::get('/categories/{id}/edit', [CategoryController::class, 'edit']);
+Route::put('/categories/{id}', [CategoryController::class, 'update']);
 Route::get('/categories/{id}/delete', [CategoryController::class, 'delete']);
+
+Route::get('/category-childs-by-category/{id}', [CategoryController::class, 'categoryChildsByCategory']);
 
 Route::get('/orders', [OrderController::class, 'index']);
 
 Route::get('/tours', [TourController::class, 'index']);
 Route::get('/tours/create', [TourController::class, 'create']);
+Route::post('/tours', [TourController::class, 'store']);
 Route::get('/tours/{id}/edit', [TourController::class, 'edit']);
+Route::put('/tours/{id}', [TourController::class, 'update']);
 Route::get('/tours/{id}/delete', [TourController::class, 'delete']);
 
 Route::get('/banners', [BannerController::class, 'index']);

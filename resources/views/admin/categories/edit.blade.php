@@ -3,57 +3,55 @@
 <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-timepicker.min.css')}}">
 @endsection
 @section('content')
-<div style="position: fixed; right: 23px; top: 30px; z-index: 1102;" id="notification">
+<div style="position: fixed; right: 23px; top: 30px; z-index: 1102;" id="notification"></div>
 
-</div>
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <h5>Thêm danh mục</h5>
+            <h5>Sửa danh mục</h5>
         </div>
         <div class="card-body">
-            <form action="/admin/categories" method="POST" enctype="multipart/form-data">
+            <form action="/admin/categories/{{ $category->id }}" method="POST" enctype="multipart/form-data">
+                @method('PUT')
                 @csrf
                 <label for="">Tên danh mục</label> <br>
+                <input class="form-control" type="text" name="name" value="{{ $category->name }}">
 
-                <input class="form-control" type="text" name="name">
-
-                <label for="">Thumbnail</label> <br>
+                <label for="">Thumbnail hiện tại</label>
+                <div class="mb-2">
+                    <img src="{{ asset($category->image) }}" alt="" style="width: 120px; height: 120px; object-fit: cover;">
+                </div>
+                <label for="">Đổi thumbnail</label> <br>
                 <input class="form-control" type="file" name="image">
-                @error('image')
-                <div style="color:red">{{$message}}</div>
-                @enderror
-                <label for="">Banner</label> <br>
+
+                <label for="">Banner hiện tại</label>
+                <div class="mb-2">
+                    @if($category->banner)
+                    <img src="{{ asset($category->banner) }}" alt="" style="width: 120px; height: 120px; object-fit: cover;">
+                    @else
+                    <p class="text-muted">Chưa có banner</p>
+                    @endif
+                </div>
+                <label for="">Đổi banner</label> <br>
                 <input class="form-control" type="file" name="banner">
 
                 <label for="">Description</label> <br>
-                <textarea class="form-control" name="description" id="description"></textarea>
-                @error('description')
-                <div style="color:red">{{$message}}</div>
-                @enderror
-                <label for="" class="mt-3">is_nav</label> <br>
-                <input type="hidden" name="is_nav" value="0">
-                <input class="form-control" type="checkbox" name="is_nav" value="1">
-                @error('is_nav')
-                <div style="color:red">{{$message}}</div>
-                @enderror
-                <label for="">is_featured</label> <br>
-                <input type="hidden" name="is_featured" value="0">
-                <input class="form-control" type="checkbox" name="is_featured" value="1">
-                @error('is_featured')
-                <div style="color:red">{{$message}}</div>
-                @enderror
-                <label for="">is_banner</label> <br>
-                <input type="hidden" name="is_banner" value="0">
-                <input class="form-control" type="checkbox" name="is_banner" value="1">
-                @error('is_banner')
-                <div style="color:red">{{$message}}</div>
-                @enderror
+                <textarea class="form-control" name="description" id="description">{{ $category->description }}</textarea>
 
-                <button type="submit" style="margin-top: 11px;" class="btn btn-primary">Thêm</button>
+                <label for="" class="mt-3">is_nav</label> <br>
+                <input class="form-control" type="checkbox" name="is_nav" {{ $category->is_nav ? 'checked' : '' }}>
+
+                <label for="">is_featured</label> <br>
+                <input class="form-control" type="checkbox" name="is_featured" {{ $category->is_featured ? 'checked' : '' }}>
+
+                <label for="">is_banner</label> <br>
+                <input class="form-control" type="checkbox" name="is_banner" {{ $category->is_banner ? 'checked' : '' }}>
+
+                <button type="submit" style="margin-top: 11px;" class="btn btn-primary">Cập nhật</button>
             </form>
         </div>
     </div>
+    <a href="/admin/categories" class="btn btn-link" style="margin-top:10px">Quay lại danh sách</a>
 </div>
 
 @if (session('success'))

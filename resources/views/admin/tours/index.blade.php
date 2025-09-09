@@ -28,15 +28,20 @@
                             @foreach($tours as $tour)
                             <tr>
                                 <td>{{ $tour->name }}</td>
-                                <td>{{ $tour->image }}</td>
+                                <td>
+                                    @php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+                                    @if($firstImage)
+                                    <img src="{{ asset($firstImage) }}" alt="" style="width: 100px; height: 100px;">
+                                    @endif
+                                </td>
                                 <td>{{ $tour->slug }}</td>
                                 <td>{{ number_format($tour->price, 0, ',', '.') }}</td>
                                 <td>{{ $tour->categoryChild->name }}</td>
                                 <td>{{ $tour->category->name }}</td>
-                                <td>{{ $tour->duration }}</td>
+                                <td>{{ $tour->schedule }}</td>
                                 <td>
-                                    <a href="" class="btn btn-warning">Sửa</a>
-                                    <a href="" class="btn btn-danger">Xóa</a>
+                                    <a href="/admin/tours/{{ $tour->id }}/edit" class="btn btn-warning">Sửa</a>
+                                    <a href="/admin/tours/{{ $tour->id }}/delete" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xoá tour này?')">Xóa</a>
                                 </td>
                             </tr>
                             @endforeach
