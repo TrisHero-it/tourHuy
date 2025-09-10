@@ -332,13 +332,13 @@
             </div>
             <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
                 <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-                    <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Admin CheckSca</a></h1>
+                    <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Admin Sinh Travel</a></h1>
                 </div>
                 <div class="formbg-outer">
                     <div class="formbg">
                         <div class="formbg-inner padding-horizontal--48">
                             <span class="padding-bottom--15" style="text-align: center">Đăng nhập</span>
-                            <form id="stripe-login" action="/admin-login" method="POST">
+                            <form id="stripe-login" action="/admin/login" method="POST">
                                 @csrf
                                 <div class="field padding-bottom--24">
                                     <label for="email">Tài khoản</label>
@@ -360,7 +360,7 @@
                     <div class="footer-link padding-top--24">
                         <span>Bạn chưa có tài khoản? <a href="/">Trở về trang chủ</a></span>
                         <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
-                            <span><a href="#">© CheckSca</a></span>
+                            <span><a href="#">© SinhTravel</a></span>
                             <span><a href="#">Contact</a></span>
                             <span><a href="#">Privacy & terms</a></span>
                         </div>
@@ -377,17 +377,17 @@
         document.getElementById('stripe-login').addEventListener('submit', (event) => {
             event.preventDefault();
             $.ajax({
-                url: '/admin-login',
+                url: '/admin/login',
                 method: 'POST',
                 data: {
                     email: email.value,
                     password: password.value,
                     _token: "{{csrf_token()}}",
                 },
-                success: function (data) {
+                success: function(data) {
                     console.log(data)
-                    if (data[0] == 'success') {
-                        window.location.href = '/admin-reports'
+                    if (data.success) {
+                        window.location.href = '/admin/categories'
                     } else {
                         thongbao[0].innerHTML = 'Tài khoản mật khẩu không chính xác';
                         thongbao[0].classList.add('alert')

@@ -69,7 +69,6 @@
                     <img src="{{asset('images/design/favicon_io/android-chrome-192x192.png')}}"
                         style="width: 30px; height: 30px" alt="logo" class="logo-thumb images">
                 </a>
-                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
             </div>
             <div class="navbar-content scroll-div" id="layout-sidenav">
 
@@ -109,6 +108,7 @@
                             <li class=""><a href="/admin/banners" class="">Banner</a></li>
                             <li class=""><a href="/admin/logos" class="">Logo</a></li>
                             <li class=""><a href="/admin/footers" class="">Địa chỉ footer</a></li>
+                            <li class=""><a href="/admin/google-maps" class="">Google Maps</a></li>
                         </ul>
                     </li>
 
@@ -152,98 +152,6 @@
             <a href="#!" class="mob-toggler"></a>
             <ul class="navbar-nav ms-auto">
                 <li>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i
-                                class="icon feather icon-bell"></i></a>
-                        <div class="dropdown-menu dropdown-menu-end notification">
-                            <div class="noti-head">
-                                <h6 class="d-inline-block m-b-0">Notifications</h6>
-                                <div class="float-end">
-                                    <a href="#!" class="m-r-10">mark as read</a>
-                                    <a href="#!">clear all</a>
-                                </div>
-                            </div>
-                            <ul class="noti-body">
-                                <li class="n-title">
-                                    <p class="m-b-0">NEW</p>
-                                </li>
-                                <li class="notification">
-                                    <div class="d-flex">
-                                        <img class="img-radius" src="{{asset('assets/images/user/avatar-1.jpg')}}"
-                                            alt="Profile Image">
-                                        <div class="flex-grow-1">
-                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i
-                                                        class="icon feather icon-clock m-r-10"></i>5 min</span></p>
-                                            <p>New ticket Added</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="n-title">
-                                    <p class="m-b-0">EARLIER</p>
-                                </li>
-                                <li class="notification">
-                                    <div class="d-flex">
-                                        <img class="img-radius" src="{{asset('assets/images/user/avatar-2.jpg')}}"
-                                            alt="Profile Image">
-                                        <div class="flex-grow-1">
-                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
-                                                        class="icon feather icon-clock m-r-10"></i>10 min</span></p>
-                                            <p>Prchace New Theme and make payment</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="notification">
-                                    <div class="d-flex">
-                                        <img class="img-radius" src="{{asset('assets/images/user/avatar-3.jpg')}}"
-                                            alt="Profile Image">
-                                        <div class="flex-grow-1">
-                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
-                                                        class="icon feather icon-clock m-r-10"></i>12 min</span></p>
-                                            <p>currently login</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="notification">
-                                    <div class="d-flex">
-                                        <img class="img-radius" src="{{asset('assets/images/user/avatar-1.jpg')}}"
-                                            alt="Profile Image">
-                                        <div class="flex-grow-1">
-                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
-                                                        class="icon feather icon-clock m-r-10"></i>30 min</span></p>
-                                            <p>Prchace New Theme and make payment</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="notification">
-                                    <div class="d-flex">
-                                        <img class="img-radius" src="{{asset('assets/images/user/avatar-3.jpg')}}"
-                                            alt="Profile Image">
-                                        <div class="flex-grow-1">
-                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
-                                                        class="icon feather icon-clock m-r-10"></i>1 hour</span></p>
-                                            <p>currently login</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="notification">
-                                    <div class="d-flex">
-                                        <img class="img-radius" src="{{asset('assets/images/user/avatar-1.jpg')}}"
-                                            alt="Profile Image">
-                                        <div class="flex-grow-1">
-                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
-                                                        class="icon feather icon-clock m-r-10"></i>2 hour</span></p>
-                                            <p>Prchace New Theme and make payment</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="noti-footer">
-                                <a href="#!">show all</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
                     <div class="dropdown drp-user">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="icon feather icon-settings"></i>
@@ -253,8 +161,8 @@
                                 <img src="{{asset('assets/images/user/avatar-1.jpg')}}" class="img-radius"
                                     alt="User-Profile-Image">
                                 <span>
-                                    <span class="text-muted">Free Trial</span>
-                                    <span class="h6">doe@company.com</span>
+                                    <span class="text-muted">{{ Auth::user()->name }}</span>
+                                    <span class="h6">{{ Auth::user()->email }}</span>
                                 </span>
                             </div>
                             <ul class="pro-body">
@@ -262,11 +170,11 @@
                                         Settings</a></li>
                                 <li><a href="#!" class="dropdown-item"><i class="feather icon-user"></i> Profile</a>
                                 </li>
-                                <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i>
+                                <li><a href="" class="dropdown-item"><i class="feather icon-mail"></i>
                                         My Messages</a></li>
-                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i>
+                                <li><a href="" class="dropdown-item"><i class="feather icon-lock"></i>
                                         Lock Screen</a></li>
-                                <li><a href="#!" class="dropdown-item"><i class="feather icon-power text-danger"></i>
+                                <li><a href="/admin/logout" class="dropdown-item"><i class="feather icon-power text-danger"></i>
                                         Logout</a></li>
                             </ul>
                         </div>
@@ -277,7 +185,6 @@
 
     </header>
     <!-- [ Header ] end -->
-
 
     <!-- [ Main Content ] start -->
     <div class="pcoded-main-container">

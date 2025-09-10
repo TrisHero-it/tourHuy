@@ -16,7 +16,7 @@
     <script>
         (function(w, d, s, l) {
             w[l] = w[l] || [];
-            (function() {   
+            (function() {
                 w[l].push(arguments);
             })('set', 'developer_id.dYzg1YT', true);
             w[l].push({
@@ -33,7 +33,7 @@
     <meta charset="UTF-8" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="pingback" href="xmlrpc.html" />
-
+    <link rel="shortcut icon" href="{{ asset($logo->image) }}" type="image/x-icon">
     <script defer
         src="data:text/javascript,%28function%28html%29%7Bhtml.className%20%3D%20html.className.replace%28%2F%5Cbno-js%5Cb%2F%2C%27js%27%29%7D%29%28document.documentElement%29%3B"></script>
     <style>
@@ -50,73 +50,15 @@
             background-image: none !important;
         }
     </style>
-    <link rel='preload' href='wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-600x168.jpg' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-600x168.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-1024x287.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam-300x84.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-du-lich-mien-bac-viet-nam.jpg 2048w'
-        imagesizes='(max-width: 600px) 100vw, 600px' />
-    <link rel='preload' href='wp-content/uploads/2506_z6700105915602_3e6ed79a3a6850cae5c1c8e59c430b44-600x450.jpg'
-        as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_z6700044442471_69c455edfeb0029df19c9eb1799027c5.jpg' as='image'
-        imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_z5519721449695_e7f485daa65015a4f21ba2fce813d603.jpg' as='image'
-        imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2505_anh-1.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2505_anh-dep-cat.webp' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2507_2nn-600x450.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_b2-600x450.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_sapa-5-1-600x450.png' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_cho-bac-ha-600x450.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_ho-chieu.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2507_song-nho-que-600x450.jpg' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_ban-cat-cat-600x450.webp' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2504_680ef0fa21c95-600x450.webp' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2504_680ef0fcb150b-600x450.webp' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2504_680ef0fdf14e0-600x450.webp' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2507_3nn-600x450.jpg' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2507_3nn-600x450.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn-1024x768.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn-300x225.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn-768x576.jpg 768w, https://dulichthesinh.vn/wp-content/uploads/2507_3nn.jpg 1200w'
-        imagesizes='(max-width: 600px) 100vw, 600px' />
-    <link rel='preload' href='wp-content/uploads/2506_tm2.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2506_cp3.jpg' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2504_680ef0f4c00b2-600x450.webp' as='image' imagesrcset=''
-        imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2505_ninh-binh-1-600x400.jpg' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-300x200.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1.jpg 1024w'
-        imagesizes='(max-width: 600px) 100vw, 600px' />
-    <link rel='preload' href='wp-content/uploads/2505_banner-tay-bac-600x284.jpg' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-600x284.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-1024x485.jpg 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac-300x142.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_banner-tay-bac.jpg 1600w'
-        imagesizes='(max-width: 600px) 100vw, 600px' />
-    <link rel='preload' href='wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-600x301.jpg'
-        as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-600x301.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674-300x150.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_momo-upload-api-210629113522-637605633229550674.jpg 800w'
-        imagesizes='(max-width: 600px) 100vw, 600px' />
-    <link rel='preload' href='wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png 512w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png 300w'
-        imagesizes='(max-width: 512px) 100vw, 512px' />
-    <link rel='preload' href='wp-content/uploads/2505_dmca-badge-1.png' as='image' imagesrcset='' imagesizes='' />
-    <link rel='preload' href='wp-content/uploads/2505_hotline-dat-tour.png' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour.png 688w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-600x206.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-300x103.png 300w'
-        imagesizes='(max-width: 688px) 100vw, 688px' />
-    <link rel='preload' href='wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-600x89.webp' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-600x89.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-1024x152.webp 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-300x44.webp 300w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao.webp 1039w'
-        imagesizes='(max-width: 600px) 100vw, 600px' />
-    <link rel='preload' href='wp-content/uploads/2504_680ef0ff90d85-1024x576.webp' as='image'
-        imagesrcset='https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-1024x576.webp 1024w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-600x338.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-300x169.webp 300w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85.webp 1280w'
-        imagesizes='(max-width: 1020px) 100vw, 1020px' />
 
     <meta name="description" content="Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt Nam!" />
     <meta name="robots" content="nofollow, noindex" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Trang chủ - Du lịch Thế Sinh" />
+    <meta property="og:title" content="Trang chủ - Sinh Travel" />
     <meta property="og:description" content="Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt Nam!" />
-    <meta property="og:url" content="https://dulichthesinh.vn/" />
-    <meta property="og:site_name" content="Du lịch Thế Sinh" />
+    <meta property="og:url" content="https://sinhtravel.com.vn" />
+    <meta property="og:site_name" content="Sinh Travel" />
     <meta property="og:updated_time" content="2025-06-02T11:18:36+07:00" />
     <meta property="og:image" content="https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp" />
     <meta property="og:image:secure_url"
@@ -135,107 +77,6 @@
     <meta name="twitter:data1" content="The Sinh Tourist" />
     <meta name="twitter:label2" content="Thời gian để đọc" />
     <meta name="twitter:data2" content="3 phút" />
-    <script type="application/ld+json"
-        class="rank-math-schema">
-        {
-            "@context": "https://schema.org",
-            "@graph": [{
-                "@type": "Organization",
-                "@id": "https://dulichthesinh.vn/#organization",
-                "name": "Du l\u1ecbch Th\u1ebf Sinh",
-                "logo": {
-                    "@type": "ImageObject",
-                    "@id": "https://dulichthesinh.vn/#logo",
-                    "url": "https://dulichthesinh.vn/wp-content/uploads/2504_cropped-2504_dulichthesinh-favicon.png",
-                    "contentUrl": "https://dulichthesinh.vn/wp-content/uploads/2504_cropped-2504_dulichthesinh-favicon.png",
-                    "caption": "Du l\u1ecbch Th\u1ebf Sinh",
-                    "inLanguage": "vi",
-                    "width": "512",
-                    "height": "512"
-                }
-            }, {
-                "@type": "WebSite",
-                "@id": "https://dulichthesinh.vn/#website",
-                "url": "https://dulichthesinh.vn",
-                "name": "Du l\u1ecbch Th\u1ebf Sinh",
-                "alternateName": "Sinh Cafe Tour",
-                "publisher": {
-                    "@id": "https://dulichthesinh.vn/#organization"
-                },
-                "inLanguage": "vi",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://dulichthesinh.vn/?s={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
-            }, {
-                "@type": "ImageObject",
-                "@id": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp",
-                "url": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp",
-                "width": "875",
-                "height": "632",
-                "inLanguage": "vi"
-            }, {
-                "@type": "WebPage",
-                "@id": "https://dulichthesinh.vn/#webpage",
-                "url": "https://dulichthesinh.vn/",
-                "name": "Trang ch\u1ee7 - Du l\u1ecbch Th\u1ebf Sinh",
-                "datePublished": "2024-12-11T17:42:51+07:00",
-                "dateModified": "2025-06-02T11:18:36+07:00",
-                "about": {
-                    "@id": "https://dulichthesinh.vn/#organization"
-                },
-                "isPartOf": {
-                    "@id": "https://dulichthesinh.vn/#website"
-                },
-                "primaryImageOfPage": {
-                    "@id": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp"
-                },
-                "inLanguage": "vi"
-            }, {
-                "@type": "Person",
-                "@id": "https://dulichthesinh.vn/#author",
-                "name": "The Sinh Tourist",
-                "image": {
-                    "@type": "ImageObject",
-                    "@id": "https://secure.gravatar.com/avatar/b1d9d828b3e218d7a57e9abcfee1797974f6a199bb85d7eae8c4949de5cae892?s=96&amp;d=mm&amp;r=g",
-                    "url": "https://secure.gravatar.com/avatar/b1d9d828b3e218d7a57e9abcfee1797974f6a199bb85d7eae8c4949de5cae892?s=96&amp;d=mm&amp;r=g",
-                    "caption": "The Sinh Tourist",
-                    "inLanguage": "vi"
-                },
-                "sameAs": ["https://dulichthesinh.vn"],
-                "worksFor": {
-                    "@id": "https://dulichthesinh.vn/#organization"
-                }
-            }, {
-                "@type": "Article",
-                "headline": "Trang ch\u1ee7 - Du l\u1ecbch Th\u1ebf Sinh",
-                "datePublished": "2024-12-11T17:42:51+07:00",
-                "dateModified": "2025-06-02T11:18:36+07:00",
-                "author": {
-                    "@id": "https://dulichthesinh.vn/#author",
-                    "name": "The Sinh Tourist"
-                },
-                "publisher": {
-                    "@id": "https://dulichthesinh.vn/#organization"
-                },
-                "description": "\u0110\u01a1n v\u1ecb t\u1ed5 ch\u1ee9c tour du l\u1ecbch mi\u1ec1n B\u1eafc h\u00e0ng \u0111\u1ea7u Vi\u1ec7t Nam!",
-                "name": "Trang ch\u1ee7 - Du l\u1ecbch Th\u1ebf Sinh",
-                "@id": "https://dulichthesinh.vn/#richSnippet",
-                "isPartOf": {
-                    "@id": "https://dulichthesinh.vn/#webpage"
-                },
-                "image": {
-                    "@id": "https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp"
-                },
-                "inLanguage": "vi",
-                "mainEntityOfPage": {
-                    "@id": "https://dulichthesinh.vn/#webpage"
-                }
-            }]
-        }
-    </script>
-    <!-- /Plugin SEO WordPress Rank Math -->
 
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
@@ -652,23 +493,23 @@
                             <!-- Header logo -->
                             <a href="{{ url('/') }}" title="Du lịch Thế Sinh" rel="home">
                                 @if(isset($logo) && $logo)
-                                    <img width="800" height="533"
-                                        src="{{ asset($logo->image) }}"
-                                        class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
-                                        fetchpriority="low" 
-                                        onerror="this.src='{{ asset('images/logo.png') }}'; console.log('Logo failed to load: {{ $logo->image }}');" />
-                                    <img width="800" height="533"
-                                        src="{{ asset($logo->image) }}"
-                                        class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low" 
-                                        onerror="this.src='{{ asset('images/logo.png') }}';" />
+                                <img width="800" height="533"
+                                    src="{{ asset($logo->image) }}"
+                                    class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
+                                    fetchpriority="low"
+                                    onerror="this.src='{{ asset('images/logo.png') }}'; console.log('Logo failed to load: {{ $logo->image }}');" />
+                                <img width="800" height="533"
+                                    src="{{ asset($logo->image) }}"
+                                    class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low"
+                                    onerror="this.src='{{ asset('images/logo.png') }}';" />
                                 @else
-                                    <img width="800" height="533"
-                                        src="{{ asset('images/logo.png') }}"
-                                        class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
-                                        fetchpriority="low" />
-                                    <img width="800" height="533"
-                                        src="{{ asset('images/logo.png') }}"
-                                        class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low" />
+                                <img width="800" height="533"
+                                    src="{{ asset('images/logo.png') }}"
+                                    class="header_logo header-logo" alt="Du lịch Thế Sinh" loading="lazy"
+                                    fetchpriority="low" />
+                                <img width="800" height="533"
+                                    src="{{ asset('images/logo.png') }}"
+                                    class="header-logo-dark" alt="Du lịch Thế Sinh" loading="lazy" fetchpriority="low" />
                                 @endif
                             </a>
                         </div>
@@ -851,17 +692,17 @@
                                 <h3><span style="font-size: 65%;"><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></span></h3>
                                 <p data-wp-editing="1"><a href="https://www.facebook.com/" target="_blank"
                                         rel="nofollow noopener"><img class="alignnone wp-image-292"
-                                            src="https://dulichsinhcafe.vn/wp-content/uploads/logo-facebook-600x600.png"
+                                            src="{{ asset('wp-content/uploads/logo-facebook-600x600.png') }}"
                                             alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
                                         href="https://zalo.me/" target="_blank" rel="nofollow noopener"><img
                                             class="alignnone wp-image-291" style="color: #333333;"
-                                            src="https://dulichsinhcafe.vn/wp-content/uploads/logo-zalo-600x600.webp"
+                                            src="{{ asset('wp-content/uploads/logo-zalo-600x600.webp') }}"
                                             alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <img
                                         class="alignnone wp-image-289" style="color: #333333;"
-                                        src="https://dulichsinhcafe.vn/wp-content/uploads/logo-youtube.png" alt=""
+                                        src="{{ asset('wp-content/uploads/logo-youtube.png') }}" alt=""
                                         width="36" height="36" loading="lazy" fetchpriority="low" /> <img
                                         class="alignnone wp-image-290" style="color: #333333;"
-                                        src="https://dulichsinhcafe.vn/wp-content/uploads/logo-google-maps.png" alt=""
+                                        src="{{ asset('wp-content/uploads/logo-google-maps.png') }}" alt=""
                                         width="36" height="37" loading="lazy" fetchpriority="low" /></p>
 
                             </div>
@@ -873,9 +714,9 @@
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_277771718">
                                     <div class="img-inner dark">
                                         <img width="512" height="194"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png"
+                                            src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}"
                                             class="attachment-original size-original" alt="" decoding="async"
-                                            srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png 512w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png 300w"
+                                            srcset="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }} 512w, {{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png') }} 300w"
                                             sizes="(max-width: 512px) 100vw, 512px" loading="eager"
                                             fetchpriority="high" />
                                     </div>
@@ -891,7 +732,7 @@
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1387355368">
                                     <div class="img-inner dark">
                                         <img width="250" height="125"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_dmca-badge-1.png"
+                                            src="{{ asset('wp-content/uploads/2505_dmca-badge-1.png') }}"
                                             class="attachment-medium size-medium" alt="" decoding="async"
                                             loading="eager" fetchpriority="high" />
                                     </div>
@@ -909,15 +750,14 @@
                         </div>
                         <div id="col-1191868968" class="col medium-3 small-6 large-3">
                             <div class="col-inner">
-                                <h3><span style="font-size: 65%;"><strong>HOTLINE ĐẶT TOUR</strong></span></h3>
+                                <h3><span style="font-size: 65%;"><strong>Địa chỉ công ty</strong></span></h3>
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1083541475">
                                     <div class="img-inner dark">
-                                        <img width="688" height="236"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour.png"
-                                            class="attachment-large size-large" alt="" decoding="async"
-                                            srcset="https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour.png 688w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-600x206.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-300x103.png 300w"
-                                            sizes="(max-width: 688px) 100vw, 688px" loading="eager"
-                                            fetchpriority="high" />
+                                        {!! $googleMap->map_url !!}
+                                        <script>
+                                            document.getElementsByTagName('iframe')[0].width = "688";
+                                            document.getElementsByTagName('iframe')[0].height = "236";
+                                        </script>
                                     </div>
 
                                     <style>
@@ -1016,32 +856,26 @@
                                             DU LỊCH SINH CAFE</strong></span></h3>
                                 <p><span style="font-size: 90%;"><strong><i class="far fa-building"></i> Trụ sở
                                             chính</strong>: <a
-                                            href="https://www.google.com/maps/place/The+Sinh+Tourist/@21.0338691,105.8473622,15z/data=!4m5!3m4!1s0x0:0xce4d71ea0684154c!8m2!3d21.0338691!4d105.8473622">Số
-                                            22 Bát Đàn, Phường Hàng Bồ, Quận Hoàn Kiếm, Hà Nội.</a></span><br /><span
+                                            href="">{{ $address->address }}</a></span><br /><span
                                         style="font-size: 90%;"><strong><i class="fas fa-phone-alt"></i> Điện
-                                            thoại</strong>: <a href="tel:02485885333">0248 5885 333</a><br /><i
+                                            thoại</strong>: <a href="tel:{{ $address->phone }}">{{ $address->phone }}</a><br /><i
                                             class="fas fa-mobile-alt"></i> <strong>Hotline</strong>: <a
                                             href="tel:0849048888">084.904.8888</a></span><br /><span
                                         style="font-size: 90%;"><strong><i class="fas fa-globe"></i> Website</strong>:
                                         <a
-                                            href="https://dulichthesinh.vn/">https://dulichthesinh.vn</a></span><br /><span
+                                            href="/">sinhtravel.com.vn</a></span><br /><span
                                         style="font-size: 90%;"><strong><i class="far fa-envelope"></i> Email</strong>:
                                         <a
-                                            href="https://dulichthesinh.vn/cdn-cgi/l/email-protection#55213d30263c3b3d213a20273c26213d343b3a3c646c6c66153238343c397b363a38"><span
-                                                class="__cf_email__"
-                                                data-cfemail="33475b56405a5d5b475c46415a40475b525d5c5a020a0a0073545e525a5f1d505c5e">[email&#160;protected]</span></a></span>
+                                            href="/">{{ $address->email }}</a>
+                                    </span>
                                 </p>
                                 <h3><span style="font-size: 100%;"><strong>GIẤY PHÉP ĐĂNG KÝ CHỨNG NHẬN KINH
                                             DOANH</strong></span></h3>
                                 <p><span style="font-size: 90%;"><strong>Số đăng ký/MST</strong>:
                                         0110034650<br /></span><span style="font-size: 12.96px;">Cấp bởi Sở Kế Hoạch
                                         &amp; Đầu Tư Thành Phố Hà Nội</span></p>
-
-
                             </div>
                         </div>
-
-
 
                         <div id="col-1822642621" class="col medium-2 small-6 large-2">
                             <div class="col-inner">
@@ -1050,12 +884,12 @@
 
                                 <h3><span style="font-size: 90%"><strong>GÓC KHÁCH HÀNG</strong></span></h3>
                                 <p><span style="font-size: 90%"><a
-                                            href="https://dulichthesinh.vn/huong-dan-dat-tour/">Hướng dẫn đặt
+                                            href="/">Hướng dẫn đặt
                                             tour</a><br /></span><span style="font-size: 90%"><a
-                                            href="https://dulichthesinh.vn/chinh-sach-bao-mat/">Chính sách bảo
+                                            href="/">Chính sách bảo
                                             mật</a><br /></span><span style="font-size: 90%"><a
-                                            href="https://dulichthesinh.vn/dieu-khoan-dieu-kien/">Điều khoản &amp; điều
-                                            kiện</a><br /></span><a href="https://dulichthesinh.vn/lien-he/"><span
+                                            href="/">Điều khoản &amp; điều
+                                            kiện</a><br /></span><a href="/"><span
                                             style="font-size: 90%">Hợp tác cùng chúng tôi</span></a></p>
 
                             </div>
@@ -1127,7 +961,7 @@
                                 <h3><span style="font-size: 70%;"><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></span></h3>
                                 <p data-wp-editing="1"><a href="https://www.facebook.com/dulichsinhcafe.vn/"
                                         target="_blank" rel="nofollow noopener"><img class="alignnone wp-image-292"
-                                            src="https://dulichsinhcafe.vn/wp-content/uploads/logo-facebook-300x300.png"
+                                            src="{{ asset('wp-content/uploads/logo-facebook-600x600.png') }}"
                                             alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
                                         href="https://zalo.me/0948351993" target="_blank" rel="nofollow noopener"><img
                                             class="alignnone wp-image-291" style="color: #333333;"
@@ -1152,7 +986,7 @@
 
 
 
-                                <h3><span style="font-size: 75%;"><strong>LIÊN HỆ ĐẶT TOUR</strong></span></h3>
+                                <h3><span style="font-size: 75%;"><strong>Địa chỉ công ty</strong></span></h3>
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1989932325">
                                     <div class="img-inner dark">
                                         <img width="688" height="236"
@@ -1191,8 +1025,7 @@
                                 <div id="text-3637533555" class="text">
 
 
-                                    <p><span style="font-size: 90%"><em>Copyright © 2024 <strong>DU LỊCH THẾ
-                                                    SINH</strong>. Ghi rõ nguồn "<strong>dulichthesinh.vn</strong>" khi
+                                    <p><span style="font-size: 90%"><em>Copyright © 2025 <strong>DU LỊCH SINH TRAVEL</strong>. Ghi rõ nguồn "<strong>sinhtravel.com.vn</strong>" khi
                                                 sử dụng thông tin từ website này.</em></span></p>
 
                                     <style>
@@ -1307,104 +1140,29 @@
         <div class="sidebar-menu no-scrollbar ">
             <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
                 <li class="header-search-form search-form html relative has-icon">
-                    <div class="header-search-form-wrapper">
-                        <div class="searchform-wrapper ux-search-box relative is-normal">
-                            <form role="search" method="get" class="searchform" action="https://dulichthesinh.vn/">
-                                <div class="flex-row relative">
-                                    <div class="flex-col search-form-categories">
-                                        <select class="search_categories resize-select mb-0" name="product_cat">
-                                            <option value="" selected='selected'>Tất cả</option>
-                                            <option value="chua-phan-loai">Chưa phân loại</option>
-                                            <option value="dong-tay-bac">Đông Tây Bắc</option>
-                                            <option value="ha-giang">Hà Giang</option>
-                                            <option value="ha-long">Hạ Long</option>
-                                            <option value="lien-tuyen">Liên Tuyến</option>
-                                            <option value="ninh-binh">Ninh Bình</option>
-                                            <option value="sa-pa">Sa Pa</option>
-                                        </select>
-                                    </div>
-                                    <div class="flex-col flex-grow">
-                                        <label class="screen-reader-text" for="woocommerce-product-search-field-1">Tìm
-                                            kiếm:</label>
-                                        <input type="search" id="woocommerce-product-search-field-1"
-                                            class="search-field mb-0" placeholder="Tìm điểm đến của bạn" value=""
-                                            name="s" />
-                                        <input type="hidden" name="post_type" value="product" />
-                                    </div>
-                                    <div class="flex-col">
-                                        <button type="submit" value="Tìm kiếm"
-                                            class="ux-search-submit submit-button secondary button  icon mb-0"
-                                            aria-label="Gửi">
-                                            <i class="icon-search"></i> </button>
-                                    </div>
-                                </div>
-                                <div class="live-search-results text-left z-top"></div>
-                            </form>
-                        </div>
-                    </div>
                 </li>
+                @foreach ($categoriesNav as $category)
+                @if ($category->categoryChild->isEmpty())
                 <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1494"><a
-                        href="https://dulichthesinh.vn/ha-noi/">Hà Nội</a></li>
+                        href="/{{ $category->slug }}/">{{ $category->name }}</a></li>
+                @else
                 <li
                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1497">
-                    <a href="https://dulichthesinh.vn/ninh-binh/">Ninh Bình</a>
+                    <a href="/{{ $category->slug }}/">{{ $category->name }}</a>
                     <ul class="sub-menu nav-sidebar-ul children">
+                        @foreach ($category->categoryChild as $child)
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1826"><a
-                                href="https://dulichthesinh.vn/ninh-binh/ninh-binh-1-ngay/">Ninh Bình 1 Ngày</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1827"><a
-                                href="https://dulichthesinh.vn/ninh-binh/ninh-binh-2-ngay/">Ninh Bình 2 Ngày</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1828"><a
-                                href="https://dulichthesinh.vn/ninh-binh/ninh-binh-lien-tuyen/">Ninh Bình Liên Tuyến</a>
-                        </li>
+                                href="/{{ $category->slug }}/{{ $child->slug }}/">{{ $child->name }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
-                <li
-                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1516">
-                    <a href="https://dulichthesinh.vn/ha-long/">Hạ Long</a>
-                    <ul class="sub-menu nav-sidebar-ul children">
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1831"><a
-                                href="https://dulichthesinh.vn/ha-long/ha-long-1-ngay/">Hạ Long 1 Ngày</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1832"><a
-                                href="https://dulichthesinh.vn/ha-long/ha-long-2-ngay-1-dem/">Hạ Long 2 Ngày 1 Đêm</a>
-                        </li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1833"><a
-                                href="https://dulichthesinh.vn/ha-long/ha-long-3-ngay-2-dem/">Hạ Long 3 Ngày 2 Đêm</a>
-                        </li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1830"><a
-                                href="https://dulichthesinh.vn/ha-long/du-lich-bien-2025/">Du Lịch Biển 2025</a></li>
-                    </ul>
-                </li>
-                <li
-                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1498">
-                    <a href="https://dulichthesinh.vn/sa-pa/">Sa Pa</a>
-                    <ul class="sub-menu nav-sidebar-ul children">
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1834"><a
-                                href="https://dulichthesinh.vn/sa-pa/sapa-2-ngay/">Sapa 2 Ngày</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1835"><a
-                                href="https://dulichthesinh.vn/sa-pa/sapa-3-ngay/">Sapa 3 Ngày</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1836"><a
-                                href="https://dulichthesinh.vn/sa-pa/sapa-ha-khau/">Sapa Hà Khẩu</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1837"><a
-                                href="https://dulichthesinh.vn/sa-pa/sapa-lien-tuyen-tour/">Sapa Liên Tuyến Tour</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1493"><a
-                        href="https://dulichthesinh.vn/ha-giang/">Hà Giang</a></li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1597"><a
-                        href="https://dulichthesinh.vn/dong-tay-bac/">Đông Tây Bắc</a></li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1814"><a
-                        href="https://dulichthesinh.vn/mien-trung/">Miền Trung</a></li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1813"><a
-                        href="https://dulichthesinh.vn/lien-tuyen/">Liên Tuyến</a></li>
+                @endif
+                @endforeach
 
-                <li class="account-item has-icon menu-item">
-                    <a href class="nav-top-link nav-top-not-logged-in" title="Đăng nhập">
-                        <span class="header-account-title">
-                            Đăng nhập </span>
-                    </a>
 
-                </li>
+
+
+
                 <li class="header-newsletter-item has-icon">
 
                     <a href="#header-newsletter-signup" class="tooltip" title="Sign up for Newsletter">
@@ -1453,70 +1211,10 @@
         src="https://dulichthesinh.vn/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script defer
         src="data:text/javascript,%2F%2F%20Ch%E1%BA%B7n%20Right%20Click%0D%0Adocument.addEventListener%28%27contextmenu%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20c%C3%A1c%20ph%C3%ADm%20t%E1%BA%AFt%20copy%2Fpaste%2Fsave%0D%0Adocument.addEventListener%28%27keydown%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20F12%20%28Developer%20Tools%29%0D%0A%20%20%20%20if%28e.keyCode%20%3D%3D%20123%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BShift%2BI%20%28Developer%20Tools%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%2073%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BShift%2BC%20%28Inspect%20Element%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%2067%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BShift%2BJ%20%28Console%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%2074%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BU%20%28View%20Source%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2085%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BA%20%28Select%20All%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2065%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BC%20%28Copy%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2067%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BV%20%28Paste%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2086%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BS%20%28Save%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2083%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BX%20%28Cut%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2088%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BP%20%28Print%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2080%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20select%20text%0D%0Adocument.addEventListener%28%27selectstart%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20k%C3%A9o%20th%E1%BA%A3%20h%C3%ACnh%20%E1%BA%A3nh%0D%0Adocument.addEventListener%28%27dragstart%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20V%C3%B4%20hi%E1%BB%87u%20h%C3%B3a%20text%20selection%20b%E1%BA%B1ng%20CSS%0D%0Adocument.addEventListener%28%27DOMContentLoaded%27%2C%20function%28%29%20%7B%0D%0A%20%20%20%20%2F%2F%20Th%C3%AAm%20CSS%20%C4%91%E1%BB%83%20ch%E1%BA%B7n%20selection%0D%0A%20%20%20%20var%20style%20%3D%20document.createElement%28%27style%27%29%3B%0D%0A%20%20%20%20style.innerHTML%20%3D%20%60%0D%0A%20%20%20%20%20%20%20%20%2A%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-moz-user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-ms-user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-touch-callout%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-tap-highlight-color%3A%20transparent%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%2F%2A%20Cho%20ph%C3%A9p%20selection%20trong%20input%20v%C3%A0%20textarea%20%2A%2F%0D%0A%20%20%20%20%20%20%20%20input%2C%20textarea%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-moz-user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-ms-user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%2F%2A%20Ch%E1%BA%B7n%20k%C3%A9o%20th%E1%BA%A3%20h%C3%ACnh%20%E1%BA%A3nh%20%2A%2F%0D%0A%20%20%20%20%20%20%20%20img%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-khtml-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-moz-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-o-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20pointer-events%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%2F%2A%20%E1%BA%A8n%20thanh%20cu%E1%BB%99n%20khi%20c%E1%BA%A7n%20%2A%2F%0D%0A%20%20%20%20%20%20%20%20body%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20overflow-x%3A%20hidden%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%60%3B%0D%0A%20%20%20%20document.head.appendChild%28style%29%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Hi%E1%BB%83n%20th%E1%BB%8B%20th%C3%B4ng%20b%C3%A1o%20b%E1%BA%A3o%20v%E1%BB%87%0D%0Afunction%20showProtectionMessage%28%29%20%7B%0D%0A%20%20%20%20%2F%2F%20T%E1%BA%A1o%20th%C3%B4ng%20b%C3%A1o%20t%C3%B9y%20ch%E1%BB%89nh%0D%0A%20%20%20%20var%20notification%20%3D%20document.createElement%28%27div%27%29%3B%0D%0A%20%20%20%20notification.innerHTML%20%3D%20%27%F0%9F%94%92%20N%E1%BB%99i%20dung%20%C4%91%C6%B0%E1%BB%A3c%20b%E1%BA%A3o%20v%E1%BB%87%21%20Vui%20l%C3%B2ng%20kh%C3%B4ng%20sao%20ch%C3%A9p.%27%3B%0D%0A%20%20%20%20notification.style.cssText%20%3D%20%60%0D%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0D%0A%20%20%20%20%20%20%20%20top%3A%2020px%3B%0D%0A%20%20%20%20%20%20%20%20right%3A%2020px%3B%0D%0A%20%20%20%20%20%20%20%20background%3A%20%23ff4444%3B%0D%0A%20%20%20%20%20%20%20%20color%3A%20white%3B%0D%0A%20%20%20%20%20%20%20%20padding%3A%2015px%2020px%3B%0D%0A%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0D%0A%20%20%20%20%20%20%20%20z-index%3A%209999%3B%0D%0A%20%20%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0D%0A%20%20%20%20%20%20%20%20font-size%3A%2014px%3B%0D%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%204px%206px%20rgba%280%2C0%2C0%2C0.1%29%3B%0D%0A%20%20%20%20%20%20%20%20animation%3A%20slideIn%200.3s%20ease%3B%0D%0A%20%20%20%20%60%3B%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Th%C3%AAm%20animation%20CSS%0D%0A%20%20%20%20if%20%28%21document.querySelector%28%27%23protection-animation%27%29%29%20%7B%0D%0A%20%20%20%20%20%20%20%20var%20animationStyle%20%3D%20document.createElement%28%27style%27%29%3B%0D%0A%20%20%20%20%20%20%20%20animationStyle.id%20%3D%20%27protection-animation%27%3B%0D%0A%20%20%20%20%20%20%20%20animationStyle.innerHTML%20%3D%20%60%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%40keyframes%20slideIn%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20from%20%7B%20transform%3A%20translateX%28100%25%29%3B%20opacity%3A%200%3B%20%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20to%20%7B%20transform%3A%20translateX%280%29%3B%20opacity%3A%201%3B%20%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%60%3B%0D%0A%20%20%20%20%20%20%20%20document.head.appendChild%28animationStyle%29%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20document.body.appendChild%28notification%29%3B%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20T%E1%BB%B1%20%C4%91%E1%BB%99ng%20%E1%BA%A9n%20sau%203%20gi%C3%A2y%0D%0A%20%20%20%20setTimeout%28function%28%29%20%7B%0D%0A%20%20%20%20%20%20%20%20if%20%28notification.parentNode%29%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20notification.parentNode.removeChild%28notification%29%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%7D%2C%203000%29%3B%0D%0A%7D%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20m%E1%BB%9F%20Developer%20Tools%20b%E1%BA%B1ng%20c%C3%A1ch%20ki%E1%BB%83m%20tra%20k%C3%ADch%20th%C6%B0%E1%BB%9Bc%20c%E1%BB%ADa%20s%E1%BB%95%0D%0Avar%20devtools%20%3D%20%7B%0D%0A%20%20%20%20open%3A%20false%2C%0D%0A%20%20%20%20orientation%3A%20null%0D%0A%7D%3B%0D%0A%0D%0Aconst%20threshold%20%3D%20160%3B%0D%0A%0D%0AsetInterval%28function%28%29%20%7B%0D%0A%20%20%20%20if%20%28window.outerHeight%20-%20window.innerHeight%20%3E%20threshold%20%7C%7C%20%0D%0A%20%20%20%20%20%20%20%20window.outerWidth%20-%20window.innerWidth%20%3E%20threshold%29%20%7B%0D%0A%20%20%20%20%20%20%20%20if%20%28%21devtools.open%29%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20devtools.open%20%3D%20true%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20C%C3%B3%20th%E1%BB%83%20redirect%20ho%E1%BA%B7c%20l%C3%A0m%20g%C3%AC%20%C4%91%C3%B3%20kh%C3%A1c%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20window.location.href%20%3D%20%22about%3Ablank%22%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%7D%20else%20%7B%0D%0A%20%20%20%20%20%20%20%20devtools.open%20%3D%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%7D%2C%20500%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20print%0D%0Awindow.addEventListener%28%27beforeprint%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Console%20warning%0D%0Aconsole.log%28%27%25c%E2%9A%A0%EF%B8%8F%20C%E1%BA%A2NH%20B%C3%81O%20B%E1%BA%A2O%20M%E1%BA%ACT%27%2C%20%27color%3A%20red%3B%20font-size%3A%2030px%3B%20font-weight%3A%20bold%3B%27%29%3B%0D%0Aconsole.log%28%27%25cVi%E1%BB%87c%20truy%20c%E1%BA%ADp%20console%20n%C3%A0y%20c%C3%B3%20th%E1%BB%83%20cho%20ph%C3%A9p%20k%E1%BA%BB%20x%E1%BA%A5u%20%C4%91%C3%A1nh%20c%E1%BA%AFp%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20b%E1%BA%A1n.%20Vui%20l%C3%B2ng%20%C4%91%C3%B3ng%20c%E1%BB%ADa%20s%E1%BB%95%20n%C3%A0y%20ngay%20l%E1%BA%ADp%20t%E1%BB%A9c%21%27%2C%20%27color%3A%20red%3B%20font-size%3A%2016px%3B%27%29%3B%0D%0A%0D%0A%2F%2F%20L%C3%A0m%20tr%E1%BB%91ng%20console%0D%0Aconsole.clear%28%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20console%20methods%0D%0Aif%20%28typeof%20console%20%21%3D%3D%20%27undefined%27%29%20%7B%0D%0A%20%20%20%20console.log%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.warn%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.error%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.info%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.debug%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%7D"></script>
-    <div id="login-form-popup" class="lightbox-content mfp-hide">
-        <div class="woocommerce">
-            <div class="woocommerce-notices-wrapper"></div>
-            <div class="account-container lightbox-inner">
 
-
-                <div class="account-login-inner">
-
-                    <h3 class="uppercase">Đăng nhập</h3>
-
-                    <form class="woocommerce-form woocommerce-form-login login" method="post" novalidate>
-
-
-                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                            <label for="username">Tên tài khoản hoặc địa chỉ email&nbsp;<span class="required"
-                                    aria-hidden="true">*</span><span class="screen-reader-text">Bắt buộc</span></label>
-                            <input type="text" class="woocommerce-Input woocommerce-Input--text input-text"
-                                name="username" id="username" autocomplete="username" value="" required
-                                aria-required="true" />
-                        </p>
-                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                            <label for="password">Mật khẩu&nbsp;<span class="required" aria-hidden="true">*</span><span
-                                    class="screen-reader-text">Bắt buộc</span></label>
-                            <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
-                                name="password" id="password" autocomplete="current-password" required
-                                aria-required="true" />
-                        </p>
-
-                        <div id="cf-turnstile-2235924840" class="cf-turnstile woo-login"
-                            data-sitekey="0x4AAAAAABevScXmSXdKMbeD" data-theme="light" data-language="auto"
-                            data-size="normal" data-retry="auto" data-retry-interval="1000"
-                            data-action="woocommerce-login" data-appearance="always"></div>
-                        <script defer
-                            src="data:text/javascript,document.addEventListener%28%22DOMContentLoaded%22%2C%20function%28%29%20%7B%20setTimeout%28function%28%29%7B%20var%20e%3Ddocument.getElementById%28%22cf-turnstile-2235924840%22%29%3B%20e%26%26%21e.innerHTML.trim%28%29%26%26%28turnstile.remove%28%22%23cf-turnstile-2235924840%22%29%2C%20turnstile.render%28%22%23cf-turnstile-2235924840%22%2C%20%7Bsitekey%3A%220x4AAAAAABevScXmSXdKMbeD%22%7D%29%29%3B%20%7D%2C%200%29%3B%20%7D%29%3B"></script>
-                        <br class="cf-turnstile-br cf-turnstile-br-2235924840">
-
-                        <p class="form-row">
-                            <label
-                                class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-                                <input class="woocommerce-form__input woocommerce-form__input-checkbox"
-                                    name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Ghi nhớ
-                                    mật khẩu</span>
-                            </label>
-                            <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce"
-                                value="3c70748e45" /><input type="hidden" name="_wp_http_referer" value="/" /> <button
-                                type="submit" class="woocommerce-button button woocommerce-form-login__submit"
-                                name="login" value="Đăng nhập">Đăng nhập</button>
-                        </p>
-                        <p class="woocommerce-LostPassword lost_password">
-                            <a href="https://dulichthesinh.vn/lost-password/">Quên mật khẩu?</a>
-                        </p>
-
-
-                    </form>
-                </div>
-
-
-            </div>
-
-        </div>
-    </div>
 
     <div class="tour-action-bar">
-        <a href="tel:0849048888" class="btn btn-tour">
+        <a href="tel:087999328" class="btn btn-tour">
             <img src="https://dulichthesinh.vn/wp-content/uploads/2505_icon-phone-call.svg" alt="Phone" class="btn-icon"
                 width="18" height="18" loading="lazy" fetchpriority="low">
             <div class="btn-text">
@@ -1524,7 +1222,7 @@
                 <span class="btn-subtitle">Thanh toán vào ngày khởi hành</span>
             </div>
         </a>
-        <a href="https://zalo.me/0849048888" class="btn btn-zalo">
+        <a href="" class="btn btn-zalo">
             <img src="https://dulichthesinh.vn/wp-content/uploads/2505_zalo-color.svg" alt="Zalo" class="btn-icon"
                 width="50" height="50" loading="lazy" fetchpriority="low">
             <span class="btn-title">Zalo</span>

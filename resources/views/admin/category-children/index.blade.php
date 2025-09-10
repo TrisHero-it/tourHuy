@@ -16,7 +16,6 @@
                         <tr>
                             <th>Tên danh mục con</th>
                             <th>Danh mục cha</th>
-                            <th>Ảnh</th>
                             <th>Slug</th>
                             <th>Chức năng</th>
                         </tr>
@@ -26,14 +25,6 @@
                         <tr>
                             <td>{{ $categoryChild->name }}</td>
                             <td>{{ $categoryChild->category->name ?? 'N/A' }}</td>
-                            <td>
-                                @if($categoryChild->image)
-                                <img src="{{ asset($categoryChild->image) }}" alt="{{ $categoryChild->name }}"
-                                    style="width: 200px; height: auto; object-fit: cover; border-radius: 4px;">
-                                @else
-                                <span class="text-muted">Chưa có ảnh</span>
-                                @endif
-                            </td>
                             <td>{{ $categoryChild->slug }}</td>
                             <td>
                                 <a href="{{ route('admin.category-children.edit', $categoryChild->id) }}" class="btn btn-outline-warning btn-sm">Sửa</a>

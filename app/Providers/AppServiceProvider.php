@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Account;
 use App\Models\Category;
+use App\Models\GoogleMap;
 use App\Models\Logo;
 use App\Models\Order;
 use Illuminate\Support\Facades\View;
@@ -27,9 +28,10 @@ class AppServiceProvider extends ServiceProvider
 
         $countOrder = Order::where('status', 'Chưa liên hệ')->count();
         $address = Account::first();
+        $googleMap = GoogleMap::where('status', 'active')->first();
         View::share('address', $address);
         View::share('countOrder', $countOrder);
-
+        View::share('googleMap', $googleMap);
         // Share categories for navigation
         try {
             $categoriesNav = Category::with('categoryChild')->get();

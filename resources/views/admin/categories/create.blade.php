@@ -33,14 +33,15 @@
                     <img id="previewBannerImg" src="" alt="Preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
                 </div>
 
-                <label for="">Description</label> <br>
+                <label for="">Mô tả ngắn</label> <br>
+                <input class="form-control" type="text" name="meta">
+
+                <label for="">Mô tả</label> <br>
                 <textarea class="form-control" name="description" id="editor"></textarea>
                 @error('description')
                 <div style="color:red">{{$message}}</div>
                 @enderror
 
-                <label for="">Meta</label> <br>
-                <textarea class="form-control" name="meta" id="metaEditor" rows="4" placeholder="Nhập nội dung meta..."></textarea>
                 @error('meta')
                 <div style="color:red">{{$message}}</div>
                 @enderror

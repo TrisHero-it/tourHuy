@@ -21,7 +21,7 @@ class TourController extends Controller
         $category = Category::where('slug', $categorySlug)
             // ->where('status', 'active')
             ->first();
-            
+
         if (!$category) {
             abort(404, 'Category not found');
         }
@@ -31,7 +31,7 @@ class TourController extends Controller
             ->where('slug', $categoryChildSlug)
             // ->where('status', 'active')
             ->first();
-            
+
         if (!$categoryChild) {
             abort(404, 'Category child not found');
         }
@@ -42,7 +42,7 @@ class TourController extends Controller
             ->where('status', 'active')
             ->with(['category', 'categoryChild'])
             ->first();
-            
+
         if (!$tour) {
             abort(404, 'Tour not found');
         }
@@ -75,7 +75,7 @@ class TourController extends Controller
                 'phone' => $validated['phone'],
                 'tour_id' => $validated['tour_id'],
                 'price_now' => $tour->price,
-                'status' => 'pending'
+                'status' => 'Chưa liên hệ'
             ]);
 
             return response()->json([
@@ -83,23 +83,21 @@ class TourController extends Controller
                 'message' => 'Đặt tour thành công! Mã đơn hàng: #' . $order->id,
                 'order_id' => $order->id
             ]);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Validation errors
             $errors = $e->validator->errors();
             $errorMessages = [];
-            
+
             foreach ($errors->all() as $error) {
                 $errorMessages[] = $error;
             }
-            
+
             return response()->json([
                 'success' => false,
                 'message' => 'Vui lòng kiểm tra lại thông tin: ' . implode(', ', $errorMessages),
                 'errors' => $errors,
                 'error' => 'Validation failed'
             ], 422);
-
         } catch (\Exception $e) {
             // Other errors
             return response()->json([
