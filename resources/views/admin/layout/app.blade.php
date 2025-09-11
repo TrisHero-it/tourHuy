@@ -65,8 +65,8 @@
             <div class="navbar-brand header-logo">
                 <a href="/" class="b-brand">
 
-                    <img src="{{asset('images/design/logo/Checksca.com.webp')}}" alt="logo" class="logo images">
-                    <img src="{{asset('images/design/favicon_io/android-chrome-192x192.png')}}"
+                    <img src="{{asset($logo->image)}}" style="width: 48px; height: 48px;" alt="logo" class="logo images">
+                    <img src="{{asset($logo->image)}}" style="width: 48px; height: 48px;"
                         style="width: 30px; height: 30px" alt="logo" class="logo-thumb images">
                 </a>
             </div>

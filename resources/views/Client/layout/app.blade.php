@@ -44,7 +44,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Tối ưu hóa công cụ tìm kiếm bởi Rank Math - https://rankmath.com/ -->
-    <title>@yield('title', 'Trang chủ - Du lịch Thế Sinh')</title>
+    <title>@yield('title', 'Trang chủ - Sinh Travel')</title>
     <style>
         .flying-press-lazy-bg {
             background-image: none !important;
@@ -60,9 +60,9 @@
     <meta property="og:url" content="https://sinhtravel.com.vn" />
     <meta property="og:site_name" content="Sinh Travel" />
     <meta property="og:updated_time" content="2025-06-02T11:18:36+07:00" />
-    <meta property="og:image" content="https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp" />
+    <meta property="og:image" content="{{ asset($logo->image) }}" />
     <meta property="og:image:secure_url"
-        content="https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp" />
+        content="{{ asset($logo->image) }}" />
     <meta property="og:image:width" content="875" />
     <meta property="og:image:height" content="632" />
     <meta property="og:image:alt" content="Trang chủ" />
@@ -72,7 +72,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Trang chủ - Du lịch Thế Sinh" />
     <meta name="twitter:description" content="Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt Nam!" />
-    <meta name="twitter:image" content="https://dulichthesinh.vn/wp-content/uploads/./2504_680ef10220506.webp" />
+    <meta name="twitter:image" content="{{ asset($logo->image) }}" />
     <meta name="twitter:label1" content="Được viết bởi" />
     <meta name="twitter:data1" content="The Sinh Tourist" />
     <meta name="twitter:label2" content="Thời gian để đọc" />
@@ -84,7 +84,7 @@
         }
     </style>
     <link rel='stylesheet' id='bfa-font-awesome-css'
-        href="https://dulichthesinh.vn/wp-content/cache/flying-press/all.css" type='text/css' media='all'
+        href="{{ asset('wp-content/cache/flying-press/all.css') }}" type='text/css' media='all'
         data-origin-href="https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=2.0.3" />
     <link rel='stylesheet' id='code-snippets-site-styles-css'
         href='https://dulichthesinh.vn/?code-snippets-css=1&amp;ver=212' type='text/css' media='all' />
@@ -136,15 +136,15 @@
         </style>
     </noscript>
     <link rel="icon"
-        href="https://dulichthesinh.vn/wp-content/uploads/2505_cropped-2505_favicon-viet-nam-ve-dep-bat-tan-32x32.png"
+        href="{{ asset($logo->image) }}"
         sizes="32x32" />
     <link rel="icon"
-        href="https://dulichthesinh.vn/wp-content/uploads/2505_cropped-2505_favicon-viet-nam-ve-dep-bat-tan-192x192.png"
+        href="{{ asset($logo->image) }}"
         sizes="192x192" />
     <link rel="apple-touch-icon"
-        href="https://dulichthesinh.vn/wp-content/uploads/2505_cropped-2505_favicon-viet-nam-ve-dep-bat-tan-180x180.png" />
+        href="{{ asset($logo->image) }}" />
     <meta name="msapplication-TileImage"
-        content="https://dulichthesinh.vn/wp-content/uploads/2505_cropped-2505_favicon-viet-nam-ve-dep-bat-tan-270x270.png" />
+        content="{{ asset($logo->image) }}" />
     <style id="custom-css" type="text/css">
         :root {
             --primary-color: #0f4c9d;
@@ -641,16 +641,9 @@
                 </div>
 
                 <div class="section-content relative">
-
-
                     <div class="row row-small" id="row-2122369246">
-
-
                         <div id="col-1311618474" class="col medium-5 small-6 large-5">
                             <div class="col-inner">
-
-
-
                                 <h3><span style="font-size: 80%;"><strong>{{ $address->name }}</strong></span></h3>
                                 <p><span style="font-size: 90%;"><strong><i class="far fa-building"></i> Trụ sở
                                             chính</strong>: <a>{{ $address->address }}.</a></span><br /><span
@@ -668,18 +661,10 @@
                                 <p><span style="font-size: 90%"><strong>Số đăng ký/MST</strong>:
                                         0111171674<br /></span><span style="font-size: 12.96px">Cấp bởi Sở Kế Hoạch
                                         &amp; Đầu Tư Thành Phố Hà Nội</span></p>
-
-
                             </div>
                         </div>
-
-
-
                         <div id="col-1821559392" class="col medium-2 small-6 large-2">
                             <div class="col-inner">
-
-
-
                                 <h3><span style="font-size: 65%;"><strong>GÓC KHÁCH HÀNG</strong></span></h3>
                                 <p><span style="font-size: 90%;"><a
                                             href="https://dulichthesinh.vn/huong-dan-dat-tour/">Hướng dẫn đặt
@@ -699,7 +684,7 @@
                                             src="{{ asset('wp-content/uploads/logo-zalo-600x600.webp') }}"
                                             alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <img
                                         class="alignnone wp-image-289" style="color: #333333;"
-                                        src="{{ asset('wp-content/uploads/logo-youtube.png') }}" alt=""
+                                        src="{{ asset('wp-content/uploads/whatapp.png') }}" alt=""
                                         width="36" height="36" loading="lazy" fetchpriority="low" /> <img
                                         class="alignnone wp-image-290" style="color: #333333;"
                                         src="{{ asset('wp-content/uploads/logo-google-maps.png') }}" alt=""
@@ -743,8 +728,6 @@
                                         }
                                     </style>
                                 </div>
-
-
 
                             </div>
                         </div>
@@ -795,45 +778,6 @@
                         <div id="col-697381432" class="col small-12 large-12">
                             <div class="col-inner">
 
-
-
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_51936078">
-                                    <div class="img-inner dark">
-                                        <img width="600" height="89"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-600x89.webp"
-                                            class="attachment-medium size-medium" alt="" decoding="async"
-                                            srcset="https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-600x89.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-1024x152.webp 1024w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao-300x44.webp 300w, https://dulichthesinh.vn/wp-content/uploads/2505_cong-thon-tin-bo-van-hoa-du-lich-the-thao.webp 1039w"
-                                            sizes="(max-width: 600px) 100vw, 600px" loading="eager"
-                                            fetchpriority="high" />
-                                    </div>
-
-                                    <style>
-                                        #image_51936078 {
-                                            width: 100%;
-                                        }
-                                    </style>
-                                </div>
-
-
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1987160121">
-                                    <div class="img-inner dark" style="margin:-15px 0px 0px 0px;">
-                                        <img width="1020" height="574"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-1024x576.webp"
-                                            class="attachment-large size-large" alt="" decoding="async"
-                                            srcset="https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-1024x576.webp 1024w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-600x338.webp 600w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85-300x169.webp 300w, https://dulichthesinh.vn/wp-content/uploads/2504_680ef0ff90d85.webp 1280w"
-                                            sizes="(max-width: 1020px) 100vw, 1020px" loading="eager"
-                                            fetchpriority="high" />
-                                    </div>
-
-                                    <style>
-                                        #image_1987160121 {
-                                            width: 100%;
-                                        }
-                                    </style>
-                                </div>
-
-
-
                             </div>
 
                             <style>
@@ -880,8 +824,6 @@
                         <div id="col-1822642621" class="col medium-2 small-6 large-2">
                             <div class="col-inner">
 
-
-
                                 <h3><span style="font-size: 90%"><strong>GÓC KHÁCH HÀNG</strong></span></h3>
                                 <p><span style="font-size: 90%"><a
                                             href="/">Hướng dẫn đặt
@@ -906,7 +848,7 @@
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1545057860">
                                     <div class="img-inner dark">
                                         <img width="512" height="194"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png"
+                                            src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}"
                                             class="attachment-medium size-medium" alt="" decoding="async"
                                             srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png 512w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png 300w"
                                             sizes="(max-width: 512px) 100vw, 512px" loading="eager"
@@ -968,7 +910,7 @@
                                             src="https://dulichsinhcafe.vn/wp-content/uploads/logo-zalo-300x300.webp"
                                             alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <img
                                         class="alignnone wp-image-289" style="color: #333333;"
-                                        src="https://dulichsinhcafe.vn/wp-content/uploads/logo-youtube-300x300.png"
+                                        src="{{ asset('wp-content/uploads/whatapp.png') }}"
                                         alt="" width="36" height="36" loading="lazy" fetchpriority="low" /> <a
                                         href="https://maps.google.com/maps?ll=21.030101,105.847494&amp;z=14&amp;t=m&amp;hl=vi&amp;gl=US&amp;mapclient=embed&amp;cid=12638864436352428695"
                                         target="_blank" rel="nofollow noopener"><img class="alignnone wp-image-290"
@@ -989,12 +931,11 @@
                                 <h3><span style="font-size: 75%;"><strong>Địa chỉ công ty</strong></span></h3>
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1989932325">
                                     <div class="img-inner dark">
-                                        <img width="688" height="236"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour.png"
-                                            class="attachment-original size-original" alt="" decoding="async"
-                                            srcset="https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour.png 688w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-600x206.png 600w, https://dulichthesinh.vn/wp-content/uploads/2505_hotline-dat-tour-300x103.png 300w"
-                                            sizes="(max-width: 688px) 100vw, 688px" loading="eager"
-                                            fetchpriority="high" />
+                                        {!! $googleMap->map_url !!}
+                                        <script>
+                                            document.getElementsByTagName('iframe')[1].width = "688";
+                                            document.getElementsByTagName('iframe')[1].height = "236";
+                                        </script>
                                     </div>
 
                                     <style>
@@ -1009,33 +950,19 @@
                                         }
                                     </style>
                                 </div>
-
-
-
                             </div>
                         </div>
-
-
-
                         <div id="col-129090828" class="col small-12 large-12">
                             <div class="col-inner">
-
-
-
                                 <div id="text-3637533555" class="text">
-
-
                                     <p><span style="font-size: 90%"><em>Copyright © 2025 <strong>DU LỊCH SINH TRAVEL</strong>. Ghi rõ nguồn "<strong>sinhtravel.com.vn</strong>" khi
                                                 sử dụng thông tin từ website này.</em></span></p>
-
                                     <style>
                                         #text-3637533555 {
                                             font-size: 0.9rem;
                                         }
                                     </style>
                                 </div>
-
-
                             </div>
                         </div>
 

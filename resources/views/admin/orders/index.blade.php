@@ -9,18 +9,19 @@
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5>Danh sách bài orders</h5>
                 <div class="d-flex align-items-center gap-2">
-                    <form action="/admin/orders" class="d-flex align-items-center gap-2" style="height: 10px;" method="get">
-                        <input type="text" value="{{ request()->search ?? '' }}" name="search" placeholder="Tìm kiếm theo số điện thoại" class="form-control">
-                        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                    <form action="/admin/orders/export" class="d-flex align-items-center gap-2" style="height: 10px;" method="post">
+                        @csrf
+                        <select name="status" id="" onchange="window.location.href = '/admin/orders?status=' + this.value" class="form-control" style="width: 200px;">
+                            <option value="">Tất cả</option>
+                            <option {{ request()->status == 'Đã liên hệ' ? 'selected' : '' }} value="Đã liên hệ">Đã liên hệ</option>
+                            <option {{ request()->status == 'Chưa liên hệ' ? 'selected' : '' }} value="Chưa liên hệ">Chưa liên hệ</option>
+                            <option {{ request()->status == 'Thành công' ? 'selected' : '' }} value="Thành công">Thành công</option>
+                            <option {{ request()->status == 'Thất bại' ? 'selected' : '' }} value="Thất bại">Thất bại</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Export</button>
                     </form>
 
-                    <select name="status" id="" onchange="window.location.href = '/admin/orders?status=' + this.value" class="form-control" style="width: 200px;">
-                        <option value="">Tất cả</option>
-                        <option {{ request()->status == 'Đã liên hệ' ? 'selected' : '' }} value="Đã liên hệ">Đã liên hệ</option>
-                        <option {{ request()->status == 'Chưa liên hệ' ? 'selected' : '' }} value="Chưa liên hệ">Chưa liên hệ</option>
-                        <option {{ request()->status == 'Thành công' ? 'selected' : '' }} value="Thành công">Thành công</option>
-                        <option {{ request()->status == 'Thất bại' ? 'selected' : '' }} value="Thất bại">Thất bại</option>
-                    </select>
+
                 </div>
             </div>
             <div class="card-body">

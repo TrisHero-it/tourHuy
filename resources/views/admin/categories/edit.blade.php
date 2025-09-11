@@ -60,11 +60,8 @@
                 <div style="color:red">{{$message}}</div>
                 @enderror
 
-                <label for="">Meta</label> <br>
-                <textarea class="form-control" name="meta" id="metaEditor" rows="4" placeholder="Nhập nội dung meta...">{{ old('meta', $category->meta) }}</textarea>
-                @error('meta')
-                <div style="color:red">{{$message}}</div>
-                @enderror
+                <label for="">Mô tả ngắn</label> <br>
+                <input class="form-control" type="text" name="meta" value="{{ old('meta', $category->meta) }}">
 
                 <div class="form-check form-switch mt-3">
                     <input type="hidden" name="is_nav" value="0">

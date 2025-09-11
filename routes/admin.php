@@ -88,4 +88,6 @@ Route::middleware('check.login.admin')->group(function () {
     Route::delete('/blogs/{id}', [BlogController::class, 'destroy']);
 
     Route::post('/upload-image', [BlogController::class, 'uploadImage'])->name('upload-image');
+
+    Route::post('/orders/export', [OrderController::class, 'export'])->name('admin.orders.export');
 });
