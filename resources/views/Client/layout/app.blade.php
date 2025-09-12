@@ -778,7 +778,7 @@
                             <style>
                 /* Top Bar Styling */
                 .header-top {
-                    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+                    background: linear-gradient(135deg, #014940 0%, #003d35 100%) !important;
                     color: #ecf0f1;
                 }
                 
@@ -793,14 +793,14 @@
 
                 /* Modern Footer Styles */
                 .footer-wrapper {
-                    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                    background: linear-gradient(135deg, #014940 0%, #003d35 100%);
                     color: #ecf0f1;
                     margin-top: 30px;
                 }
                 
                 .footer-main {
                     padding: 25px 0 20px;
-                    background: #2c3e50;
+                    background: #014940;
                 }
                 
                 .footer-grid {
@@ -958,9 +958,9 @@
                 }
                 
                 .footer-certifications {
-                    background: #34495e;
+                    background: #003d35;
                     padding: 15px 0;
-                    border-top: 1px solid #4a5f7a;
+                    border-top: 1px solid #015a50;
                 }
                 
                 .cert-grid {
@@ -996,9 +996,9 @@
                 }
                 
                 .footer-bottom {
-                    background: #2c3e50;
+                    background: #014940;
                     padding: 10px 0;
-                    border-top: 1px solid #4a5f7a;
+                    border-top: 1px solid #015a50;
                 }
                 
                 .copyright-content {
@@ -1020,18 +1020,18 @@
                 @media (max-width: 1024px) {
                     .footer-grid {
                         grid-template-columns: 1fr 1fr;
-                        gap: 15px;
+                        gap: 20px;
                     }
                 }
                 
                 @media (max-width: 768px) {
                     .footer-main {
-                        padding: 20px 0 15px;
+                        padding: 30px 0 20px;
                     }
                     
                     .footer-grid {
                         grid-template-columns: 1fr;
-                        gap: 15px;
+                        gap: 20px;
                     }
                     
                     .social-links {
@@ -1040,7 +1040,7 @@
                     
                     .cert-grid {
                         grid-template-columns: 1fr;
-                        gap: 10px;
+                        gap: 15px;
                         text-align: center;
                     }
                     
@@ -1049,32 +1049,32 @@
                     }
                     
                     .map-container {
-                        height: 100px;
+                        height: 120px;
                     }
                 }
                 
                 @media (max-width: 480px) {
                     .footer-main {
-                        padding: 15px 0 10px;
+                        padding: 25px 0 15px;
                     }
                     
                     .footer-section h3 {
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                     
                     .footer-section h4 {
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                     
                     .social-links {
-                        gap: 6px;
+                        gap: 8px;
                     }
                     
                     .social-btn {
-                        width: 25px;
-                        height: 25px;
-                        font-size: 10px;
-                    }
+                        width: 30px;
+                        height: 30px;
+                        font-size: 12px;
+                        }
                     }
                 </style>
 
