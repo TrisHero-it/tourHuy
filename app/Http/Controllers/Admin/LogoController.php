@@ -22,7 +22,7 @@ class LogoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,webp,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
 
         if ($request->hasFile('image')) {
