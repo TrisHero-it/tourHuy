@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" prefix="og: https://ogp.me/ns#" class="loading-site no-js">
 
-<!-- Mirrored from dulichthesinh.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 14:44:56 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
@@ -87,10 +86,35 @@
         href="{{ asset('wp-content/cache/flying-press/all.css') }}" type='text/css' media='all'
         data-origin-href="https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=2.0.3" />
     <link rel='stylesheet' id='code-snippets-site-styles-css'
-        href='https://dulichthesinh.vn/?code-snippets-css=1&amp;ver=212' type='text/css' media='all' />
+        href='{{ asset('wp-content/css/a.css') }}' type='text/css' media='all' />
     <link rel='stylesheet' id='flatsome-main-css'
-        href='https://dulichthesinh.vn/wp-content/cache/flying-press/4264b2a55c6d.flatsome.css' type='text/css'
+        href='{{ asset('wp-content/css/b.css') }}' type='text/css'
         media='all' />
+    <link rel='stylesheet' id='css-protect.css-css' href='{{ asset('wp-content/css/c.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='print-protection.css-css' href='{{ asset('wp-content/css/d.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='bfa-font-awesome-css' href="{{ asset('wp-content/cache/flying-press/all.css') }}" type='text/css' media='all' data-origin-href="https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=2.0.3" />
+    <link rel='stylesheet' id='code-snippets-site-styles-css' href='{{ asset('wp-content/css/e.css') }}' type='text/css' media='all' />
+    <link rel='stylesheet' id='flatsome-main-css' href='{{ asset('wp-content/css/f.css') }}' type='text/css' media='all' />
+    <style id='flatsome-main-inline-css' type='text/css'>
+        @font-face {
+            font-display: swap;
+            font-family: "fl-icons";
+
+            src: url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.20.1);
+            src:
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.20.1) format("embedded-opentype"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.20.1) format("woff2"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.20.1) format("truetype"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.20.1) format("woff"),
+                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.20.1#fl-icons) format("svg");
+        }
+    </style>
+    <link rel='stylesheet' id='flatsome-shop-css' href='{{ asset('wp-content/cache/flying-press/61aa9a689d81.flatsome-shop.css') }}' type='text/css' media='all' />
+    <script type="text/javascript" src="{{ asset('wp-includes/js/jquery/jquery.min.js') }}" id="jquery-core-js" defer></script>
+    <script type="text/javascript" src="{{ asset('wp-content/js/jquery.blockUI.min.js') }}" id="jquery-blockui-js" data-wp-strategy="defer" defer></script>
+    <script type="text/javascript" src="{{ asset('wp-content/js/js.cookie.min.js') }}" id="js-cookie-js" data-wp-strategy="defer" defer></script>
+    <meta name="theme-color" content="#1365ac" />
+
     <style id='flatsome-main-inline-css' type='text/css'>
         @font-face {
             font-display: swap;
@@ -106,18 +130,17 @@
         }
     </style>
     <link rel='stylesheet' id='flatsome-shop-css'
-        href='https://dulichthesinh.vn/wp-content/cache/flying-press/1cb9f4eac993.flatsome-shop.css' type='text/css'
+        href='{{ asset('wp-content/cache/flying-press/1cb9f4eac993.flatsome-shop.css') }}' type='text/css'
         media='all' />
-    <script type="text/javascript" src="https://dulichthesinh.vn/wp-includes/js/jquery/jquery.min.js?ver=826eb77e86b0"
+    <script type="text/javascript" src="{{ asset('wp-includes/js/jquery/jquery.min.js') }}"
         id="jquery-core-js" defer></script>
     <script type="text/javascript"
-        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=ef56117d1bb5"
+        src="{{ asset('wp-content/js/jquery.blockUI.min.js') }}"
         id="jquery-blockui-js" data-wp-strategy="defer" defer></script>
     <script type="text/javascript"
-        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=691a1e43450e"
+        src="{{ asset('wp-content/js/js.cookie.min.js') }}"
         id="js-cookie-js" data-wp-strategy="defer" defer></script>
-    <link rel="https://api.w.org/" href="https://dulichthesinh.vn/wp-json/" />
-    <link rel="alternate" title="JSON" type="application/json" href="https://dulichthesinh.vn/wp-json/wp/v2/pages/52" />
+
     <meta name="theme-color" content="#1365ac" />
 
     <!-- Google Tag Manager -->
@@ -126,8 +149,6 @@
     <!-- End Google Tag Manager -->
 
     <!-- Cloudflare Web Analytics -->
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "28d8e2864499485fbc9edb63acd54b2b"}'></script><!-- End Cloudflare Web Analytics -->
     <noscript>
         <style>
             .woocommerce-product-gallery {
@@ -667,12 +688,12 @@
                             <div class="col-inner">
                                 <h3><span style="font-size: 65%;"><strong>GÓC KHÁCH HÀNG</strong></span></h3>
                                 <p><span style="font-size: 90%;"><a
-                                            href="https://dulichthesinh.vn/huong-dan-dat-tour/">Hướng dẫn đặt
+                                            href="{{ url('/huong-dan-dat-tour') }}">Hướng dẫn đặt
                                             tour</a><br /></span><span style="font-size: 90%;"><a
-                                            href="https://dulichthesinh.vn/chinh-sach-bao-mat/">Chính sách bảo
+                                            href="{{ url('/chinh-sach-bao-mat') }}">Chính sách bảo
                                             mật</a><br /></span><span style="font-size: 90%;"><a
-                                            href="https://dulichthesinh.vn/dieu-khoan-dieu-kien/">Điều khoản &amp; điều
-                                            kiện</a><br /></span><a href="https://dulichthesinh.vn/lien-he/"><span
+                                            href="{{ url('/dieu-khoan-dieu-kien') }}">Điều khoản &amp; điều
+                                            kiện</a><br /></span><a href="{{ url('/lien-he') }}"><span
                                             style="font-size: 90%;">Hợp tác cùng chúng tôi</span></a></p>
                                 <h3><span style="font-size: 65%;"><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></span></h3>
                                 <p data-wp-editing="1"><a href="https://www.facebook.com/" target="_blank"
@@ -682,10 +703,13 @@
                                         href="https://zalo.me/" target="_blank" rel="nofollow noopener"><img
                                             class="alignnone wp-image-291" style="color: #333333;"
                                             src="{{ asset('wp-content/uploads/logo-zalo-600x600.webp') }}"
-                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <img
-                                        class="alignnone wp-image-289" style="color: #333333;"
-                                        src="{{ asset('wp-content/uploads/whatapp.png') }}" alt=""
-                                        width="36" height="36" loading="lazy" fetchpriority="low" /> <img
+                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
+                                        href="https://wa.me/84879998230" target="_blank" rel="nofollow noopener">
+                                        <img
+                                            class="alignnone wp-image-289" style="color: #333333;"
+                                            src="{{ asset('wp-content/uploads/whatapp.png') }}" alt=""
+                                            width="36" height="36" loading="lazy" fetchpriority="low" />
+                                    </a> <img
                                         class="alignnone wp-image-290" style="color: #333333;"
                                         src="{{ asset('wp-content/uploads/logo-google-maps.png') }}" alt=""
                                         width="36" height="37" loading="lazy" fetchpriority="low" /></p>
@@ -850,7 +874,7 @@
                                         <img width="512" height="194"
                                             src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}"
                                             class="attachment-medium size-medium" alt="" decoding="async"
-                                            srcset="https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png 512w, https://dulichthesinh.vn/wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png 300w"
+                                            srcset="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }} 512w, {{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png') }} 300w"
                                             sizes="(max-width: 512px) 100vw, 512px" loading="eager"
                                             fetchpriority="high" />
                                     </div>
@@ -866,7 +890,7 @@
                                 <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1082346620">
                                     <div class="img-inner dark" style="margin:-15px 0px 0px 0px;">
                                         <img width="250" height="125"
-                                            src="https://dulichthesinh.vn/wp-content/uploads/2505_dmca-badge-1.png"
+                                            src="{{ asset('wp-content/uploads/2505_dmca-badge-1.png') }}"
                                             class="attachment-medium size-medium" alt="" decoding="async"
                                             loading="eager" fetchpriority="high" />
                                     </div>
@@ -888,9 +912,6 @@
 
                             </div>
                         </div>
-
-
-
                     </div>
                     <div class="row" id="row-2132797282">
 
@@ -901,21 +922,24 @@
 
 
                                 <h3><span style="font-size: 70%;"><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></span></h3>
-                                <p data-wp-editing="1"><a href="https://www.facebook.com/dulichsinhcafe.vn/"
+                                <p data-wp-editing="1"><a href="https://www.facebook.com/"
                                         target="_blank" rel="nofollow noopener"><img class="alignnone wp-image-292"
                                             src="{{ asset('wp-content/uploads/logo-facebook-600x600.png') }}"
                                             alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
                                         href="https://zalo.me/0948351993" target="_blank" rel="nofollow noopener"><img
                                             class="alignnone wp-image-291" style="color: #333333;"
-                                            src="https://dulichsinhcafe.vn/wp-content/uploads/logo-zalo-300x300.webp"
-                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <img
-                                        class="alignnone wp-image-289" style="color: #333333;"
-                                        src="{{ asset('wp-content/uploads/whatapp.png') }}"
-                                        alt="" width="36" height="36" loading="lazy" fetchpriority="low" /> <a
+                                            src="{{ asset('wp-content/uploads/logo-zalo-300x300.webp') }}"
+                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
+                                        href="https://wa.me/84879998230" target="_blank" rel="nofollow noopener">
+                                        <img
+                                            class="alignnone wp-image-289" style="color: #333333;"
+                                            src="{{ asset('wp-content/uploads/whatapp.png') }}" alt=""
+                                            width="36" height="36" loading="lazy" fetchpriority="low" />
+                                    </a> <a
                                         href="https://maps.google.com/maps?ll=21.030101,105.847494&amp;z=14&amp;t=m&amp;hl=vi&amp;gl=US&amp;mapclient=embed&amp;cid=12638864436352428695"
                                         target="_blank" rel="nofollow noopener"><img class="alignnone wp-image-290"
                                             style="color: #333333;"
-                                            src="https://dulichsinhcafe.vn/wp-content/uploads/logo-google-maps.png"
+                                            src="{{ asset('wp-content/uploads/logo-google-maps.png') }}"
                                             alt="" width="36" height="37" loading="lazy" fetchpriority="low" /></a></p>
 
                             </div>
@@ -1111,7 +1135,7 @@
                             target="_blank" class="icon plain twitter tooltip" title="Theo dõi trên Twitter"
                             aria-label="Theo dõi trên Twitter" rel="noopener nofollow"><i
                                 class="icon-twitter"></i></a><a
-                            href="https://dulichthesinh.vn/cdn-cgi/l/email-protection#463f29333406232b272f2a"
+                            href=""
                             data-label="E-mail" target="_blank" class="icon plain email tooltip"
                             title="Gửi email cho chúng tôi" aria-label="Gửi email cho chúng tôi"
                             rel="nofollow noopener"><i class="icon-envelop"></i></a></div>
@@ -1135,14 +1159,11 @@
 
     </div>
     <script data-cfasync="false"
-        src="https://dulichthesinh.vn/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script defer
-        src="data:text/javascript,%2F%2F%20Ch%E1%BA%B7n%20Right%20Click%0D%0Adocument.addEventListener%28%27contextmenu%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20c%C3%A1c%20ph%C3%ADm%20t%E1%BA%AFt%20copy%2Fpaste%2Fsave%0D%0Adocument.addEventListener%28%27keydown%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20F12%20%28Developer%20Tools%29%0D%0A%20%20%20%20if%28e.keyCode%20%3D%3D%20123%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BShift%2BI%20%28Developer%20Tools%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%2073%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BShift%2BC%20%28Inspect%20Element%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%2067%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BShift%2BJ%20%28Console%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.shiftKey%20%26%26%20e.keyCode%20%3D%3D%2074%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BU%20%28View%20Source%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2085%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BA%20%28Select%20All%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2065%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BC%20%28Copy%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2067%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BV%20%28Paste%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2086%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BS%20%28Save%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2083%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BX%20%28Cut%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2088%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Ch%E1%BA%B7n%20Ctrl%2BP%20%28Print%29%0D%0A%20%20%20%20if%28e.ctrlKey%20%26%26%20e.keyCode%20%3D%3D%2080%29%20%7B%0D%0A%20%20%20%20%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20return%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20select%20text%0D%0Adocument.addEventListener%28%27selectstart%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20k%C3%A9o%20th%E1%BA%A3%20h%C3%ACnh%20%E1%BA%A3nh%0D%0Adocument.addEventListener%28%27dragstart%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20V%C3%B4%20hi%E1%BB%87u%20h%C3%B3a%20text%20selection%20b%E1%BA%B1ng%20CSS%0D%0Adocument.addEventListener%28%27DOMContentLoaded%27%2C%20function%28%29%20%7B%0D%0A%20%20%20%20%2F%2F%20Th%C3%AAm%20CSS%20%C4%91%E1%BB%83%20ch%E1%BA%B7n%20selection%0D%0A%20%20%20%20var%20style%20%3D%20document.createElement%28%27style%27%29%3B%0D%0A%20%20%20%20style.innerHTML%20%3D%20%60%0D%0A%20%20%20%20%20%20%20%20%2A%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-moz-user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-ms-user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20user-select%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-touch-callout%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-tap-highlight-color%3A%20transparent%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%2F%2A%20Cho%20ph%C3%A9p%20selection%20trong%20input%20v%C3%A0%20textarea%20%2A%2F%0D%0A%20%20%20%20%20%20%20%20input%2C%20textarea%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-moz-user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-ms-user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20user-select%3A%20text%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%2F%2A%20Ch%E1%BA%B7n%20k%C3%A9o%20th%E1%BA%A3%20h%C3%ACnh%20%E1%BA%A3nh%20%2A%2F%0D%0A%20%20%20%20%20%20%20%20img%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-webkit-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-khtml-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-moz-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20-o-user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20user-drag%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20pointer-events%3A%20none%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20%2F%2A%20%E1%BA%A8n%20thanh%20cu%E1%BB%99n%20khi%20c%E1%BA%A7n%20%2A%2F%0D%0A%20%20%20%20%20%20%20%20body%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20overflow-x%3A%20hidden%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%60%3B%0D%0A%20%20%20%20document.head.appendChild%28style%29%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Hi%E1%BB%83n%20th%E1%BB%8B%20th%C3%B4ng%20b%C3%A1o%20b%E1%BA%A3o%20v%E1%BB%87%0D%0Afunction%20showProtectionMessage%28%29%20%7B%0D%0A%20%20%20%20%2F%2F%20T%E1%BA%A1o%20th%C3%B4ng%20b%C3%A1o%20t%C3%B9y%20ch%E1%BB%89nh%0D%0A%20%20%20%20var%20notification%20%3D%20document.createElement%28%27div%27%29%3B%0D%0A%20%20%20%20notification.innerHTML%20%3D%20%27%F0%9F%94%92%20N%E1%BB%99i%20dung%20%C4%91%C6%B0%E1%BB%A3c%20b%E1%BA%A3o%20v%E1%BB%87%21%20Vui%20l%C3%B2ng%20kh%C3%B4ng%20sao%20ch%C3%A9p.%27%3B%0D%0A%20%20%20%20notification.style.cssText%20%3D%20%60%0D%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0D%0A%20%20%20%20%20%20%20%20top%3A%2020px%3B%0D%0A%20%20%20%20%20%20%20%20right%3A%2020px%3B%0D%0A%20%20%20%20%20%20%20%20background%3A%20%23ff4444%3B%0D%0A%20%20%20%20%20%20%20%20color%3A%20white%3B%0D%0A%20%20%20%20%20%20%20%20padding%3A%2015px%2020px%3B%0D%0A%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0D%0A%20%20%20%20%20%20%20%20z-index%3A%209999%3B%0D%0A%20%20%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0D%0A%20%20%20%20%20%20%20%20font-size%3A%2014px%3B%0D%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%204px%206px%20rgba%280%2C0%2C0%2C0.1%29%3B%0D%0A%20%20%20%20%20%20%20%20animation%3A%20slideIn%200.3s%20ease%3B%0D%0A%20%20%20%20%60%3B%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20Th%C3%AAm%20animation%20CSS%0D%0A%20%20%20%20if%20%28%21document.querySelector%28%27%23protection-animation%27%29%29%20%7B%0D%0A%20%20%20%20%20%20%20%20var%20animationStyle%20%3D%20document.createElement%28%27style%27%29%3B%0D%0A%20%20%20%20%20%20%20%20animationStyle.id%20%3D%20%27protection-animation%27%3B%0D%0A%20%20%20%20%20%20%20%20animationStyle.innerHTML%20%3D%20%60%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%40keyframes%20slideIn%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20from%20%7B%20transform%3A%20translateX%28100%25%29%3B%20opacity%3A%200%3B%20%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20to%20%7B%20transform%3A%20translateX%280%29%3B%20opacity%3A%201%3B%20%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%60%3B%0D%0A%20%20%20%20%20%20%20%20document.head.appendChild%28animationStyle%29%3B%0D%0A%20%20%20%20%7D%0D%0A%20%20%20%20%0D%0A%20%20%20%20document.body.appendChild%28notification%29%3B%0D%0A%20%20%20%20%0D%0A%20%20%20%20%2F%2F%20T%E1%BB%B1%20%C4%91%E1%BB%99ng%20%E1%BA%A9n%20sau%203%20gi%C3%A2y%0D%0A%20%20%20%20setTimeout%28function%28%29%20%7B%0D%0A%20%20%20%20%20%20%20%20if%20%28notification.parentNode%29%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20notification.parentNode.removeChild%28notification%29%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%7D%2C%203000%29%3B%0D%0A%7D%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20m%E1%BB%9F%20Developer%20Tools%20b%E1%BA%B1ng%20c%C3%A1ch%20ki%E1%BB%83m%20tra%20k%C3%ADch%20th%C6%B0%E1%BB%9Bc%20c%E1%BB%ADa%20s%E1%BB%95%0D%0Avar%20devtools%20%3D%20%7B%0D%0A%20%20%20%20open%3A%20false%2C%0D%0A%20%20%20%20orientation%3A%20null%0D%0A%7D%3B%0D%0A%0D%0Aconst%20threshold%20%3D%20160%3B%0D%0A%0D%0AsetInterval%28function%28%29%20%7B%0D%0A%20%20%20%20if%20%28window.outerHeight%20-%20window.innerHeight%20%3E%20threshold%20%7C%7C%20%0D%0A%20%20%20%20%20%20%20%20window.outerWidth%20-%20window.innerWidth%20%3E%20threshold%29%20%7B%0D%0A%20%20%20%20%20%20%20%20if%20%28%21devtools.open%29%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20devtools.open%20%3D%20true%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20C%C3%B3%20th%E1%BB%83%20redirect%20ho%E1%BA%B7c%20l%C3%A0m%20g%C3%AC%20%C4%91%C3%B3%20kh%C3%A1c%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20window.location.href%20%3D%20%22about%3Ablank%22%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%7D%20else%20%7B%0D%0A%20%20%20%20%20%20%20%20devtools.open%20%3D%20false%3B%0D%0A%20%20%20%20%7D%0D%0A%7D%2C%20500%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20vi%E1%BB%87c%20print%0D%0Awindow.addEventListener%28%27beforeprint%27%2C%20function%28e%29%20%7B%0D%0A%20%20%20%20e.preventDefault%28%29%3B%0D%0A%20%20%20%20showProtectionMessage%28%29%3B%0D%0A%20%20%20%20return%20false%3B%0D%0A%7D%29%3B%0D%0A%0D%0A%2F%2F%20Console%20warning%0D%0Aconsole.log%28%27%25c%E2%9A%A0%EF%B8%8F%20C%E1%BA%A2NH%20B%C3%81O%20B%E1%BA%A2O%20M%E1%BA%ACT%27%2C%20%27color%3A%20red%3B%20font-size%3A%2030px%3B%20font-weight%3A%20bold%3B%27%29%3B%0D%0Aconsole.log%28%27%25cVi%E1%BB%87c%20truy%20c%E1%BA%ADp%20console%20n%C3%A0y%20c%C3%B3%20th%E1%BB%83%20cho%20ph%C3%A9p%20k%E1%BA%BB%20x%E1%BA%A5u%20%C4%91%C3%A1nh%20c%E1%BA%AFp%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20b%E1%BA%A1n.%20Vui%20l%C3%B2ng%20%C4%91%C3%B3ng%20c%E1%BB%ADa%20s%E1%BB%95%20n%C3%A0y%20ngay%20l%E1%BA%ADp%20t%E1%BB%A9c%21%27%2C%20%27color%3A%20red%3B%20font-size%3A%2016px%3B%27%29%3B%0D%0A%0D%0A%2F%2F%20L%C3%A0m%20tr%E1%BB%91ng%20console%0D%0Aconsole.clear%28%29%3B%0D%0A%0D%0A%2F%2F%20Ch%E1%BA%B7n%20console%20methods%0D%0Aif%20%28typeof%20console%20%21%3D%3D%20%27undefined%27%29%20%7B%0D%0A%20%20%20%20console.log%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.warn%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.error%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.info%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%20%20%20%20console.debug%20%3D%20function%28%29%20%7B%7D%3B%0D%0A%7D"></script>
-
+        src="{{ asset('wp-content/js/email-decode.min.js') }}"></script>
 
     <div class="tour-action-bar">
         <a href="tel:087999328" class="btn btn-tour">
-            <img src="https://dulichthesinh.vn/wp-content/uploads/2505_icon-phone-call.svg" alt="Phone" class="btn-icon"
+            <img src="{{ asset('wp-content/uploads/2505_icon-phone-call.svg') }}" alt="Phone" class="btn-icon"
                 width="18" height="18" loading="lazy" fetchpriority="low">
             <div class="btn-text">
                 <span class="btn-title">Tư vấn đặt tour</span>
@@ -1150,12 +1171,12 @@
             </div>
         </a>
         <a href="" class="btn btn-zalo">
-            <img src="https://dulichthesinh.vn/wp-content/uploads/2505_zalo-color.svg" alt="Zalo" class="btn-icon"
+            <img src="{{ asset('wp-content/uploads/2505_zalo-color.svg') }}" alt="Zalo" class="btn-icon"
                 width="50" height="50" loading="lazy" fetchpriority="low">
             <span class="btn-title">Zalo</span>
         </a>
         <a href="https://m.me/100057498496081" class="btn btn-messenger">
-            <img src="https://dulichthesinh.vn/wp-content/uploads/2505_messenger-2025.svg" alt="Messenger"
+            <img src="{{ asset('wp-content/uploads/2505_messenger-2025.svg') }}" alt="Messenger"
                 class="btn-icon" width="1000" height="999" loading="lazy" fetchpriority="low">
             <span class="btn-title">Messenger</span>
         </a>
@@ -1164,7 +1185,7 @@
     <script type='text/javascript' defer
         src="data:text/javascript,%28function%20%28%29%20%7B%0A%09%09%09var%20c%20%3D%20document.body.className%3B%0A%09%09%09c%20%3D%20c.replace%28%2Fwoocommerce-no-js%2F%2C%20%27woocommerce-js%27%29%3B%0A%09%09%09document.body.className%20%3D%20c%3B%0A%09%09%7D%29%28%29%3B"></script>
     <link rel='stylesheet' id='wc-blocks-style-css'
-        href='https://dulichthesinh.vn/wp-content/cache/flying-press/3c68ad9b345b.wc-blocks.css' type='text/css'
+        href='{{ asset('wp-content/cache/flying-press/3c68ad9b345b.wc-blocks.css') }}' type='text/css'
         media='all' />
     <style id='wp-block-paragraph-inline-css' type='text/css'>
         .is-small-text {
@@ -1824,27 +1845,27 @@
     <script type="text/javascript" id="woocommerce-js-extra" defer
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20woocommerce_params%20%3D%20%7B%22ajax_url%22%3A%22%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22wc_ajax_url%22%3A%22%5C%2F%3Fwc-ajax%3D%25%25endpoint%25%25%22%2C%22i18n_password_show%22%3A%22Hi%5Cu1ec3n%20th%5Cu1ecb%20m%5Cu1eadt%20kh%5Cu1ea9u%22%2C%22i18n_password_hide%22%3A%22%5Cu1ea8n%20m%5Cu1eadt%20kh%5Cu1ea9u%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
     <script type="text/javascript"
-        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=69718a71ff04"
+        src="{{ asset('wp-content/js/woocommerce.min.js') }}"
         id="woocommerce-js" data-wp-strategy="defer" defer></script>
-    <script type="text/javascript" src="https://dulichthesinh.vn/wp-includes/js/hoverIntent.min.js?ver=8c0498e2f1f7"
+    <script type="text/javascript" src="{{ asset('wp-includes/js/hoverIntent.min.js') }}"
         id="hoverIntent-js" defer></script>
     <script type="text/javascript" id="flatsome-js-js-extra" defer
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20flatsomeVars%20%3D%20%7B%22theme%22%3A%7B%22version%22%3A%223.19.15%22%7D%2C%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22rtl%22%3A%22%22%2C%22sticky_height%22%3A%2270%22%2C%22stickyHeaderHeight%22%3A%220%22%2C%22scrollPaddingTop%22%3A%220%22%2C%22assets_url%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-content%5C%2Fthemes%5C%2Fflatsome%5C%2Fassets%5C%2F%22%2C%22lightbox%22%3A%7B%22close_markup%22%3A%22%3Cbutton%20title%3D%5C%22%25title%25%5C%22%20type%3D%5C%22button%5C%22%20class%3D%5C%22mfp-close%5C%22%3E%3Csvg%20xmlns%3D%5C%22http%3A%5C%2F%5C%2Fwww.w3.org%5C%2F2000%5C%2Fsvg%5C%22%20width%3D%5C%2228%5C%22%20height%3D%5C%2228%5C%22%20viewBox%3D%5C%220%200%2024%2024%5C%22%20fill%3D%5C%22none%5C%22%20stroke%3D%5C%22currentColor%5C%22%20stroke-width%3D%5C%222%5C%22%20stroke-linecap%3D%5C%22round%5C%22%20stroke-linejoin%3D%5C%22round%5C%22%20class%3D%5C%22feather%20feather-x%5C%22%3E%3Cline%20x1%3D%5C%2218%5C%22%20y1%3D%5C%226%5C%22%20x2%3D%5C%226%5C%22%20y2%3D%5C%2218%5C%22%3E%3C%5C%2Fline%3E%3Cline%20x1%3D%5C%226%5C%22%20y1%3D%5C%226%5C%22%20x2%3D%5C%2218%5C%22%20y2%3D%5C%2218%5C%22%3E%3C%5C%2Fline%3E%3C%5C%2Fsvg%3E%3C%5C%2Fbutton%3E%22%2C%22close_btn_inside%22%3Afalse%7D%2C%22user%22%3A%7B%22can_edit_pages%22%3Afalse%7D%2C%22i18n%22%3A%7B%22mainMenu%22%3A%22Menu%20ch%5Cu00ednh%22%2C%22toggleButton%22%3A%22Chuy%5Cu1ec3n%20%5Cu0111%5Cu1ed5i%22%7D%2C%22options%22%3A%7B%22cookie_notice_version%22%3A%221%22%2C%22swatches_layout%22%3Afalse%2C%22swatches_disable_deselect%22%3Afalse%2C%22swatches_box_select_event%22%3Afalse%2C%22swatches_box_behavior_selected%22%3Afalse%2C%22swatches_box_update_urls%22%3A%221%22%2C%22swatches_box_reset%22%3Afalse%2C%22swatches_box_reset_limited%22%3Afalse%2C%22swatches_box_reset_extent%22%3Afalse%2C%22swatches_box_reset_time%22%3A300%2C%22search_result_latency%22%3A%220%22%7D%2C%22is_mini_cart_reveal%22%3A%221%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
     <script type="text/javascript"
-        src="https://dulichthesinh.vn/wp-content/themes/flatsome/assets/js/flatsome.js?ver=ed03f8cb80df"
+        src="{{ asset('wp-content/themes/flatsome/assets/js/flatsome.js') }}"
         id="flatsome-js-js" defer></script>
     <script type="text/javascript"
-        src="https://dulichthesinh.vn/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=3a8f98a00b53"
+        src="{{ asset('wp-content/js/woocommerce.js') }}"
         id="flatsome-theme-woocommerce-js-js" defer></script>
     <script type="text/javascript" id="gt_widget_script_12967469-js-before" defer
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2712967469%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-12967469%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
     <script src="https://dulichthesinh.vn/wp-content/plugins/gtranslate/js/fn.js?ver=9c5a190da378" data-no-optimize="1"
-        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="dulichthesinh.vn" data-gt-widget-id="12967469"
+        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="{{ url('/') }}" data-gt-widget-id="12967469"
         defer></script>
     <script type="text/javascript" id="gt_widget_script_38227772-js-before" defer
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2738227772%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-38227772%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
-    <script src="https://dulichthesinh.vn/wp-content/plugins/gtranslate/js/fn.js?ver=9c5a190da378" data-no-optimize="1"
-        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="dulichthesinh.vn" data-gt-widget-id="38227772"
+    <script src="{{ asset('wp-content/js/fn.js') }}" data-no-optimize="1"
+        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="{{ url('/') }}" data-gt-widget-id="38227772"
         defer></script>
 
     <script>
@@ -2029,6 +2050,5 @@
     </script>
 </body>
 
-<!-- Mirrored from dulichthesinh.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 14:45:02 GMT -->
 
 </html>
