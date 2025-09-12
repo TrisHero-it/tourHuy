@@ -7,7 +7,7 @@
 
 	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_566051371">
 		<div class="img-inner dark">
-			<img width="1250" height="350"
+			<img
 				src="{{asset($banners->image)}}"
 				alt="Banner du lịch" />
 		</div>
@@ -15,13 +15,12 @@
 		<style>
 			#image_566051371 img {
 				width: 100%;
-				height: 350px;
 				object-fit: cover;
 			}
 		</style>
 	</div>
 	<!-- danh mục -->
-	<div class="row danh-muc-tour large-columns-7 medium-columns-3 small-columns-4 row-small">
+	<div class="row danh-muc-tour large-columns-7 medium-columns-3 small-columns-4 row-small" style="margin-top: 40px;">
 		@foreach ($categoriesBanner as $category)
 		<div class="product-category col">
 			<div class="col-inner">
@@ -73,9 +72,8 @@
 				<div id="text-1379572598" class="text blog-header">
 
 
-					<h2>Khám phá các tour du lịch cùng<br />The Sinh Tourist</h2>
-					<p><span style="font-size: 80%;">Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt
-							Nam!</span></p>
+					<h2>Khám phá vẻ đẹp Việt Nam cùng<br />Sinh Travel</h2>
+					<p><span style="font-size: 80%;">Hành trình du lịch đáng nhớ với giá cả hợp lý và dịch vụ chuyên nghiệp</span></p>
 
 					<style>
 						#text-1379572598 {
@@ -134,7 +132,8 @@
 				<div id="text-3075179566" class="text">
 
 
-					<p>{{ $category->description }}</p>
+					<p>{{ $category->meta }}</p>
+
 
 					<style>
 						#text-3075179566 {
@@ -160,7 +159,7 @@
 											aria-label="{{ $tour->name }}">
 											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
 											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" style="width: 100px; height: 100px;">
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
 											@endif
 										</a>
 									</div>
@@ -197,8 +196,8 @@
 												@endif
 											</p>
 											<p class="tour-schedule" style="margin:0;"><i
-													class="far fa-clock" aria-hidden="true"></i> Đi buổi
-												sáng hàng ngày</p>
+													class="far fa-clock" aria-hidden="true"></i> Đi buổi sáng
+												</p>
 										</div>
 									</div>
 								</div>
@@ -248,7 +247,7 @@
 
 				<div id="text-646834923" class="text">
 
-					<p>{{ $category->description }}</p>
+					<p>{{ $category->meta }}</p>
 
 					<style>
 						#text-646834923 {
@@ -260,7 +259,6 @@
 				<div class="row trang-chu-san-pham equalize-box large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-simple slider-nav-outside slider-nav-push"
 					data-flickity-options='{&quot;imagesLoaded&quot;: true, &quot;groupCells&quot;: &quot;100%&quot;, &quot;dragThreshold&quot; : 5, &quot;cellAlign&quot;: &quot;left&quot;,&quot;wrapAround&quot;: true,&quot;prevNextButtons&quot;: true,&quot;percentPosition&quot;: true,&quot;pageDots&quot;: false, &quot;rightToLeft&quot;: false, &quot;autoPlay&quot; : false}'>
 					@foreach ($category->tours as $tour)
-
 					<div
 						class="product-small col has-hover product type-product post-1924 status-publish first instock product_cat-ha-giang product_cat-ninh-binh product_cat-ninh-binh-lien-tuyen product_cat-sa-pa product_cat-sapa-lien-tuyen-tour has-post-thumbnail sale shipping-taxable product-type-simple">
 						<div class="col-inner">
@@ -273,11 +271,11 @@
 									<div class="image-none">
 										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="NINH BÌNH - SAPA FANXIPAN - HÀ GIANG - 5 NGÀY 5 ĐÊM.">
-											<img decoding="async" width="600" height="450"
-												src="https://dulichthesinh.vn/wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg"
-												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-												alt="NINH BÌNH - SAPA FANXIPAN - HÀ GIANG - 5 NGÀY 5 ĐÊM."
-												loading="eager" fetchpriority="high" /> </a>
+											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+											@if($firstImage)
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											@endif
+										</a>
 									</div>
 									<div class="image-tools is-small top right show-on-hover">
 									</div>
@@ -365,7 +363,7 @@
 				<div id="text-1206134298" class="text">
 
 
-					<p>{{ $category->description }}</p>
+					<p>{{ $category->meta }}</p>
 
 
 					<style>
@@ -394,11 +392,11 @@
 									<div class="image-none">
 										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
-											<img decoding="async" width="600" height="450"
-												src="https://dulichthesinh.vn/wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg"
-												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-												alt="{{ $tour->name }}"
-												loading="eager" fetchpriority="high" /> </a>
+											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+											@if($firstImage)
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											@endif
+										</a>
 									</div>
 									<div class="image-tools is-small top right show-on-hover">
 									</div>
@@ -487,7 +485,7 @@
 				<div id="text-1169398156" class="text">
 
 
-					<p>{{ $category->description }}</p>
+					<p>{{ $category->meta }}</p>
 
 					<style>
 						#text-1169398156 {
@@ -515,11 +513,11 @@
 									<div class="image-none">
 										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
-											<img decoding="async" width="600" height="450"
-												src="https://dulichthesinh.vn/wp-content/uploads/2508_nui-doi-co-tien-600x450.jpg"
-												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-												alt="{{ $tour->name }}"
-												loading="eager" fetchpriority="high" /> </a>
+											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+											@if($firstImage)
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											@endif
+										</a>
 									</div>
 									<div class="image-tools is-small top right show-on-hover">
 									</div>
@@ -608,7 +606,7 @@
 				<div id="text-3099693880" class="text">
 
 
-					<p>{{ $category->description }}</p>
+					<p>{{ $category->meta }}</p>
 
 					<style>
 						#text-3099693880 {
@@ -636,11 +634,11 @@
 									<div class="image-none">
 										<a href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 											aria-label="{{ $tour->name }}">
-											<img decoding="async" width="600" height="450"
-												src="https://dulichthesinh.vn/wp-content/uploads/2505_anh-dep-cat.webp"
-												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-												alt="{{ $tour->name }}"
-												loading="eager" fetchpriority="high" /> </a>
+											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+											@if($firstImage)
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											@endif
+										</a>
 									</div>
 									<div class="image-tools is-small top right show-on-hover">
 									</div>
@@ -675,8 +673,7 @@
 												@endif
 											</p>
 											<p class="tour-schedule" style="margin:0;"><i
-													class="far fa-clock" aria-hidden="true"></i> Đi buổi
-												sáng hàng ngày</p>
+													class="far fa-clock" aria-hidden="true"></i> Đi buổi sáng</p>
 										</div>
 									</div>
 								</div>
@@ -744,12 +741,11 @@
 										<a href="{{ route('blog.show', $blogs->slug) }}"
 											class="plain"
 											aria-label="6 địa điểm du lịch tâm linh ở Ninh Bình giúp bạn tìm kiếm sự bình an">
-											<img decoding="async" width="600" height="400"
-												src="{{ $blogs->image ? asset($blogs->image) : 'https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg' }}"
-												class="attachment-medium size-medium wp-post-image" alt=""
-												srcset="https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-600x400.jpg 600w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1-300x200.jpg 300w, https://dulichthesinh.vn/wp-content/uploads/2505_ninh-binh-1.jpg 1024w"
-												sizes="(max-width: 600px) 100vw, 600px" loading="eager"
-												fetchpriority="high" /> </a>
+											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+											@if($firstImage)
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											@endif
+										</a>
 									</div>
 								</div>
 								<div class="box-text text-left"
@@ -765,7 +761,7 @@
 										</h5>
 										<div class="is-divider"></div>
 										<p class="from_the_blog_excerpt ">
-											{{ $blogs->content }}
+											{{ $blogs->meta }}
 										</p>
 										<style>
 											.from_the_blog_excerpt {

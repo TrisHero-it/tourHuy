@@ -21,9 +21,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($logos as $logo)
-                            <tr>
-                                <td><img src="{{ asset( $logo->image) }}" alt="" style="width: auto; height: 200px;"></td>
+                                @if($logos->count() > 0)
+                                @foreach ($logos as $logo)
+                                <tr>
+                                    <td>
+                                        <img src="{{ asset($logo->image) }}" alt="Logo" style="width: auto; height: 200px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" 
+                                             onerror="this.src='{{ asset('images/logo.png') }}'; this.alt='Logo not found';">
+                                        <br><small style="color: #666;">{{ $logo->image }}</small>
+                                    </td>
                                 <td>
                                     @if ($logo->status == 'active')
                                     <span class="badge rounded-pill text-bg-success"
@@ -40,10 +45,18 @@
                                     <a onclick="changeStatus({{ $logo->id }}, 'active')" class="btn btn-success">Bật</a>
                                     @endif
 
-                                    <button onclick="deleteBanner({{ $logo->id }})" class="btn btn-outline-danger">Xóa</button>
+                                    <button onclick="deleteLogo({{ $logo->id }})" class="btn btn-outline-danger">Xóa</button>
                                 </td>
                             </tr>
-                            @endforeach
+                                @endforeach
+                            @else
+                                <tr>
+                                    <td colspan="3" style="text-align: center; padding: 40px; color: #666;">
+                                        <i class="fas fa-image" style="font-size: 48px; margin-bottom: 15px; display: block;"></i>
+                                        <p>Chưa có logo nào. <a href="/admin/logos/create">Thêm logo đầu tiên</a></p>
+                                    </td>
+                                </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>
@@ -55,7 +68,7 @@
 </div>
 
 <script !src="">
-    function deleteBanner(id) {
+    function deleteLogo(id) {
         if (confirm(`Ban muốn xóa bài này`)) {
             $.ajax({
                 url: '/admin/logos/' + id,

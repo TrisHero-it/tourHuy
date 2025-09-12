@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use App\Models\Account;
 use App\Models\Category;
+use App\Models\GoogleMap;
+use App\Models\Logo;
+use App\Models\Order;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,9 +25,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $address = Account::first();
-        View::share('address', $address);
 
+        $countOrder = Order::where('status', 'Chưa liên hệ')->count();
+        $address = Account::first();
+        $googleMap = GoogleMap::where('status', 'active')->first();
+        View::share('address', $address);
+        View::share('countOrder', $countOrder);
+        View::share('googleMap', $googleMap);
         // Share categories for navigation
         try {
             $categoriesNav = Category::with('categoryChild')->get();
@@ -32,6 +39,15 @@ class AppServiceProvider extends ServiceProvider
         } catch (\Exception $e) {
             // Fallback if table doesn't exist or has issues
             View::share('categoriesNav', collect());
+        }
+
+        // Share active logo globally
+        try {
+            $logo = Logo::where('status', 'active')->first();
+            View::share('logo', $logo);
+        } catch (\Exception $e) {
+            // Fallback if table doesn't exist or has issues
+            View::share('logo', null);
         }
     }
 }

@@ -26,6 +26,7 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'meta' => 'nullable|string',
             'image' => 'required|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'banner' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
@@ -51,10 +52,10 @@ class CategoryController extends Controller
         // Tạo slug từ name
         $data['slug'] = Str::slug($data['name']);
 
-        // Xử lý checkbox values
-        $data['is_nav'] = $request->has('is_nav') ? 1 : 0;
-        $data['is_featured'] = $request->has('is_featured') ? 1 : 0;
-        $data['is_banner'] = $request->has('is_banner') ? 1 : 0;
+        // Xử lý checkbox values chính xác 0/1
+        $data['is_nav'] = $request->boolean('is_nav') ? 1 : 0;
+        $data['is_featured'] = $request->boolean('is_featured') ? 1 : 0;
+        $data['is_banner'] = $request->boolean('is_banner') ? 1 : 0;
 
         Category::create($data);
 
@@ -74,6 +75,7 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'meta' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'banner' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
@@ -115,10 +117,10 @@ class CategoryController extends Controller
         // Tạo slug từ name
         $data['slug'] = Str::slug($data['name']);
 
-        // Xử lý checkbox values
-        $data['is_nav'] = $request->has('is_nav') ? 1 : 0;
-        $data['is_featured'] = $request->has('is_featured') ? 1 : 0;
-        $data['is_banner'] = $request->has('is_banner') ? 1 : 0;
+        // Xử lý checkbox values chính xác 0/1
+        $data['is_nav'] = $request->boolean('is_nav') ? 1 : 0;
+        $data['is_featured'] = $request->boolean('is_featured') ? 1 : 0;
+        $data['is_banner'] = $request->boolean('is_banner') ? 1 : 0;
 
         $category->update($data);
 

@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use App\Models\Account;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Tour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TourController extends Controller
 {
@@ -19,7 +21,7 @@ class TourController extends Controller
         $category = Category::where('slug', $categorySlug)
             // ->where('status', 'active')
             ->first();
-            
+
         if (!$category) {
             abort(404, 'Category not found');
         }
@@ -29,7 +31,7 @@ class TourController extends Controller
             ->where('slug', $categoryChildSlug)
             // ->where('status', 'active')
             ->first();
-            
+
         if (!$categoryChild) {
             abort(404, 'Category child not found');
         }
@@ -40,7 +42,7 @@ class TourController extends Controller
             ->where('status', 'active')
             ->with(['category', 'categoryChild'])
             ->first();
-            
+
         if (!$tour) {
             abort(404, 'Tour not found');
         }
@@ -49,5 +51,61 @@ class TourController extends Controller
         $account = Account::first();
 
         return view('client.tour.detail', compact('category', 'categoryChild', 'tour', 'account'));
+    }
+
+    /**
+     * Handle tour booking
+     */
+    public function booking(Request $request)
+    {
+        try {
+            // Validate request
+            $validated = $request->validate([
+                'name' => 'required|string|max:255',
+                'phone' => 'required|string|max:20',
+                'tour_id' => 'required|exists:tours,id'
+            ]);
+
+            // Get tour details
+            $tour = Tour::findOrFail($validated['tour_id']);
+
+            // Create order
+            $order = Order::create([
+                'name' => $validated['name'],
+                'phone' => $validated['phone'],
+                'tour_id' => $validated['tour_id'],
+                'price_now' => $tour->price,
+                'status' => 'Chưa liên hệ'
+            ]);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Đặt tour thành công! Mã đơn hàng: #' . $order->id,
+                'order_id' => $order->id
+            ]);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Validation errors
+            $errors = $e->validator->errors();
+            $errorMessages = [];
+
+            foreach ($errors->all() as $error) {
+                $errorMessages[] = $error;
+            }
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Vui lòng kiểm tra lại thông tin: ' . implode(', ', $errorMessages),
+                'errors' => $errors,
+                'error' => 'Validation failed'
+            ], 422);
+        } catch (\Exception $e) {
+            // Other errors
+            return response()->json([
+                'success' => false,
+                'message' => 'Có lỗi xảy ra khi đặt tour. Vui lòng thử lại sau.',
+                'error' => $e->getMessage(),
+                'errors' => null
+            ], 500);
+        }
     }
 }

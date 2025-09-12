@@ -5,9 +5,9 @@
 </div>
 <div class="col-md-12">
     <div class="card">
-        <div class="card-header">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <h5>Danh sách danh mục con</h5>
-            <a href="{{ route('admin.category-children.create') }}" class="btn btn-primary btn-sm">Thêm danh mục con</a>
+            <a href="{{ route('admin.category-children.create') }}" class="btn btn-primary ">Thêm danh mục con</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -16,7 +16,6 @@
                         <tr>
                             <th>Tên danh mục con</th>
                             <th>Danh mục cha</th>
-                            <th>Ảnh</th>
                             <th>Slug</th>
                             <th>Chức năng</th>
                         </tr>
@@ -26,14 +25,6 @@
                         <tr>
                             <td>{{ $categoryChild->name }}</td>
                             <td>{{ $categoryChild->category->name ?? 'N/A' }}</td>
-                            <td>
-                                @if($categoryChild->image)
-                                <img src="{{ asset($categoryChild->image) }}" alt="{{ $categoryChild->name }}"
-                                    style="width: 200px; height: auto; object-fit: cover; border-radius: 4px;">
-                                @else
-                                <span class="text-muted">Chưa có ảnh</span>
-                                @endif
-                            </td>
                             <td>{{ $categoryChild->slug }}</td>
                             <td>
                                 <a href="{{ route('admin.category-children.edit', $categoryChild->id) }}" class="btn btn-outline-warning btn-sm">Sửa</a>

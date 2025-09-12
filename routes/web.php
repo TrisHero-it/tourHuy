@@ -34,3 +34,6 @@ Route::get('/{categorySlug}/{slug}', [CategoryController::class, 'toursByCategor
 // Tour detail with category child
 Route::get('/{categorySlug}/{categoryChildSlug}/{tourSlug}', [TourController::class, 'showWithCategoryChild'])
     ->name('tour.detail');
+
+// Tour booking
+Route::post('/tour/booking', [TourController::class, 'booking'])->name('tour.booking');

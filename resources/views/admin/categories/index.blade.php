@@ -6,8 +6,9 @@
     <!-- Zero config table start -->
     <div class="col-sm-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
                 <h5>Danh sách danh mục</h5>
+                <a href="{{ route('admin.categories.create') }}" class="btn btn-primary ">Thêm danh mục</a>
             </div>
             <div class="card-body">
                 <div class="dt-responsive table-responsive">
@@ -19,6 +20,7 @@
                                 <th>Banner</th>
                                 <th>Slug</th>
                                 <th>Mô Tả</th>
+                                <th>Meta</th>
                                 <th>is_nav</th>
                                 <th>is_featured</th>
                                 <th>is_banner</th>
@@ -34,7 +36,8 @@
                                 <td><img src="{{ asset($category->banner) }}" alt=""
                                         style="width: 100px; height: 100px;"></td>
                                 <td>{{ $category->slug }}</td>
-                                <td>{{ $category->description }}</td>
+                                <td>{{ Str::limit($category->description, 50) }}</td>
+                                <td>{{ Str::limit($category->meta, 50) }}</td>
                                 <td>
                                     @if ($category->is_nav == 1)
                                     <span class="badge rounded-pill text-bg-success"

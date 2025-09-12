@@ -38,11 +38,10 @@
                                     <div class="box-image">
                                         <div class="image-none">
                                             <a href="{{ route('tour.detail', [$category->slug, $categoryChild->slug, $tour->slug]) }}" aria-label="{{ $tour->name }}">
-                                                @if($tour->image)
-                                                    <img width="600" height="450" src="{{ asset('storage/' . $tour->image) }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $tour->name }}" decoding="async" fetchpriority="high" loading="eager" />
-                                                @else
-                                                    <img width="600" height="450" src="https://dulichthesinh.vn/wp-content/uploads/2506_anh-1-600x450.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $tour->name }}" decoding="async" fetchpriority="high" loading="eager" />
-                                                @endif
+                                                @php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
+                                                @if($firstImage)
+                                                <img src="{{ asset($firstImage) }}" alt="" height="600" width="450">
+                                                @endif  
                                             </a>
                                         </div>
                                         <div class="image-tools is-small top right show-on-hover">

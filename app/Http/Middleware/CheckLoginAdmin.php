@@ -16,8 +16,8 @@ class CheckLoginAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!Auth::check() || Auth::user()->role_id != "2") {
-            return redirect('/admin/login');
+        if (!Auth::check()) {
+            return redirect('/admin');
         } else {
             return $next($request);
         }

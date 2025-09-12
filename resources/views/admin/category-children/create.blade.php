@@ -27,9 +27,9 @@
                     <select class="form-control" name="category_id" id="category_id" required>
                         <option value="">Chọn danh mục cha</option>
                         @foreach($categories as $category)
-                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
-                                {{ $category->name }}
-                            </option>
+                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
                         @endforeach
                     </select>
                     @error('category_id')
@@ -37,16 +37,6 @@
                     @enderror
                 </div>
 
-                <div class="mb-3">
-                    <label for="image" class="form-label">Ảnh</label>
-                    <input class="form-control" type="file" name="image" id="image" required onchange="previewImage(this)">
-                    @error('image')
-                    <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                    <div id="imagePreview" class="mt-2" style="display: none;">
-                        <img id="previewImg" src="" alt="Preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
-                    </div>
-                </div>
                 <button type="submit" class="btn btn-primary">Thêm</button>
                 <a href="{{ route('admin.category-children.index') }}" class="btn btn-secondary">Hủy</a>
             </form>
@@ -82,17 +72,17 @@
 @endif
 
 <script>
-function previewImage(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        
-        reader.onload = function(e) {
-            document.getElementById('previewImg').src = e.target.result;
-            document.getElementById('imagePreview').style.display = 'block';
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                document.getElementById('previewImg').src = e.target.result;
+                document.getElementById('imagePreview').style.display = 'block';
+            }
+
+            reader.readAsDataURL(input.files[0]);
         }
-        
-        reader.readAsDataURL(input.files[0]);
     }
-}
 </script>
 @endsection
