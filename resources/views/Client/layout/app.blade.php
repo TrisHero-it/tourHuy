@@ -686,23 +686,7 @@
                                     </div>
 
                             <!-- Social Media -->
-                            <div class="social-section">
-                                <h4>Kết nối với chúng tôi</h4>
-                                <div class="social-links">
-                                    <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="https://zalo.me/" target="_blank" class="social-btn zalo">
-                                        <i class="fab fa-telegram"></i>
-                                    </a>
-                                    <a href="https://wa.me/84879998230" target="_blank" class="social-btn whatsapp">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="https://maps.google.com/maps?ll=21.030101,105.847494&z=14&t=m&hl=vi&gl=US&mapclient=embed&cid=12638864436352428695" target="_blank" class="social-btn maps">
-                                        <i class="fas fa-map"></i>
-                                    </a>
-                                </div>
-                            </div>
+                      
                                 </div>
 
                         <!-- Quick Links Section -->
@@ -720,15 +704,21 @@
 
                         <!-- Services Section -->
                         <div class="footer-section">
-                            <h4>Dịch vụ</h4>
-                            <ul class="footer-links">
-                                <li><a href="{{ url('/tour-trong-nuoc') }}">Tour trong nước</a></li>
-                                <li><a href="{{ url('/tour-nuoc-ngoai') }}">Tour nước ngoài</a></li>
-                                <li><a href="{{ url('/tour-du-lich-mien-bac') }}">Tour miền Bắc</a></li>
-                                <li><a href="{{ url('/tour-du-lich-mien-trung') }}">Tour miền Trung</a></li>
-                                <li><a href="{{ url('/tour-du-lich-mien-nam') }}">Tour miền Nam</a></li>
-                                <li><a href="{{ url('/tour-du-lich-tet') }}">Tour du lịch Tết</a></li>
-                            </ul>
+                                <h4>Kết nối với chúng tôi</h4>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://zalo.me/" target="_blank" class="social-btn zalo">
+                                        <i class="fab fa-telegram"></i>
+                                    </a>
+                                    <a href="https://wa.me/84879998230" target="_blank" class="social-btn whatsapp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://maps.google.com/maps?ll=21.030101,105.847494&z=14&t=m&hl=vi&gl=US&mapclient=embed&cid=12638864436352428695" target="_blank" class="social-btn maps">
+                                        <i class="fas fa-map"></i>
+                                    </a>
+                                </div>
                                 </div>
 
                         <!-- Map Section -->
