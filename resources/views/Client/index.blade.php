@@ -20,7 +20,7 @@
 		</style>
 	</div>
 	<!-- danh mục -->
-	<div class="row danh-muc-tour large-columns-7 medium-columns-3 small-columns-4 row-small">
+	<div class="row danh-muc-tour large-columns-7 medium-columns-3 small-columns-4 row-small" style="margin-top: 40px;">
 		@foreach ($categoriesBanner as $category)
 		<div class="product-category col">
 			<div class="col-inner">
@@ -72,9 +72,8 @@
 				<div id="text-1379572598" class="text blog-header">
 
 
-					<h2>Khám phá các tour du lịch cùng<br />Sinh Travel</h2>
-					<p><span style="font-size: 80%;">Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt
-							Nam!</span></p>
+					<h2>Khám phá vẻ đẹp Việt Nam cùng<br />Sinh Travel</h2>
+					<p><span style="font-size: 80%;">Hành trình du lịch đáng nhớ với giá cả hợp lý và dịch vụ chuyên nghiệp</span></p>
 
 					<style>
 						#text-1379572598 {
