@@ -656,428 +656,428 @@
         </main>
 
         <footer id="footer" class="footer-wrapper">
-            <section class="section hide-for-small" id="section_456667461">
-                <div class="section-bg fill">
-
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Company Info Section -->
+                        <div class="footer-section company-section">
+                            <div class="footer-logo">
+                                <h3>{{ $address->name }}</h3>
+                                <p class="tagline">Khám phá thế giới cùng chúng tôi</p>
                 </div>
-
-                <div class="section-content relative">
-                    <div class="row row-small" id="row-2122369246">
-                        <div id="col-1311618474" class="col medium-5 small-6 large-5">
-                            <div class="col-inner">
-                                <h3><span style="font-size: 80%;"><strong>{{ $address->name }}</strong></span></h3>
-                                <p><span style="font-size: 90%;"><strong><i class="far fa-building"></i> Trụ sở
-                                            chính</strong>: <a>{{ $address->address }}.</a></span><br /><span
-                                        style="font-size: 90%;"><strong><i class="fas fa-phone-alt"></i> Điện
-                                            thoại</strong>: <a href="tel:{{ $address->phone }}">{{ $address->phone }}</a><br />
-                                    </span><span
-                                        style="font-size: 90%;"><strong><i class="fas fa-globe"></i> Website</strong>:
-                                        <a
-                                            href="https://sinhtravel.com.vn/">https://sinhtravel.com.vn</a></span><br /><span
-                                        style="font-size: 90%;"><strong><i class="far fa-envelope"></i> Email</strong>:
-                                        <a><span>{{ $address->email }}</span></a></span>
-                                </p>
-                                <h3><span style="font-size: 65%"><strong>GIẤY PHÉP ĐĂNG KÝ CHỨNG NHẬN KINH
-                                            DOANH</strong></span></h3>
-                                <p><span style="font-size: 90%"><strong>Số đăng ký/MST</strong>:
-                                        0111171674<br /></span><span style="font-size: 12.96px">Cấp bởi Sở Kế Hoạch
-                                        &amp; Đầu Tư Thành Phố Hà Nội</span></p>
+                            <div class="company-details">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>{{ $address->address }}</span>
                             </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:{{ $address->phone }}">{{ $address->phone }}</a>
                         </div>
-                        <div id="col-1821559392" class="col medium-2 small-6 large-2">
-                            <div class="col-inner">
-                                <h3><span style="font-size: 65%;"><strong>GÓC KHÁCH HÀNG</strong></span></h3>
-                                <p><span style="font-size: 90%;"><a
-                                            href="{{ url('/huong-dan-dat-tour') }}">Hướng dẫn đặt
-                                            tour</a><br /></span><span style="font-size: 90%;"><a
-                                            href="{{ url('/chinh-sach-bao-mat') }}">Chính sách bảo
-                                            mật</a><br /></span><span style="font-size: 90%;"><a
-                                            href="{{ url('/dieu-khoan-dieu-kien') }}">Điều khoản &amp; điều
-                                            kiện</a><br /></span><a href="{{ url('/lien-he') }}"><span
-                                            style="font-size: 90%;">Hợp tác cùng chúng tôi</span></a></p>
-                                <h3><span style="font-size: 65%;"><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></span></h3>
-                                <p data-wp-editing="1"><a href="https://www.facebook.com/" target="_blank"
-                                        rel="nofollow noopener"><img class="alignnone wp-image-292"
-                                            src="{{ asset('wp-content/uploads/logo-facebook-600x600.png') }}"
-                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
-                                        href="https://zalo.me/" target="_blank" rel="nofollow noopener"><img
-                                            class="alignnone wp-image-291" style="color: #333333;"
-                                            src="{{ asset('wp-content/uploads/logo-zalo-600x600.webp') }}"
-                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
-                                        href="https://wa.me/84879998230" target="_blank" rel="nofollow noopener">
-                                        <img
-                                            class="alignnone wp-image-289" style="color: #333333;"
-                                            src="{{ asset('wp-content/uploads/whatapp.png') }}" alt=""
-                                            width="36" height="36" loading="lazy" fetchpriority="low" />
-                                    </a> <img
-                                        class="alignnone wp-image-290" style="color: #333333;"
-                                        src="{{ asset('wp-content/uploads/logo-google-maps.png') }}" alt=""
-                                        width="36" height="37" loading="lazy" fetchpriority="low" /></p>
-
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:{{ $address->email }}">{{ $address->email }}</a>
                             </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-globe"></i>
+                                    <a href="https://sinhtravel.com.vn" target="_blank">sinhtravel.com.vn</a>
                         </div>
-                        <div id="col-1742795861" class="col medium-2 small-6 large-2">
-                            <div class="col-inner">
-
-                                <h3><span style="font-size: 65%"><strong>CHỨNG NHẬN</strong></span></h3>
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_277771718">
-                                    <div class="img-inner dark">
-                                        <img width="512" height="194"
-                                            src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}"
-                                            class="attachment-original size-original" alt="" decoding="async"
-                                            srcset="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }} 512w, {{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png') }} 300w"
-                                            sizes="(max-width: 512px) 100vw, 512px" loading="eager"
-                                            fetchpriority="high" />
                                     </div>
 
-                                    <style>
-                                        #image_277771718 {
-                                            width: 80%;
-                                        }
-                                    </style>
+                            <!-- Social Media -->
+                            <div class="social-section">
+                                <h4>Kết nối với chúng tôi</h4>
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://zalo.me/" target="_blank" class="social-btn zalo">
+                                        <i class="fab fa-telegram"></i>
+                                    </a>
+                                    <a href="https://wa.me/84879998230" target="_blank" class="social-btn whatsapp">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://maps.google.com/maps?ll=21.030101,105.847494&z=14&t=m&hl=vi&gl=US&mapclient=embed&cid=12638864436352428695" target="_blank" class="social-btn maps">
+                                        <i class="fas fa-map"></i>
+                                    </a>
+                                </div>
+                            </div>
                                 </div>
 
-
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1387355368">
-                                    <div class="img-inner dark">
-                                        <img width="250" height="125"
-                                            src="{{ asset('wp-content/uploads/2505_dmca-badge-1.png') }}"
-                                            class="attachment-medium size-medium" alt="" decoding="async"
-                                            loading="eager" fetchpriority="high" />
+                        <!-- Quick Links Section -->
+                        <div class="footer-section">
+                            <h4>Góc khách hàng</h4>
+                            <ul class="footer-links">
+                                <li><a href="{{ url('/huong-dan-dat-tour') }}">Hướng dẫn đặt tour</a></li>
+                                <li><a href="{{ url('/chinh-sach-bao-mat') }}">Chính sách bảo mật</a></li>
+                                <li><a href="{{ url('/dieu-khoan-dieu-kien') }}">Điều khoản & điều kiện</a></li>
+                                <li><a href="{{ url('/lien-he') }}">Hợp tác cùng chúng tôi</a></li>
+                                <li><a href="{{ url('/ve-chung-toi') }}">Về chúng tôi</a></li>
+                                <li><a href="{{ url('/tin-tuc') }}">Tin tức</a></li>
+                            </ul>
                                     </div>
 
-                                    <style>
-                                        #image_1387355368 {
-                                            width: 80%;
-                                        }
-                                    </style>
+                        <!-- Services Section -->
+                        <div class="footer-section">
+                            <h4>Dịch vụ</h4>
+                            <ul class="footer-links">
+                                <li><a href="{{ url('/tour-trong-nuoc') }}">Tour trong nước</a></li>
+                                <li><a href="{{ url('/tour-nuoc-ngoai') }}">Tour nước ngoài</a></li>
+                                <li><a href="{{ url('/tour-du-lich-mien-bac') }}">Tour miền Bắc</a></li>
+                                <li><a href="{{ url('/tour-du-lich-mien-trung') }}">Tour miền Trung</a></li>
+                                <li><a href="{{ url('/tour-du-lich-mien-nam') }}">Tour miền Nam</a></li>
+                                <li><a href="{{ url('/tour-du-lich-tet') }}">Tour du lịch Tết</a></li>
+                            </ul>
                                 </div>
 
+                        <!-- Map Section -->
+                        <div class="footer-section map-section">
+                            <h4>Vị trí của chúng tôi</h4>
+                            <div class="map-container">
+                                {!! $googleMap->map_url !!}
                             </div>
                         </div>
-                        <div id="col-1191868968" class="col medium-3 small-6 large-3">
-                            <div class="col-inner">
-                                <h3><span style="font-size: 65%;"><strong>Địa chỉ công ty</strong></span></h3>
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1083541475">
-                                    <div class="img-inner dark">
-                                        {!! $googleMap->map_url !!}
-                                        <script>
-                                            document.getElementsByTagName('iframe')[0].width = "688";
-                                            document.getElementsByTagName('iframe')[0].height = "236";
-                                        </script>
                                     </div>
-
-                                    <style>
-                                        #image_1083541475 {
-                                            width: 100%;
-                                        }
-                                    </style>
+                </div>
                                 </div>
 
+            <!-- Certifications Section -->
+            <div class="footer-certifications">
+                <div class="container">
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <h5>Giấy phép kinh doanh</h5>
+                            <p><strong>MST:</strong> 0111171674</p>
+                            <p>Cấp bởi Sở Kế Hoạch & Đầu Tư TP. Hà Nội</p>
                             </div>
+                        <div class="cert-item">
+                            <h5>Chứng nhận</h5>
+                            <div class="cert-logos">
+                                <img src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}" 
+                                     alt="Logo đã thông báo bộ công" class="cert-logo" />
+                                <img src="{{ asset('wp-content/uploads/2505_dmca-badge-1.png') }}" 
+                                     alt="DMCA Badge" class="cert-logo" />
                         </div>
-                        <div id="col-1805330945" class="col small-6 large-12">
-                            <div class="col-inner">
-                                <p><span style="font-size: 90%"><em>Copyright © 2024 <strong>DU LỊCH VÀ DỊCH VỤ THẾ SINH CAFE TOURIST</strong>. Ghi rõ nguồn "<strong>sinhtravel.com.vn</strong>" khi sử
-                                            dụng thông tin từ website này.</em></span></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <style>
-                    #section_456667461 {
-                        padding-top: 30px;
-                        padding-bottom: 30px;
-                        background-color: rgb(244, 248, 249);
-                    }
-                </style>
-            </section>
 
-            <section class="section show-for-small" id="section_954813435">
-                <div class="section-bg fill">
+            <!-- Copyright Section -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="copyright-content">
+                        <p>&copy; {{ date('Y') }} <strong>DU LỊCH SINH TRAVEL</strong> - sinhtravel.com.vn. Tất cả quyền được bảo lưu.</p>
+                        <p class="disclaimer">Ghi rõ nguồn "sinhtravel.com.vn" khi sử dụng thông tin từ website này.</p>
                 </div>
-                <div class="section-content relative">
-                    <div class="row row-collapse" id="row-241224082">
-
-                        <div id="col-697381432" class="col small-12 large-12">
-                            <div class="col-inner">
-
                             </div>
+            </div>
+        </footer>
 
                             <style>
-                                #col-697381432>.col-inner {
-                                    padding: 0px 0px 30px 0px;
-                                }
-                            </style>
-                        </div>
+                /* Top Bar Styling */
+                .header-top {
+                    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+                    color: #ecf0f1;
+                }
+                
+                .header-top .menu-item {
+                    color: #bdc3c7 !important;
+                    font-size: 13px;
+                }
+                
+                .header-top .separator {
+                    color: #7f8c8d !important;
+                }
 
-
-
-                    </div>
-                    <div class="row row-small" id="row-1702787578">
-
-
-                        <div id="col-1684812485" class="col medium-5 small-12 large-5">
-                            <div class="col-inner">
-
-                                <h3><span style="font-size: 100%;"><strong>CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DỊCH VỤ
-                                            DU LỊCH SINH CAFE</strong></span></h3>
-                                <p><span style="font-size: 90%;"><strong><i class="far fa-building"></i> Trụ sở
-                                            chính</strong>: <a
-                                            href="">{{ $address->address }}</a></span><br /><span
-                                        style="font-size: 90%;"><strong><i class="fas fa-phone-alt"></i> Điện
-                                            thoại</strong>: <a href="tel:{{ $address->phone }}">{{ $address->phone }}</a><br /><i
-                                            class="fas fa-mobile-alt"></i> <strong>Hotline</strong>: <a
-                                            href="tel:0849048888">084.904.8888</a></span><br /><span
-                                        style="font-size: 90%;"><strong><i class="fas fa-globe"></i> Website</strong>:
-                                        <a
-                                            href="/">sinhtravel.com.vn</a></span><br /><span
-                                        style="font-size: 90%;"><strong><i class="far fa-envelope"></i> Email</strong>:
-                                        <a
-                                            href="/">{{ $address->email }}</a>
-                                    </span>
-                                </p>
-                                <h3><span style="font-size: 100%;"><strong>GIẤY PHÉP ĐĂNG KÝ CHỨNG NHẬN KINH
-                                            DOANH</strong></span></h3>
-                                <p><span style="font-size: 90%;"><strong>Số đăng ký/MST</strong>:
-                                        0110034650<br /></span><span style="font-size: 12.96px;">Cấp bởi Sở Kế Hoạch
-                                        &amp; Đầu Tư Thành Phố Hà Nội</span></p>
-                            </div>
-                        </div>
-
-                        <div id="col-1822642621" class="col medium-2 small-6 large-2">
-                            <div class="col-inner">
-
-                                <h3><span style="font-size: 90%"><strong>GÓC KHÁCH HÀNG</strong></span></h3>
-                                <p><span style="font-size: 90%"><a
-                                            href="/">Hướng dẫn đặt
-                                            tour</a><br /></span><span style="font-size: 90%"><a
-                                            href="/">Chính sách bảo
-                                            mật</a><br /></span><span style="font-size: 90%"><a
-                                            href="/">Điều khoản &amp; điều
-                                            kiện</a><br /></span><a href="/"><span
-                                            style="font-size: 90%">Hợp tác cùng chúng tôi</span></a></p>
-
-                            </div>
-                        </div>
-
-
-
-                        <div id="col-1288620566" class="col medium-2 small-6 large-2">
-                            <div class="col-inner text-left">
-
-
-
-                                <h3><span style="font-size: 90%"><strong>CHỨNG NHẬN</strong></span></h3>
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1545057860">
-                                    <div class="img-inner dark">
-                                        <img width="512" height="194"
-                                            src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}"
-                                            class="attachment-medium size-medium" alt="" decoding="async"
-                                            srcset="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }} 512w, {{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong-300x114.png') }} 300w"
-                                            sizes="(max-width: 512px) 100vw, 512px" loading="eager"
-                                            fetchpriority="high" />
-                                    </div>
-
-                                    <style>
-                                        #image_1545057860 {
-                                            width: 80%;
-                                        }
-                                    </style>
-                                </div>
-
-
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1082346620">
-                                    <div class="img-inner dark" style="margin:-15px 0px 0px 0px;">
-                                        <img width="250" height="125"
-                                            src="{{ asset('wp-content/uploads/2505_dmca-badge-1.png') }}"
-                                            class="attachment-medium size-medium" alt="" decoding="async"
-                                            loading="eager" fetchpriority="high" />
-                                    </div>
-
-                                    <style>
-                                        #image_1082346620 {
-                                            width: 80%;
-                                        }
-
-                                        @media (min-width:550px) {
-                                            #image_1082346620 {
-                                                width: 100%;
-                                            }
-                                        }
-                                    </style>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="row-2132797282">
-
-
-                        <div id="col-1802264754" class="col medium-2 small-6 large-2">
-                            <div class="col-inner">
-
-
-
-                                <h3><span style="font-size: 70%;"><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></span></h3>
-                                <p data-wp-editing="1"><a href="https://www.facebook.com/"
-                                        target="_blank" rel="nofollow noopener"><img class="alignnone wp-image-292"
-                                            src="{{ asset('wp-content/uploads/logo-facebook-600x600.png') }}"
-                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
-                                        href="https://zalo.me/0948351993" target="_blank" rel="nofollow noopener"><img
-                                            class="alignnone wp-image-291" style="color: #333333;"
-                                            src="{{ asset('wp-content/uploads/logo-zalo-300x300.webp') }}"
-                                            alt="" width="36" height="36" loading="lazy" fetchpriority="low" /></a> <a
-                                        href="https://wa.me/84879998230" target="_blank" rel="nofollow noopener">
-                                        <img
-                                            class="alignnone wp-image-289" style="color: #333333;"
-                                            src="{{ asset('wp-content/uploads/whatapp.png') }}" alt=""
-                                            width="36" height="36" loading="lazy" fetchpriority="low" />
-                                    </a> <a
-                                        href="https://maps.google.com/maps?ll=21.030101,105.847494&amp;z=14&amp;t=m&amp;hl=vi&amp;gl=US&amp;mapclient=embed&amp;cid=12638864436352428695"
-                                        target="_blank" rel="nofollow noopener"><img class="alignnone wp-image-290"
-                                            style="color: #333333;"
-                                            src="{{ asset('wp-content/uploads/logo-google-maps.png') }}"
-                                            alt="" width="36" height="37" loading="lazy" fetchpriority="low" /></a></p>
-
-                            </div>
-                        </div>
-
-
-
-                        <div id="col-1460064641" class="col medium-2 small-6 large-2">
-                            <div class="col-inner">
-
-
-
-                                <h3><span style="font-size: 75%;"><strong>Địa chỉ công ty</strong></span></h3>
-                                <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1989932325">
-                                    <div class="img-inner dark">
-                                        {!! $googleMap->map_url !!}
-                                        <script>
-                                            document.getElementsByTagName('iframe')[1].width = "688";
-                                            document.getElementsByTagName('iframe')[1].height = "236";
-                                        </script>
-                                    </div>
-
-                                    <style>
-                                        #image_1989932325 {
-                                            width: 80%;
-                                        }
-
-                                        @media (min-width:550px) {
-                                            #image_1989932325 {
-                                                width: 100%;
-                                            }
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="col-129090828" class="col small-12 large-12">
-                            <div class="col-inner">
-                                <div id="text-3637533555" class="text">
-                                    <p><span style="font-size: 90%"><em>Copyright © 2025 <strong>DU LỊCH SINH TRAVEL</strong>. Ghi rõ nguồn "<strong>sinhtravel.com.vn</strong>" khi
-                                                sử dụng thông tin từ website này.</em></span></p>
-                                    <style>
-                                        #text-3637533555 {
-                                            font-size: 0.9rem;
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <div id="gap-91330152" class="gap-element clearfix" style="display:block; height:auto;">
-
-                        <style>
-                            #gap-91330152 {
-                                padding-top: 40px;
-                            }
-
-                            @media (min-width:550px) {
-                                #gap-91330152 {
-                                    padding-top: 30px;
-                                }
-                            }
-                        </style>
-                    </div>
-                </div>
-                <style>
-                    #section_954813435 {
-                        padding-top: 0px;
-                        padding-bottom: 0px;
-                        background-color: rgb(244, 248, 249);
+                /* Modern Footer Styles */
+                .footer-wrapper {
+                    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+                    color: #ecf0f1;
+                    margin-top: 30px;
+                }
+                
+                .footer-main {
+                    padding: 25px 0 20px;
+                    background: #2c3e50;
+                }
+                
+                .footer-grid {
+                    display: grid;
+                    grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+                    gap: 20px;
+                    align-items: start;
+                }
+                
+                .footer-section h3 {
+                    color: #3498db;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                }
+                
+                .footer-section h4 {
+                    color: #ecf0f1;
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                    font-weight: 600;
+                    position: relative;
+                    padding-bottom: 6px;
+                }
+                
+                .footer-section h4::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 3px;
+                    background: #3498db;
+                    border-radius: 2px;
+                }
+                
+                .footer-logo .tagline {
+                    color: #bdc3c7;
+                    font-style: italic;
+                    margin-bottom: 15px;
+                    font-size: 12px;
+                }
+                
+                .company-details {
+                    margin-bottom: 15px;
+                }
+                
+                .contact-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                    padding: 3px 0;
+                }
+                
+                .contact-item i {
+                    color: #3498db;
+                    width: 16px;
+                    margin-right: 12px;
+                    font-size: 14px;
+                }
+                
+                .contact-item a {
+                    color: #ecf0f1;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+                
+                .contact-item a:hover {
+                    color: #3498db;
+                }
+                
+                .footer-links {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                .footer-links li {
+                    margin-bottom: 6px;
+                }
+                
+                .footer-links a {
+                    color: #bdc3c7;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    display: block;
+                    padding: 2px 0;
+                    font-size: 12px;
+                }
+                
+                .footer-links a:hover {
+                    color: #3498db;
+                    padding-left: 10px;
+                }
+                
+                .social-section {
+                    margin-top: 15px;
+                }
+                
+                .social-links {
+                    display: flex;
+                    gap: 8px;
+                    margin-top: 10px;
+                }
+                
+                .social-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    font-size: 12px;
+                }
+                
+                .social-btn.facebook {
+                    background: #3b5998;
+                    color: white;
+                }
+                
+                .social-btn.zalo {
+                    background: #0068ff;
+                    color: white;
+                }
+                
+                .social-btn.whatsapp {
+                    background: #25d366;
+                    color: white;
+                }
+                
+                .social-btn.maps {
+                    background: #ea4335;
+                    color: white;
+                }
+                
+                .social-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                }
+                
+                .map-container {
+                    width: 100%;
+                    height: 120px;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                }
+                
+                .map-container iframe {
+                    width: 100% !important;
+                    height: 100% !important;
+                    border: none;
+                }
+                
+                .footer-certifications {
+                    background: #34495e;
+                    padding: 15px 0;
+                    border-top: 1px solid #4a5f7a;
+                }
+                
+                .cert-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                    align-items: center;
+                }
+                
+                .cert-item h5 {
+                    color: #3498db;
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                    font-weight: 600;
+                }
+                
+                .cert-item p {
+                    color: #bdc3c7;
+                    margin-bottom: 4px;
+                    font-size: 10px;
+                }
+                
+                .cert-logos {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                }
+                
+                .cert-logo {
+                    max-width: 60px;
+                    height: auto;
+                    border-radius: 3px;
+                }
+                
+                .footer-bottom {
+                    background: #2c3e50;
+                    padding: 10px 0;
+                    border-top: 1px solid #4a5f7a;
+                }
+                
+                .copyright-content {
+                    text-align: center;
+                }
+                
+                .copyright-content p {
+                    color: #bdc3c7;
+                    margin-bottom: 3px;
+                    font-size: 11px;
+                }
+                
+                .disclaimer {
+                    font-size: 9px !important;
+                    color: #95a5a6 !important;
+                }
+                
+                /* Responsive Design */
+                @media (max-width: 1024px) {
+                    .footer-grid {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 15px;
                     }
-
-                    @media (min-width:550px) {
-                        #section_954813435 {
-                            padding-top: 30px;
-                            padding-bottom: 30px;
-                        }
+                }
+                
+                @media (max-width: 768px) {
+                    .footer-main {
+                        padding: 20px 0 15px;
+                    }
+                    
+                    .footer-grid {
+                        grid-template-columns: 1fr;
+                        gap: 15px;
+                    }
+                    
+                    .social-links {
+                        justify-content: center;
+                    }
+                    
+                    .cert-grid {
+                        grid-template-columns: 1fr;
+                        gap: 10px;
+                        text-align: center;
+                    }
+                    
+                    .cert-logos {
+                        justify-content: center;
+                    }
+                    
+                    .map-container {
+                        height: 100px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .footer-main {
+                        padding: 15px 0 10px;
+                    }
+                    
+                    .footer-section h3 {
+                        font-size: 16px;
+                    }
+                    
+                    .footer-section h4 {
+                        font-size: 12px;
+                    }
+                    
+                    .social-links {
+                        gap: 6px;
+                    }
+                    
+                    .social-btn {
+                        width: 25px;
+                        height: 25px;
+                        font-size: 10px;
+                    }
                     }
                 </style>
-            </section>
-            <div class="absolute-footer dark medium-text-center small-text-center">
-                <div class="container clearfix">
 
-                    <div class="footer-secondary pull-right">
-                        <div class="payment-icons inline-block">
-                            <div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
-                                    <path
-                                        d="M10.781 7.688c-0.251-1.283-1.219-1.688-2.344-1.688h-8.376l-0.061 0.405c5.749 1.469 10.469 4.595 12.595 10.501l-1.813-9.219zM13.125 19.688l-0.531-2.781c-1.096-2.907-3.752-5.594-6.752-6.813l4.219 15.939h5.469l8.157-20.032h-5.501l-5.062 13.688zM27.72 26.061l3.248-20.061h-5.187l-3.251 20.061h5.189zM41.875 5.656c-5.125 0-8.717 2.72-8.749 6.624-0.032 2.877 2.563 4.469 4.531 5.439 2.032 0.968 2.688 1.624 2.688 2.499 0 1.344-1.624 1.939-3.093 1.939-2.093 0-3.219-0.251-4.875-1.032l-0.688-0.344-0.719 4.499c1.219 0.563 3.437 1.064 5.781 1.064 5.437 0.032 8.97-2.688 9.032-6.843 0-2.282-1.405-4-4.376-5.439-1.811-0.904-2.904-1.563-2.904-2.499 0-0.843 0.936-1.72 2.968-1.72 1.688-0.029 2.936 0.314 3.875 0.752l0.469 0.248 0.717-4.344c-1.032-0.406-2.656-0.844-4.656-0.844zM55.813 6c-1.251 0-2.189 0.376-2.72 1.688l-7.688 18.374h5.437c0.877-2.467 1.096-3 1.096-3 0.592 0 5.875 0 6.624 0 0 0 0.157 0.688 0.624 3h4.813l-4.187-20.061h-4zM53.405 18.938c0 0 0.437-1.157 2.064-5.594-0.032 0.032 0.437-1.157 0.688-1.907l0.374 1.72c0.968 4.781 1.189 5.781 1.189 5.781-0.813 0-3.283 0-4.315 0z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
-                                    <path
-                                        d="M35.255 12.078h-2.396c-0.229 0-0.444 0.114-0.572 0.303l-3.306 4.868-1.4-4.678c-0.088-0.292-0.358-0.493-0.663-0.493h-2.355c-0.284 0-0.485 0.28-0.393 0.548l2.638 7.745-2.481 3.501c-0.195 0.275 0.002 0.655 0.339 0.655h2.394c0.227 0 0.439-0.111 0.569-0.297l7.968-11.501c0.191-0.275-0.006-0.652-0.341-0.652zM19.237 16.718c-0.23 1.362-1.311 2.276-2.691 2.276-0.691 0-1.245-0.223-1.601-0.644-0.353-0.417-0.485-1.012-0.374-1.674 0.214-1.35 1.313-2.294 2.671-2.294 0.677 0 1.227 0.225 1.589 0.65 0.365 0.428 0.509 1.027 0.404 1.686zM22.559 12.078h-2.384c-0.204 0-0.378 0.148-0.41 0.351l-0.104 0.666-0.166-0.241c-0.517-0.749-1.667-1-2.817-1-2.634 0-4.883 1.996-5.321 4.796-0.228 1.396 0.095 2.731 0.888 3.662 0.727 0.856 1.765 1.212 3.002 1.212 2.123 0 3.3-1.363 3.3-1.363l-0.106 0.662c-0.040 0.252 0.155 0.479 0.41 0.479h2.147c0.341 0 0.63-0.247 0.684-0.584l1.289-8.161c0.040-0.251-0.155-0.479-0.41-0.479zM8.254 12.135c-0.272 1.787-1.636 1.787-2.957 1.787h-0.751l0.527-3.336c0.031-0.202 0.205-0.35 0.41-0.35h0.345c0.899 0 1.747 0 2.185 0.511 0.262 0.307 0.341 0.761 0.242 1.388zM7.68 7.473h-4.979c-0.341 0-0.63 0.248-0.684 0.584l-2.013 12.765c-0.040 0.252 0.155 0.479 0.41 0.479h2.378c0.34 0 0.63-0.248 0.683-0.584l0.543-3.444c0.053-0.337 0.343-0.584 0.683-0.584h1.575c3.279 0 5.172-1.587 5.666-4.732 0.223-1.375 0.009-2.456-0.635-3.212-0.707-0.832-1.962-1.272-3.628-1.272zM60.876 7.823l-2.043 12.998c-0.040 0.252 0.155 0.479 0.41 0.479h2.055c0.34 0 0.63-0.248 0.683-0.584l2.015-12.765c0.040-0.252-0.155-0.479-0.41-0.479h-2.299c-0.205 0.001-0.379 0.148-0.41 0.351zM54.744 16.718c-0.23 1.362-1.311 2.276-2.691 2.276-0.691 0-1.245-0.223-1.601-0.644-0.353-0.417-0.485-1.012-0.374-1.674 0.214-1.35 1.313-2.294 2.671-2.294 0.677 0 1.227 0.225 1.589 0.65 0.365 0.428 0.509 1.027 0.404 1.686zM58.066 12.078h-2.384c-0.204 0-0.378 0.148-0.41 0.351l-0.104 0.666-0.167-0.241c-0.516-0.749-1.667-1-2.816-1-2.634 0-4.883 1.996-5.321 4.796-0.228 1.396 0.095 2.731 0.888 3.662 0.727 0.856 1.765 1.212 3.002 1.212 2.123 0 3.3-1.363 3.3-1.363l-0.106 0.662c-0.040 0.252 0.155 0.479 0.41 0.479h2.147c0.341 0 0.63-0.247 0.684-0.584l1.289-8.161c0.040-0.252-0.156-0.479-0.41-0.479zM43.761 12.135c-0.272 1.787-1.636 1.787-2.957 1.787h-0.751l0.527-3.336c0.031-0.202 0.205-0.35 0.41-0.35h0.345c0.899 0 1.747 0 2.185 0.511 0.261 0.307 0.34 0.761 0.241 1.388zM43.187 7.473h-4.979c-0.341 0-0.63 0.248-0.684 0.584l-2.013 12.765c-0.040 0.252 0.156 0.479 0.41 0.479h2.554c0.238 0 0.441-0.173 0.478-0.408l0.572-3.619c0.053-0.337 0.343-0.584 0.683-0.584h1.575c3.279 0 5.172-1.587 5.666-4.732 0.223-1.375 0.009-2.456-0.635-3.212-0.707-0.832-1.962-1.272-3.627-1.272z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
-                                    <path
-                                        d="M7.114 14.656c-1.375-0.5-2.125-0.906-2.125-1.531 0-0.531 0.437-0.812 1.188-0.812 1.437 0 2.875 0.531 3.875 1.031l0.563-3.5c-0.781-0.375-2.406-1-4.656-1-1.594 0-2.906 0.406-3.844 1.188-1 0.812-1.5 2-1.5 3.406 0 2.563 1.563 3.688 4.125 4.594 1.625 0.594 2.188 1 2.188 1.656 0 0.625-0.531 0.969-1.5 0.969-1.188 0-3.156-0.594-4.437-1.343l-0.563 3.531c1.094 0.625 3.125 1.281 5.25 1.281 1.688 0 3.063-0.406 4.031-1.157 1.063-0.843 1.594-2.062 1.594-3.656-0.001-2.625-1.595-3.719-4.188-4.657zM21.114 9.125h-3v-4.219l-4.031 0.656-0.563 3.563-1.437 0.25-0.531 3.219h1.937v6.844c0 1.781 0.469 3 1.375 3.75 0.781 0.625 1.907 0.938 3.469 0.938 1.219 0 1.937-0.219 2.468-0.344v-3.688c-0.282 0.063-0.938 0.22-1.375 0.22-0.906 0-1.313-0.5-1.313-1.563v-6.156h2.406l0.595-3.469zM30.396 9.031c-0.313-0.062-0.594-0.093-0.876-0.093-1.312 0-2.374 0.687-2.781 1.937l-0.313-1.75h-4.093v14.719h4.687v-9.563c0.594-0.719 1.437-0.968 2.563-0.968 0.25 0 0.5 0 0.812 0.062v-4.344zM33.895 2.719c-1.375 0-2.468 1.094-2.468 2.469s1.094 2.5 2.468 2.5 2.469-1.124 2.469-2.5-1.094-2.469-2.469-2.469zM36.239 23.844v-14.719h-4.687v14.719h4.687zM49.583 10.468c-0.843-1.094-2-1.625-3.469-1.625-1.343 0-2.531 0.563-3.656 1.75l-0.25-1.469h-4.125v20.155l4.688-0.781v-4.719c0.719 0.219 1.469 0.344 2.125 0.344 1.157 0 2.876-0.313 4.188-1.75 1.281-1.375 1.907-3.5 1.907-6.313 0-2.499-0.469-4.405-1.407-5.593zM45.677 19.532c-0.375 0.687-0.969 1.094-1.625 1.094-0.468 0-0.906-0.093-1.281-0.281v-7c0.812-0.844 1.531-0.938 1.781-0.938 1.188 0 1.781 1.313 1.781 3.812 0.001 1.437-0.219 2.531-0.656 3.313zM62.927 10.843c-1.032-1.312-2.563-2-4.501-2-4 0-6.468 2.938-6.468 7.688 0 2.625 0.656 4.625 1.968 5.875 1.157 1.157 2.844 1.719 5.032 1.719 2 0 3.844-0.469 5-1.251l-0.501-3.219c-1.157 0.625-2.5 0.969-4 0.969-0.906 0-1.532-0.188-1.969-0.594-0.5-0.406-0.781-1.094-0.875-2.062h7.75c0.031-0.219 0.062-1.281 0.062-1.625 0.001-2.344-0.5-4.188-1.499-5.5zM56.583 15.094c0.125-2.093 0.687-3.062 1.75-3.062s1.625 1 1.687 3.062h-3.437z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="payment-icon"><svg viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M18.4306 31.9299V29.8062C18.4306 28.9938 17.9382 28.4618 17.0929 28.4618C16.6703 28.4618 16.2107 28.6021 15.8948 29.0639C15.6486 28.6763 15.2957 28.4618 14.7663 28.4618C14.4135 28.4618 14.0606 28.5691 13.7816 28.9567V28.532H13.043V31.9299H13.7816V30.0536C13.7816 29.4515 14.0975 29.167 14.5899 29.167C15.0823 29.167 15.3285 29.4845 15.3285 30.0536V31.9299H16.0671V30.0536C16.0671 29.4515 16.42 29.167 16.8754 29.167C17.3678 29.167 17.614 29.4845 17.614 30.0536V31.9299H18.4306ZM29.3863 28.532H28.1882V27.5051H27.4496V28.532H26.7808V29.2041H27.4496V30.7629C27.4496 31.5423 27.7655 32 28.6108 32C28.9268 32 29.2797 31.8928 29.5259 31.7526L29.3125 31.1134C29.0991 31.2536 28.8529 31.2907 28.6765 31.2907C28.3236 31.2907 28.1841 31.0763 28.1841 30.7258V29.2041H29.3822V28.532H29.3863ZM35.6562 28.4577C35.2335 28.4577 34.9504 28.6722 34.774 28.9526V28.5278H34.0354V31.9258H34.774V30.0124C34.774 29.4474 35.0202 29.1258 35.4797 29.1258C35.6192 29.1258 35.7957 29.1629 35.9393 29.1959L36.1527 28.4866C36.0049 28.4577 35.7957 28.4577 35.6562 28.4577ZM26.1817 28.8124C25.8288 28.5649 25.3364 28.4577 24.8071 28.4577C23.9618 28.4577 23.3997 28.8825 23.3997 29.5546C23.3997 30.1196 23.8223 30.4412 24.5609 30.5443L24.9138 30.5814C25.2995 30.6515 25.5128 30.7588 25.5128 30.9361C25.5128 31.1835 25.2297 31.3608 24.7373 31.3608C24.2449 31.3608 23.8551 31.1835 23.6089 31.0062L23.256 31.5711C23.6417 31.8557 24.1711 31.9959 24.7004 31.9959C25.6852 31.9959 26.2514 31.534 26.2514 30.899C26.2514 30.2969 25.7919 29.9794 25.0902 29.8722L24.7373 29.835C24.4214 29.7979 24.1752 29.7278 24.1752 29.5175C24.1752 29.2701 24.4214 29.1299 24.8112 29.1299C25.2338 29.1299 25.6565 29.3072 25.8698 29.4144L26.1817 28.8124ZM45.8323 28.4577C45.4097 28.4577 45.1265 28.6722 44.9501 28.9526V28.5278H44.2115V31.9258H44.9501V30.0124C44.9501 29.4474 45.1963 29.1258 45.6559 29.1258C45.7954 29.1258 45.9718 29.1629 46.1154 29.1959L46.3288 28.4948C46.1852 28.4577 45.9759 28.4577 45.8323 28.4577ZM36.3948 30.2309C36.3948 31.2577 37.1005 32 38.192 32C38.6844 32 39.0373 31.8928 39.3901 31.6124L39.0373 31.0103C38.7541 31.2247 38.4751 31.3278 38.1551 31.3278C37.556 31.3278 37.1333 30.9031 37.1333 30.2309C37.1333 29.5917 37.556 29.167 38.1551 29.134C38.471 29.134 38.7541 29.2412 39.0373 29.4515L39.3901 28.8495C39.0373 28.5649 38.6844 28.4618 38.192 28.4618C37.1005 28.4577 36.3948 29.2041 36.3948 30.2309ZM43.2267 30.2309V28.532H42.4881V28.9567C42.2419 28.6392 41.889 28.4618 41.4295 28.4618C40.4775 28.4618 39.7389 29.2041 39.7389 30.2309C39.7389 31.2577 40.4775 32 41.4295 32C41.9219 32 42.2748 31.8227 42.4881 31.5051V31.9299H43.2267V30.2309ZM40.5144 30.2309C40.5144 29.6289 40.9002 29.134 41.5362 29.134C42.1352 29.134 42.5579 29.5959 42.5579 30.2309C42.5579 30.833 42.1352 31.3278 41.5362 31.3278C40.9043 31.2907 40.5144 30.8289 40.5144 30.2309ZM31.676 28.4577C30.6912 28.4577 29.9854 29.167 29.9854 30.2268C29.9854 31.2907 30.6912 31.9959 31.7129 31.9959C32.2053 31.9959 32.6977 31.8557 33.0875 31.534L32.7346 31.0021C32.4515 31.2165 32.0986 31.3567 31.7498 31.3567C31.2903 31.3567 30.8348 31.1423 30.7281 30.5443H33.227C33.227 30.4371 33.227 30.367 33.227 30.2598C33.2598 29.167 32.6238 28.4577 31.676 28.4577ZM31.676 29.0969C32.1355 29.0969 32.4515 29.3814 32.5213 29.9093H30.7609C30.8307 29.4515 31.1467 29.0969 31.676 29.0969ZM50.0259 30.2309V27.1876H49.2873V28.9567C49.0411 28.6392 48.6882 28.4618 48.2286 28.4618C47.2767 28.4618 46.5381 29.2041 46.5381 30.2309C46.5381 31.2577 47.2767 32 48.2286 32C48.721 32 49.0739 31.8227 49.2873 31.5051V31.9299H50.0259V30.2309ZM47.3136 30.2309C47.3136 29.6289 47.6993 29.134 48.3353 29.134C48.9344 29.134 49.357 29.5959 49.357 30.2309C49.357 30.833 48.9344 31.3278 48.3353 31.3278C47.6993 31.2907 47.3136 30.8289 47.3136 30.2309ZM22.5872 30.2309V28.532H21.8486V28.9567C21.6024 28.6392 21.2495 28.4618 20.79 28.4618C19.838 28.4618 19.0994 29.2041 19.0994 30.2309C19.0994 31.2577 19.838 32 20.79 32C21.2824 32 21.6352 31.8227 21.8486 31.5051V31.9299H22.5872V30.2309ZM19.8421 30.2309C19.8421 29.6289 20.2278 29.134 20.8638 29.134C21.4629 29.134 21.8855 29.5959 21.8855 30.2309C21.8855 30.833 21.4629 31.3278 20.8638 31.3278C20.2278 31.2907 19.8421 30.8289 19.8421 30.2309Z" />
-                                    <path
-                                        d="M26.6745 12.7423C26.6745 8.67216 28.5785 5.05979 31.5 2.72577C29.3499 1.0268 26.6376 0 23.6791 0C16.6707 0 11 5.69897 11 12.7423C11 19.7856 16.6707 25.4845 23.6791 25.4845C26.6376 25.4845 29.3499 24.4577 31.5 22.7588C28.5744 20.4577 26.6745 16.8124 26.6745 12.7423Z" />
-                                    <path
-                                        d="M31.5 2.72577C34.4215 5.05979 36.3255 8.67216 36.3255 12.7423C36.3255 16.8124 34.4585 20.4206 31.5 22.7588L25.9355 22.7588V2.72577L31.5 2.72577Z"
-                                        fill-opacity="0.6" />
-                                    <path
-                                        d="M52 12.7423C52 19.7856 46.3293 25.4845 39.3209 25.4845C36.3624 25.4845 33.6501 24.4577 31.5 22.7588C34.4585 20.4206 36.3255 16.8124 36.3255 12.7423C36.3255 8.67216 34.4215 5.05979 31.5 2.72577C33.646 1.0268 36.3583 0 39.3168 0C46.3293 0 52 5.73608 52 12.7423Z"
-                                        fill-opacity="0.4" />
-                                </svg>
-                            </div>
-                            <div class="payment-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 32">
-                                    <path
-                                        d="M13.043 8.356c-0.46 0-0.873 0.138-1.24 0.413s-0.662 0.681-0.885 1.217c-0.223 0.536-0.334 1.112-0.334 1.727 0 0.568 0.119 0.99 0.358 1.265s0.619 0.413 1.141 0.413c0.508 0 1.096-0.131 1.765-0.393v1.327c-0.693 0.262-1.389 0.393-2.089 0.393-0.884 0-1.572-0.254-2.063-0.763s-0.736-1.229-0.736-2.161c0-0.892 0.181-1.712 0.543-2.462s0.846-1.32 1.452-1.709 1.302-0.584 2.089-0.584c0.435 0 0.822 0.038 1.159 0.115s0.7 0.217 1.086 0.421l-0.616 1.276c-0.369-0.201-0.673-0.333-0.914-0.398s-0.478-0.097-0.715-0.097zM19.524 12.842h-2.47l-0.898 1.776h-1.671l3.999-7.491h1.948l0.767 7.491h-1.551l-0.125-1.776zM19.446 11.515l-0.136-1.786c-0.035-0.445-0.052-0.876-0.052-1.291v-0.184c-0.153 0.408-0.343 0.84-0.569 1.296l-0.982 1.965h1.739zM27.049 12.413c0 0.711-0.257 1.273-0.773 1.686s-1.213 0.62-2.094 0.62c-0.769 0-1.389-0.153-1.859-0.46v-1.398c0.672 0.367 1.295 0.551 1.869 0.551 0.39 0 0.694-0.072 0.914-0.217s0.329-0.343 0.329-0.595c0-0.147-0.024-0.275-0.070-0.385s-0.114-0.214-0.201-0.309c-0.087-0.095-0.303-0.269-0.648-0.52-0.481-0.337-0.818-0.67-1.013-1s-0.293-0.685-0.293-1.066c0-0.439 0.108-0.831 0.324-1.176s0.523-0.614 0.922-0.806 0.857-0.288 1.376-0.288c0.755 0 1.446 0.168 2.073 0.505l-0.569 1.189c-0.543-0.252-1.044-0.378-1.504-0.378-0.289 0-0.525 0.077-0.71 0.23s-0.276 0.355-0.276 0.607c0 0.207 0.058 0.389 0.172 0.543s0.372 0.36 0.773 0.615c0.421 0.272 0.736 0.572 0.945 0.9s0.313 0.712 0.313 1.151zM33.969 14.618h-1.597l0.7-3.22h-2.46l-0.7 3.22h-1.592l1.613-7.46h1.597l-0.632 2.924h2.459l0.632-2.924h1.592l-1.613 7.46zM46.319 9.831c0 0.963-0.172 1.824-0.517 2.585s-0.816 1.334-1.415 1.722c-0.598 0.388-1.288 0.582-2.067 0.582-0.891 0-1.587-0.251-2.086-0.753s-0.749-1.198-0.749-2.090c0-0.902 0.172-1.731 0.517-2.488s0.82-1.338 1.425-1.743c0.605-0.405 1.306-0.607 2.099-0.607 0.888 0 1.575 0.245 2.063 0.735s0.73 1.176 0.73 2.056zM43.395 8.356c-0.421 0-0.808 0.155-1.159 0.467s-0.627 0.739-0.828 1.283-0.3 1.135-0.3 1.771c0 0.5 0.116 0.877 0.348 1.133s0.558 0.383 0.979 0.383 0.805-0.148 1.151-0.444c0.346-0.296 0.617-0.714 0.812-1.255s0.292-1.148 0.292-1.822c0-0.483-0.113-0.856-0.339-1.12-0.227-0.264-0.546-0.396-0.957-0.396zM53.427 14.618h-1.786l-1.859-5.644h-0.031l-0.021 0.163c-0.111 0.735-0.227 1.391-0.344 1.97l-0.757 3.511h-1.436l1.613-7.46h1.864l1.775 5.496h0.021c0.042-0.259 0.109-0.628 0.203-1.107s0.407-1.942 0.94-4.388h1.43l-1.613 7.461zM13.296 20.185c0 0.98-0.177 1.832-0.532 2.556s-0.868 1.274-1.539 1.652c-0.672 0.379-1.464 0.568-2.376 0.568h-2.449l1.678-7.68h2.15c0.977 0 1.733 0.25 2.267 0.751s0.801 1.219 0.801 2.154zM8.925 23.615c0.536 0 1.003-0.133 1.401-0.399s0.71-0.657 0.934-1.174c0.225-0.517 0.337-1.108 0.337-1.773 0-0.54-0.131-0.95-0.394-1.232s-0.64-0.423-1.132-0.423h-0.624l-1.097 5.001h0.575zM18.64 24.96h-4.436l1.678-7.68h4.442l-0.293 1.334h-2.78l-0.364 1.686h2.59l-0.299 1.334h-2.59l-0.435 1.98h2.78l-0.293 1.345zM20.509 24.96l1.678-7.68h1.661l-1.39 6.335h2.78l-0.294 1.345h-4.436zM26.547 24.96l1.694-7.68h1.656l-1.694 7.68h-1.656zM33.021 23.389c0.282-0.774 0.481-1.27 0.597-1.487l2.346-4.623h1.716l-4.061 7.68h-1.814l-0.689-7.68h1.602l0.277 4.623c0.015 0.157 0.022 0.39 0.022 0.699-0.007 0.361-0.018 0.623-0.033 0.788h0.038zM41.678 24.96h-4.437l1.678-7.68h4.442l-0.293 1.334h-2.78l-0.364 1.686h2.59l-0.299 1.334h-2.59l-0.435 1.98h2.78l-0.293 1.345zM45.849 22.013l-0.646 2.947h-1.656l1.678-7.68h1.949c0.858 0 1.502 0.179 1.933 0.536s0.646 0.881 0.646 1.571c0 0.554-0.15 1.029-0.451 1.426s-0.733 0.692-1.298 0.885l1.417 3.263h-1.803l-1.124-2.947h-0.646zM46.137 20.689h0.424c0.474 0 0.843-0.1 1.108-0.3s0.396-0.504 0.396-0.914c0-0.287-0.086-0.502-0.258-0.646s-0.442-0.216-0.812-0.216h-0.402l-0.456 2.076zM53.712 20.39l2.031-3.11h1.857l-3.355 4.744-0.646 2.936h-1.645l0.646-2.936-1.281-4.744h1.694l0.7 3.11z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-primary pull-left">
-                        <div class="copyright-footer">
-                            Copyright 2025 &copy; <strong>Flatsome Theme</strong> </div>
-                    </div>
-                </div>
-            </div>
 
             <a href="#top"
                 class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle"
