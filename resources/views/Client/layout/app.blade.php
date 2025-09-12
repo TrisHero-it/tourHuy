@@ -1010,32 +1010,173 @@
                 @media (max-width: 1024px) {
                     .footer-grid {
                         grid-template-columns: 1fr 1fr;
-                        gap: 20px;
+                        gap: 25px;
                     }
                 }
                 
                 @media (max-width: 768px) {
                     .footer-main {
-                        padding: 30px 0 20px;
+                        padding: 25px 0 15px;
                     }
                     
                     .footer-grid {
-                        grid-template-columns: 1fr;
+                        grid-template-columns: 1fr 1fr;
                         gap: 20px;
+                    }
+                    
+                    .footer-section h4 {
+                        font-size: 16px;
+                        margin-bottom: 15px;
+                    }
+                    
+                    .footer-links a {
+                        font-size: 14px;
+                        padding: 6px 0;
+                    }
+                    
+                    .footer-links li {
+                        margin-bottom: 8px;
+                    }
+                    
+                    .contact-item {
+                        margin-bottom: 12px;
+                        padding: 5px 0;
+                    }
+                    
+                    .contact-item i {
+                        font-size: 16px;
+                        width: 18px;
                     }
                     
                     .social-links {
                         justify-content: center;
+                        gap: 15px;
+                        margin-top: 15px;
+                    }
+                    
+                    .social-btn {
+                        width: 45px;
+                        height: 45px;
+                        font-size: 18px;
                     }
                     
                     .cert-grid {
                         grid-template-columns: 1fr;
-                        gap: 15px;
+                        gap: 20px;
                         text-align: center;
+                    }
+                    
+                    .cert-item h5 {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                    
+                    .cert-item p {
+                        font-size: 12px;
+                        margin-bottom: 6px;
                     }
                     
                     .cert-logos {
                         justify-content: center;
+                    }
+                    
+                    .footer-certifications {
+                        padding: 20px 0;
+                    }
+                    
+                    .footer-bottom {
+                        padding: 15px 0;
+                    }
+                    
+                    .copyright-content p {
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    .disclaimer {
+                        font-size: 11px !important;
+                    }
+                    
+                    .map-container {
+                        height: 150px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .footer-main {
+                        padding: 20px 0 10px;
+                    }
+                    
+                    .footer-grid {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 15px;
+                    }
+                    
+                    .footer-section h3 {
+                        font-size: 18px;
+                        margin-bottom: 12px;
+                    }
+                    
+                    .footer-section h4 {
+                        font-size: 15px;
+                        margin-bottom: 12px;
+                    }
+                    
+                    .footer-links a {
+                        font-size: 13px;
+                        padding: 4px 0;
+                    }
+                    
+                    .footer-links li {
+                        margin-bottom: 6px;
+                    }
+                    
+                    .contact-item {
+                        margin-bottom: 10px;
+                        padding: 3px 0;
+                    }
+                    
+                    .contact-item i {
+                        font-size: 14px;
+                        width: 16px;
+                    }
+                    
+                    .social-links {
+                        gap: 10px;
+                        margin-top: 12px;
+                    }
+                    
+                    .social-btn {
+                        width: 40px;
+                        height: 40px;
+                        font-size: 16px;
+                    }
+                    
+                    .cert-item h5 {
+                        font-size: 13px;
+                        margin-bottom: 8px;
+                    }
+                    
+                    .cert-item p {
+                        font-size: 11px;
+                        margin-bottom: 4px;
+                    }
+                    
+                    .footer-certifications {
+                        padding: 15px 0;
+                    }
+                    
+                    .footer-bottom {
+                        padding: 12px 0;
+                    }
+                    
+                    .copyright-content p {
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                    }
+                    
+                    .disclaimer {
+                        font-size: 10px !important;
                     }
                     
                     .map-container {
@@ -1043,29 +1184,32 @@
                     }
                 }
                 
-                @media (max-width: 480px) {
-                    .footer-main {
-                        padding: 25px 0 15px;
-                    }
-                    
-                    .footer-section h3 {
-                        font-size: 18px;
+                @media (max-width: 360px) {
+                    .footer-grid {
+                        grid-template-columns: 1fr;
+                        gap: 20px;
                     }
                     
                     .footer-section h4 {
                         font-size: 14px;
+                        margin-bottom: 10px;
                     }
                     
-                    .social-links {
-                        gap: 8px;
+                    .footer-links a {
+                        font-size: 12px;
+                        padding: 3px 0;
                     }
                     
                     .social-btn {
-                        width: 30px;
-                        height: 30px;
-                        font-size: 12px;
-                        }
+                        width: 35px;
+                        height: 35px;
+                        font-size: 14px;
                     }
+                    
+                    .map-container {
+                        height: 100px;
+                    }
+                }
                 </style>
 
 
