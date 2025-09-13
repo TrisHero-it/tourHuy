@@ -706,10 +706,10 @@
                         <div class="footer-section">
                                 <h4>Kết nối với chúng tôi</h4>
                                 <div class="social-links">
-                                    <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook">
+                                    <a href="https://m.me/61579608994747" target="_blank" class="social-btn facebook">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
-                                    <a href="https://zalo.me/" target="_blank" class="social-btn zalo">
+                                    <a href="https://zalo.me/0879998230" target="_blank" class="social-btn zalo">
                                         <i class="fab fa-telegram"></i>
                                     </a>
                                     <a href="https://wa.me/84879998230" target="_blank" class="social-btn whatsapp">
@@ -1309,7 +1309,7 @@
                 width="50" height="50" loading="lazy" fetchpriority="low">
             <span class="btn-title">Zalo</span>
         </a>
-        <a href="https://m.me/100057498496081" class="btn btn-messenger">
+        <a href="https://m.me/61579608994747" class="btn btn-messenger">
             <img src="{{ asset('wp-content/uploads/2505_messenger-2025.svg') }}" alt="Messenger"
                 class="btn-icon" width="1000" height="999" loading="lazy" fetchpriority="low">
             <span class="btn-title">Messenger</span>
@@ -2182,6 +2182,100 @@
             })
         });
     </script>
+
+    <!-- Floating Social Icons -->
+    <div class="floating-social-icons">
+        <a href="https://m.me/61579608994747" target="_blank" class="floating-icon facebook-icon" title="Chat Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://zalo.me/0879998230" target="_blank" class="floating-icon zalo-icon" title="Chat Zalo">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://wa.me/84123456789" target="_blank" class="floating-icon whatsapp-icon" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <style>
+        .floating-social-icons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .floating-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .facebook-icon {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+        }
+
+        .facebook-icon:hover {
+            background: linear-gradient(135deg, #166fe5, #1976d2);
+        }
+
+        .zalo-icon {
+            background: #0068ff;
+            color: white;
+        }
+
+        .zalo-icon:hover {
+            background: #0052cc;
+        }
+
+        .whatsapp-icon {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        .whatsapp-icon:hover {
+            background: linear-gradient(135deg, #1ea952, #0f6b5c);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .floating-social-icons {
+                right: 15px;
+                bottom: 15px;
+            }
+            
+            .floating-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    </style>
+
 </body>
 
 

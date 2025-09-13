@@ -37,6 +37,18 @@
                     @enderror
                 </div>
 
+                <div class="mb-3">
+                    <label for="image" class="form-label">Ảnh danh mục con</label>
+                    <input class="form-control" type="file" name="image" id="image" onchange="previewImage(this)">
+                    @error('image')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                    <div id="imagePreview" class="mt-2" style="display: none;">
+                        <p class="text-muted">Ảnh xem trước:</p>
+                        <img id="previewImg" src="" alt="Preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
+                    </div>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Thêm</button>
                 <a href="{{ route('admin.category-children.index') }}" class="btn btn-secondary">Hủy</a>
             </form>

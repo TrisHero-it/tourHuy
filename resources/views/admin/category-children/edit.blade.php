@@ -41,7 +41,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Ảnh hiện tại</label>
-                    @if($categoryChild->image)
+                    @if($categoryChild->image && file_exists(public_path($categoryChild->image)))
                         <div class="mb-2">
                             <img src="{{ asset($categoryChild->image) }}" alt="{{ $categoryChild->name }}" style="max-width: 200px; max-height: 150px;">
                         </div>

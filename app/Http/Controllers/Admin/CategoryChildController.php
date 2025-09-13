@@ -27,8 +27,17 @@ class CategoryChildController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
+            'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
         $data = $request->all();
+
+        // Xử lý upload ảnh
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '_child.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images/category-children'), $imageName);
+            $data['image'] = 'images/category-children/' . $imageName;
+        }
 
         // Tạo slug từ name
         $data['slug'] = Str::slug($data['name']);
