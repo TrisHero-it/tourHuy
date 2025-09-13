@@ -12,7 +12,7 @@ class TourController extends Controller
 {
     public function index()
     {
-        $tours = Tour::with('category', 'categoryChild')->orderBy('id', 'desc')->paginate(12);
+        $tours = Tour::with('category', 'categoryChild')->orderBy('created_at', 'desc')->paginate(12);
         return view('admin.tours.index', compact('tours'));
     }
 
@@ -25,7 +25,7 @@ class TourController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:tours,name',
             'description' => 'nullable|string',
             'price' => 'nullable|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
@@ -66,7 +66,7 @@ class TourController extends Controller
         $tour = Tour::findOrFail($id);
 
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:tours,name,' . $id,
             'description' => 'nullable|string',
             'price' => 'nullable|numeric|min:0',
             'category_id' => 'required|exists:categories,id',

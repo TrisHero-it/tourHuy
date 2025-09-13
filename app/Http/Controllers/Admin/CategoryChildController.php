@@ -12,7 +12,7 @@ class CategoryChildController extends Controller
 {
     public function index()
     {
-        $categoryChildren = CategoryChild::with('category')->paginate(12);
+        $categoryChildren = CategoryChild::with('category')->orderBy('created_at', 'desc')->paginate(12);
         return view('admin.category-children.index', compact('categoryChildren'));
     }
 
@@ -25,7 +25,7 @@ class CategoryChildController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:category_childs,name',
             'category_id' => 'required|exists:categories,id',
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
@@ -59,7 +59,7 @@ class CategoryChildController extends Controller
         $categoryChild = CategoryChild::findOrFail($id);
 
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:category_childs,name,' . $id,
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'category_id' => 'required|exists:categories,id',
         ]);

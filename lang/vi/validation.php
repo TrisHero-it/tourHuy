@@ -181,7 +181,7 @@ return [
     */
 
     'attributes' => [
-        'name' => 'tên danh mục',
+        'name' => 'tên',
         'description' => 'mô tả',
         'meta' => 'mô tả ngắn',
         'image' => 'ảnh thumbnail',

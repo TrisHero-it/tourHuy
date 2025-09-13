@@ -12,7 +12,10 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('categoryChild')->orderBy('order', 'asc')->paginate(12);
+        $categories = Category::with('categoryChild')
+            ->orderByRaw('CASE WHEN `order` IS NOT NULL THEN `order` ELSE 999 END ASC')
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -24,10 +27,10 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:categories,name',
             'description' => 'nullable|string',
             'meta' => 'nullable|string',
-            'order' => 'nullable|integer|min:1|max:8',
+            'order' => 'nullable|integer|min:1|max:8|unique:categories,order',
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'banner' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
@@ -58,19 +61,6 @@ class CategoryController extends Controller
         $data['is_featured'] = $request->boolean('is_featured') ? 1 : 0;
         $data['is_banner'] = $request->boolean('is_banner') ? 1 : 0;
 
-        // Xử lý order - nếu order đã tồn tại thì đẩy các order khác lên
-        if ($request->filled('order')) {
-            $newOrder = $request->order;
-            $existingCategory = Category::where('order', $newOrder)->first();
-            
-            if ($existingCategory) {
-                // Tìm order trống gần nhất
-                $emptyOrder = $this->findEmptyOrder();
-                if ($emptyOrder) {
-                    $existingCategory->update(['order' => $emptyOrder]);
-                }
-            }
-        }
 
         Category::create($data);
 
@@ -88,7 +78,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
 
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:categories,name,' . $id,
             'description' => 'nullable|string',
             'meta' => 'nullable|string',
             'order' => 'nullable|integer|min:1|max:8',
@@ -183,16 +173,4 @@ class CategoryController extends Controller
         return response()->json($categoryChilds);
     }
 
-    /**
-     * Tìm order trống gần nhất
-     */
-    private function findEmptyOrder()
-    {
-        for ($i = 1; $i <= 8; $i++) {
-            if (!Category::where('order', $i)->exists()) {
-                return $i;
-            }
-        }
-        return null;
-    }
 }
