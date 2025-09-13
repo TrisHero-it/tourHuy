@@ -27,23 +27,26 @@ class TourController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
+            'price' => 'nullable|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'category_child_id' => 'nullable|exists:category_childs,id',
-            'images' => 'required|array|size:3',
-            'images.*' => 'required|image|mimes:jpeg,png,webp,jpg,gif',
+            'images' => 'nullable|array|size:3',
+            'images.*' => 'nullable|image|mimes:jpeg,png,webp,jpg,gif',
+            'duration' => 'nullable|string|max:255',
         ]);
 
         $data = $validated;
         $data['slug'] = Str::slug($validated['name']);
 
-        $storedImages = [];
-        foreach ($request->file('images') as $image) {
-            $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images/tours'), $imageName);
-            $storedImages[] = "images/tours/" . $imageName;
+        if ($request->hasFile('images')) {
+            $storedImages = [];
+            foreach ($request->file('images') as $image) {
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/tours'), $imageName);
+                $storedImages[] = "images/tours/" . $imageName;
+            }
+            $data['image'] = $storedImages;
         }
-        $data['image'] = $storedImages;
 
         $data['schedule'] = "Khởi hành vào buổi sáng";
         $data['status'] = 'active';
@@ -65,11 +68,12 @@ class TourController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
+            'price' => 'nullable|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'category_child_id' => 'nullable|exists:category_childs,id',
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,webp,jpg,gif|max:5120',
+            'duration' => 'nullable|string|max:255',
         ]);
 
         $data = $validated;

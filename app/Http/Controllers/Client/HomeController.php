@@ -17,9 +17,9 @@ class HomeController extends Controller
         $banners = Banner::where('status', 'active')->first();
         $blog = Blog::orderBy('id', 'desc')->take(3)->get();
         $logo = Logo::where('status', 'active')->first();
-        $categoriesNav = $categories->where('is_nav', true)->take(8);
-        $categoriesBanner = $categories->where('is_banner', true)->take(6);
-        $categoriesFeature = $categories->where('is_featured', true)->take(5);
+        $categoriesNav = $categories->where('is_nav', true)->sortBy('order')->take(8);
+        $categoriesBanner = $categories->where('is_banner', true)->sortBy('order')->take(6);
+        $categoriesFeature = $categories->where('is_featured', true)->sortBy('order')->take(5);
 
         return view('client.index', compact('categoriesNav', 'categoriesBanner', 'categoriesFeature', 'blog', 'banners', 'logo'));
     }

@@ -18,6 +18,7 @@ class Category extends Model
         'banner',
         'image',
         'slug',
+        'order',
         'is_nav',
         'is_featured',
         'is_banner'

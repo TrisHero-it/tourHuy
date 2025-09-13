@@ -2,6 +2,34 @@
 @section('link')
 <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-timepicker.min.css')}}">
 <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+<style>
+.alert {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #ff6b6b, #ff5252);
+    border: none;
+    color: white;
+}
+
+.alert-danger i {
+    margin-right: 8px;
+}
+</style>
 @endsection
 @section('content')
 <div style="position: fixed; right: 23px; top: 30px; z-index: 1102;" id="notification">
@@ -19,7 +47,9 @@
                 <label for="">Tên danh mục</label> <br>
                 <input class="form-control" type="text" name="name" value="{{ old('name', $category->name) }}">
                 @error('name')
-                <div style="color:red">{{$message}}</div>
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
                 @enderror
 
                 <label for="">Thumbnail hiện tại</label> <br>
@@ -32,7 +62,9 @@
                 <label for="image">Thay đổi thumbnail</label> <br>
                 <input class="form-control" type="file" name="image" id="image" onchange="previewImage(this, 'imagePreview', 'previewImg')">
                 @error('image')
-                <div style="color:red">{{$message}}</div>
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
                 @enderror
                 <div id="imagePreview" class="mt-2" style="display: none;">
                     <img id="previewImg" src="" alt="Preview" style="max-width: 200px; max-height: 150px; border-radius: 4px; border: 1px solid #ddd;">
@@ -57,11 +89,33 @@
                 <label for="">Description</label> <br>
                 <textarea class="form-control" name="description" id="editor">{{ old('description', $category->description) }}</textarea>
                 @error('description')
-                <div style="color:red">{{$message}}</div>
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
                 @enderror
 
                 <label for="">Mô tả ngắn</label> <br>
                 <input class="form-control" type="text" name="meta" value="{{ old('meta', $category->meta) }}">
+                @error('meta')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
+                <label for="order" class="mt-3">Thứ tự hiển thị (1-8)</label> <br>
+                <select class="form-control" name="order" id="order">
+                    <option value="">Chọn thứ tự</option>
+                    @for($i = 1; $i <= 8; $i++)
+                        <option value="{{ $i }}" {{ old('order', $category->order) == $i ? 'selected' : '' }}>
+                            Thứ tự {{ $i }}
+                        </option>
+                    @endfor
+                </select>
+                @error('order')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
 
                 <div class="form-check form-switch mt-3">
                     <input type="hidden" name="is_nav" value="0">
@@ -155,6 +209,39 @@
             }
             reader.readAsDataURL(input.files[0]);
         }
+    }
+
+    // Hiển thị popup toast notification
+    function showToast(message, type = 'error') {
+        const notification = document.getElementById('notification');
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type} alert-dismissible fade show`;
+        toast.style.position = 'fixed';
+        toast.style.top = '20px';
+        toast.style.right = '20px';
+        toast.style.zIndex = '9999';
+        toast.style.minWidth = '300px';
+        toast.innerHTML = `
+            <i class="fas fa-exclamation-triangle"></i> ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        notification.appendChild(toast);
+        
+        // Tự động ẩn sau 5 giây
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.remove();
+            }
+        }, 5000);
+    }
+
+    // Kiểm tra lỗi validation và hiển thị popup
+    const errors = @json($errors->all());
+    if (errors.length > 0) {
+        errors.forEach(error => {
+            showToast(error, 'danger');
+        });
     }
 </script>
 @endsection
