@@ -25,8 +25,20 @@ class CategoryChildController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255|unique:category_childs,name',
             'category_id' => 'required|exists:categories,id',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                function ($attribute, $value, $fail) use ($request) {
+                    $exists = CategoryChild::where('name', $value)
+                        ->where('category_id', $request->category_id)
+                        ->exists();
+                    if ($exists) {
+                        $fail('Tên danh mục con "' . $value . '" đã tồn tại trong danh mục cha này.');
+                    }
+                }
+            ],
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
         $data = $request->all();
@@ -59,9 +71,22 @@ class CategoryChildController extends Controller
         $categoryChild = CategoryChild::findOrFail($id);
 
         $request->validate([
-            'name' => 'required|string|max:255|unique:category_childs,name,' . $id,
-            'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'category_id' => 'required|exists:categories,id',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                function ($attribute, $value, $fail) use ($request, $id) {
+                    $exists = CategoryChild::where('name', $value)
+                        ->where('category_id', $request->category_id)
+                        ->where('id', '!=', $id)
+                        ->exists();
+                    if ($exists) {
+                        $fail('Tên danh mục con "' . $value . '" đã tồn tại trong danh mục cha này.');
+                    }
+                }
+            ],
+            'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
 
         $data = $request->all();

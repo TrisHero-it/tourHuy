@@ -25,11 +25,34 @@ class TourController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255|unique:tours,name',
-            'description' => 'nullable|string',
-            'price' => 'nullable|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'category_child_id' => 'nullable|exists:category_childs,id',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                function ($attribute, $value, $fail) use ($request) {
+                    $query = Tour::where('name', $value);
+                    
+                    // Nếu có category_child_id thì check trong danh mục con
+                    if ($request->category_child_id) {
+                        $exists = $query->where('category_child_id', $request->category_child_id)->exists();
+                        if ($exists) {
+                            $fail('Tên tour "' . $value . '" đã tồn tại trong danh mục con này.');
+                        }
+                    } else {
+                        // Nếu không có category_child_id thì check trong danh mục cha
+                        $exists = $query->where('category_id', $request->category_id)
+                            ->whereNull('category_child_id')
+                            ->exists();
+                        if ($exists) {
+                            $fail('Tên tour "' . $value . '" đã tồn tại trong danh mục cha này.');
+                        }
+                    }
+                }
+            ],
+            'description' => 'nullable|string',
+            'price' => 'nullable|numeric|min:0',
             'images' => 'nullable|array|size:3',
             'images.*' => 'nullable|image|mimes:jpeg,png,webp,jpg,gif',
             'duration' => 'nullable|string|max:255',
@@ -66,11 +89,34 @@ class TourController extends Controller
         $tour = Tour::findOrFail($id);
 
         $validated = $request->validate([
-            'name' => 'required|string|max:255|unique:tours,name,' . $id,
-            'description' => 'nullable|string',
-            'price' => 'nullable|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'category_child_id' => 'nullable|exists:category_childs,id',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                function ($attribute, $value, $fail) use ($request, $id) {
+                    $query = Tour::where('name', $value)->where('id', '!=', $id);
+                    
+                    // Nếu có category_child_id thì check trong danh mục con
+                    if ($request->category_child_id) {
+                        $exists = $query->where('category_child_id', $request->category_child_id)->exists();
+                        if ($exists) {
+                            $fail('Tên tour "' . $value . '" đã tồn tại trong danh mục con này.');
+                        }
+                    } else {
+                        // Nếu không có category_child_id thì check trong danh mục cha
+                        $exists = $query->where('category_id', $request->category_id)
+                            ->whereNull('category_child_id')
+                            ->exists();
+                        if ($exists) {
+                            $fail('Tên tour "' . $value . '" đã tồn tại trong danh mục cha này.');
+                        }
+                    }
+                }
+            ],
+            'description' => 'nullable|string',
+            'price' => 'nullable|numeric|min:0',
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,webp,jpg,gif|max:5120',
             'duration' => 'nullable|string|max:255',
