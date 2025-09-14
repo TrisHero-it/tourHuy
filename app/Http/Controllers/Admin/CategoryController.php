@@ -12,7 +12,10 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('categoryChild')->paginate(12);
+        $categories = Category::with('categoryChild')
+            ->orderByRaw('CASE WHEN `order` IS NOT NULL THEN `order` ELSE 999 END ASC')
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -24,10 +27,11 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:categories,name',
             'description' => 'nullable|string',
             'meta' => 'nullable|string',
-            'image' => 'required|image|mimes:jpeg,webp,png,jpg,gif,svg',
+            'order' => 'nullable|integer|min:1|max:8|unique:categories,order',
+            'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'banner' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
 
@@ -57,6 +61,7 @@ class CategoryController extends Controller
         $data['is_featured'] = $request->boolean('is_featured') ? 1 : 0;
         $data['is_banner'] = $request->boolean('is_banner') ? 1 : 0;
 
+
         Category::create($data);
 
         return redirect()->back()->with('success', 'Danh mục đã được thêm thành công');
@@ -73,9 +78,10 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
 
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:categories,name,' . $id,
             'description' => 'nullable|string',
             'meta' => 'nullable|string',
+            'order' => 'nullable|integer|min:1|max:8',
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
             'banner' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
         ]);
@@ -122,6 +128,21 @@ class CategoryController extends Controller
         $data['is_featured'] = $request->boolean('is_featured') ? 1 : 0;
         $data['is_banner'] = $request->boolean('is_banner') ? 1 : 0;
 
+        // Xử lý order - swap order nếu có xung đột
+        if ($request->filled('order')) {
+            $newOrder = $request->order;
+            $oldOrder = $category->order;
+            
+            if ($newOrder != $oldOrder) {
+                $existingCategory = Category::where('order', $newOrder)->where('id', '!=', $id)->first();
+                
+                if ($existingCategory) {
+                    // Swap order: danh mục hiện tại lấy order mới, danh mục cũ lấy order cũ
+                    $existingCategory->update(['order' => $oldOrder]);
+                }
+            }
+        }
+
         $category->update($data);
 
         return redirect()->route('admin.categories.index')->with('success', 'Danh mục đã được cập nhật thành công');
@@ -151,4 +172,5 @@ class CategoryController extends Controller
         $categoryChilds = CategoryChild::where('category_id', $id)->get();
         return response()->json($categoryChilds);
     }
+
 }

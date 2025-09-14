@@ -16,6 +16,7 @@
                         <thead>
                             <tr>
                                 <th>Tên danh mục</th>
+                                <th>Thứ tự</th>
                                 <th>Thumbnail</th>
                                 <th>Banner</th>
                                 <th>Slug</th>
@@ -31,6 +32,13 @@
                             @foreach($categories as $category)
                             <tr>
                                 <td>{{ $category->name }}</td>
+                                <td>
+                                    @if($category->order)
+                                        <span class="badge bg-primary">{{ $category->order }}</span>
+                                    @else
+                                        <span class="text-muted">Chưa đặt</span>
+                                    @endif
+                                </td>
                                 <td><img src="{{ asset($category->image) }}" alt=""
                                         style="width: 100px; height: 100px;"></td>
                                 <td><img src="{{ asset($category->banner) }}" alt=""

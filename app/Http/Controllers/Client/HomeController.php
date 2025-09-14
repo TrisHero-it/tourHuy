@@ -13,7 +13,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $categories = Category::with(['categoryChild', 'tours'])->get();
+        $categories = Category::with(['categoryChild', 'tours'])
+            ->orderByRaw('CASE WHEN `order` IS NOT NULL THEN `order` ELSE 999 END ASC')
+            ->orderBy('created_at', 'desc')
+            ->get();
         $banners = Banner::where('status', 'active')->first();
         $blog = Blog::orderBy('id', 'desc')->take(3)->get();
         $logo = Logo::where('status', 'active')->first();
