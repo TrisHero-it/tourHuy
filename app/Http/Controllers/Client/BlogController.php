@@ -14,8 +14,6 @@ class BlogController extends Controller
             ->where('slug', $slug)
             ->firstOrFail();
 
-        return view('Client.blog.blog', compact('blog'));
+        return view('client.blog.blog', compact('blog'));
     }
 }
-
-
