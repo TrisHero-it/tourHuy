@@ -455,8 +455,6 @@
     <a class="skip-link screen-reader-text" href="#main">Bỏ qua nội dung</a>
 
     <div id="wrapper">
-
-
         <header id="header" class="header has-sticky sticky-shrink">
             <div class="header-wrapper">
                 <div id="top-bar" class="header-top nav-dark flex-has-center">
@@ -607,6 +605,7 @@
                     <div class="header-bg-color fill"></div>
                 </div>
             </div>
+
         </header>
 
 
@@ -725,6 +724,8 @@
                 </div>
             </div>
         </footer>
+
+
 
         <style>
             /* Top Bar Styling */
@@ -1227,15 +1228,7 @@
                 }
 
                 /* Mobile Menu Toggle Styles */
-                #main-menu.mfp-hide {
-                    display: none !important;
-                }
 
-                #main-menu:not(.mfp-hide) {
-                    display: block !important;
-                    opacity: 1 !important;
-                    visibility: visible !important;
-                }
 
                 /* Ensure mobile menu is properly positioned */
                 .mobile-sidebar {
@@ -1256,57 +1249,46 @@
             id="top-link" aria-label="Lên đầu trang"><i class="icon-angle-up"></i></a>
 
         </footer>
-
     </div>
 
     <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
-        <div class="sidebar-menu no-scrollbar mobile-sidebar-levels-1">
+        <div class="sidebar-menu no-scrollbar ">
             <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
                 @foreach ($categoriesNav as $category)
                 @if ($category->categoryChild->isEmpty())
                 <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1494"><a
-                        href="/{{ $category->slug }}/">{{ $category->name }}</a></li>
+                        href="/{{ $category->slug }}">{{ $category->name }}</a></li>
                 @else
                 <li
-                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1497 nav-slide">
-                    <a href="/{{ $category->slug }}/">{{ $category->name }}</a>
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1497">
+                    <a href="/{{ $category->slug }}">{{ $category->name }}</a>
                     <ul class="sub-menu nav-sidebar-ul children">
-                        @foreach ($category->categoryChild as $child)
+                        @foreach ($category->categoryChild as $categoryChild)
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1826"><a
-                                href="/{{ $category->slug }}/{{ $child->slug }}/">{{ $child->name }}</a></li>
+                                href="/{{ $category->slug }}/{{ $categoryChild->slug }}">{{ $categoryChild->name }}</a></li>
                         @endforeach
+
                     </ul>
                 </li>
                 @endif
                 @endforeach
-
-                {{-- <li class="header-newsletter-item has-icon">
-
-                    <a href="#header-newsletter-signup" class="tooltip" title="Sign up for Newsletter">
-
-                        <i class="icon-envelop"></i>
-                        <span class="header-newsletter-title">
-                            Newsletter </span>
-                    </a>
-
-                </li>
                 <li class="html header-social-icons ml-0">
-                    <div class="social-icons follow-icons"><a href="http://url/" target="_blank" data-label="Facebook"
-                            class="icon plain facebook tooltip" title="Theo dõi trên Facebook"
-                            aria-label="Theo dõi trên Facebook" rel="noopener nofollow"><i
-                                class="icon-facebook"></i></a><a href="http://url/" target="_blank"
-                            data-label="Instagram" class="icon plain instagram tooltip" title="Theo dõi trên Instagram"
-                            aria-label="Theo dõi trên Instagram" rel="noopener nofollow"><i
-                                class="icon-instagram"></i></a><a href="http://url/" data-label="Twitter"
-                            target="_blank" class="icon plain twitter tooltip" title="Theo dõi trên Twitter"
-                            aria-label="Theo dõi trên Twitter" rel="noopener nofollow"><i
-                                class="icon-twitter"></i></a><a
+                    <div class="social-icons follow-icons"><a href="" target="_blank" data-label="Facebook"
+                            class="icon plain tooltip facebook" title="Theo dõi trên Facebook"
+                            aria-label="Theo dõi trên Facebook" rel="noopener nofollow"><i class="icon-facebook"
+                                aria-hidden="true"></i></a><a href="" target="_blank" data-label="Instagram"
+                            class="icon plain tooltip instagram" title="Theo dõi trên Instagram"
+                            aria-label="Theo dõi trên Instagram" rel="noopener nofollow"><i class="icon-instagram"
+                                aria-hidden="true"></i></a><a href="" data-label="Twitter" target="_blank"
+                            class="icon plain tooltip twitter" title="Theo dõi trên Twitter"
+                            aria-label="Theo dõi trên Twitter" rel="noopener nofollow"><i class="icon-twitter"
+                                aria-hidden="true"></i></a><a
                             href=""
-                            data-label="E-mail" target="_blank" class="icon plain email tooltip"
+                            data-label="E-mail" target="_blank" class="icon plain tooltip email"
                             title="Gửi email cho chúng tôi" aria-label="Gửi email cho chúng tôi"
-                            rel="nofollow noopener"><i class="icon-envelop"></i></a></div>
-                </li> --}}
-                {{-- <li class="html custom html_topbar_right">
+                            rel="nofollow noopener"><i class="icon-envelop" aria-hidden="true"></i></a></div>
+                </li>
+                <li class="html custom html_topbar_right">
                     <div class="menu-content size-s">
                         <div class="menu-item">Giá tốt nhất, khởi hành hàng ngày</div>
                         <div class="separator"></div>
@@ -1316,7 +1298,7 @@
                         <div class="separator"></div>
                         <div class="menu-item">Bảo hiểm du lịch miễn phí</div>
                     </div>
-                </li> --}}
+                </li>
             </ul>
 
 
@@ -1324,6 +1306,8 @@
 
 
     </div>
+
+
     <script data-cfasync="false"
         src="{{ asset('wp-content/js/email-decode.min.js') }}"></script>
 
@@ -2000,67 +1984,7 @@
     <script type="text/javascript"
         src="{{ asset('wp-content/themes/flatsome/assets/js/flatsome.js') }}"
         id="flatsome-js-js" defer></script>
-
-    <script>
-        // Mobile Menu Toggle and Dropdown
-        document.addEventListener('DOMContentLoaded', function() {
-            // Wait for Flatsome to load
-            setTimeout(function() {
-                // Mobile Menu Toggle
-                const menuToggle = document.querySelector('[data-open="#main-menu"]');
-                const mobileMenu = document.getElementById('main-menu');
-
-                if (menuToggle && mobileMenu) {
-                    menuToggle.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-
-                        // Toggle menu visibility
-                        if (mobileMenu.classList.contains('mfp-hide')) {
-                            mobileMenu.classList.remove('mfp-hide');
-                            mobileMenu.style.display = 'block';
-                            mobileMenu.style.opacity = '1';
-                            mobileMenu.style.visibility = 'visible';
-                        } else {
-                            mobileMenu.classList.add('mfp-hide');
-                            mobileMenu.style.display = 'none';
-                        }
-                    });
-                }
-
-                // Mobile Menu Dropdown Toggle
-                const mobileMenuItems = document.querySelectorAll('.mobile-sidebar .nav-slide');
-
-                function handleMenuClick(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    const currentItem = e.currentTarget.closest('.nav-slide');
-
-                    // Close other open menus
-                    mobileMenuItems.forEach(function(otherItem) {
-                        if (otherItem !== currentItem) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-
-                    // Toggle current menu
-                    currentItem.classList.toggle('active');
-                }
-
-                mobileMenuItems.forEach(function(item) {
-                    const link = item.querySelector('a');
-                    if (link) {
-                        // Remove any existing event listeners
-                        link.removeEventListener('click', handleMenuClick);
-                        // Add new event listener
-                        link.addEventListener('click', handleMenuClick);
-                    }
-                });
-            }, 1000);
-        });
-    </script>
-    <script type="text/javascript"
+        <script type="text/javascript"
         src="{{ asset('wp-content/js/woocommerce.js') }}"
         id="flatsome-theme-woocommerce-js-js" defer></script>
     <script type="text/javascript" id="gt_widget_script_12967469-js-before" defer
@@ -2072,90 +1996,165 @@
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2738227772%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-38227772%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
     <script src="{{ asset('wp-content/js/fn.js') }}" data-no-optimize="1"
         data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="{{ url('/') }}" data-gt-widget-id="38227772"
+        defer></script> 
+
+    <script type="text/javascript" id="woocommerce-js-extra" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20woocommerce_params%20%3D%20%7B%22ajax_url%22%3A%22%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22wc_ajax_url%22%3A%22%5C%2F%3Fwc-ajax%3D%25%25endpoint%25%25%22%2C%22i18n_password_show%22%3A%22Hi%5Cu1ec3n%20th%5Cu1ecb%20m%5Cu1eadt%20kh%5Cu1ea9u%22%2C%22i18n_password_hide%22%3A%22%5Cu1ea8n%20m%5Cu1eadt%20kh%5Cu1ea9u%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=69718a71ff04"
+        id="woocommerce-js" data-wp-strategy="defer" defer></script>
+    <script type="text/javascript" id="wccp_pro_admin_bar_ajax-js-extra" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20ajax_object%20%3D%20%7B%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22link%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/plugins/wccp-pro/js/admin_bar_ajax.js?ver=36c2d82bdeb9"
+        id="wccp_pro_admin_bar_ajax-js" defer></script>
+    <script type="text/javascript" src="https://dulichthesinh.vn/wp-includes/js/hoverIntent.min.js?ver=8c0498e2f1f7"
+        id="hoverIntent-js" defer></script>
+    <script type="text/javascript" id="flatsome-js-js-extra" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20flatsomeVars%20%3D%20%7B%22theme%22%3A%7B%22version%22%3A%223.20.1%22%7D%2C%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22rtl%22%3A%22%22%2C%22sticky_height%22%3A%2270%22%2C%22stickyHeaderHeight%22%3A%220%22%2C%22scrollPaddingTop%22%3A%220%22%2C%22assets_url%22%3A%22https%3A%5C%2F%5C%2Fdulichthesinh.vn%5C%2Fwp-content%5C%2Fthemes%5C%2Fflatsome%5C%2Fassets%5C%2F%22%2C%22lightbox%22%3A%7B%22close_markup%22%3A%22%3Cbutton%20title%3D%5C%22%25title%25%5C%22%20type%3D%5C%22button%5C%22%20class%3D%5C%22mfp-close%5C%22%3E%3Csvg%20xmlns%3D%5C%22http%3A%5C%2F%5C%2Fwww.w3.org%5C%2F2000%5C%2Fsvg%5C%22%20width%3D%5C%2228%5C%22%20height%3D%5C%2228%5C%22%20viewBox%3D%5C%220%200%2024%2024%5C%22%20fill%3D%5C%22none%5C%22%20stroke%3D%5C%22currentColor%5C%22%20stroke-width%3D%5C%222%5C%22%20stroke-linecap%3D%5C%22round%5C%22%20stroke-linejoin%3D%5C%22round%5C%22%20class%3D%5C%22feather%20feather-x%5C%22%3E%3Cline%20x1%3D%5C%2218%5C%22%20y1%3D%5C%226%5C%22%20x2%3D%5C%226%5C%22%20y2%3D%5C%2218%5C%22%3E%3C%5C%2Fline%3E%3Cline%20x1%3D%5C%226%5C%22%20y1%3D%5C%226%5C%22%20x2%3D%5C%2218%5C%22%20y2%3D%5C%2218%5C%22%3E%3C%5C%2Fline%3E%3C%5C%2Fsvg%3E%3C%5C%2Fbutton%3E%22%2C%22close_btn_inside%22%3Afalse%7D%2C%22user%22%3A%7B%22can_edit_pages%22%3Afalse%7D%2C%22i18n%22%3A%7B%22mainMenu%22%3A%22Menu%20ch%5Cu00ednh%22%2C%22toggleButton%22%3A%22Chuy%5Cu1ec3n%20%5Cu0111%5Cu1ed5i%22%7D%2C%22options%22%3A%7B%22cookie_notice_version%22%3A%221%22%2C%22swatches_layout%22%3Afalse%2C%22swatches_disable_deselect%22%3Afalse%2C%22swatches_box_select_event%22%3Afalse%2C%22swatches_box_behavior_selected%22%3Afalse%2C%22swatches_box_update_urls%22%3A%221%22%2C%22swatches_box_reset%22%3Afalse%2C%22swatches_box_reset_limited%22%3Afalse%2C%22swatches_box_reset_extent%22%3Afalse%2C%22swatches_box_reset_time%22%3A300%2C%22search_result_latency%22%3A%220%22%2C%22header_nav_vertical_fly_out_frontpage%22%3A1%7D%2C%22is_mini_cart_reveal%22%3A%221%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/themes/flatsome/assets/js/flatsome.js?ver=1e277ac66aae"
+        id="flatsome-js-js" defer></script>
+    <script type="text/javascript"
+        src="https://dulichthesinh.vn/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=6435c06593a2"
+        id="flatsome-theme-woocommerce-js-js" defer></script>
+
+    <script type="text/javascript" id="gt_widget_script_39466841-js-before" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2739466841%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-39466841%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script src="https://dulichthesinh.vn/wp-content/plugins/gtranslate/js/fn.js?ver=9c5a190da378" data-no-optimize="1"
+        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="dulichthesinh.vn" data-gt-widget-id="39466841"
         defer></script>
+    <script type="text/javascript" id="gt_widget_script_20774748-js-before" defer
+        src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2720774748%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-20774748%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
+    <script src="https://dulichthesinh.vn/wp-content/plugins/gtranslate/js/fn.js?ver=9c5a190da378" data-no-optimize="1"
+        data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="dulichthesinh.vn" data-gt-widget-id="20774748"
+        defer></script>
+
 
     <script>
         ! function(e) {
             "function" == typeof define && define.amd ? define(e) : e()
-        }(function() {
+        }
+
+        (function() {
             ! function() {
+
                 var e, t = !1,
                     n = !1,
                     r = Array.from(document.querySelectorAll("script[data-loading-method][data-src]")),
                     o = r.filter(function(e) {
                         return "idle" === e.dataset.loadingMethod
+
                     }),
                     a = r.filter(function(e) {
                         return "user-interaction" === e.dataset.loadingMethod
                     }),
                     i = document.querySelectorAll("link[data-href]");
+
                 if (r.length || i.length) {
+
                     var c = ["readystatechange", "DOMContentLoaded", "load"],
                         u = {
                             readystatechange: [],
                             DOMContentLoaded: [],
                             load: []
-                        },
+                        }
+
+                        ,
                         l = !1,
                         d = EventTarget.prototype.addEventListener;
+
                     EventTarget.prototype.addEventListener = function(e, t, n) {
                         if (!l || !c.includes(e)) return d.call(this, e, t, n);
+
                         u[e].push({
                             target: this,
                             listener: t,
                             options: n
                         })
-                    };
+                    }
+
+                    ;
+
                     var s = [{
-                            event: "click",
-                            target: document
-                        }, {
-                            event: "mousemove",
-                            target: document
-                        }, {
-                            event: "keydown",
-                            target: document
-                        }, {
-                            event: "touchstart",
-                            target: document
-                        }, {
-                            event: "touchmove",
-                            target: document
-                        }, {
-                            event: "scroll",
-                            target: window
-                        }],
+                                event: "click",
+                                target: document
+                            }
+
+                            , {
+                                event: "mousemove",
+                                target: document
+                            }
+
+                            , {
+                                event: "keydown",
+                                target: document
+                            }
+
+                            , {
+                                event: "touchstart",
+                                target: document
+                            }
+
+                            , {
+                                event: "touchmove",
+                                target: document
+                            }
+
+                            , {
+                                event: "scroll",
+                                target: window
+                            }
+
+                        ],
                         f = function(e) {
                             s.forEach(function(t) {
                                 return t.target.addEventListener(t.event, e, {
                                     passive: !0
                                 })
                             })
-                        },
+                        }
+
+                        ,
                         v = function(e) {
                             s.forEach(function(t) {
                                 return t.target.removeEventListener(t.event, e)
                             })
-                        };
+                        }
+
+                    ;
+
                     window.requestIdleCallback = window.requestIdleCallback || function(e) {
                         return setTimeout(function() {
-                            var t = Date.now();
-                            e({
-                                didTimeout: !1,
-                                timeRemaining: function() {
-                                    return Math.max(0, 50 - (Date.now() - t))
-                                }
-                            })
-                        }, 1)
-                    };
+                                var t = Date.now();
+
+                                e({
+
+                                    didTimeout: !1,
+                                    timeRemaining: function() {
+                                        return Math.max(0, 50 - (Date.now() - t))
+                                    }
+                                })
+                            }
+
+                            , 1)
+                    }
+
+                    ;
+
                     var g = [],
                         h = function(e) {
                             return g.push(e)
-                        };
+                        }
+
+                    ;
+
                     document.addEventListener("click", h, {
                         passive: !0
+
                     }), o.length && window.requestIdleCallback(function() {
                         return m(o)
+
                     }), a.length && (f(y), e = setTimeout(y, 5e3)), f(function e() {
                         i.forEach(function(e) {
                             e.href = e.getAttribute("data-href"), e.removeAttribute("data-href")
@@ -2166,16 +2165,19 @@
                 function m(e) {
                     e.forEach(function(e) {
                             var t = e.getAttribute("data-src");
+
                             if (!t.includes("data:")) {
                                 var n = document.createElement("link");
                                 n.rel = "preload", n.as = "script", n.href = t, document.head.appendChild(n)
                             }
+
                         }),
                         function r(o) {
                             if (o > e.length - 1) n || (window.jQuery && t && window.jQuery.holdReady(!1), c.forEach(function(e) {
                                 u[e].forEach(function(t) {
                                     var n = t.target,
                                         r = t.listener;
+
                                     try {
                                         var o = new Event(e, {
                                             bubbles: !0,
@@ -2186,8 +2188,10 @@
                                         console.error("Error executing " + e + " listener:", t)
                                     }
                                 }), u[e].length = 0
+
                             }), document.removeEventListener("click", h), g.forEach(function(e) {
                                 var t;
+
                                 return null == (t = e.target) ? void 0 : t.dispatchEvent(new MouseEvent("click", {
                                     bubbles: !0,
                                     cancelable: !0,
@@ -2195,161 +2199,176 @@
                                     clientY: e.clientY
                                 }))
                             }), g.length = 0, n = !0);
+
                             else {
                                 var a = e[o].getAttribute("data-src");
+
                                 window.jQuery && "function" == typeof window.jQuery.holdReady && !t && (window.jQuery.holdReady(!0), t = !0), window.requestIdleCallback(function() {
                                     var e = document.createElement("script");
                                     l = !0;
+
                                     var t = setTimeout(function() {
-                                        l && (l = !1, r(o + 1))
-                                    }, 1500);
+                                            l && (l = !1, r(o + 1))
+                                        }
+
+                                        , 1500);
+
                                     e.onload = function() {
-                                        clearTimeout(t), l = !1, r(o + 1)
-                                    }, e.onerror = function() {
-                                        clearTimeout(t), l = !1, r(o + 1)
-                                    }, e.src = a, document.head.appendChild(e)
+                                            clearTimeout(t), l = !1, r(o + 1)
+                                        }
+
+                                        , e.onerror = function() {
+                                            clearTimeout(t), l = !1, r(o + 1)
+                                        }
+
+                                        , e.src = a, document.head.appendChild(e)
                                 })
                             }
-                        }(0)
+                        }
+
+                    (0)
                 }
 
                 function y() {
                     e && clearTimeout(e), v(y), m(a)
                 }
-            }(), [{
-                selector: "video[data-lazy-src],iframe[data-lazy-src]",
-                callback: function(e) {
-                    return function(t) {
-                        if (t.isIntersecting) {
-                            var n = t.target.getAttribute("data-lazy-src");
-                            t.target.setAttribute("src", n), e.unobserve(t.target)
+            }
+
+            (), [{
+
+                    selector: "video[data-lazy-src],iframe[data-lazy-src]",
+                    callback: function(e) {
+                        return function(t) {
+                            if (t.isIntersecting) {
+                                var n = t.target.getAttribute("data-lazy-src");
+                                t.target.setAttribute("src", n), e.unobserve(t.target)
+                            }
                         }
                     }
                 }
-            }, {
-                selector: ".flying-press-lazy-bg",
-                callback: function(e) {
-                    return function(t) {
-                        t.isIntersecting && (t.target.classList.remove("flying-press-lazy-bg"), e.unobserve(t.target))
+
+                , {
+
+                    selector: ".flying-press-lazy-bg",
+                    callback: function(e) {
+                        return function(t) {
+                            t.isIntersecting && (t.target.classList.remove("flying-press-lazy-bg"), e.unobserve(t.target))
+                        }
                     }
                 }
-            }, {
-                selector: '[style*="content-visibility"]',
-                callback: function(e) {
-                    return function(t) {
-                        t.isIntersecting && (t.target.style.removeProperty("content-visibility"), t.target.style.removeProperty("contain-intrinsic-size"), e.unobserve(t.target))
+
+                , {
+
+                    selector: '[style*="content-visibility"]',
+                    callback: function(e) {
+                        return function(t) {
+                            t.isIntersecting && (t.target.style.removeProperty("content-visibility"), t.target.style.removeProperty("contain-intrinsic-size"), e.unobserve(t.target))
+                        }
                     }
                 }
-            }].forEach(function(e) {
+
+            ].forEach(function(e) {
+
                 var t = e.selector,
                     n = e.callback,
                     r = new IntersectionObserver(function(e) {
-                        e.forEach(n(r))
-                    }, {
-                        rootMargin: "300px"
-                    });
+                            e.forEach(n(r))
+                        }
+
+                        , {
+                            rootMargin: "300px"
+                        });
+
                 document.querySelectorAll(t).forEach(function(e) {
                     return r.observe(e)
                 })
             })
         });
     </script>
-
-    <!-- Floating Social Icons -->
-    <div class="floating-social-icons">
-        <a href="https://m.me/61579608994747" target="_blank" class="floating-icon facebook-icon" title="Chat Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://zalo.me/0879998230" target="_blank" class="floating-icon zalo-icon" title="Chat Zalo">
-            <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://wa.me/84123456789" target="_blank" class="floating-icon whatsapp-icon" title="Chat WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <style>
-        .floating-social-icons {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .floating-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-size: 24px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .floating-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        }
-
-        .facebook-icon {
-            background: linear-gradient(135deg, #1877f2, #42a5f5);
-        }
-
-        .facebook-icon:hover {
-            background: linear-gradient(135deg, #166fe5, #1976d2);
-        }
-
-        .zalo-icon {
-            background: #0068ff;
-            color: white;
-        }
-
-        .zalo-icon:hover {
-            background: #0052cc;
-        }
-
-        .whatsapp-icon {
-            background: linear-gradient(135deg, #25d366, #128c7e);
-        }
-
-        .whatsapp-icon:hover {
-            background: linear-gradient(135deg, #1ea952, #0f6b5c);
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
+    < !-- Floating Social Icons -->
+        <div class="floating-social-icons"><a href="https://m.me/61579608994747" target="_blank" class="floating-icon facebook-icon" title="Chat Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://zalo.me/0879998230" target="_blank" class="floating-icon zalo-icon" title="Chat Zalo"><i class="fab fa-telegram"></i></a><a href="https://wa.me/84123456789" target="_blank" class="floating-icon whatsapp-icon" title="Chat WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+        <style>
             .floating-social-icons {
-                right: 15px;
-                bottom: 15px;
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                z-index: 1000;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
             }
 
             .floating-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: white;
+                font-size: 24px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                transition: all 0.3s ease;
+                animation: float 3s ease-in-out infinite;
             }
-        }
-    </style>
+
+            .floating-icon:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            }
+
+            .facebook-icon {
+                background: linear-gradient(135deg, #1877f2, #42a5f5);
+            }
+
+            .facebook-icon:hover {
+                background: linear-gradient(135deg, #166fe5, #1976d2);
+            }
+
+            .zalo-icon {
+                background: #0068ff;
+                color: white;
+            }
+
+            .zalo-icon:hover {
+                background: #0052cc;
+            }
+
+            .whatsapp-icon {
+                background: linear-gradient(135deg, #25d366, #128c7e);
+            }
+
+            .whatsapp-icon:hover {
+                background: linear-gradient(135deg, #1ea952, #0f6b5c);
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .floating-social-icons {
+                    right: 15px;
+                    bottom: 15px;
+                }
+
+                .floating-icon {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 20px;
+                }
+            }
+        </style>
 
 </body>
 
