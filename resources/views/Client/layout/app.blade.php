@@ -586,45 +586,7 @@
                                 <li class="html custom html_nav_position_text">
                                     <div class="gtranslate_wrapper" id="gt-wrapper-38227772"></div>
                                 </li>
-                                <li class="header-search header-search-lightbox has-icon">
-                                    <a href="#search-lightbox" aria-label="Tìm kiếm" data-open="#search-lightbox"
-                                        data-focus="input.search-field" class="is-small">
-                                        <i class="icon-search" style="font-size:16px;"></i></a>
 
-                                    <div id="search-lightbox" class="mfp-hide dark text-center">
-                                        <div class="searchform-wrapper ux-search-box relative is-large">
-                                            <form role="search" method="get" class="searchform"
-                                                action="/">
-                                                <div class="flex-row relative">
-                                                    <div class="flex-col search-form-categories">
-                                                        <select class="search_categories resize-select mb-0"
-                                                            name="product_cat">
-                                                            <option value="" selected='selected'>Tất cả</option>
-                                                            @foreach ($categoriesNav as $category)
-                                                            <option value="{{ $category->slug }}">{{ $category->name }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    <div class="flex-col flex-grow">
-                                                        <label class="screen-reader-text"
-                                                            for="woocommerce-product-search-field-0">Tìm kiếm:</label>
-                                                        <input type="search" id="woocommerce-product-search-field-0"
-                                                            class="search-field mb-0" placeholder="Tìm điểm đến của bạn"
-                                                            value="" name="s" />
-                                                        <input type="hidden" name="post_type" value="product" />
-                                                    </div>
-                                                    <div class="flex-col">
-                                                        <button type="submit" value="Tìm kiếm"
-                                                            class="ux-search-submit submit-button secondary button  icon mb-0"
-                                                            aria-label="Gửi">
-                                                            <i class="icon-search"></i> </button>
-                                                    </div>
-                                                </div>
-                                                <div class="live-search-results text-left z-top"></div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
                                 <li class="nav-icon has-icon">
                                     <a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay"
                                         data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu"
@@ -1199,16 +1161,93 @@
                     padding: 3px 0;
                 }
 
-                .social-btn {
-                    width: 35px;
-                    height: 35px;
-                    font-size: 14px;
+                /* Mobile Menu Dropdown Styles */
+                .mobile-sidebar .nav-slide .sub-menu,
+                .mobile-sidebar .nav-slide .children {
+                    display: none !important;
+                    background: #f8f9fa;
+                    border-left: 3px solid #4ab4e4;
+                    margin-left: 10px;
+                    padding: 0;
+                    list-style: none;
                 }
 
-                .map-container {
-                    height: 100px;
+                .mobile-sidebar .nav-slide.active .sub-menu,
+                .mobile-sidebar .nav-slide.active .children {
+                    display: block !important;
                 }
-            }
+
+                .mobile-sidebar .nav-slide>a {
+                    position: relative;
+                    padding-right: 40px;
+                    display: block;
+                    text-decoration: none;
+                    color: #333;
+                    padding: 12px 20px;
+                }
+
+                .mobile-sidebar .nav-slide>a:after {
+                    content: '\f107';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: transform 0.3s ease;
+                    color: #666;
+                }
+
+                .mobile-sidebar .nav-slide.active>a:after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+
+                .mobile-sidebar .sub-menu li a,
+                .mobile-sidebar .children li a {
+                    padding: 10px 20px;
+                    color: #666;
+                    font-size: 14px;
+                    display: block;
+                    text-decoration: none;
+                }
+
+                .mobile-sidebar .sub-menu li a:hover,
+                .mobile-sidebar .children li a:hover {
+                    background: #e9ecef;
+                    color: #4ab4e4;
+                }
+
+                /* Clean up mobile menu */
+                .mobile-sidebar .nav-slide {
+                    border-bottom: 1px solid #eee;
+                }
+
+                .mobile-sidebar .nav-slide:last-child {
+                    border-bottom: none;
+                }
+
+                /* Mobile Menu Toggle Styles */
+                #main-menu.mfp-hide {
+                    display: none !important;
+                }
+
+                #main-menu:not(.mfp-hide) {
+                    display: block !important;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                }
+
+                /* Ensure mobile menu is properly positioned */
+                .mobile-sidebar {
+                    position: fixed !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 300px !important;
+                    height: 100vh !important;
+                    background: #fff !important;
+                    z-index: 9999 !important;
+                    overflow-y: auto !important;
+                }
         </style>
 
 
@@ -1221,17 +1260,15 @@
     </div>
 
     <div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
-        <div class="sidebar-menu no-scrollbar ">
+        <div class="sidebar-menu no-scrollbar mobile-sidebar-levels-1">
             <ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
-                <li class="header-search-form search-form html relative has-icon">
-                </li>
                 @foreach ($categoriesNav as $category)
                 @if ($category->categoryChild->isEmpty())
                 <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1494"><a
                         href="/{{ $category->slug }}/">{{ $category->name }}</a></li>
                 @else
                 <li
-                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1497">
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1497 nav-slide">
                     <a href="/{{ $category->slug }}/">{{ $category->name }}</a>
                     <ul class="sub-menu nav-sidebar-ul children">
                         @foreach ($category->categoryChild as $child)
@@ -1243,11 +1280,7 @@
                 @endif
                 @endforeach
 
-
-
-
-
-                <li class="header-newsletter-item has-icon">
+                {{-- <li class="header-newsletter-item has-icon">
 
                     <a href="#header-newsletter-signup" class="tooltip" title="Sign up for Newsletter">
 
@@ -1272,8 +1305,8 @@
                             data-label="E-mail" target="_blank" class="icon plain email tooltip"
                             title="Gửi email cho chúng tôi" aria-label="Gửi email cho chúng tôi"
                             rel="nofollow noopener"><i class="icon-envelop"></i></a></div>
-                </li>
-                <li class="html custom html_topbar_right">
+                </li> --}}
+                {{-- <li class="html custom html_topbar_right">
                     <div class="menu-content size-s">
                         <div class="menu-item">Giá tốt nhất, khởi hành hàng ngày</div>
                         <div class="separator"></div>
@@ -1283,7 +1316,7 @@
                         <div class="separator"></div>
                         <div class="menu-item">Bảo hiểm du lịch miễn phí</div>
                     </div>
-                </li>
+                </li> --}}
             </ul>
 
 
@@ -1294,26 +1327,6 @@
     <script data-cfasync="false"
         src="{{ asset('wp-content/js/email-decode.min.js') }}"></script>
 
-    <div class="tour-action-bar">
-        <a href="tel:087999328" class="btn btn-tour">
-            <img src="{{ asset('wp-content/uploads/2505_icon-phone-call.svg') }}" alt="Phone" class="btn-icon"
-                width="18" height="18" loading="lazy" fetchpriority="low">
-            <div class="btn-text">
-                <span class="btn-title">Tư vấn đặt tour</span>
-                <span class="btn-subtitle">Thanh toán vào ngày khởi hành</span>
-            </div>
-        </a>
-        <a href="" class="btn btn-zalo">
-            <img src="{{ asset('wp-content/uploads/2505_zalo-color.svg') }}" alt="Zalo" class="btn-icon"
-                width="50" height="50" loading="lazy" fetchpriority="low">
-            <span class="btn-title">Zalo</span>
-        </a>
-        <a href="https://m.me/61579608994747" class="btn btn-messenger">
-            <img src="{{ asset('wp-content/uploads/2505_messenger-2025.svg') }}" alt="Messenger"
-                class="btn-icon" width="1000" height="999" loading="lazy" fetchpriority="low">
-            <span class="btn-title">Messenger</span>
-        </a>
-    </div>
 
     <script type='text/javascript' defer
         src="data:text/javascript,%28function%20%28%29%20%7B%0A%09%09%09var%20c%20%3D%20document.body.className%3B%0A%09%09%09c%20%3D%20c.replace%28%2Fwoocommerce-no-js%2F%2C%20%27woocommerce-js%27%29%3B%0A%09%09%09document.body.className%20%3D%20c%3B%0A%09%09%7D%29%28%29%3B"></script>
@@ -1987,6 +2000,66 @@
     <script type="text/javascript"
         src="{{ asset('wp-content/themes/flatsome/assets/js/flatsome.js') }}"
         id="flatsome-js-js" defer></script>
+
+    <script>
+        // Mobile Menu Toggle and Dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for Flatsome to load
+            setTimeout(function() {
+                // Mobile Menu Toggle
+                const menuToggle = document.querySelector('[data-open="#main-menu"]');
+                const mobileMenu = document.getElementById('main-menu');
+
+                if (menuToggle && mobileMenu) {
+                    menuToggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        // Toggle menu visibility
+                        if (mobileMenu.classList.contains('mfp-hide')) {
+                            mobileMenu.classList.remove('mfp-hide');
+                            mobileMenu.style.display = 'block';
+                            mobileMenu.style.opacity = '1';
+                            mobileMenu.style.visibility = 'visible';
+                        } else {
+                            mobileMenu.classList.add('mfp-hide');
+                            mobileMenu.style.display = 'none';
+                        }
+                    });
+                }
+
+                // Mobile Menu Dropdown Toggle
+                const mobileMenuItems = document.querySelectorAll('.mobile-sidebar .nav-slide');
+
+                function handleMenuClick(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const currentItem = e.currentTarget.closest('.nav-slide');
+
+                    // Close other open menus
+                    mobileMenuItems.forEach(function(otherItem) {
+                        if (otherItem !== currentItem) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current menu
+                    currentItem.classList.toggle('active');
+                }
+
+                mobileMenuItems.forEach(function(item) {
+                    const link = item.querySelector('a');
+                    if (link) {
+                        // Remove any existing event listeners
+                        link.removeEventListener('click', handleMenuClick);
+                        // Add new event listener
+                        link.addEventListener('click', handleMenuClick);
+                    }
+                });
+            }, 1000);
+        });
+    </script>
     <script type="text/javascript"
         src="{{ asset('wp-content/js/woocommerce.js') }}"
         id="flatsome-theme-woocommerce-js-js" defer></script>

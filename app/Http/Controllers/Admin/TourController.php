@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -33,7 +34,7 @@ class TourController extends Controller
                 'max:255',
                 function ($attribute, $value, $fail) use ($request) {
                     $query = Tour::where('name', $value);
-                    
+
                     // Nếu có category_child_id thì check trong danh mục con
                     if ($request->category_child_id) {
                         $exists = $query->where('category_child_id', $request->category_child_id)->exists();
@@ -97,7 +98,7 @@ class TourController extends Controller
                 'max:255',
                 function ($attribute, $value, $fail) use ($request, $id) {
                     $query = Tour::where('name', $value)->where('id', '!=', $id);
-                    
+
                     // Nếu có category_child_id thì check trong danh mục con
                     if ($request->category_child_id) {
                         $exists = $query->where('category_child_id', $request->category_child_id)->exists();
@@ -147,6 +148,7 @@ class TourController extends Controller
 
     public function delete($id)
     {
+        Order::where('tour_id', $id)->delete();
         $tour = Tour::findOrFail($id);
         $tour->delete();
         return redirect()->back()->with('success', 'Xoá tour thành công');

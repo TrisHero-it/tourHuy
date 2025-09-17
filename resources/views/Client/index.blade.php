@@ -197,7 +197,7 @@
 											</p>
 											<p class="tour-schedule" style="margin:0;"><i
 													class="far fa-clock" aria-hidden="true"></i> Đi buổi sáng
-												</p>
+											</p>
 										</div>
 									</div>
 								</div>
@@ -741,10 +741,8 @@
 										<a href="{{ route('blog.show', $blogs->slug) }}"
 											class="plain"
 											aria-label="6 địa điểm du lịch tâm linh ở Ninh Bình giúp bạn tìm kiếm sự bình an">
-											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
-											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
-											@endif
+
+											<img src="{{ asset($blogs->image) }}" alt="" height="450" width="600">
 										</a>
 									</div>
 								</div>

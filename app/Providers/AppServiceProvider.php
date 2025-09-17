@@ -34,7 +34,12 @@ class AppServiceProvider extends ServiceProvider
         View::share('googleMap', $googleMap);
         // Share categories for navigation
         try {
-            $categoriesNav = Category::with('categoryChild')->get();
+            $categoriesNav = Category::with('categoryChild')
+                ->where('is_nav', true)
+                ->orderByRaw('CASE WHEN `order` IS NOT NULL THEN `order` ELSE 999 END ASC')
+                ->orderBy('created_at', 'desc')
+                ->take(8)
+                ->get();
             View::share('categoriesNav', $categoriesNav);
         } catch (\Exception $e) {
             // Fallback if table doesn't exist or has issues
