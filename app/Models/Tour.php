@@ -21,6 +21,7 @@ class Tour extends Model
         'schedule',
         'status',
         'category_id',
+        'price_usd',
         'category_child_id'
     ];
 

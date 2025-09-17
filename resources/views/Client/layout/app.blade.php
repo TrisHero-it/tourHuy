@@ -1984,7 +1984,7 @@
     <script type="text/javascript"
         src="{{ asset('wp-content/themes/flatsome/assets/js/flatsome.js') }}"
         id="flatsome-js-js" defer></script>
-        <script type="text/javascript"
+    <script type="text/javascript"
         src="{{ asset('wp-content/js/woocommerce.js') }}"
         id="flatsome-theme-woocommerce-js-js" defer></script>
     <script type="text/javascript" id="gt_widget_script_12967469-js-before" defer
@@ -1996,7 +1996,7 @@
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Awindow.gtranslateSettings%20%3D%20%2F%2A%20document.write%20%2A%2F%20window.gtranslateSettings%20%7C%7C%20%7B%7D%3Bwindow.gtranslateSettings%5B%2738227772%27%5D%20%3D%20%7B%22default_language%22%3A%22vi%22%2C%22languages%22%3A%5B%22en%22%2C%22vi%22%5D%2C%22url_structure%22%3A%22none%22%2C%22native_language_names%22%3A1%2C%22flag_style%22%3A%222d%22%2C%22flag_size%22%3A16%2C%22wrapper_selector%22%3A%22%23gt-wrapper-38227772%22%2C%22alt_flags%22%3A%5B%5D%2C%22horizontal_position%22%3A%22inline%22%2C%22flags_location%22%3A%22%5C%2Fwp-content%5C%2Fplugins%5C%2Fgtranslate%5C%2Fflags%5C%2F%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>
     <script src="{{ asset('wp-content/js/fn.js') }}" data-no-optimize="1"
         data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="{{ url('/') }}" data-gt-widget-id="38227772"
-        defer></script> 
+        defer></script>
 
     <script type="text/javascript" id="woocommerce-js-extra" defer
         src="data:text/javascript,%2F%2A%20%3C%21%5BCDATA%5B%20%2A%2F%0Avar%20woocommerce_params%20%3D%20%7B%22ajax_url%22%3A%22%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22wc_ajax_url%22%3A%22%5C%2F%3Fwc-ajax%3D%25%25endpoint%25%25%22%2C%22i18n_password_show%22%3A%22Hi%5Cu1ec3n%20th%5Cu1ecb%20m%5Cu1eadt%20kh%5Cu1ea9u%22%2C%22i18n_password_hide%22%3A%22%5Cu1ea8n%20m%5Cu1eadt%20kh%5Cu1ea9u%22%7D%3B%0A%2F%2A%20%5D%5D%3E%20%2A%2F"></script>

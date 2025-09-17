@@ -3,32 +3,33 @@
 <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-timepicker.min.css')}}">
 <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 <style>
-.alert {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+    .alert {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        animation: slideIn 0.3s ease-out;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-}
 
-.alert-danger {
-    background: linear-gradient(135deg, #ff6b6b, #ff5252);
-    border: none;
-    color: white;
-}
+    .alert-danger {
+        background: linear-gradient(135deg, #ff6b6b, #ff5252);
+        border: none;
+        color: white;
+    }
 
-.alert-danger i {
-    margin-right: 8px;
-}
+    .alert-danger i {
+        margin-right: 8px;
+    }
 </style>
 @endsection
 @section('content')
@@ -62,6 +63,9 @@
 
                 <label for="">Giá</label>
                 <input class="form-control" type="number" name="price" value="{{ old('price') }}">
+
+                <label for="">Giá USD (VD : 4.99)</label>
+                <input class="form-control" type="text" name="price_usd" value="{{ old('price_usd') }}">
 
                 <label for="">Ảnh (tùy chọn - nếu chọn thì phải chọn đúng 3 ảnh)</label>
                 <input class="form-control" type="file" name="images[]" accept="image/*" multiple onchange="validateImages(this)">
@@ -159,9 +163,9 @@
             <i class="fas fa-exclamation-triangle"></i> ${message}
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         `;
-        
+
         notification.appendChild(toast);
-        
+
         // Tự động ẩn sau 5 giây
         setTimeout(() => {
             if (toast.parentNode) {

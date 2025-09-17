@@ -159,7 +159,7 @@
 											aria-label="{{ $tour->name }}">
 											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
 											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600" style="width:265.72px; height:199.28px;">
 											@endif
 										</a>
 									</div>
@@ -175,7 +175,7 @@
 
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
-										<p class="name product-title woocommerce-loop-product__title"><a
+										<p style="height: 38.59px;" class="name product-title woocommerce-loop-product__title"><a
 												href="{{ $tour->categoryChild ? route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) : route('category.child.show', [$category->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
@@ -184,6 +184,11 @@
 												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
 															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
+											<span class="price-suffix">/khách</span></span>
+										<span class="price"><span class="price-prefix">Hoặc </span><ins
+												aria-hidden="true"><span
+													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
+															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
 											<span class="price-suffix">/khách</span></span>
 										<div class="tour-custom-fields"
 											style="margin-top:8px;font-size:0.9em;">
@@ -273,7 +278,7 @@
 											aria-label="NINH BÌNH - SAPA FANXIPAN - HÀ GIANG - 5 NGÀY 5 ĐÊM.">
 											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
 											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600" style="width:265.72px; height:199.28px;">
 											@endif
 										</a>
 									</div>
@@ -289,7 +294,7 @@
 
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
-										<p class="name product-title woocommerce-loop-product__title"><a
+										<p style="height: 38.59px;" class="name product-title woocommerce-loop-product__title"><a
 												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}.</a></p>
 									</div>
@@ -394,7 +399,7 @@
 											aria-label="{{ $tour->name }}">
 											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
 											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600" style="width:265.72px; height:199.28px;">
 											@endif
 										</a>
 									</div>
@@ -410,7 +415,7 @@
 
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
-										<p class="name product-title woocommerce-loop-product__title"><a
+										<p style="height: 38.59px;" class="name product-title woocommerce-loop-product__title"><a
 												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
@@ -515,7 +520,7 @@
 											aria-label="{{ $tour->name }}">
 											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
 											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600" style="width:265.72px; height:199.28px;">
 											@endif
 										</a>
 									</div>
@@ -531,7 +536,7 @@
 
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
-										<p class="name product-title woocommerce-loop-product__title"><a
+										<p style="height: 38.59px;" class="name product-title woocommerce-loop-product__title"><a
 												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
@@ -636,7 +641,7 @@
 											aria-label="{{ $tour->name }}">
 											@php($firstImage = is_array($tour->image) ? ($tour->image[0] ?? null) : $tour->image)
 											@if($firstImage)
-											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600">
+											<img src="{{ asset($firstImage) }}" alt="" height="450" width="600" style="width:265.72px; height:199.28px;">
 											@endif
 										</a>
 									</div>
@@ -652,7 +657,7 @@
 
 								<div class="box-text box-text-products">
 									<div class="title-wrapper">
-										<p class="name product-title woocommerce-loop-product__title"><a
+										<p style="height: 38.59px;" class="name product-title woocommerce-loop-product__title"><a
 												href="{{ route('tour.detail', [$category->slug, $tour->categoryChild->slug, $tour->slug]) }}"
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
