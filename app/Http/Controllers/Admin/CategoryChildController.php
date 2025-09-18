@@ -40,7 +40,9 @@ class CategoryChildController extends Controller
                 }
             ],
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
+            'hidden_money' => 'nullable|boolean',
         ]);
+
         $data = $request->all();
 
         // Xử lý upload ảnh
@@ -87,6 +89,7 @@ class CategoryChildController extends Controller
                 }
             ],
             'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg',
+            'hidden_money' => 'nullable|boolean',
         ]);
 
         $data = $request->all();

@@ -63,7 +63,8 @@ class TourController extends Controller
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
                 'phone' => 'required|string|max:20',
-                'tour_id' => 'required|exists:tours,id'
+                'tour_id' => 'required|exists:tours,id',
+                'email' => 'required|email|max:255'
             ]);
 
             // Get tour details
@@ -75,7 +76,8 @@ class TourController extends Controller
                 'phone' => $validated['phone'],
                 'tour_id' => $validated['tour_id'],
                 'price_now' => $tour->price,
-                'status' => 'Chưa liên hệ'
+                'status' => 'Chưa liên hệ',
+                'email' => $validated['email']
             ]);
 
             return response()->json([

@@ -14,7 +14,8 @@ class Order extends Model
         'phone',
         'status',
         'tour_id',
-        'price_now'
+        'price_now',
+        'email'
     ];
 
     public function tour()

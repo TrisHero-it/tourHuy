@@ -38,4 +38,9 @@ class Tour extends Model
     {
         return $this->belongsTo(CategoryChild::class, 'category_child_id', 'id');
     }
+
+    public function getHiddenMoneyAttribute()
+    {
+        return $this->categoryChild->hidden_money;
+    }
 }

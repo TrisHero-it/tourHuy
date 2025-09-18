@@ -48,6 +48,8 @@ class OrderController extends Controller
         if ($conn->connect_error) {
             die("Kết nối thất bại: " . $conn->connect_error);
         }
+        $conn->set_charset("utf8mb4");
+
         $query = "
         SELECT orders.name, orders.phone, orders.price_now, orders.status, tours.name as tour_name
         FROM orders
@@ -71,6 +73,7 @@ class OrderController extends Controller
         $sheet->setCellValue('C1', 'Giá tour');
         $sheet->setCellValue('D1', 'Trạng thái');
         $sheet->setCellValue('E1', 'Tour');
+        $sheet->setCellValue('F1', 'Email');
         $row = 2;
         while ($data = $result->fetch_assoc()) {
             $sheet->setCellValue("A{$row}", $data['name']);
@@ -78,6 +81,7 @@ class OrderController extends Controller
             $sheet->setCellValue("C{$row}", $data['price_now']);
             $sheet->setCellValue("D{$row}", $data['status']);
             $sheet->setCellValue("E{$row}", $data['tour_name']);
+            $sheet->setCellValue("F{$row}", $data['email']);
             $row++;
         }
 

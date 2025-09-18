@@ -69,6 +69,12 @@
                     @enderror
                 </div>
 
+                <div class="form-check form-switch mt-2">
+                    <input type="hidden" name="hidden_money" value="0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="hidden_money" name="hidden_money" value="1">
+                    <label class="form-check-label" for="is_banner">Ẩn tiền (hidden_money)</label>
+                </div>
+
                 <div class="mb-3">
                     <label for="image" class="form-label">Ảnh danh mục con</label>
                     <input class="form-control" type="file" name="image" id="image" onchange="previewImage(this)">

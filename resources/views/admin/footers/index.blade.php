@@ -15,11 +15,7 @@
                     <table id="simpletable" class="table table-striped table-bordered nowrap">
                         <thead>
                             <tr>
-                                <th>Tên trang web</th>
-                                <th>Địa chỉ</th>
-                                <th>Email</th>
-                                <th>Số điện thoại</th>
-                                <th>Trạng thái</th>
+                                <th>Nội dung</th>
                                 <th>Chức năng</th>
                             </tr>
                         </thead>
@@ -27,34 +23,10 @@
                             @foreach ($footers as $footer)
                             <tr>
                                 <td>
-                                    {{ $footer->name }}
+                                    {!! $footer->content !!}
                                 </td>
                                 <td>
-                                    {{ $footer->address }}
-                                </td>
-                                <td>
-                                    {{ $footer->email }}
-                                </td>
-                                <td>
-                                    {{ $footer->phone }}
-                                </td>
-                                <td>
-                                    @if ($footer->is_active == 1)
-                                    <span class="badge rounded-pill text-bg-success"
-                                        style="display: flex;align-items: center;width: max-content;">active</span>
-                                    @else
-                                    <span class="badge rounded-pill text-bg-danger"
-                                        style="display: flex;align-items: center;width: max-content;">inactive</span>
-                                    @endif
-                                </td>
-                                <td>
-                                    @if ($footer->is_active == 1)
-                                    <a onclick="changeStatus({{ $footer->id }}, 0)" class="btn btn-danger">Tắt</a>
-                                    @else
-                                    <a onclick="changeStatus({{ $footer->id }}, 1)" class="btn btn-success">Bật</a>
-                                    @endif
-
-                                    <button onclick="deleteBanner({{ $footer->id }})" class="btn btn-outline-danger">Xóa</button>
+                                    <button onclick="deleteFooter({{ $footer->id }})" class="btn btn-outline-danger">Xóa</button>
                                 </td>
                             </tr>
                             @endforeach
@@ -69,7 +41,7 @@
 </div>
 
 <script !src="">
-    function deleteBanner(id) {
+    function deleteFooter(id) {
         if (confirm(`Ban muốn xóa bài này`)) {
             $.ajax({
                 url: '/admin/footers/' + id,
@@ -84,8 +56,8 @@
 
             });
         }
-        reload()
         setTimeout(notification1('Xóa thành công'), 1000);
+        setTimeout(reload(), 1500);
     }
 
     function changeStatus(id, statusActive) {
@@ -105,16 +77,7 @@
     }
 
     function reload() {
-        $.ajax({
-            url: '/admin/footers',
-            method: 'get',
-            success: function(data) {
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(data, 'text/html');
-                const newTable = htmlDoc.getElementById('table').innerHTML;
-                document.getElementById('table').innerHTML = newTable;
-            }
-        })
+        window.location.reload();
     }
 
     function notification1(text) {

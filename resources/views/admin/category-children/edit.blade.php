@@ -2,32 +2,33 @@
 @section('link')
 <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-timepicker.min.css')}}">
 <style>
-.alert {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+    .alert {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        animation: slideIn 0.3s ease-out;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-}
 
-.alert-danger {
-    background: linear-gradient(135deg, #ff6b6b, #ff5252);
-    border: none;
-    color: white;
-}
+    .alert-danger {
+        background: linear-gradient(135deg, #ff6b6b, #ff5252);
+        border: none;
+        color: white;
+    }
 
-.alert-danger i {
-    margin-right: 8px;
-}
+    .alert-danger i {
+        margin-right: 8px;
+    }
 </style>
 @endsection
 @section('content')
@@ -43,7 +44,7 @@
             <form action="{{ route('admin.category-children.update', $categoryChild->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                
+
                 <div class="mb-3">
                     <label for="name" class="form-label">Tên danh mục con</label>
                     <input class="form-control" type="text" name="name" id="name" value="{{ old('name', $categoryChild->name) }}">
@@ -54,14 +55,20 @@
                     @enderror
                 </div>
 
+                <div class="form-check form-switch mt-2">
+                    <input type="hidden" name="hidden_money" value="0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="hidden_money" name="hidden_money" value="1" {{ old('hidden_money', $categoryChild->hidden_money) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="hidden_money">Ẩn tiền (hidden_money)</label>
+                </div>
+
                 <div class="mb-3">
                     <label for="category_id" class="form-label">Danh mục cha</label>
                     <select class="form-control" name="category_id" id="category_id">
                         <option value="">Chọn danh mục cha</option>
                         @foreach($categories as $category)
-                            <option value="{{ $category->id }}" {{ old('category_id', $categoryChild->category_id) == $category->id ? 'selected' : '' }}>
-                                {{ $category->name }}
-                            </option>
+                        <option value="{{ $category->id }}" {{ old('category_id', $categoryChild->category_id) == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
                         @endforeach
                     </select>
                     @error('category_id')
@@ -74,11 +81,11 @@
                 <div class="mb-3">
                     <label class="form-label">Ảnh hiện tại</label>
                     @if($categoryChild->image && file_exists(public_path($categoryChild->image)))
-                        <div class="mb-2">
-                            <img src="{{ asset($categoryChild->image) }}" alt="{{ $categoryChild->name }}" style="max-width: 200px; max-height: 150px;">
-                        </div>
+                    <div class="mb-2">
+                        <img src="{{ asset($categoryChild->image) }}" alt="{{ $categoryChild->name }}" style="max-width: 200px; max-height: 150px;">
+                    </div>
                     @else
-                        <p class="text-muted">Chưa có ảnh</p>
+                    <p class="text-muted">Chưa có ảnh</p>
                     @endif
                 </div>
 
@@ -130,50 +137,50 @@
 @endif
 
 <script>
-function previewNewImage(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        
-        reader.onload = function(e) {
-            document.getElementById('previewNewImg').src = e.target.result;
-            document.getElementById('newImagePreview').style.display = 'block';
-        }
-        
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+    function previewNewImage(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-// Hiển thị popup toast notification
-function showToast(message, type = 'error') {
-    const notification = document.getElementById('notification');
-    const toast = document.createElement('div');
-    toast.className = `alert alert-${type} alert-dismissible fade show`;
-    toast.style.position = 'fixed';
-    toast.style.top = '20px';
-    toast.style.right = '20px';
-    toast.style.zIndex = '9999';
-    toast.style.minWidth = '300px';
-    toast.innerHTML = `
+            reader.onload = function(e) {
+                document.getElementById('previewNewImg').src = e.target.result;
+                document.getElementById('newImagePreview').style.display = 'block';
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    // Hiển thị popup toast notification
+    function showToast(message, type = 'error') {
+        const notification = document.getElementById('notification');
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type} alert-dismissible fade show`;
+        toast.style.position = 'fixed';
+        toast.style.top = '20px';
+        toast.style.right = '20px';
+        toast.style.zIndex = '9999';
+        toast.style.minWidth = '300px';
+        toast.innerHTML = `
         <i class="fas fa-exclamation-triangle"></i> ${message}
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
-    
-    notification.appendChild(toast);
-    
-    // Tự động ẩn sau 5 giây
-    setTimeout(() => {
-        if (toast.parentNode) {
-            toast.remove();
-        }
-    }, 5000);
-}
 
-// Kiểm tra lỗi validation và hiển thị popup
-const errors = @json($errors->all());
-if (errors.length > 0) {
-    errors.forEach(error => {
-        showToast(error, 'danger');
-    });
-}
+        notification.appendChild(toast);
+
+        // Tự động ẩn sau 5 giây
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.remove();
+            }
+        }, 5000);
+    }
+
+    // Kiểm tra lỗi validation và hiển thị popup
+    const errors = @json($errors->all());
+    if (errors.length > 0) {
+        errors.forEach(error => {
+            showToast(error, 'danger');
+        });
+    }
 </script>
 @endsection

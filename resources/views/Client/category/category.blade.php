@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="box-text text-center">
                                         <div class="box-text-inner">
-                                            <h5 class="uppercase header-title">{{ $child->name }}</h5>
+                                            <h5 class="uppercase header-title">{{ $child->name }} ({{ $child->countTour }})</h5>
                                         </div>
                                     </div>
                                 </div>

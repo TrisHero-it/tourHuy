@@ -108,17 +108,7 @@
     }
 
     function reload() {
-        $.ajax({
-            url: '/admin/logos',
-            method: 'get',
-            success: function(data) {
-                console.log(data)
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(data, 'text/html');
-                const newTable = htmlDoc.getElementById('table').innerHTML;
-                document.getElementById('table').innerHTML = newTable;
-            }
-        })
+        window.location.reload();
     }
 </script>
 @endsection

@@ -4,13 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Account;
+use App\Models\Footer;
 use Illuminate\Http\Request;
 
 class FooterController extends Controller
 {
     public function index()
     {
-        $footers = Account::all();
+        $footers = Footer::all();
         return view('admin.footers.index', compact('footers'));
     }
 
@@ -22,13 +23,9 @@ class FooterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'address' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'content' => 'required',
         ]);
-        Account::where('is_active', 1)->update(['is_active' => 0]);
-        $footer = Account::create($request->all());
+        $footer = Footer::create($request->all());
         return redirect()->back()->with('success', 'Footer thêm thành công');
     }
 
@@ -42,7 +39,7 @@ class FooterController extends Controller
 
     public function destroy($id)
     {
-        $footer = Account::find($id);
+        $footer = Footer::find($id);
         $footer->delete();
         return redirect()->back()->with('success', 'Footer xóa thành công');
     }

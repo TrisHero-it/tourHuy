@@ -175,7 +175,7 @@
     }
 
     // Kiểm tra lỗi validation và hiển thị popup
-    const errors = @json($errors->all());
+    const errors = @json($errors - > all());
     if (errors.length > 0) {
         errors.forEach(error => {
             showToast(error, 'danger');
@@ -208,7 +208,22 @@
         }, 1000)
     }, 2000)
 </script>
-@endif
 
+
+@endif
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
+            }
+        })
+        .then(editor => {
+            console.log('CKEditor initialized successfully');
+        })
+        .catch(error => {
+            console.error('Error initializing CKEditor:', error);
+        });
+</script>
 
 @endsection

@@ -623,26 +623,11 @@
                         <!-- Company Info Section -->
                         <div class="footer-section company-section">
                             <div class="footer-logo">
-                                <h3>{{ $address->name }}</h3>
+                                <h3>CÔNG TY TRÁCH NHIỆM HỮU HẠN DU LỊCH VÀ DỊCH VỤ THE SINH CAFE TOURIST</h3>
                                 <p class="tagline">Khám phá thế giới cùng chúng tôi</p>
                             </div>
                             <div class="company-details">
-                                <div class="contact-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>{{ $address->address }}</span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
-                                    <a href="tel:{{ $address->phone }}">{{ $address->phone }}</a>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <a href="mailto:{{ $address->email }}">{{ $address->email }}</a>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-globe"></i>
-                                    <a href="https://sinhtravel.com.vn" target="_blank">sinhtravel.com.vn</a>
-                                </div>
+                              {!! $footer->content !!}
                             </div>
 
                             <!-- Social Media -->
@@ -1301,9 +1286,7 @@
                 </li>
             </ul>
 
-
         </div>
-
 
     </div>
 
@@ -2371,6 +2354,5 @@
         </style>
 
 </body>
-
 
 </html>

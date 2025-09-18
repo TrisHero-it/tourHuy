@@ -239,11 +239,17 @@
                                             <div class="product-price-container is-larger">
                                                 <div class="price-wrapper">
                                                     <p class="price product-page-price price-on-sale">
-                                                        <span class="price-prefix">Giá chỉ </span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins> <span class="price-suffix">/khách</span>
+                                                        <span class="price-prefix">Giá từ </span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi> ≈ {{ number_format($tour->price, 0, ',', '.') }}<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins> <span class="price-suffix">/khách</span>
                                                     </p>
                                                 </div>
                                             </div>
-
+                                            <div class="product-price-container is-larger">
+                                                <div class="price-wrapper">
+                                                    <p class="price product-page-price price-on-sale">
+                                                        <span class="price-prefix">Hoặc </span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi> ≈ {{ $tour->price_usd }}<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></ins> <span class="price-suffix">/khách</span>
+                                                    </p>
+                                                </div>
+                                            </div>
 
 
                                             <style>
@@ -285,7 +291,13 @@
                                             <div class="tt-tour-wrapper">
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="far fa-calendar-alt"></i>Thời gian:</span>
-                                                    <span class="value">1 ngày</span>
+                                                    <span class="value">@if ($tour->category_child_id != null)
+                                                        {{ $tour->categoryChild->name }}
+                                                        @else
+                                                        {{ $tour->duration }}
+                                                        @endif
+
+                                                    </span>
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-plane"></i>Phương tiện:</span>
@@ -293,7 +305,7 @@
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-map-marker-alt"></i>Nơi khởi hành:</span>
-                                                    <span class="value">Hà Nội</span>
+                                                    <span class="value">...</span>
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="far fa-clock"></i>Lịch khởi hành:</span>
@@ -301,12 +313,11 @@
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-hotel"></i>Khách sạn:</span>
-                                                    <span class="value">Khách sạn 3 sao</span>
+                                                    <span class="value">...</span>
                                                 </div>
                                             </div>
 
                                             <p style="text-align: center;">Đặt giữ chỗ giá tốt - Thanh toán sau.</p>
-
 
                                             <div class="fluentform ff-default fluentform_wrapper_1 ffs_default_wrap">
                                                 <form data-form_id="1" id="bookingForm" action="/tour/booking" class="frm-fluent-form fluent_form_1 ff-el-form-top ff_form_instance_1_1 ff-form-loading ffs_default" data-form_instance="ff_form_instance_1_1" method="POST">
@@ -322,6 +333,11 @@
                                                         <div class="ff-el-group form-phone">
                                                             <div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_1_phone" aria-label="Số điện thoại">Tên</label></div>
                                                             <div class="ff-el-input--content"><input name="name" class="ff-el-form-control ff-el-phone ff_el_with_extended_validation" type="tel" placeholder="Nhập tên của bạn!" data-name="phone" id="ff_1_phone" inputmode="tel" aria-invalid="false" aria-required="true"></div>
+                                                        </div>
+
+                                                        <div class="ff-el-group form-phone">
+                                                            <div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_1_phone" aria-label="Số điện thoại">Email</label></div>
+                                                            <div class="ff-el-input--content"><input name="email" class="ff-el-form-control ff-el-phone ff_el_with_extended_validation" type="tel" placeholder="Nhập email của bạn!" data-name="phone" id="ff_1_phone" inputmode="tel" aria-invalid="false" aria-required="true"></div>
                                                         </div>
                                                         <div class="ff-el-group ff-text-center form-button ff_submit_btn_wrapper ff_submit_btn_wrapper_custom"><button class="ff-btn ff-btn-submit ff-btn-sm ff_btn_style wpf_has_custom_css" type="submit" name="custom_submit_button-1_1" data-name="custom_submit_button-1_1">GỬI</button>
                                                             <style>
