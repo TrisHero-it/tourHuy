@@ -151,7 +151,7 @@ return [
     'url' => 'Trường :attribute phải là một URL hợp lệ.',
     'ulid' => 'Trường :attribute phải là một ULID hợp lệ.',
     'uuid' => 'Trường :attribute phải là một UUID hợp lệ.',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -196,6 +196,7 @@ return [
         'images' => 'ảnh tour',
         'duration' => 'thời gian đi',
         'category_child_id' => 'danh mục con',
+        'price_usd' => 'giá USD',
     ],
 
 ];

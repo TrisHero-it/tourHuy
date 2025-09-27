@@ -43,9 +43,9 @@
                                 <div class="box box-normal">
                                     <div class="box-image">
                                         @if($child->image)
-                                        <img src="{{ asset($child->image) }}" alt="{{ $child->name }}" width="600" height="450" loading="lazy" fetchpriority="low" />
+                                        <img src="{{ asset($child->image) }}" alt="{{ $child->name }}" style="width:270.43px; height: 202.81px" loading="lazy" fetchpriority="low" />
                                         @else
-                                        <img src="{{ asset('wp-content/uploads/2504_680ef0e76d6a5-600x450.webp') }}" alt="{{ $child->name }}" width="600" height="450" loading="lazy" fetchpriority="low" />
+                                        <img src="{{ asset('wp-content/uploads/2504_680ef0e76d6a5-600x450.webp') }}" alt="{{ $child->name }}" style="width:270.43px; height: 202.81px" loading="lazy" fetchpriority="low" />
                                         @endif
                                     </div>
                                     <div class="box-text text-center">

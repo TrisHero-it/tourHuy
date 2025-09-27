@@ -803,11 +803,11 @@
 										<p class="cat-label  is-xxsmall op-7 uppercase">
 											Blog du lịch </p>
 										<h5 class="post-title is-large ">
-											<a href="{{ route('blog.show', $blogs->slug) }}"
+											<a style="height: 43.44px;" href="{{ route('blog.show', $blogs->slug) }}"
 												class="plain"> {{ $blogs->title }}</a>
 										</h5>
 										<div class="is-divider"></div>
-										<p class="from_the_blog_excerpt ">
+										<p class="from_the_blog_excerpt" style="height: 43.18px;">
 											{{ $blogs->meta }}
 										</p>
 										<style>

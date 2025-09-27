@@ -28,7 +28,7 @@ class TourController extends Controller
         $validated = $request->validate([
             'category_id' => 'required|exists:categories,id',
             'category_child_id' => 'nullable|exists:category_childs,id',
-            'price_usd' => 'nullable|string|max:255',
+            'price_usd' => 'required|string|max:255',
             'name' => [
                 'required',
                 'string',
@@ -51,6 +51,7 @@ class TourController extends Controller
                             $fail('Tên tour "' . $value . '" đã tồn tại trong danh mục cha này.');
                         }
                     }
+
                 }
             ],
             'description' => 'nullable|string',

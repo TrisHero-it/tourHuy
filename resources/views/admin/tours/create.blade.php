@@ -63,7 +63,11 @@
 
                 <label for="">Giá USD (VD : 4.99)</label>
                 <input class="form-control" type="text" name="price_usd" value="{{ old('price_usd') }}">
-
+                @error('price_usd')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
                 <label for="">Ảnh (tùy chọn - nếu chọn thì phải chọn đúng 3 ảnh)</label>
                 <input class="form-control" type="file" name="images[]" accept="image/*" multiple onchange="validateImages(this)">
                 @error('images')
