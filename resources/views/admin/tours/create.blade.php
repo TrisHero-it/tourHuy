@@ -61,9 +61,6 @@
                 </div>
                 @enderror
 
-                <label for="">Giá</label>
-                <input class="form-control" type="number" name="price" value="{{ old('price') }}">
-
                 <label for="">Giá USD (VD : 4.99)</label>
                 <input class="form-control" type="text" name="price_usd" value="{{ old('price_usd') }}">
 
@@ -175,7 +172,7 @@
     }
 
     // Kiểm tra lỗi validation và hiển thị popup
-    const errors = @json($errors - > all());
+    const errors = @json($errors->all());
     if (errors.length > 0) {
         errors.forEach(error => {
             showToast(error, 'danger');

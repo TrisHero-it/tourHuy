@@ -59,8 +59,8 @@
                 </div>
                 @enderror
 
-                <label for="">Giá</label>
-                <input class="form-control" type="number" name="price" value="{{ old('price', $tour->price) }}">
+                <label for="">Giá (USD)</label>
+                <input class="form-control" type="text" name="price" value="{{ old('price', $tour->price_usd) }}">
 
                 <label for="">Ảnh hiện tại</label>
                 <div class="mb-2" style="display:flex; gap:10px; flex-wrap:wrap;">

@@ -35,7 +35,7 @@
                                     @endif
                                 </td>
                                 <td>{{ $tour->slug }}</td>
-                                <td>{{ number_format($tour->price, 0, ',', '.') }}</td>
+                                <td>{{ $tour->price_usd }}$</td>
                                 <td>{{ $tour->categoryChild ? $tour->categoryChild->name : 'Không có ' }}</td>
                                 <td>{{ $tour->category->name }}</td>
                                 <td>{{ $tour->schedule }}</td>

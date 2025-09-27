@@ -183,22 +183,12 @@
 										@if($tour->hidden_money == 0)
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
 												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
-												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
 											<span class="price-suffix">/khách</span></span>
 										@endif
 										@else
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
-												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
 												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
@@ -312,22 +302,13 @@
 										@if($tour->hidden_money == 1)
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
 												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
-												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
 											<span class="price-suffix">/khách</span></span>
 										@endif
 										@else
+
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
-												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
 												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
@@ -453,22 +434,13 @@
 										@if($tour->hidden_money == 1)
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
 												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
-												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
 											<span class="price-suffix">/khách</span></span>
 										@endif
 										@else
+
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
-												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
 												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
@@ -590,16 +562,22 @@
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">
+										@if($tour->category_child_id != null)
+										@if($tour->hidden_money == 1)
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
-												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
 												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
 											<span class="price-suffix">/khách</span></span>
+										@endif
+										@else
+
+										<span class="price"><span class="price-prefix">Giá từ </span><ins
+												aria-hidden="true"><span
+													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
+															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
+											<span class="price-suffix">/khách</span></span>
+										@endif
 										<div class="tour-custom-fields"
 											style="margin-top:8px;font-size:0.9em;">
 											<p class="tour-duration" style="margin:0;"><i
@@ -716,16 +694,22 @@
 												class="woocommerce-LoopProduct-link woocommerce-loop-product__link">{{ $tour->name }}</a></p>
 									</div>
 									<div class="price-wrapper">
+										@if($tour->category_child_id != null)
+										@if($tour->hidden_money == 1)
 										<span class="price"><span class="price-prefix">Giá từ </span><ins
-												aria-hidden="true"><span
-													class="woocommerce-Price-amount amount"><bdi>{{ number_format($tour->price, 0, ',', '.') }}<span
-															class="woocommerce-Price-currencySymbol">&#8363;</span></bdi></span></ins>
-											<span class="price-suffix">/khách</span></span>
-										<span class="price"><span class="price-prefix">Hoặc </span><ins
 												aria-hidden="true"><span
 													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
 															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
 											<span class="price-suffix">/khách</span></span>
+										@endif
+										@else
+
+										<span class="price"><span class="price-prefix">Giá từ </span><ins
+												aria-hidden="true"><span
+													class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
+															class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
+											<span class="price-suffix">/khách</span></span>
+										@endif
 										<div class="tour-custom-fields"
 											style="margin-top:8px;font-size:0.9em;">
 											<p class="tour-duration" style="margin:0;"><i
@@ -737,7 +721,8 @@
 												@endif
 											</p>
 											<p class="tour-schedule" style="margin:0;"><i
-													class="far fa-clock" aria-hidden="true"></i> Đi buổi sáng</p>
+													class="far fa-clock" aria-hidden="true"></i> Đi buổi
+												sáng hàng ngày</p>
 										</div>
 									</div>
 								</div>

@@ -59,29 +59,35 @@
                                         </p>
                                     </div>
                                     <div class="price-wrapper">
-                                        <div class="star-rating star-rating--inline" role="img" aria-label="Được xếp hạng 5.00 5 sao">
-                                            <span style="width:100%">Được xếp hạng <strong class="rating">5.00</strong> 5 sao</span>
-                                        </div>
-                                        <span class="price">
-                                            <span class="price-prefix">Giá từ </span>
-                                            <ins aria-hidden="true">
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <bdi>{{ number_format($tour->price) }}<span class="woocommerce-Price-currencySymbol">&#8363;</span></bdi>
-                                                </span>
-                                            </ins>
-                                            <span class="price-suffix">/khách</span>
-                                        </span>
-                                        <div class="tour-custom-fields" style="margin-top:8px;font-size:0.9em;">
-                                            @if($tour->duration)
-                                            <p class="tour-duration" style="margin:0;">
-                                                <i class="fas fa-calendar-alt" aria-hidden="true"></i> {{ $tour->duration }}
+                                        @if($tour->category_child_id != null)
+                                        @if($tour->hidden_money == 1)
+                                        <span class="price"><span class="price-prefix">Giá từ </span><ins
+                                                aria-hidden="true"><span
+                                                    class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
+                                                            class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
+                                            <span class="price-suffix">/khách</span></span>
+                                        @endif
+                                        @else
+
+                                        <span class="price"><span class="price-prefix">Giá từ </span><ins
+                                                aria-hidden="true"><span
+                                                    class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
+                                                            class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
+                                            <span class="price-suffix">/khách</span></span>
+                                        @endif
+                                        <div class="tour-custom-fields"
+                                            style="margin-top:8px;font-size:0.9em;">
+                                            <p class="tour-duration" style="margin:0;"><i
+                                                    class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                                @if ($tour->category_child_id != null)
+                                                {{ $tour->categoryChild->name }}
+                                                @else
+                                                {{ $tour->schedule }}
+                                                @endif
                                             </p>
-                                            @endif
-                                            @if($tour->schedule)
-                                            <p class="tour-schedule" style="margin:0;">
-                                                <i class="far fa-clock" aria-hidden="true"></i> {{ $tour->schedule }}
-                                            </p>
-                                            @endif
+                                            <p class="tour-schedule" style="margin:0;"><i
+                                                    class="far fa-clock" aria-hidden="true"></i> Đi buổi
+                                                sáng hàng ngày</p>
                                         </div>
                                     </div>
                                 </div>
