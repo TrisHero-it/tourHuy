@@ -99,13 +99,13 @@
             font-display: swap;
             font-family: "fl-icons";
 
-            src: url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.20.1);
+            src: url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.eot') }});
             src:
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.20.1) format("embedded-opentype"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.20.1) format("woff2"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.20.1) format("truetype"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.20.1) format("woff"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.20.1#fl-icons) format("svg");
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.eot') }}#iefix) format("embedded-opentype"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2') }}) format("woff2"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf') }}) format("truetype"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.woff') }}) format("woff"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.svg') }}#fl-icons) format("svg");
         }
     </style>
     <link rel='stylesheet' id='flatsome-shop-css' href='{{ asset('wp-content/cache/flying-press/61aa9a689d81.flatsome-shop.css') }}' type='text/css' media='all' />
@@ -119,13 +119,13 @@
             font-display: swap;
             font-family: "fl-icons";
 
-            src: url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.19.15);
+            src: url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.eot') }});
             src:
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.19.15) format("embedded-opentype"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.19.15) format("woff2"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.19.15) format("truetype"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.19.15) format("woff"),
-                url(https://dulichthesinh.vn/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.19.15#fl-icons) format("svg");
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.eot') }}#iefix) format("embedded-opentype"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2') }}) format("woff2"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf') }}) format("truetype"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.woff') }}) format("woff"),
+                url({{ asset('wp-content/themes/flatsome/assets/css/icons/fl-icons.svg') }}#fl-icons) format("svg");
         }
     </style>
     <link rel='stylesheet' id='flatsome-shop-css'
@@ -655,7 +655,7 @@
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="https://zalo.me/0879998230" target="_blank" class="social-btn zalo">
-                                    <i class="fab fa-telegram"></i>
+                                    <img src="{{ asset('images/zalo-icon.svg') }}" alt="Zalo" class="social-icon">
                                 </a>
                                 <a href="https://wa.me/84879998230" target="_blank" class="social-btn whatsapp">
                                     <i class="fab fa-whatsapp"></i>
@@ -880,6 +880,13 @@
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             }
 
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
             .map-container {
                 width: 100%;
                 height: 120px;
@@ -1007,6 +1014,11 @@
                     font-size: 18px;
                 }
 
+                .social-icon {
+                    width: 36px;
+                    height: 36px;
+                }
+
                 .cert-grid {
                     grid-template-columns: 1fr;
                     gap: 20px;
@@ -1097,6 +1109,11 @@
                     width: 40px;
                     height: 40px;
                     font-size: 16px;
+                }
+
+                .social-icon {
+                    width: 34px;
+                    height: 34px;
                 }
 
                 .cert-item h5 {
@@ -2269,7 +2286,7 @@
         });
     </script>
     < !-- Floating Social Icons -->
-        <div class="floating-social-icons"><a href="https://m.me/61579608994747" target="_blank" class="floating-icon facebook-icon" title="Chat Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://zalo.me/0879998230" target="_blank" class="floating-icon zalo-icon" title="Chat Zalo"><i class="fab fa-telegram"></i></a><a href="https://wa.me/84123456789" target="_blank" class="floating-icon whatsapp-icon" title="Chat WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+        <div class="floating-social-icons"><a href="https://m.me/61579608994747" target="_blank" class="floating-icon facebook-icon" title="Chat Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://zalo.me/0879998230" target="_blank" class="floating-icon zalo-icon" title="Chat Zalo"><img src="{{ asset('images/zalo-icon.svg') }}" alt="Zalo" class="social-icon"></a><a href="https://wa.me/84123456789" target="_blank" class="floating-icon whatsapp-icon" title="Chat WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
         <style>
             .floating-social-icons {
                 position: fixed;
