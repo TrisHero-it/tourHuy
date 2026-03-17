@@ -686,15 +686,7 @@
                             <p><strong>MST:</strong> 0111171674</p>
                             <p>Cấp bởi Sở Kế Hoạch & Đầu Tư TP. Hà Nội</p>
                         </div>
-                        <div class="cert-item">
-                            <h5>Chứng nhận</h5>
-                            <div class="cert-logos">
-                                <img src="{{ asset('wp-content/uploads/2505_logo-da-thong-bao-bo-cong.png') }}"
-                                    alt="Logo đã thông báo bộ công" class="cert-logo" />
-                                <img src="{{ asset('wp-content/uploads/2505_dmca-badge-1.png') }}"
-                                    alt="DMCA Badge" class="cert-logo" />
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -2369,6 +2361,146 @@
                 }
             }
         </style>
+
+        <script>
+            (function() {
+                const RATE_CACHE_KEY = 'tt_usd_vnd_rate';
+                const RATE_CACHE_AT_KEY = 'tt_usd_vnd_rate_at';
+                const RATE_TTL_MS = 6 * 60 * 60 * 1000; // 6h
+                const FALLBACK_RATE = 26000;
+
+                function now() {
+                    return Date.now();
+                }
+
+                function getCurrentLang() {
+                    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+                    if (htmlLang) return htmlLang;
+                    return (navigator.language || 'vi').toLowerCase();
+                }
+
+                function desiredCurrencyFromLang(lang) {
+                    return lang.startsWith('en') ? 'USD' : 'VND';
+                }
+
+                function parseAmount(v) {
+                    if (v === null || v === undefined) return null;
+                    const n = Number(String(v).replace(/,/g, '').trim());
+                    return Number.isFinite(n) && n > 0 ? n : null;
+                }
+
+                function formatMoney(amount, currency) {
+                    if (!Number.isFinite(amount)) return '';
+                    if (currency === 'USD') {
+                        const rounded = Math.round(amount);
+                        return '$' + new Intl.NumberFormat('en-US', {
+                            maximumFractionDigits: 0
+                        }).format(rounded);
+                    }
+                    const rounded = Math.round(amount);
+                    return new Intl.NumberFormat('vi-VN', {
+                        maximumFractionDigits: 0
+                    }).format(rounded) + '₫';
+                }
+
+                function loadCachedRate() {
+                    const rate = parseFloat(localStorage.getItem(RATE_CACHE_KEY) || '');
+                    const at = parseInt(localStorage.getItem(RATE_CACHE_AT_KEY) || '0', 10);
+                    if (!Number.isFinite(rate) || rate <= 0) return null;
+                    if (!Number.isFinite(at) || at <= 0) return null;
+                    if (now() - at > RATE_TTL_MS) return null;
+                    return rate;
+                }
+
+                function saveRate(rate) {
+                    try {
+                        localStorage.setItem(RATE_CACHE_KEY, String(rate));
+                        localStorage.setItem(RATE_CACHE_AT_KEY, String(now()));
+                    } catch (e) {}
+                }
+
+                async function fetchUsdVndRate() {
+                    const cached = loadCachedRate();
+                    if (cached) return cached;
+
+                    try {
+                        const res = await fetch('https://open.er-api.com/v6/latest/USD', {
+                            cache: 'no-store'
+                        });
+                        if (!res.ok) throw new Error('rate_http_' + res.status);
+                        const json = await res.json();
+                        const rate = json && json.rates ? Number(json.rates.VND) : NaN;
+                        if (!Number.isFinite(rate) || rate <= 0) throw new Error('rate_invalid');
+                        saveRate(rate);
+                        return rate;
+                    } catch (e) {
+                        return FALLBACK_RATE;
+                    }
+                }
+
+                async function updateAllPrices() {
+                    const els = document.querySelectorAll('bdi.tt-price');
+                    if (!els.length) return;
+
+                    const lang = getCurrentLang();
+                    const currency = desiredCurrencyFromLang(lang);
+                    const rate = await fetchUsdVndRate(); // VND per 1 USD
+
+                    els.forEach((el) => {
+                        const vnd = parseAmount(el.dataset.amountVnd);
+                        const usd = parseAmount(el.dataset.amountUsd);
+
+                        let amount = null;
+                        if (currency === 'VND') {
+                            if (vnd !== null) amount = vnd;
+                            else if (usd !== null) amount = usd * rate;
+                        } else {
+                            if (usd !== null) amount = usd;
+                            else if (vnd !== null) amount = vnd / rate;
+                        }
+
+                        if (amount === null) return;
+
+                        const prefix = (el.textContent || '').trim().startsWith('≈') ? '≈ ' : '';
+                        el.textContent = prefix + formatMoney(amount, currency);
+                    });
+                }
+
+                function scheduleUpdate() {
+                    if (scheduleUpdate._t) clearTimeout(scheduleUpdate._t);
+                    scheduleUpdate._t = setTimeout(updateAllPrices, 50);
+                }
+
+                document.addEventListener('DOMContentLoaded', scheduleUpdate, {
+                    once: true
+                });
+
+                // React to language changes from GTranslate (usually updates <html lang="...">)
+                const html = document.documentElement;
+                const obs = new MutationObserver((muts) => {
+                    for (const m of muts) {
+                        if (m.type === 'attributes' && m.attributeName === 'lang') {
+                            scheduleUpdate();
+                            break;
+                        }
+                    }
+                });
+                obs.observe(html, {
+                    attributes: true
+                });
+
+                // Also update after user clicks language widget (some setups don't mutate lang immediately)
+                document.addEventListener('click', (e) => {
+                    const t = e.target;
+                    if (!t) return;
+                    const wrapper = t.closest ? t.closest('.gtranslate_wrapper') : null;
+                    if (wrapper) {
+                        setTimeout(scheduleUpdate, 300);
+                        setTimeout(scheduleUpdate, 1200);
+                    }
+                }, true);
+            })();
+        </script>
 
 </body>
 

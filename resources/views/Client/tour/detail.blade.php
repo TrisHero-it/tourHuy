@@ -232,21 +232,12 @@
                                                 </a>
                                             </div>
 
-
-
                                             <div class="is-divider divider clearfix" style="margin-top:1em;margin-bottom:1em;max-width:20%;"></div>
 
                                             <div class="product-price-container is-larger">
                                                 <div class="price-wrapper">
                                                     <p class="price product-page-price price-on-sale">
-                                                        <span class="price-prefix">Giá từ </span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi> ≈ {{ number_format($tour->price, 0, ',', '.') }}<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></ins> <span class="price-suffix">/khách</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="product-price-container is-larger">
-                                                <div class="price-wrapper">
-                                                    <p class="price product-page-price price-on-sale">
-                                                        <span class="price-prefix">Hoặc </span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi> ≈ {{ $tour->price_usd }}<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></ins> <span class="price-suffix">/khách</span>
+                                                        <span class="price-prefix">Giá từ </span><ins aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi class="tt-price" data-amount-vnd="{{ $tour->price ?? '' }}" data-amount-usd="{{ $tour->price_usd ?? '' }}">≈ {{ $tour->price ? number_format((float)$tour->price, 0, ',', '.') . '₫' : ((float)$tour->price_usd . '$') }}</bdi></span></ins> <span class="price-suffix">/khách</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -301,64 +292,112 @@
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-plane"></i>Phương tiện:</span>
-                                                    <span class="value">Ô tô</span>
+                                                    <span class="value">...</span>
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-map-marker-alt"></i>Nơi khởi hành:</span>
                                                     <span class="value">...</span>
                                                 </div>
-                                                <div class="tt-tour-item">
-                                                    <span class="label"><i class="far fa-clock"></i>Lịch khởi hành:</span>
-                                                    <span class="value">Đi buổi sáng hàng ngày</span>
-                                                </div>
-                                                <div class="tt-tour-item">
-                                                    <span class="label"><i class="fas fa-hotel"></i>Khách sạn:</span>
-                                                    <span class="value">...</span>
-                                                </div>
+
                                             </div>
 
                                             <p style="text-align: center;">Đặt giữ chỗ giá tốt - Thanh toán sau.</p>
 
                                             <div class="fluentform ff-default fluentform_wrapper_1 ffs_default_wrap">
-                                                <form data-form_id="1" id="bookingForm" action="/tour/booking" class="frm-fluent-form fluent_form_1 ff-el-form-top ff_form_instance_1_1 ff-form-loading ffs_default" data-form_instance="ff_form_instance_1_1" method="POST">
-                                                    @csrf
-                                                    <input type="hidden" name="tour_id" value="{{ $tour->id }}">
-                                                    <fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
-                                                        <legend class="ff_screen_reader_title" style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">ĐĂNG KÝ</legend><input type="hidden" name="__fluent_form_embded_post_id" value="1305"><input type="hidden" id="_fluentform_1_fluentformnonce" name="_fluentform_1_fluentformnonce" value="15547fddb5"><input type="hidden" name="_wp_http_referer" value="/tour-hoa-lu-tam-coc-1-ngay-an-trua-buffet/">
-                                                        <div class="ff-el-group form-phone">
-                                                            <div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_1_phone" aria-label="Số điện thoại">Số điện thoại</label></div>
-                                                            <div class="ff-el-input--content"><input name="phone" class="ff-el-form-control ff-el-phone ff_el_with_extended_validation" type="tel" placeholder="Nhập SĐT, chúng tôi sẽ liên hệ lại ngay!" data-name="phone" id="ff_1_phone" inputmode="tel" aria-invalid="false" aria-required="true"></div>
-                                                        </div>
+                                                <style>
+                                                    .tt-contact-actions {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        gap: 10px;
+                                                    }
 
-                                                        <div class="ff-el-group form-phone">
-                                                            <div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_1_phone" aria-label="Số điện thoại">Tên</label></div>
-                                                            <div class="ff-el-input--content"><input name="name" class="ff-el-form-control ff-el-phone ff_el_with_extended_validation" type="tel" placeholder="Nhập tên của bạn!" data-name="phone" id="ff_1_phone" inputmode="tel" aria-invalid="false" aria-required="true"></div>
-                                                        </div>
+                                                    .tt-facebook-btn,
+                                                    .tt-zalo-btn,
+                                                    .tt-whatsapp-btn {
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        gap: 10px;
+                                                        width: 100%;
+                                                        padding: 12px 14px;
+                                                        border-radius: 10px;
+                                                        color: #fff;
+                                                        font-weight: 700;
+                                                        text-decoration: none;
+                                                        border: 1px solid rgba(0, 0, 0, .05);
+                                                        transition: transform .08s ease, filter .2s ease;
+                                                    }
 
-                                                        <div class="ff-el-group form-phone">
-                                                            <div class="ff-el-input--label ff-el-is-required asterisk-right"><label for="ff_1_phone" aria-label="Số điện thoại">Email</label></div>
-                                                            <div class="ff-el-input--content"><input name="email" class="ff-el-form-control ff-el-phone ff_el_with_extended_validation" type="tel" placeholder="Nhập email của bạn!" data-name="phone" id="ff_1_phone" inputmode="tel" aria-invalid="false" aria-required="true"></div>
-                                                        </div>
-                                                        <div class="ff-el-group ff-text-center form-button ff_submit_btn_wrapper ff_submit_btn_wrapper_custom"><button class="ff-btn ff-btn-submit ff-btn-sm ff_btn_style wpf_has_custom_css" type="submit" name="custom_submit_button-1_1" data-name="custom_submit_button-1_1">GỬI</button>
-                                                            <style>
-                                                                form.fluent_form_1 .wpf_has_custom_css.ff-btn-submit {
-                                                                    background-color: rgba(19, 101, 172, 1);
-                                                                    border-color: rgba(19, 101, 172, 1);
-                                                                    color: #ffffff;
-                                                                    border-radius: 4px;
-                                                                    min-width: 100%;
-                                                                }
+                                                    .tt-facebook-btn {
+                                                        background: #1877f2;
+                                                    }
 
-                                                                form.fluent_form_1 .wpf_has_custom_css.ff-btn-submit:hover {
-                                                                    background-color: #ffffff;
-                                                                    border-color: #1a7efb;
-                                                                    color: #1a7efb;
-                                                                    min-width: 100%;
-                                                                }
-                                                            </style>
-                                                        </div><input type="hidden" name="hidden" value="CỐ ĐÔ HOA LƯ - TRÀNG AN 1 NGÀY." data-name="hidden">
-                                                    </fieldset>
-                                                </form>
+                                                    .tt-zalo-btn {
+                                                        background: #0068ff;
+                                                    }
+
+                                                    .tt-whatsapp-btn {
+                                                        background: #25d366;
+                                                    }
+
+                                                    .tt-facebook-btn:hover,
+                                                    .tt-zalo-btn:hover,
+                                                    .tt-whatsapp-btn:hover {
+                                                        color: #fff;
+                                                        filter: brightness(1.05);
+                                                        text-decoration: none;
+                                                    }
+
+                                                    .tt-facebook-btn:active,
+                                                    .tt-zalo-btn:active,
+                                                    .tt-whatsapp-btn:active {
+                                                        transform: translateY(1px);
+                                                    }
+
+                                                    .tt-facebook-btn i,
+                                                    .tt-whatsapp-btn i {
+                                                        font-size: 18px;
+                                                        line-height: 1;
+                                                    }
+
+                                                    .tt-zalo-logo {
+                                                        width: 26px;
+                                                        height: 26px;
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        flex: 0 0 26px;
+                                                    }
+
+                                                    .tt-zalo-logo svg {
+                                                        width: 26px;
+                                                        height: 26px;
+                                                        display: block;
+                                                    }
+                                                </style>
+                                                <div class="tt-contact-actions">
+                                                    <a class="tt-facebook-btn" href="https://m.me/61579608994747" target="_blank" rel="noopener noreferrer" aria-label="Chat Facebook Messenger">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                        <span>Chat Facebook</span>
+                                                    </a>
+
+                                                    <a class="tt-zalo-btn" href="https://zalo.me/0879998230" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo">
+                                                        <span class="tt-zalo-logo" aria-hidden="true">
+                                                            <svg viewBox="0 0 64 64" role="img" focusable="false" aria-hidden="true">
+                                                                <rect x="6" y="10" width="52" height="40" rx="14" fill="rgba(255,255,255,.96)" />
+                                                                <path d="M22 50 L19 56 C18.3 57.5 19.9 58.9 21.3 58.1 L32 52.5" fill="rgba(255,255,255,.96)" />
+                                                                <text x="32" y="37" text-anchor="middle" font-size="18" font-weight="900" font-family="Arial, Helvetica, sans-serif" fill="#0068ff">Zalo</text>
+                                                            </svg>
+                                                        </span>
+                                                        <span>Chat Zalo</span>
+                                                    </a>
+
+                                                    <a class="tt-whatsapp-btn" href="https://wa.me/84123456789" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+                                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                                        <span>Chat WhatsApp</span>
+                                                    </a>
+                                                </div>
+
                                                 <div id="fluentform_1_errors" class="ff-errors-in-stack ff_form_instance_1_1 ff-form-loading_errors ff_form_instance_1_1_errors"></div>
                                             </div>
                                             <script type="text/javascript" defer="" src="data:text/javascript,window.fluent_form_ff_form_instance_1_1%20%3D%20%7B%22id%22%3A%221%22%2C%22settings%22%3A%7B%22layout%22%3A%7B%22labelPlacement%22%3A%22top%22%2C%22helpMessagePlacement%22%3A%22with_label%22%2C%22errorMessagePlacement%22%3A%22inline%22%2C%22cssClassName%22%3A%22%22%2C%22asteriskPlacement%22%3A%22asterisk-right%22%7D%2C%22restrictions%22%3A%7B%22denyEmptySubmission%22%3A%7B%22enabled%22%3Afalse%7D%7D%7D%2C%22form_instance%22%3A%22ff_form_instance_1_1%22%2C%22form_id_selector%22%3A%22fluentform_1%22%2C%22rules%22%3A%7B%22phone%22%3A%7B%22required%22%3A%7B%22value%22%3Atrue%2C%22global%22%3Atrue%2C%22message%22%3A%22Tr%5Cu01b0%5Cu1eddng%20n%5Cu00e0y%20l%5Cu00e0%20b%5Cu1eaft%20bu%5Cu1ed9c%22%2C%22global_message%22%3A%22Tr%5Cu01b0%5Cu1eddng%20n%5Cu00e0y%20l%5Cu00e0%20b%5Cu1eaft%20bu%5Cu1ed9c%22%7D%2C%22valid_phone_number%22%3A%7B%22value%22%3Atrue%2C%22global%22%3Atrue%2C%22message%22%3A%22S%5Cu1ed1%20%5Cu0111i%5Cu1ec7n%20tho%5Cu1ea1i%20kh%5Cu00f4ng%20h%5Cu1ee3p%20l%5Cu1ec7%22%2C%22global_message%22%3A%22S%5Cu1ed1%20%5Cu0111i%5Cu1ec7n%20tho%5Cu1ea1i%20kh%5Cu00f4ng%20h%5Cu1ee3p%20l%5Cu1ec7%22%7D%7D%7D%2C%22debounce_time%22%3A300%7D%3B"></script>

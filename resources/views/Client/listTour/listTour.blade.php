@@ -63,16 +63,14 @@
                                         @if($tour->hidden_money == 1)
                                         <span class="price"><span class="price-prefix">Giá từ </span><ins
                                                 aria-hidden="true"><span
-                                                    class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
-                                                            class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
+                                                    class="woocommerce-Price-amount amount"><bdi class="tt-price" data-amount-vnd="{{ $tour->price ?? '' }}" data-amount-usd="{{ $tour->price_usd ?? '' }}">{{ $tour->price ? number_format((float)$tour->price, 0, ',', '.') . '₫' : ((float)$tour->price_usd . '$') }}</bdi></span></ins>
                                             <span class="price-suffix">/khách</span></span>
                                         @endif
                                         @else
 
                                         <span class="price"><span class="price-prefix">Giá từ </span><ins
                                                 aria-hidden="true"><span
-                                                    class="woocommerce-Price-amount amount"><bdi>{{ $tour->price_usd }}<span
-                                                            class="woocommerce-Price-currencySymbol"> $</span></bdi></span></ins>
+                                                    class="woocommerce-Price-amount amount"><bdi class="tt-price" data-amount-vnd="{{ $tour->price ?? '' }}" data-amount-usd="{{ $tour->price_usd ?? '' }}">{{ $tour->price ? number_format((float)$tour->price, 0, ',', '.') . '₫' : ((float)$tour->price_usd . '$') }}</bdi></span></ins>
                                             <span class="price-suffix">/khách</span></span>
                                         @endif
                                         <div class="tour-custom-fields"

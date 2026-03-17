@@ -58,8 +58,8 @@
                         </div>
                     </div>
                     @endforeach
-                </div><!-- row -->
-            </div><!-- shop container -->
+                </div>
+            </div>
         </div>
     </div>
 </main>

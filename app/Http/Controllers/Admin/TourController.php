@@ -51,7 +51,6 @@ class TourController extends Controller
                             $fail('Tên tour "' . $value . '" đã tồn tại trong danh mục cha này.');
                         }
                     }
-
                 }
             ],
             'description' => 'nullable|string',
