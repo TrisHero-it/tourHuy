@@ -54,10 +54,16 @@ class TourController extends Controller
                 }
             ],
             'description' => 'nullable|string',
+            'itinerary' => 'nullable|string',
+            'price_table' => 'nullable|string',
+            'faq' => 'nullable|string',
             'price' => 'nullable|numeric|min:0',
             'images' => 'nullable|array|size:3',
             'images.*' => 'nullable|image|mimes:jpeg,png,webp,jpg,gif',
             'duration' => 'nullable|string|max:255',
+            'transportation' => 'nullable|string|max:255',
+            'departure_place' => 'nullable|string|max:255',
+            'schedule' => 'nullable|string|max:255',
         ]);
 
         $data = $validated;
@@ -73,7 +79,7 @@ class TourController extends Controller
             $data['image'] = $storedImages;
         }
 
-        $data['schedule'] = "Khởi hành vào buổi sáng";
+        $data['schedule'] = $request->filled('schedule') ? $request->input('schedule') : 'Khởi hành vào buổi sáng';
         $data['status'] = 'active';
         $tour = Tour::create($data);
         return redirect()->back()->with('success', 'Tạo tour thành công');
@@ -119,10 +125,16 @@ class TourController extends Controller
                 }
             ],
             'description' => 'nullable|string',
+            'itinerary' => 'nullable|string',
+            'price_table' => 'nullable|string',
+            'faq' => 'nullable|string',
             'price' => 'nullable|numeric|min:0',
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpeg,png,webp,jpg,gif|max:5120',
             'duration' => 'nullable|string|max:255',
+            'transportation' => 'nullable|string|max:255',
+            'departure_place' => 'nullable|string|max:255',
+            'schedule' => 'nullable|string|max:255',
         ]);
 
         $data = $validated;
@@ -150,9 +162,15 @@ class TourController extends Controller
 
     public function delete($id)
     {
-        Order::where('tour_id', $id)->delete();
         $tour = Tour::findOrFail($id);
-        $tour->delete();
+
+        try {
+            Order::where('tour_id', $id)->delete();
+            $tour->delete();
+        } catch (\Throwable $e) {
+            return redirect()->back()->with('error', 'Không xoá được tour này. Vui lòng thử lại.');
+        }
+
         return redirect()->back()->with('success', 'Xoá tour thành công');
     }
 }

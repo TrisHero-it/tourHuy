@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="price-wrapper">
                                         @if($tour->category_child_id != null)
-                                        @if($tour->hidden_money == 1)
+                                        @if($tour->hidden_money == 0)
                                         <span class="price"><span class="price-prefix">Giá từ </span><ins
                                                 aria-hidden="true"><span
                                                     class="woocommerce-Price-amount amount"><bdi class="tt-price" data-amount-vnd="{{ $tour->price ?? '' }}" data-amount-usd="{{ $tour->price_usd ?? '' }}">{{ $tour->price ? number_format((float)$tour->price, 0, ',', '.') . '₫' : ((float)$tour->price_usd . '$') }}</bdi></span></ins>

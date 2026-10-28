@@ -10,7 +10,7 @@ class LogoController extends Controller
 {
     public function index()
     {
-        $logos = Logo::all();
+        $logos = Logo::orderByDesc('id')->paginate(12);
         return view('admin.logos.index', compact('logos'));
     }
 
@@ -40,22 +40,28 @@ class LogoController extends Controller
 
     public function update(Request $request, $id)
     {
-        $logo = Logo::find($id);
-        $logo->status = $request->status;
+        $validated = $request->validate([
+            'status' => 'required|in:active,inactive',
+        ], [], ['status' => 'trạng thái']);
+
+        $logo = Logo::findOrFail($id);
+        $logo->status = $validated['status'];
         $logo->save();
-        return redirect()->back()->with('success', 'Logo cập nhập thành công');
+
+        return redirect()->back()->with('success', 'Cập nhật trạng thái logo thành công');
     }
 
     public function destroy($id)
     {
-        $logo = Logo::find($id);
-        
+        $logo = Logo::findOrFail($id);
+
         // Delete the image file from storage
-        if ($logo && file_exists(public_path($logo->image))) {
-            unlink(public_path($logo->image));
+        if ($logo->image && file_exists(public_path($logo->image))) {
+            @unlink(public_path($logo->image));
         }
-        
+
         $logo->delete();
-        return redirect()->back()->with('success', 'Logo đã được xóa thành công');
+
+        return redirect()->back()->with('success', 'Xóa logo thành công');
     }
 }

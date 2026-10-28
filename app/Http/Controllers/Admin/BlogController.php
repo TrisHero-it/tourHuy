@@ -12,7 +12,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::orderByDesc('id')->paginate(12);
         return view('admin.blogs.index', compact('blogs'));
     }
 
@@ -23,23 +23,38 @@ class BlogController extends Controller
 
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'title' => 'required|string|max:255|unique:blogs,title',
+            'content' => 'required|string',
+            'meta' => 'nullable|string|max:500',
+            'key_words' => 'nullable|string|max:500',
+            'image' => 'nullable|image|mimes:jpeg,png,webp,jpg,gif|max:5120',
+        ], [], [
+            'title' => 'tiêu đề',
+            'content' => 'nội dung',
+            'meta' => 'mô tả meta',
+            'key_words' => 'từ khoá',
+            'image' => 'ảnh đại diện',
+        ]);
+
+        $nameImage = null;
         if ($request->hasFile('image')) {
-            $image = $request->image;
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image = $request->file('image');
+            $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images/blogs'), $imageName);
-            $request->merge(['image' => "images/blogs/" . $imageName]);
-            $nameImage =  "images/blogs/" . $imageName;
+            $nameImage = "images/blogs/" . $imageName;
         }
-        $slug = Str::slug($request->title);
-        $blog = Blog::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'slug' => $slug,
-            'meta' => $request->meta,
-            'key_words' => $request->key_words,
+
+        Blog::create([
+            'title' => $validated['title'],
+            'content' => $validated['content'],
+            'slug' => Str::slug($validated['title']),
+            'meta' => $validated['meta'] ?? null,
+            'key_words' => $validated['key_words'] ?? null,
             'image' => $nameImage,
         ]);
-        return redirect()->back()->with('success', 'Blog thêm thành công');
+
+        return redirect()->back()->with('success', 'Thêm bài viết thành công');
     }
 
     public function uploadImage(Request $request)
@@ -58,8 +73,14 @@ class BlogController extends Controller
 
     public function  destroy($id)
     {
-        $blog = Blog::find($id);
+        $blog = Blog::findOrFail($id);
+
+        if ($blog->image && file_exists(public_path($blog->image))) {
+            @unlink(public_path($blog->image));
+        }
+
         $blog->delete();
-        return redirect()->back()->with('success', 'Blog xóa thành công');
+
+        return redirect()->back()->with('success', 'Xóa bài viết thành công');
     }
 }

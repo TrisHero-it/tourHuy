@@ -23,17 +23,22 @@ class OrderController extends Controller
             $orders->where('status', $request->status);
         }
 
-        $orders = $orders->with('tour')->paginate(15);
+        $orders = $orders->with('tour')->orderByDesc('id')->paginate(15)->withQueryString();
 
         return view('admin.orders.index', compact('orders'));
     }
 
     public function updateStatus(Request $request, $id)
     {
+        $validated = $request->validate([
+            'status' => 'required|in:Chưa liên hệ,Đã liên hệ,Thành công,Thất bại',
+        ], [], ['status' => 'trạng thái']);
+
         $order = Order::findOrFail($id);
-        $order->status = $request->status;
+        $order->status = $validated['status'];
         $order->save();
-        return redirect()->back()->with('success', 'Cập nhật trạng thái thành công');
+
+        return redirect()->back()->with('success', 'Cập nhật trạng thái đơn hàng thành công');
     }
 
 

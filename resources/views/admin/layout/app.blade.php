@@ -190,6 +190,8 @@
     <div class="pcoded-main-container">
         <div class="pcoded-wrapper">
             <div class="pcoded-content">
+                @include('admin.partials.flash')
+
                 @yield('content')
 
             </div>

@@ -31,11 +31,6 @@
                         </div>
                     </div>
                 </div>
-                @if (session('success'))
-                <div class="alert alert-success mt-5" role="alert">
-                    Thêm thành công
-                </div>
-                @endif
                 <button type="submit" style="margin-top: 11px;" class="btn btn-primary">Thêm</button>
             </form>
         </div>

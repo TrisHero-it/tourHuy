@@ -42,7 +42,7 @@
                             <tr>
                                 <td>{{ $order->name }}</td>
                                 <td>{{ $order->phone }}</td>
-                                <td>{{ $order->tour->name }}</td>
+                                <td>{{ optional($order->tour)->name ?? 'Tour đã bị xoá' }}</td>
                                 <td>{{ number_format($order->price_now, 0, ',', '.') }} VNĐ</td>
                                 <td>{{ $order->status }}</td>
                                 <td>
@@ -65,6 +65,15 @@
                         </tbody>
                     </table>
                 </div>
+
+                @if($orders->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $orders->firstItem() }}-{{ $orders->lastItem() }} trong tổng số {{ $orders->total() }} đơn hàng
+                    </small>
+                    {{ $orders->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
 
             </div>
         </div>

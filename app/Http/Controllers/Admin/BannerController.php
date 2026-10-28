@@ -10,7 +10,7 @@ class BannerController extends Controller
 {
     public function index()
     {
-        $banners = Banner::all();
+        $banners = Banner::orderByDesc('id')->paginate(12);
         return view('admin.banners.index', compact('banners'));
     }
 
@@ -40,16 +40,27 @@ class BannerController extends Controller
 
     public function update(Request $request, $id)
     {
-        $banner = Banner::find($id);
-        $banner->status = $request->status;
+        $validated = $request->validate([
+            'status' => 'required|in:active,inactive',
+        ], [], ['status' => 'trạng thái']);
+
+        $banner = Banner::findOrFail($id);
+        $banner->status = $validated['status'];
         $banner->save();
-        return redirect()->back()->with('success', 'Banner cập nhập thành công');
+
+        return redirect()->back()->with('success', 'Cập nhật trạng thái banner thành công');
     }
 
     public function delete($id)
     {
-        $banner = Banner::find($id);
+        $banner = Banner::findOrFail($id);
+
+        if ($banner->image && file_exists(public_path($banner->image))) {
+            @unlink(public_path($banner->image));
+        }
+
         $banner->delete();
-        return redirect()->back()->with('success', 'Banner xóa thành công');
+
+        return redirect()->back()->with('success', 'Xóa banner thành công');
     }
 }

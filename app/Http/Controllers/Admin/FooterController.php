@@ -11,7 +11,7 @@ class FooterController extends Controller
 {
     public function index()
     {
-        $footers = Footer::all();
+        $footers = Footer::orderByDesc('id')->paginate(12);
         return view('admin.footers.index', compact('footers'));
     }
 
@@ -22,25 +22,32 @@ class FooterController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'content' => 'required',
-        ]);
-        $footer = Footer::create($request->all());
-        return redirect()->back()->with('success', 'Footer thêm thành công');
+        $validated = $request->validate([
+            'content' => 'required|string|max:5000',
+        ], [], ['content' => 'nội dung footer']);
+
+        Footer::create($validated);
+
+        return redirect()->back()->with('success', 'Thêm footer thành công');
     }
 
     public function update(Request $request, $id)
     {
-        $logo = Account::find($id);
-        $logo->is_active = $request->is_active;
-        $logo->save();
-        return redirect()->back()->with('success', 'Footer cập nhập thành công');
+        $validated = $request->validate([
+            'content' => 'required|string|max:5000',
+        ], [], ['content' => 'nội dung footer']);
+
+        $footer = Footer::findOrFail($id);
+        $footer->update($validated);
+
+        return redirect()->back()->with('success', 'Cập nhật footer thành công');
     }
 
     public function destroy($id)
     {
-        $footer = Footer::find($id);
+        $footer = Footer::findOrFail($id);
         $footer->delete();
-        return redirect()->back()->with('success', 'Footer xóa thành công');
+
+        return redirect()->back()->with('success', 'Xóa footer thành công');
     }
 }

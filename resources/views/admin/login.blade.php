@@ -389,7 +389,7 @@
                     if (data.success) {
                         window.location.href = '/admin/categories'
                     } else {
-                        thongbao[0].innerHTML = 'Tài khoản mật khẩu không chính xác';
+                        thongbao[0].innerHTML = data.error || 'Tài khoản mật khẩu không chính xác';
                         thongbao[0].classList.add('alert')
                     }
                 }

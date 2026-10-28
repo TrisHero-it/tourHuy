@@ -50,7 +50,39 @@ class TourController extends Controller
         // Lấy thông tin liên hệ từ bảng account
         $account = Account::first();
 
-        return view('client.tour.detail', compact('category', 'categoryChild', 'tour', 'account'));
+        $relatedTours = $this->getRelatedTours($tour);
+
+        return view('client.tour.detail', compact('category', 'categoryChild', 'tour', 'account', 'relatedTours'));
+    }
+
+    /**
+     * Lấy danh sách tour tương tự: ưu tiên cùng danh mục con, thiếu thì lấy thêm cùng danh mục cha
+     */
+    private function getRelatedTours(Tour $tour, int $limit = 4)
+    {
+        $baseQuery = fn() => Tour::query()
+            ->where('status', 'active')
+            ->where('id', '!=', $tour->id)
+            ->whereNotNull('category_child_id')
+            ->with(['category', 'categoryChild'])
+            ->orderBy('created_at', 'desc');
+
+        $related = $baseQuery()
+            ->where('category_child_id', $tour->category_child_id)
+            ->take($limit)
+            ->get();
+
+        if ($related->count() < $limit) {
+            $more = $baseQuery()
+                ->where('category_id', $tour->category_id)
+                ->whereNotIn('id', $related->pluck('id'))
+                ->take($limit - $related->count())
+                ->get();
+
+            $related = $related->concat($more);
+        }
+
+        return $related;
     }
 
     /**

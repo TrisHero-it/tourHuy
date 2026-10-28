@@ -88,6 +88,15 @@
                     </table>
                 </div>
 
+                @if($categories->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $categories->firstItem() }}-{{ $categories->lastItem() }} trong tổng số {{ $categories->total() }} danh mục
+                    </small>
+                    {{ $categories->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
+
             </div>
         </div>
     </div>

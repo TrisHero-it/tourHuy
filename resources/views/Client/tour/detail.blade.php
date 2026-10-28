@@ -23,7 +23,7 @@
                                     <div class="product-breadcrumb-container is-small">
                                         <nav class="rank-math-breadcrumb breadcrumbs uppercase">
                                             <p>
-                                                <a href="{{ url('/') }}">The Sinh Tourist</a>
+                                                <a href="{{ url('/') }}">Sinh Travel</a>
                                                 <span class="separator"> / </span>
                                                 <a href="{{ route('category.show', $category->slug) }}">{{ $category->name }}</a>
                                                 @if($tour->categoryChild)
@@ -196,15 +196,159 @@
                                 <div class="col-inner">
 
                                     <!-- Tour Description -->
+                                    @php($ttIntro = trim((string) $tour->description))
+                                    @php($ttTabs = [
+                                        ['key' => 'gioi-thieu', 'label' => 'Giới thiệu', 'icon' => 'fas fa-info-circle', 'content' => $ttIntro],
+                                        ['key' => 'lich-trinh', 'label' => 'Lịch trình', 'icon' => 'fas fa-route', 'content' => trim((string) $tour->itinerary)],
+                                        ['key' => 'bang-gia', 'label' => 'Bảng giá', 'icon' => 'fas fa-tags', 'content' => trim((string) $tour->price_table)],
+                                        ['key' => 'faq', 'label' => 'Câu hỏi thường gặp', 'icon' => 'far fa-question-circle', 'content' => trim((string) $tour->faq)],
+                                    ])
+                                    @php($ttTabs = array_values(array_filter($ttTabs, fn($t) => $t['content'] !== '')))
+
+                                    <style>
+                                        .tt-tabs {
+                                            margin-bottom: 24px;
+                                        }
+
+                                        .tt-tabs__nav {
+                                            display: flex;
+                                            gap: 6px;
+                                            overflow-x: auto;
+                                            border-bottom: 2px solid #ececec;
+                                            margin-bottom: 20px;
+                                            -webkit-overflow-scrolling: touch;
+                                            scrollbar-width: none;
+                                        }
+
+                                        .tt-tabs__nav::-webkit-scrollbar {
+                                            display: none;
+                                        }
+
+                                        .tt-tabs__btn {
+                                            flex: 0 0 auto;
+                                            display: inline-flex;
+                                            align-items: center;
+                                            gap: 8px;
+                                            padding: 12px 18px;
+                                            border: 0;
+                                            background: none;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            color: #6b7280;
+                                            white-space: nowrap;
+                                            cursor: pointer;
+                                            border-bottom: 3px solid transparent;
+                                            margin-bottom: -2px;
+                                            border-radius: 8px 8px 0 0;
+                                            transition: color .2s ease, background .2s ease, border-color .2s ease;
+                                        }
+
+                                        .tt-tabs__btn i {
+                                            font-size: 15px;
+                                        }
+
+                                        .tt-tabs__btn:hover {
+                                            color: #ff6600;
+                                            background: rgba(255, 102, 0, .06);
+                                        }
+
+                                        .tt-tabs__btn.is-active {
+                                            color: #ff6600;
+                                            border-bottom-color: #ff6600;
+                                        }
+
+                                        .tt-tabs__panel {
+                                            animation: ttTabFade .25s ease;
+                                        }
+
+                                        @keyframes ttTabFade {
+                                            from {
+                                                opacity: 0;
+                                                transform: translateY(6px);
+                                            }
+
+                                            to {
+                                                opacity: 1;
+                                                transform: translateY(0);
+                                            }
+                                        }
+
+                                        .tt-tabs__panel table {
+                                            width: 100%;
+                                            border-collapse: collapse;
+                                            margin-bottom: 16px;
+                                        }
+
+                                        .tt-tabs__panel table td,
+                                        .tt-tabs__panel table th {
+                                            border: 1px solid #e5e7eb;
+                                            padding: 10px 12px;
+                                        }
+
+                                        .tt-tabs__panel table th {
+                                            background: #fcf6f2;
+                                        }
+
+                                        .tt-tabs__scroll {
+                                            overflow-x: auto;
+                                        }
+
+                                        @media (max-width: 767px) {
+                                            .tt-tabs__btn {
+                                                padding: 11px 13px;
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    </style>
+
                                     <div class="custom-full-description">
-                                        @if($tour->description)
-                                        {!! $tour->description !!}
+                                        @if(count($ttTabs))
+                                        <div class="tt-tabs" id="ttTourTabs">
+                                            <div class="tt-tabs__nav" role="tablist">
+                                                @foreach($ttTabs as $ttTab)
+                                                <button type="button" class="tt-tabs__btn {{ $loop->first ? 'is-active' : '' }}" role="tab" aria-controls="tt-panel-{{ $ttTab['key'] }}" aria-selected="{{ $loop->first ? 'true' : 'false' }}" data-tab="{{ $ttTab['key'] }}">
+                                                    <i class="{{ $ttTab['icon'] }}" aria-hidden="true"></i>
+                                                    <span>{{ $ttTab['label'] }}</span>
+                                                </button>
+                                                @endforeach
+                                            </div>
+
+                                            @foreach($ttTabs as $ttTab)
+                                            <div class="tt-tabs__panel tt-tabs__scroll" id="tt-panel-{{ $ttTab['key'] }}" role="tabpanel" data-panel="{{ $ttTab['key'] }}" {{ $loop->first ? '' : 'hidden' }}>
+                                                {!! $ttTab['content'] !!}
+                                            </div>
+                                            @endforeach
+                                        </div>
+
+                                        <script>
+                                            (function() {
+                                                var root = document.getElementById('ttTourTabs');
+                                                if (!root) return;
+
+                                                var buttons = root.querySelectorAll('.tt-tabs__btn');
+                                                var panels = root.querySelectorAll('.tt-tabs__panel');
+
+                                                buttons.forEach(function(btn) {
+                                                    btn.addEventListener('click', function() {
+                                                        var key = btn.getAttribute('data-tab');
+
+                                                        buttons.forEach(function(b) {
+                                                            var on = b === btn;
+                                                            b.classList.toggle('is-active', on);
+                                                            b.setAttribute('aria-selected', on ? 'true' : 'false');
+                                                        });
+
+                                                        panels.forEach(function(p) {
+                                                            p.hidden = p.getAttribute('data-panel') !== key;
+                                                        });
+                                                    });
+                                                });
+                                            })();
+                                        </script>
                                         @else
                                         <p style="text-align: center"><span style="font-size: 110%;color: #ff6600"><strong>KÍNH CHÀO QUÝ KHÁCH ĐÃ ĐẾN CÔNG TY </strong></span></p>
-                                        <p style="text-align: center"><span style="font-size: 110%;color: #ff6600"><strong>DU LỊCH THE SINH TOURIST 22 BÁT ĐÀN – HOÀN KIẾM – HÀ NỘI</strong></span></p>
+                                        <p style="text-align: center"><span style="font-size: 110%;color: #ff6600"><strong>DU LỊCH SINH TRAVEL 22 BÁT ĐÀN – HOÀN KIẾM – HÀ NỘI</strong></span></p>
                                         @endif
-
-
                                     </div>
                                 </div>
                             </div>
@@ -292,11 +436,15 @@
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-plane"></i>Phương tiện:</span>
-                                                    <span class="value">...</span>
+                                                    <span class="value">{{ $tour->transportation ?: 'Liên hệ' }}</span>
                                                 </div>
                                                 <div class="tt-tour-item">
                                                     <span class="label"><i class="fas fa-map-marker-alt"></i>Nơi khởi hành:</span>
-                                                    <span class="value">...</span>
+                                                    <span class="value">{{ $tour->departure_place ?: 'Liên hệ' }}</span>
+                                                </div>
+                                                <div class="tt-tour-item">
+                                                    <span class="label"><i class="far fa-clock"></i>Lịch khởi hành:</span>
+                                                    <span class="value">{{ $tour->schedule ?: 'Khởi hành vào buổi sáng' }}</span>
                                                 </div>
 
                                             </div>
@@ -374,7 +522,177 @@
                                                         height: 26px;
                                                         display: block;
                                                     }
+
+                                                    /* CTA đặt tour */
+                                                    .tt-cta-book {
+                                                        position: relative;
+                                                        overflow: hidden;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        gap: 12px;
+                                                        width: 100%;
+                                                        margin: 0 0 14px;
+                                                        padding: 14px 18px;
+                                                        border-radius: 999px;
+                                                        color: #fff !important;
+                                                        text-decoration: none;
+                                                        background: linear-gradient(110deg, #ff8a1f, #ff5a00 40%, #ffab3d 65%, #ff6600);
+                                                        background-size: 220% 100%;
+                                                        box-shadow: 0 8px 20px rgba(255, 102, 0, .35);
+                                                        animation: ttCtaGradient 6s ease-in-out infinite, ttCtaPulse 2.4s ease-in-out infinite;
+                                                        transition: transform .2s ease, box-shadow .2s ease;
+                                                    }
+
+                                                    .tt-cta-book::after {
+                                                        content: "";
+                                                        position: absolute;
+                                                        top: 0;
+                                                        left: -60%;
+                                                        width: 40%;
+                                                        height: 100%;
+                                                        background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .45) 50%, rgba(255, 255, 255, 0) 100%);
+                                                        transform: skewX(-20deg);
+                                                        animation: ttCtaShine 3.2s ease-in-out infinite;
+                                                        pointer-events: none;
+                                                    }
+
+                                                    .tt-cta-book:hover,
+                                                    .tt-cta-book:focus {
+                                                        color: #fff !important;
+                                                        transform: translateY(-2px);
+                                                        box-shadow: 0 12px 26px rgba(255, 102, 0, .45);
+                                                    }
+
+                                                    .tt-cta-book:active {
+                                                        transform: translateY(0);
+                                                    }
+
+                                                    .tt-cta-book .tt-cta-text {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: flex-start;
+                                                        line-height: 1.25;
+                                                    }
+
+                                                    .tt-cta-book .tt-cta-title {
+                                                        font-size: 17px;
+                                                        font-weight: 700;
+                                                        letter-spacing: .2px;
+                                                        text-transform: uppercase;
+                                                    }
+
+                                                    .tt-cta-book .tt-cta-sub {
+                                                        font-size: 12px;
+                                                        font-weight: 500;
+                                                        opacity: .92;
+                                                    }
+
+                                                    .tt-cta-book .tt-cta-phone-icon {
+                                                        font-size: 18px;
+                                                        animation: ttCtaRing 2s ease-in-out infinite;
+                                                        transform-origin: 50% 60%;
+                                                    }
+
+                                                    .tt-cta-book .tt-cta-arrow {
+                                                        font-size: 14px;
+                                                        margin-left: auto;
+                                                        animation: ttCtaNudge 1.4s ease-in-out infinite;
+                                                    }
+
+                                                    @keyframes ttCtaGradient {
+
+                                                        0%,
+                                                        100% {
+                                                            background-position: 0% 50%;
+                                                        }
+
+                                                        50% {
+                                                            background-position: 100% 50%;
+                                                        }
+                                                    }
+
+                                                    @keyframes ttCtaPulse {
+
+                                                        0%,
+                                                        100% {
+                                                            box-shadow: 0 8px 20px rgba(255, 102, 0, .35), 0 0 0 0 rgba(255, 102, 0, .45);
+                                                        }
+
+                                                        70% {
+                                                            box-shadow: 0 8px 20px rgba(255, 102, 0, .35), 0 0 0 12px rgba(255, 102, 0, 0);
+                                                        }
+                                                    }
+
+                                                    @keyframes ttCtaShine {
+
+                                                        0%,
+                                                        55% {
+                                                            left: -60%;
+                                                        }
+
+                                                        100% {
+                                                            left: 130%;
+                                                        }
+                                                    }
+
+                                                    @keyframes ttCtaRing {
+
+                                                        0%,
+                                                        60%,
+                                                        100% {
+                                                            transform: rotate(0deg);
+                                                        }
+
+                                                        65% {
+                                                            transform: rotate(-14deg);
+                                                        }
+
+                                                        72% {
+                                                            transform: rotate(12deg);
+                                                        }
+
+                                                        80% {
+                                                            transform: rotate(-8deg);
+                                                        }
+
+                                                        88% {
+                                                            transform: rotate(6deg);
+                                                        }
+                                                    }
+
+                                                    @keyframes ttCtaNudge {
+
+                                                        0%,
+                                                        100% {
+                                                            transform: translateX(0);
+                                                        }
+
+                                                        50% {
+                                                            transform: translateX(5px);
+                                                        }
+                                                    }
+
+                                                    @media (prefers-reduced-motion: reduce) {
+
+                                                        .tt-cta-book,
+                                                        .tt-cta-book::after,
+                                                        .tt-cta-book .tt-cta-phone-icon,
+                                                        .tt-cta-book .tt-cta-arrow {
+                                                            animation: none !important;
+                                                        }
+                                                    }
                                                 </style>
+
+                                                <a class="tt-cta-book" href="https://zalo.me/0879998230" target="_blank" rel="noopener noreferrer" aria-label="Đặt tour ngay qua Zalo 0879 998 230">
+                                                    <i class="fas fa-comment-dots tt-cta-phone-icon" aria-hidden="true"></i>
+                                                    <span class="tt-cta-text">
+                                                        <span class="tt-cta-title">Đặt tour ngay</span>
+                                                        <span class="tt-cta-sub">Nhắn Zalo tư vấn miễn phí 24/7</span>
+                                                    </span>
+                                                    <i class="fas fa-arrow-right tt-cta-arrow" aria-hidden="true"></i>
+                                                </a>
+
                                                 <div class="tt-contact-actions">
                                                     <a class="tt-facebook-btn" href="https://m.me/61579608994747" target="_blank" rel="noopener noreferrer" aria-label="Chat Facebook Messenger">
                                                         <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -424,6 +742,261 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Tour tương tự -->
+                @if($relatedTours->isNotEmpty())
+                <section class="section" id="section_related_tours">
+                    <div class="section-content relative">
+                        <div class="row">
+                            <div class="col small-12 large-12">
+                                <div class="col-inner">
+                                    <style>
+                                        .tt-related {
+                                            margin: 10px 0 40px;
+                                        }
+
+                                        .tt-related-head {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            gap: 16px;
+                                            flex-wrap: wrap;
+                                            margin-bottom: 18px;
+                                        }
+
+                                        .tt-related-title {
+                                            margin: 0;
+                                            font-size: 22px;
+                                            font-weight: 700;
+                                            text-transform: uppercase;
+                                            color: #2d4271;
+                                            position: relative;
+                                            padding-bottom: 8px;
+                                        }
+
+                                        .tt-related-title::after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            width: 52px;
+                                            height: 3px;
+                                            border-radius: 3px;
+                                            background: #ff6600;
+                                        }
+
+                                        .tt-related-more {
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            color: #ff6600 !important;
+                                            text-decoration: none;
+                                            white-space: nowrap;
+                                        }
+
+                                        .tt-related-more:hover {
+                                            text-decoration: underline;
+                                        }
+
+                                        .tt-related-grid {
+                                            display: grid;
+                                            grid-template-columns: repeat(4, minmax(0, 1fr));
+                                            gap: 20px;
+                                        }
+
+                                        .tt-related-card {
+                                            display: flex;
+                                            flex-direction: column;
+                                            height: 100%;
+                                            background: #fff;
+                                            border: 1px solid #ececec;
+                                            border-radius: 14px;
+                                            overflow: hidden;
+                                            text-decoration: none;
+                                            color: inherit;
+                                            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+                                        }
+
+                                        .tt-related-card:hover {
+                                            transform: translateY(-5px);
+                                            border-color: rgba(255, 102, 0, .35);
+                                            box-shadow: 0 12px 26px rgba(45, 66, 113, .14);
+                                        }
+
+                                        .tt-related-thumb {
+                                            position: relative;
+                                            aspect-ratio: 4 / 3;
+                                            overflow: hidden;
+                                            background: #f3f4f6;
+                                        }
+
+                                        .tt-related-thumb img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            display: block;
+                                            transition: transform .45s ease;
+                                        }
+
+                                        .tt-related-card:hover .tt-related-thumb img {
+                                            transform: scale(1.07);
+                                        }
+
+                                        .tt-related-badge {
+                                            position: absolute;
+                                            left: 10px;
+                                            top: 10px;
+                                            padding: 5px 10px;
+                                            border-radius: 999px;
+                                            background: rgba(255, 102, 0, .95);
+                                            color: #fff;
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            line-height: 1;
+                                        }
+
+                                        .tt-related-body {
+                                            display: flex;
+                                            flex-direction: column;
+                                            flex: 1 1 auto;
+                                            gap: 8px;
+                                            padding: 14px 14px 16px;
+                                        }
+
+                                        .tt-related-name {
+                                            margin: 0;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            line-height: 1.45;
+                                            color: #2d4271;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 2;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            min-height: 43px;
+                                        }
+
+                                        .tt-related-card:hover .tt-related-name {
+                                            color: #ff6600;
+                                        }
+
+                                        .tt-related-meta {
+                                            font-size: 13px;
+                                            color: #6b7280;
+                                            line-height: 1.6;
+                                        }
+
+                                        .tt-related-meta i {
+                                            color: #ff6600;
+                                        }
+
+                                        .tt-related-price {
+                                            margin-top: auto;
+                                            padding-top: 10px;
+                                            border-top: 1px dashed #ececec;
+                                            font-size: 13px;
+                                            color: #6b7280;
+                                        }
+
+                                        .tt-related-price strong {
+                                            display: block;
+                                            font-size: 18px;
+                                            font-weight: 700;
+                                            color: #ff6600;
+                                            line-height: 1.3;
+                                        }
+
+                                        @media (max-width: 1024px) {
+                                            .tt-related-grid {
+                                                grid-template-columns: repeat(3, minmax(0, 1fr));
+                                            }
+                                        }
+
+                                        @media (max-width: 767px) {
+                                            .tt-related-grid {
+                                                grid-template-columns: repeat(2, minmax(0, 1fr));
+                                                gap: 14px;
+                                            }
+
+                                            .tt-related-title {
+                                                font-size: 19px;
+                                            }
+
+                                            .tt-related-name {
+                                                font-size: 14px;
+                                                min-height: 40px;
+                                            }
+
+                                            .tt-related-price strong {
+                                                font-size: 16px;
+                                            }
+                                        }
+
+                                        @media (max-width: 420px) {
+                                            .tt-related-grid {
+                                                grid-template-columns: minmax(0, 1fr);
+                                            }
+                                        }
+                                    </style>
+
+                                    <div class="tt-related">
+                                        <div class="tt-related-head">
+                                            <h2 class="tt-related-title">Tour tương tự</h2>
+                                            <a class="tt-related-more" href="{{ route('category.child.show', [$category->slug, $categoryChild->slug]) }}">
+                                                Xem tất cả <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="tt-related-grid">
+                                            @foreach($relatedTours as $related)
+                                            @php($relatedImage = is_array($related->image) ? ($related->image[0] ?? null) : $related->image)
+                                            @php($relatedUrl = route('tour.detail', [optional($related->category)->slug, optional($related->categoryChild)->slug, $related->slug]))
+                                            <a class="tt-related-card" href="{{ $relatedUrl }}" aria-label="{{ $related->name }}">
+                                                <div class="tt-related-thumb">
+                                                    @if($relatedImage)
+                                                    <img src="{{ asset($relatedImage) }}" alt="{{ $related->name }}" width="450" height="338" loading="lazy">
+                                                    @endif
+                                                    @if(optional($related->categoryChild)->name)
+                                                    <span class="tt-related-badge">{{ $related->categoryChild->name }}</span>
+                                                    @endif
+                                                </div>
+                                                <div class="tt-related-body">
+                                                    <h3 class="tt-related-name">{{ $related->name }}</h3>
+
+                                                    <div class="tt-related-meta">
+                                                        <i class="far fa-clock" aria-hidden="true"></i>
+                                                        {{ $related->schedule ?: 'Khởi hành vào buổi sáng' }}
+                                                    </div>
+
+                                                    @if($related->departure_place)
+                                                    <div class="tt-related-meta">
+                                                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                                        {{ $related->departure_place }}
+                                                    </div>
+                                                    @endif
+
+                                                    @if(optional($related->categoryChild)->hidden_money == 0)
+                                                    <div class="tt-related-price">
+                                                        Giá từ
+                                                        <strong>
+                                                            <bdi class="tt-price" data-amount-vnd="{{ $related->price ?? '' }}" data-amount-usd="{{ $related->price_usd ?? '' }}">{{ $related->price ? number_format((float) $related->price, 0, ',', '.') . '₫' : ((float) $related->price_usd . '$') }}</bdi>
+                                                        </strong>
+                                                    </div>
+                                                    @else
+                                                    <div class="tt-related-price">
+                                                        <strong>Liên hệ</strong>
+                                                    </div>
+                                                    @endif
+                                                </div>
+                                            </a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @endif
 
             </div>
         </div>

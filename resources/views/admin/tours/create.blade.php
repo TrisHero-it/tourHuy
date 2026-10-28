@@ -53,9 +53,33 @@
                 </div>
                 @enderror
 
-                <label for="">Mô tả</label>
-                <textarea name="description" id="editor" class="form-control">{{ old('description') }}</textarea>
+                <label for="">Giới thiệu</label>
+                <textarea name="description" id="editor" class="form-control rich-editor">{{ old('description') }}</textarea>
                 @error('description')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
+                <label for="" class="mt-3">Lịch trình</label>
+                <textarea name="itinerary" id="editorItinerary" class="form-control rich-editor">{{ old('itinerary') }}</textarea>
+                @error('itinerary')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
+                <label for="" class="mt-3">Bảng giá</label>
+                <textarea name="price_table" id="editorPriceTable" class="form-control rich-editor">{{ old('price_table') }}</textarea>
+                @error('price_table')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
+                <label for="" class="mt-3">Câu hỏi thường gặp</label>
+                <textarea name="faq" id="editorFaq" class="form-control rich-editor">{{ old('faq') }}</textarea>
+                @error('faq')
                 <div class="alert alert-danger mt-2" role="alert">
                     <i class="fas fa-exclamation-triangle"></i> {{ $message }}
                 </div>
@@ -101,6 +125,30 @@
                 </div>
                 @enderror
 
+                <label for="">Phương tiện di chuyển</label> <br>
+                <input class="form-control" type="text" name="transportation" placeholder="Ví dụ: Xe ô tô đời mới, Máy bay + ô tô, Tàu hoả" value="{{ old('transportation') }}">
+                @error('transportation')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
+                <label for="">Nơi khởi hành</label> <br>
+                <input class="form-control" type="text" name="departure_place" placeholder="Ví dụ: Hà Nội, TP. Hồ Chí Minh, Đà Nẵng" value="{{ old('departure_place') }}">
+                @error('departure_place')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
+                <label for="">Lịch khởi hành</label> <br>
+                <input class="form-control" type="text" name="schedule" placeholder="Ví dụ: Hàng ngày, Thứ 2 - Thứ 6, Khởi hành vào buổi sáng" value="{{ old('schedule') }}">
+                @error('schedule')
+                <div class="alert alert-danger mt-2" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> {{ $message }}
+                </div>
+                @enderror
+
                 <button type="submit" style="margin-top: 11px;" class="btn btn-primary">Thêm</button>
             </form>
         </div>
@@ -137,18 +185,18 @@
 </script>
 
 <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            ckfinder: {
-                uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
-            }
-        })
-        .then(editor => {
-            console.log('CKEditor initialized successfully');
-        })
-        .catch(error => {
-            console.error('Error initializing CKEditor:', error);
-        });
+    // Khởi tạo CKEditor cho mọi ô soạn thảo (Giới thiệu, Lịch trình, Bảng giá, FAQ)
+    document.querySelectorAll('.rich-editor').forEach(function(el) {
+        ClassicEditor
+            .create(el, {
+                ckfinder: {
+                    uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
+                }
+            })
+            .catch(error => {
+                console.error('Error initializing CKEditor:', error);
+            });
+    });
 
     // Hiển thị popup toast notification
     function showToast(message, type = 'error') {
@@ -182,49 +230,6 @@
             showToast(error, 'danger');
         });
     }
-</script>
-
-@if (session('success'))
-<script !src="">
-    let html = `
-        <div class="toast toast-3 mb-2 fade show" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <img src="{{asset('images/design/favicon_io/favicon.ico')}}" alt="" class="img-fluid m-r-5" style="width:20px;">
-                <strong class="me-auto">Sinh travel</strong>
-                <small class="text-muted">1 Giây</small>
-                <button type="button" class="m-l-5 mb-1 mt-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
-                </button>
-            </div>
-            <div class="toast-body">
-                {{ session('success') }}
-            </div>
-        </div> `
-    $('#notification').prepend(html)
-    setTimeout(() => {
-        let a = document.getElementById('toast');
-        a.style.transition = '0.2s ease all';
-        a.style.transform = 'translateX(200%)';
-        setTimeout(() => {
-            document.getElementById('toast').remove()
-        }, 1000)
-    }, 2000)
-</script>
-
-
-@endif
-<script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            ckfinder: {
-                uploadUrl: "{{route('upload-image', ['_token'=>csrf_token()])}}"
-            }
-        })
-        .then(editor => {
-            console.log('CKEditor initialized successfully');
-        })
-        .catch(error => {
-            console.error('Error initializing CKEditor:', error);
-        });
 </script>
 
 @endsection

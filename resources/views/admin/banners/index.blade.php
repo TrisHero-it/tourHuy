@@ -48,6 +48,15 @@
                     </table>
                 </div>
 
+                @if($banners->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $banners->firstItem() }}-{{ $banners->lastItem() }} trong tổng số {{ $banners->total() }} banner
+                    </small>
+                    {{ $banners->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
+
             </div>
         </div>
     </div>

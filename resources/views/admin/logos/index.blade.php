@@ -61,6 +61,15 @@
                     </table>
                 </div>
 
+                @if($logos->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $logos->firstItem() }}-{{ $logos->lastItem() }} trong tổng số {{ $logos->total() }} logo
+                    </small>
+                    {{ $logos->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
+
             </div>
         </div>
     </div>

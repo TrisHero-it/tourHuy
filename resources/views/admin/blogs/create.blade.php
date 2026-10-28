@@ -85,7 +85,6 @@
                     Độ dài văn bản: Văn bản chứa 0 các từ. Độ dài này quá ngắn so với số lượng tối thiểu 300 các từ được khuyến nghị. Hãy thêm nội dung.
                 </div>
 
-
                 <div class="d-flex mt-2 align-items-center" id="outLink" style="gap: 8px">
                     <div style="width: 10px; height: 10px">
                         <svg style="transform: translateY(-7px)" aria-hidden="true" role="img" focusable="false" class="sc-bcXHqe fYBLbR yoast-svg-icon yoast-svg-icon-circle sc-fmZqYP jRPVdB" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" fill="#dc3232">
@@ -435,32 +434,6 @@
     }
 </script>
 
-@if(session('success'))
-<script !src="">
-    let html = `
-        <div class="toast toast-3 mb-2 fade show" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <img src="{{asset('images/design/favicon_io/favicon.ico')}}" alt="" class="img-fluid m-r-5" style="width:20px;">
-                <strong class="me-auto">Sinh travel</strong>
-                <small class="text-muted">1 Giây</small>
-                <button type="button" class="m-l-5 mb-1 mt-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
-                </button>
-            </div>
-            <div class="toast-body">
-                Thêm thành công !!
-            </div>
-        </div> `
-    $('#notification').prepend(html)
-    setTimeout(() => {
-        let a = document.getElementById('toast');
-        a.style.transition = '0.2s ease all';
-        a.style.transform = 'translateX(200%)';
-        setTimeout(() => {
-            document.getElementById('toast').remove()
-        }, 1000)
-    }, 2000)
-</script>
-@endif
 <script src="{{asset('assets/js/plugins/choices.min.js')}}"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {

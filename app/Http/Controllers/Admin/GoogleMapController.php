@@ -49,9 +49,18 @@ class GoogleMapController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|string|max:500',
+            'map_url' => 'required|string',
+        ], [], [
+            'name' => 'tên địa điểm',
+            'address' => 'địa chỉ',
+            'map_url' => 'link bản đồ',
+        ]);
 
         $map = GoogleMap::findOrFail($id);
-        $map->update($request->all());
+        $map->update($validated);
 
         return redirect()->route('admin.google-maps.index')->with('success', 'Cập nhật Google Map thành công');
     }

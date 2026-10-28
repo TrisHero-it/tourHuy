@@ -49,6 +49,15 @@
                     </table>
                 </div>
 
+                @if($tours->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $tours->firstItem() }}-{{ $tours->lastItem() }} trong tổng số {{ $tours->total() }} tour
+                    </small>
+                    {{ $tours->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
+
             </div>
         </div>
     </div>

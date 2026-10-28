@@ -72,7 +72,7 @@
     <meta name="twitter:description" content="Đơn vị tổ chức tour du lịch miền Bắc hàng đầu Việt Nam!" />
     <meta name="twitter:image" content="{{ asset($logo->image) }}" />
     <meta name="twitter:label1" content="Được viết bởi" />
-    <meta name="twitter:data1" content="The Sinh Tourist" />
+    <meta name="twitter:data1" content="Sinh Travel" />
     <meta name="twitter:label2" content="Thời gian để đọc" />
     <meta name="twitter:data2" content="3 phút" />
 
@@ -468,13 +468,13 @@
                             <ul class="nav nav-center nav-small  nav-divided">
                                 <li class="html custom html_topbar_right">
                                     <div class="menu-content size-s">
-                                        <div class="menu-item">Giá tốt nhất, khởi hành hàng ngày</div>
+                                        <div class="menu-item">Giá tốt mỗi ngày</div>
                                         <div class="separator"></div>
-                                        <div class="menu-item">Giá tốt nhất, khởi hành hàng ngày</div>
+                                        <div class="menu-item">Tour ghép & tour riêng linh hoạt</div>
                                         <div class="separator"></div>
-                                        <div class="menu-item">Tour đơn - Tour ghép linh hoạt</div>
+                                        <div class="menu-item">Lịch trình rõ ràng</div>
                                         <div class="separator"></div>
-                                        <div class="menu-item">Bảo hiểm du lịch miễn phí</div>
+                                        <div class="menu-item">Hỗ trợ tận tâm 24/7</div>
                                     </div>
                                 </li>
                             </ul>
@@ -490,10 +490,10 @@
                                 <li class="html custom html_topbar_left">
                                     <div class="menu-scroll-mobile">
                                         <div class="scroll-wrapper">
-                                            <div class="scroll-item">Đơn vị tổ chức tour Miền Bắc số 1</div>
-                                            <div class="scroll-item">Giá tốt nhất, khởi hành hàng ngày</div>
-                                            <div class="scroll-item">Tour đơn - Tour ghép linh hoạt</div>
-                                            <div class="scroll-item">Bảo hiểm du lịch miễn phí</div>
+                                            <div class="scroll-item">Giá tốt mỗi ngày</div>
+                                            <div class="scroll-item">Tour ghép & tour riêng linh hoạt</div>
+                                            <div class="scroll-item">Lịch trình rõ ràng</div>
+                                            <div class="scroll-item">Hỗ trợ tận tâm 24/7</div>
                                         </div>
                                     </div>
                                 </li>
@@ -1284,13 +1284,13 @@
                 </li>
                 <li class="html custom html_topbar_right">
                     <div class="menu-content size-s">
-                        <div class="menu-item">Giá tốt nhất, khởi hành hàng ngày</div>
+                        <div class="menu-item">Giá tốt mỗi ngày</div>
                         <div class="separator"></div>
-                        <div class="menu-item">Giá tốt nhất, khởi hành hàng ngày</div>
+                        <div class="menu-item">Tour ghép & tour riêng linh hoạt</div>
                         <div class="separator"></div>
-                        <div class="menu-item">Tour đơn - Tour ghép linh hoạt</div>
+                        <div class="menu-item">Lịch trình rõ ràng</div>
                         <div class="separator"></div>
-                        <div class="menu-item">Bảo hiểm du lịch miễn phí</div>
+                        <div class="menu-item">Hỗ trợ tận tâm 24/7</div>
                     </div>
                 </li>
             </ul>

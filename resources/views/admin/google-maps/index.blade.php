@@ -60,6 +60,15 @@
                     </table>
                 </div>
 
+                @if($googleMaps->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $googleMaps->firstItem() }}-{{ $googleMaps->lastItem() }} trong tổng số {{ $googleMaps->total() }} bản đồ
+                    </small>
+                    {{ $googleMaps->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
+
             </div>
         </div>
     </div>

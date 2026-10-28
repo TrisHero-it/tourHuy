@@ -44,36 +44,19 @@
                     </table>
                 </div>
 
+                @if($blogs->hasPages())
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+                    <small class="text-muted">
+                        Hiển thị {{ $blogs->firstItem() }}-{{ $blogs->lastItem() }} trong tổng số {{ $blogs->total() }} bài viết
+                    </small>
+                    {{ $blogs->onEachSide(1)->links('pagination::bootstrap-5') }}
+                </div>
+                @endif
+
             </div>
         </div>
     </div>
     <!-- Zero config table end -->
 </div>
 
-@if (session('success'))
-<script !src="">
-    let html = `
-        <div class="toast toast-3 mb-2 fade show" id="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <img src="{{asset('images/design/favicon_io/favicon.ico')}}" alt="" class="img-fluid m-r-5" style="width:20px;">
-                <strong class="me-auto">Sinh travel</strong>
-                <small class="text-muted">1 Giây</small>
-                <button type="button" class="m-l-5 mb-1 mt-1 btn-close" data-bs-dismiss="toast" aria-label="Close">
-                </button>
-            </div>
-            <div class="toast-body">
-                {{ session('success') }}
-            </div>
-        </div> `
-    $('#notification').prepend(html)
-    setTimeout(() => {
-        let a = document.getElementById('toast');
-        a.style.transition = '0.2s ease all';
-        a.style.transform = 'translateX(200%)';
-        setTimeout(() => {
-            document.getElementById('toast').remove()
-        }, 1000)
-    }, 2000)
-</script>
-@endif
 @endsection
